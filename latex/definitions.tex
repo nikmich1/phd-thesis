@@ -1,0 +1,59 @@
+% definitions to keep notation consistent.
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\ASlash}{\slashed{A}}
+\newcommand{\pSlash}{\slashed{p}}
+\newcommand{\epsSlash}{\slashed{\epsilon}}
+\newcommand{\kSlash}{\slashed{k}}
+\newcommand{\psiA}{\psi_{\mathcal{A}}}
+\newcommand{\psiAmin}{\psiA^\text{min}}
+\newcommand{\psiAmax}{\psiA^\text{max}}
+\newcommand{\e}{\text{e}}
+\renewcommand{\d}{\text{d}}
+\renewcommand{\t}{\text{t}}
+\renewcommand{\i}{\text{i}}
+\renewcommand{\v}{\text{v}}
+\renewcommand{\Re}{\text{Re}}
+\renewcommand{\Im}{\text{Im}}
+
+% abbreviations
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\beqa}{\begin{align}}
+\newcommand{\eeqa}{\end{align}}
+\newcommand{\beqan}{\begin{align*}}
+\newcommand{\eeqan}{\end{align*}}
+\newcommand{\ean}{\nonumber\\}
+\newcommand{\vect}{\bm}
+\newcommand{\PV}{\mathcal{C}\!\!\!\!\!\!\int}
+\newcommand{\PVtext}{c\!\!\!\!\int}
+\newcommand{\leftexp}[2]{{\vphantom{#2}}^{#1}{#2}}
+
+% physics notation
+\def\ket#1{$| #1 \rangle$}
+\def\ketm#1{| #1 \rangle}
+\def\bra#1{$\langle #1 |$}
+\def\bram#1{\langle #1 |}
+\def\spr#1#2{$\langle #1 | \right. #2 \rangle$}
+\def\sprm#1#2{\langle #1 | \right. #2 \rangle}
+\def\me#1#2#3{$\langle #1 | #2 | #3 \rangle$}
+\def\mem#1#2#3{\langle #1 | #2 | #3 \rangle}
+\def\redme#1#2#3{$\langle #1 \|
+                  #2 \| #3 \rangle$}
+\def\redmem#1#2#3{\langle #1 \|
+                  #2 \| #3 \rangle}
+%
+\def\threej#1#2#3#4#5#6{$\left( \begin{matrix} #1 & #2 & #3  \\
+                                               #4 & #5 & #6  \end{matrix} \right)$}
+\def\threejm#1#2#3#4#5#6{\left( \begin{matrix} #1 & #2 & #3  \\
+                                               #4 & #5 & #6  \end{matrix} \right)}
+%
+\def\sixj#1#2#3#4#5#6{$\left\{ \begin{matrix} #1 & #2 & #3  \\
+                                              #4 & #5 & #6  \end{matrix} \right\}$}
+\def\sixjm#1#2#3#4#5#6{\left\{ \begin{matrix} #1 & #2 & #3  \\
+                                              #4 & #5 & #6  \end{matrix} \right\}}
+
+%
+\def\ninejm#1#2#3#4#5#6#7#8#9{  \left\{ \begin{matrix} #1 & #2 & #3  \\
+                                                       #4 & #5 & #6  \\
+                                                       #7 & #8 & #9  \end{matrix}  \right\}   }

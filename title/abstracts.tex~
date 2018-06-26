@@ -1,0 +1,21 @@
+\cleardoublepage
+\thispagestyle{empty}
+
+
+\minisec{Zusammenfassung}
+%  \vspace{\baselineskip}
+  \vspace{0.1cm}
+  \input{title/abstract-ger}
+
+\vfill
+
+\minisec{Abstract}
+%  \vspace{\baselineskip}
+  \vspace{0.1cm}
+  \input{title/abstract-eng}
+
+\thispagestyle{empty}
+
+
+
+

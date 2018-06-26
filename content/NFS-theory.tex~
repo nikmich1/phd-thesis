@@ -1,0 +1,498 @@
+\chapter{Nuclear forward scattering}
+\label{chap:NFS}
+
+
+%------------------------------------------------------------------------------------%
+%\section{Introduction}
+
+In 1958, Rudolf M\"{o}ssbauer discovered that nuclear transitions inside solids can occur by recoilless absorption and reemission \cite{Mossbauer1, Mossbauer2, Mossbauer3}. This became known as the M\"{o}ssbauer effect. The detection of recoil-free nuclear fluorescence opened the possibility to measure nuclear energy spectra with a very high precision, a technique soon known as M\"{o}ssbauer spectroscopy. Since $\gamma$-rays have typically very narrow line widths in comparison to their energies, the resonant scattering is very sensitive to tiny energy changes which may reveal information about the environment surrounding the nuclei. In this manner M\"{o}ssbauer spectroscopy has for instance been applied to measure isomeric shifts, quadrupole and hyperfine splittings, and is widely used in nuclear physics, solid-state physics, chemistry and biophysics.
+
+In the beginning, M\"{o}ssbauer spectroscopy was limited to $\gamma$-ray sources composed of the radioactive parent nuclei corresponding to the species under investigation. The decay of the parent nuclei produced resonant photons applicable to nuclear resonance spectroscopy, but with a very low photon emission rate.
+This limitation could however be overcome by the development of synchrotron light sources in the 1970s. The idea to employ the brilliant and frequency-tunable synchrotron radiation (SR) for M\"{o}ssbauer spectroscopy \cite{Ruby1974, Cohen1978, Shenoy2006} advanced enormously the investigation of the light-nucleus interaction which eventually led to the development of nuclear forward scattering (NFS) \cite{Gerdau1999.HI, Smirnov1999.HI, Kagan1999.HI, NFS-bible, Sturhahn2004.J}. 
+%The M\"{o}ssbauer effect builds furthermore the basis for nuclear forward scattering (NFS) with synchrotron radiation (SR) which has become a versatile tool in studies of the resonant light-nucleus interaction over the last decades.
+
+The usage of broadband synchrotron pulses in NFS experiments, first demonstrated in 1985 \cite{Gerdau1985.PRL}, opens the possibility to detect the pure nuclear fluorescence not only in dependence of frequency but also in dependence of time \cite{Hastings1991.PRL}. This idea relies on two key features: (i) in contrast to conventional M\"{o}ssbauer $\gamma$-ray sources, SR pulses have a very short pulse duration ($\sim$~ps) which can be considered to behave $\delta$-like in time in comparison to the nuclear response ($\sim$~ns); (ii) the lifetime $\tau$ of a nuclear excited state is typically much longer than the time scale of any other process contributing to the scattered radiation field like for instance the electronic background. Combining these two properties it is possible to measure the time spectrum of the pure nuclear response of the target simply by time gating. 
+
+%Nuclear forward scattering (NFS) with synchrotron radiation (SR) has become a versatile tool in studies of the resonant light-nucleus interaction over the last decades. A typical setup is shown in Fig.~\ref{fig:NFS-setup}(a) where the SR pulse impinges on a nuclear solid-state sample and the scattered intensity is measured in dependence on time in the forward direction. In contrast to conventional M\"{o}ssbauer $\gamma$-ray sources, SR pulses have typically very short pulse durations of about a few ps. It can be considered to be $\delta$-like in time in comparison to the nuclear response. The energy of the SR pulse is chosen such that a nuclear transition is resonantly driven. Typically, the lifetime $\tau$ of a nuclear excited state is much longer than any other processes contributing to the scattered field. This in connection with the $\delta$-like time structure of the SR pulse makes it possible to measure the pure nuclear response of the target simply by time gating. The idea to record the time spectrum instead of the frequency spectrum (like in conventional M\"{o}ssbauer spectroscopy) is thereby essential.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\linewidth]{pics/NFS-setup-general_3.pdf}
+\caption{NFS setup (a) and characteristic NFS time spectrum (b). Synchrotron radiation impinges perpendicular on a nuclear target resonantly interacting with some nuclear M\"ossbauer species. The scattered field is detected in the forward direction (a). The magnetic field splits the nuclear states in the corresponding Zeeman sublevels, resulting in the characteristic NFS time spectrum (b) with the quantum beat pattern (orange curve) modulated by a so-called dynamical beat (blue curve). The nuclear decay is collectively enhanced in comparison to the exponential behavior of a single nucleus (green dashed curve).}
+\label{fig:NFS-setup}
+\end{figure}
+
+
+A typical NFS setup is shown in Fig.~\ref{fig:NFS-setup}(a) where the SR pulse impinges in normal incidence on a nuclear solid-state sample and the scattered intensity is recorded in the forward direction. Like the name ``nuclear forward scattering'' promises, the forward direction plays a special role in the scattering process. Since the time scales of the nuclear excitation by the SR pulse and the subsequent decay are so much different, the scattering can be described as two independent processes, the formation of the excited state and the subsequent $\gamma$-ray emission \cite{NFS-bible}. Due to the typically narrow nuclear line width and the low degeneracy of the SR, it can be safely assumed that each pulse contains maximally one resonant photon such that at most one nucleus can be excited. If the photon is absorbed recoillessly by a nuclear M\"{o}ssbauer transition, it will be impossible to distinguish which nucleus has been excited. In this way a collective, delocalized excitation is created, called nuclear exciton \cite{NFS-bible, Kagan1999.HI}. 
+%or nuclear polariton \cite{Smirnov2005.PRA}. 
+It can be written as a superposition of single excited states \ket{g, e_j}, where the $j^{\rm{th}}$ nucleus is excited and all others remain in the ground state \cite{Roehlsberger2004, Scully2006.PRL, Scully2007.LP}:
+\begin{equation}
+\ketm{E} = \frac{1}{\sqrt{N}} \sum_{j=1}^N \e^{\i \bm{k} \bm{r}_j} \ketm{g, e_j}\ .
+\label{eq:NFS_exciton}
+\end{equation}
+Here, the wave vector of the incident radiation is denoted by $\bm{k}$, $\bm{r}_j$ is the position of the $j^{\rm{th}}$ nucleus and $N$ the number of contributing nuclei.
+
+Applying the Weisskopf-Wigner theory of spontaneous decay \cite{ScullyZubairy} it can be shown that the nuclear exciton preferably decays by the emission of a photon into the forward direction along $\bm{k}$ \cite{Scully2006.PRL, Scully2007.LP, thesis-Wente}, provided the final state remains indistinguishable from the initial one. This requires that the photon is absorbed and re-emitted recoillessly and that neither a nuclear spin flip nor internal conversion occur. Furthermore, the collective excitation defined in Eq.~(\ref{eq:NFS_exciton}) is spatially coherent leading to an increased radiative transition width \cite{NFS-bible}. For instance, the ratio between internal conversion (IC) and radiative decay of the first excited state of an isolated ${}^{57}$Fe nucleus is $\Gamma _{\rm{IC}}/\Gamma _{\rm{rad}} \approx 8$, implying that IC is 8 times more probable than spontaneous emission. The formation of a spatially coherent, delocalized excitation in a nuclear ensemble may change this ratio drastically such that radiative decay dominates IC in the forward direction. Accordingly, in comparison to the exponential decay of an isolated nucleus, we expect to see a speed-up of the spontaneous decay in NFS.
+
+In Fig.~\ref{fig:NFS-setup}(b) a typical time spectrum of NFS is shown. It is completely different from a simple exponential decay like it is expected for an isolated, resonant absorber [green dashed curve in Fig.~\ref{fig:NFS-setup}(b)]. Actually, this kind of time spectrum is characteristic for NFS and therefore, it is important to understand the peculiar features imprinted by the nuclear ensemble: the so-called dynamical and quantum beats \cite{NFS-bible}. The dynamical beat is illustrated by the blue curve in Fig.~\ref{fig:NFS-setup}(b). It is caused by multiple scattering events where the resonant photon is absorbed and re-emitted several times inside the target by a single nuclear transition. Therefore, it is essential that the decay into the forward direction preserves the photon energy. The temporal behavior of the dynamical beat can be represented by the product of a Bessel function of first kind $J_1$ and an exponential decay \cite{Shvydko1999.HI, Shvydko1999.PRB}
+\begin{equation}
+\left( \frac{\xi}{\sqrt{\xi \Gamma_0 t}} J_1\!\left( 2 \sqrt{\xi \Gamma_0 t} \right) \right)^2 \e^{-\Gamma_0 t}\ ,
+\label{eq:NFS_bessel}
+\end{equation}
+where $\Gamma_0$ represents the natural width of the nuclear excited state and $\xi$ is the effective resonant thickness of the nuclear sample. The derivation of Eq.~(\ref{eq:NFS_bessel}) will be given in the next Section. The effective thickness is proportional to the number of nuclei contributing to the resonant nuclear scattering ($\xi \propto N_0$). For small times ($\xi \Gamma_0 t < 1$) Eq.~(\ref{eq:NFS_bessel}) can be approximated by
+\begin{equation}
+\e^{-(\xi+1) \Gamma_0 t}
+\label{eq:NFS_bessel-small-t}
+\end{equation}
+which represents an exponential decay with enhanced decay constant $(\xi+1) \Gamma_0$. The enhancement of the decay is proportional to $\xi$ and hence proportional to the number of participating nuclear scatterers which shows that the already mentioned speed-up of the spontaneous decay is a collective effect. In Chap.~\ref{chap:bloch}, this speed-up of the spontaneous decay has already been introduced as the collective nuclear decay rate.
+
+The second characteristic pattern of the time spectrum, the quantum beat, is caused by a magnetic field (either external or internal) at the nuclear target. This B-field produces hyperfine interactions which lead to a splitting of the nuclear states into their Zeeman sublevels. Due to the broadband nature of the SR it is possible to drive more than one hyperfine transition simultaneously. The interference of these transitions with different frequencies subsequently leads to a beating pattern in the time spectrum, e.g., the quantum beat. The full spectrum with dynamical and quantum beats is illustrated by the orange curve in Fig.~\ref{fig:NFS-setup}(b).
+
+%So far, we described the nuclear forward scattering as a two step process: the resonant SR pulse creates a collective excitation in the nuclear sample which subsequently decays back into the ground state. The radiative part of this decay into the forward direction is under certain circumstances strongly enhanced in comparison to an isolated nucleus. Furthermore, the time spectrum in the forward direction has a very characteristic pattern composed of the so-called dynamical and quantum beats. In the next section we leave the picture of a two step process and describe the NFS as a scattering problem using a semiclassical approach. This kind of treatment allows us to derive a wave equation for the coherent propagation through the resonant medium which clearly reveals the origin of all the characteristic NFS features just mentioned.
+
+This Chapter is devoted to the theoretical treatment of NFS. Therefore, we are going to leave the simple picture of the nuclear exciton formation with subsequent decay and rather describe NFS as a real scattering problem. There are a number of theoretical approaches to treat the pulse propagation through a resonant medium. Solutions founded on Maxwell's equations use a complex space- and time-dependent polarizability to describe the nuclear medium. Based on such a model, Kagan and Afanas'ev derived the first time-dependent theory of NFS with synchrotron light \cite{Kagan1979.JOP}. At the same time, Hannon and Trammel developed a description of NFS based on Green's function techniques of quantum electrodynamics as it is applied in the quantum theory of crystal optics \cite{Trammell1978.PRB, Trammell1979.PRB}. Comprehensive reviews can be found in Refs.~\cite{Kagan1999.HI} and \cite{NFS-bible}, respectively. Since then, both models have been extensively used to analyze experimental data on NFS where insights into advanced geometries with complicated interactions could be gained. Meanwhile, there is furthermore an approach applying Heitler's quantum theory of radiation to NFS setups with SR \cite{Hoy2001.PRB, Kohn2007.PRB}.
+
+The approach we are using follows Refs.~\cite{Shvydko1999.HI, Shvydko1999.PRB, Shvydko2000.HI} where Maxwell's equations
+%the resonant interaction between a classical electromagnetic field and the nuclei 
+are directly solved in time and space. This kind of treatment allows us to easily incorporate time-dependent interactions like timed rotations of the magnetic field. Actually, Ref.~\cite{Shvydko1999.PRB} provides a general way of solving the problem of NFS in terms of a semiclassical description, applicable to arbitrary time-dependent interactions. Here, we rather present a reduced version of the model introduced in Ref.~\cite{Shvydko1999.PRB}, adapted to our purposes. In Sec.~\ref{sec:wave-eq}, first the wave equation for the coherent propagation of the x-ray pulse through the resonant medium is derived. Its solution requires the light-induced macroscopic current density to be expressed in terms of transition amplitudes between single-particle states which is the topic of Sec.~\ref{sec:nuc-current}. Sec.~\ref{sec:solution} is then devoted to the general solution of the wave equation. Afterwards in Secs.~\ref{sec:static-hf}, \ref{sec:rot-hf} and \ref{sec:switch-hf}, explicit time-dependent hyperfine interactions are discussed. 
+Atomic units $\hbar=m_{\rm{e}}=e=4\pi\varepsilon_0=1$ are used throughout this Chapter.
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Wave equation}
+\label{sec:wave-eq}
+
+
+In order to set up a wave equation to describe NFS, let us again consider the typical setup shown in Fig.~\ref{fig:NFS-setup}(a). The target surface lies in the $x$-$z$ plane perpendicular to the $y$-direction, an external magnetic field points along the $z$-direction and determines the quantization axis of the system. The incident radiation propagates along the $y$-axis, hits the nuclear sample at $y=0$ and can be described as a plane wave modulated in time,
+\begin{equation}
+\bm{\mathcal{E}}_{\rm{in}}(\bm{r},t) = \bm{E}_{\rm{in}}(t) \e^{\i(\bm{k} \bm{r} - \omega t)}\ ,
+\label{eq:NFS_Ein}
+\end{equation}
+where $\bm{k}$ is the wave vector and $\omega$ the carrier frequency of the incoming field. We are interested in the scattered intensity behind the target in the forward direction.
+
+We describe the coherent nuclear scattering process with a semiclassical approach where the electromagnetic field is considered to behave classically whereas the nuclear system is treated quantum mechanically. 
+%This kind of description has already been proven to reproduce experimental results of NFS to a good accuracy \cite{}. Moreover, effects like .... could be explained. 
+In order to facilitate the treatment of time-dependent hyperfine interactions later, it is natural to solve the scattering problem directly in space and time based on Refs.~\cite{Shvydko1999.HI, Shvydko1999.PRB, Shvydko2000.HI}. 
+%The theoretical description we are going to present is based on Ref.~\cite{}. 
+Accordingly, the coherent propagation of the electromagnetic field through the resonant medium is thereby described by Maxwell's equation
+\begin{equation}
+\left( \nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \right) \boldsymbol{\mathcal{E}}(\bm{r},t) = \frac{4 \pi}{c^2} \frac{\partial}{\partial t} \boldsymbol{\mathcal{J}}(\bm{r},t)\ ,
+\label{eq:NFS_Maxwell}
+\end{equation}
+where $\boldsymbol{\mathcal{J}}(\bm{r},t)$ denotes the macroscopic current density induced by the incident radiation.
+
+The electromagnetic field $\boldsymbol{\mathcal{E}}(\bm{r},t)$ inside the nuclear target and the macroscopic current density $\boldsymbol{\mathcal{J}}(\bm{r},t)$ can be written in the same form as the incident radiation $\bm{\mathcal{E}}_{\rm{in}}(\bm{r},t)$, namely 
+\begin{align}
+\label{eq:NFS_E}
+\bm{\mathcal{E}}(\bm{r},t) &= \bm{E}(y,t) \e^{\i(\bm{k} \bm{r} - \omega t)}\ , \\
+\label{eq:NFS_J}
+\boldsymbol{\mathcal{J}}(\bm{r},t) &= \bm{J}(y,t) \e^{\i(\bm{k} \bm{r} - \omega t)}\ .
+\end{align}
+The amplitudes $\bm{E}(y,t)$ and $\bm{J}(y,t)$ only depend on the spatial coordinate $y$ because absorption as well as refraction occur along the propagation direction. Since $\bm{E}(y,t)$ and $\bm{J}(y,t)$ furthermore change only slowly in time in comparison to the exponent, the so-called slowly-varying amplitude approximation can be applied, reducing Maxwell's equation to
+\begin{equation}
+\frac{\partial}{\partial y} \bm{E}(y,t) = -\frac{2 \pi}{c} \bm{J}(y,t)
+\label{eq:NFS_Maxwell-slowly}
+\end{equation}
+with boundary condition
+\begin{equation}
+\bm{E}(0,t) = \bm{E}_{\rm{in}}(t)\ .
+\label{eq:NFS_Maxwell-boundary}
+\end{equation}
+
+Once we have solved Eq.~(\ref{eq:NFS_Maxwell-slowly}), the forward scattered intensity spectrum behind the target is given by
+\begin{equation}
+I(t) = \left| \bm{E}(L,t) \right|^2\ ,
+\label{eq:NFS_intensity}
+\end{equation}
+where $L$ denotes the thickness of the nuclear sample. In order to find a solution for Eq.~\eqref{eq:NFS_Maxwell-slowly}, it is first necessary to derive an explicit expression for the macroscopic nuclear current density $\bm{J}(y,t)$.
+
+
+%------------------------------------------------------------------------------------%
+\section{Nuclear current density}
+\label{sec:nuc-current}
+
+
+The macroscopic nuclear current density $\boldsymbol{\mathcal{J}}(\bm{r},t)$ can be written as a sum over all individual nuclear current densities which are usually written down in momentum space,
+\begin{equation}
+\boldsymbol{\mathcal{J}}(\bm{r},t) = \int \frac{\d^3\bm{k}'}{(2 \pi)^3}\, \e^{\i \bm{k}' \bm{r}} \sum_{\alpha} \mem{\psi_{\alpha}(t)}{\bm{j}(\bm{k}')}{\psi_{\alpha}(t)} \e^{-\i \bm{k}' \bm{r}_{\alpha}}\ ,
+\label{eq:NFS_macro-current}
+\end{equation}
+where $\bm{r}_{\alpha}$ represents the position of nucleus $\alpha$, \ket{\psi_{\alpha}(t)} stands for the time dependent nuclear wave function and $\bm{j}(\bm{k}')$ is the momentum representation of the operator for the current density of a single nucleus in the Schr\"{o}dinger picture.
+
+In order to evaluate the matrix element of the nuclear current density operator, we first need to define the Hamiltonian for an individual nucleus. Since we consider resonant light-nucleus interactions of energetically well separated nuclear transitions, each nucleus can be represented as a two level system with transition energy $\omega_0 = E _{\rm{e}} - E _{\rm{g}}$ and a natural line width $\Gamma_0$. In addition, the ground and excited states are characterized by their total spin quantum number $\bm{I}_{\lambda}$ with projections $M_{\lambda}$ and magnetic moments $\bm{\mu}_{\lambda}$ [$\lambda \in \{g,e\}$]. The general Hamiltonian is given by
+\begin{equation}
+H = H_0 + H _{\rm{hf}}(t) + H_{\gamma}(t)\ .
+\label{eq:NFS_Hamiltonian}
+\end{equation}
+Here, $H_0$ represents the unperturbed nuclear Hamiltonian determined by
+\begin{equation}
+H_0 = \Big( E_{\lambda} - \i \frac{\Gamma_0}{2} \delta_{\lambda,e} \Big) \ketm{I_{\lambda} M_{\lambda}} \bram{I_{\lambda} M_{\lambda}} \ ,
+\label{eq:NFS_Hamiltonian-0}
+\end{equation}
+where $\delta_{\lambda,e}$ represents the Kronecker delta which is one only for $\lambda=e$ and otherwise zero. The hyperfine interactions $H _{\rm{hf}}(t)$ can be time dependent. An explicit form of $H _{\rm{hf}}(t)$ is given later in Secs.~\ref{sec:static-hf}, \ref{sec:rot-hf} and \ref{sec:switch-hf} when the special cases of the considered hyperfine interactions are discussed. Here, we first discuss the problem for a general $H_{\rm{hf}}(t)$.
+
+The Hamiltonian $H_{\gamma}(t)$ describes the light-nucleus interaction and is given in Eq.~\eqref{H_int}. Here, it is important that Eq.~\eqref{H_int} can be rewritten such that we obtain \cite{Shvydko1992.JOP, Shvydko1993.JOP}
+\begin{equation}
+H_{\gamma}(t) = \frac{\i}{\omega} \bm{j}^{\dagger}(\bm{k}) \bm{E}(y_{\alpha},t) \e^{\i(\bm{k} \bm{r}_{\alpha} - \omega t)}\ .
+\label{eq:NFS_Hamiltonian-gamma}
+\end{equation}
+In the derivation of this expression the Coulomb gauge, the special form of the electromagnetic field given in Eq.~(\ref{eq:NFS_E}) and the slowly varying amplitude approximation were employed.
+% (see App.~\ref{app:NFS}).
+
+The time-dependent matrix element \me{\psi_{\alpha}(t)}{\bm{j}(\bm{k})}{\psi_{\alpha}(t)} occurring in Eq.~(\ref{eq:NFS_macro-current}) can be written as
+\begin{equation}
+\mem{\psi_{\alpha}(t)}{\bm{j}(\bm{k}')}{\psi_{\alpha}(t)} = \mem{I _{\rm{g}} M _{\rm{g}}}{U^{\dagger}(t,-\infty) \bm{j}(\bm{k}') U(t,-\infty)}{I _{\rm{g}} M _{\rm{g}}}\ ,
+\label{eq:NFS_macro-current-me}
+\end{equation}
+where the system was assumed to be in the ground state with specific spin $I _{\rm{g}}$ and spin projection quantum number $M _{\rm{g}}$ at time $t = -\infty$. The time evolution operator $U(t,t')$ is defined by
+\begin{equation}
+U(t,t') = T \exp\left( -\i \int_{t'}^{t} \d t'\, (H_0 + H _{\rm{hf}}(t') ) \right)\ ,
+\label{eq:NFS_time-evo-op}
+\end{equation}
+with $T$ being the so-called time ordering operator. Since the light-nucleus interaction can be assumed to be weak ($H_{\gamma} \ll H_0 + H _{\rm{hf}}$), it is possible to apply perturbation theory for calculating \me{\psi_{\alpha}(t)}{\bm{j}(\bm{k})}{\psi_{\alpha}(t)}. The detailed derivation is presented in App.~\ref{app:NFS}. An important remark is that resonant scattering is always a second order process because the resonant photon absorption is followed by a reemission process.
+
+In the calculation of the macroscopic nuclear current density $\boldsymbol{\mathcal{J}}(\bm{r},t)$ (see App.~\ref{app:NFS}) an important step is the assumption of a macroscopic nuclear ensemble. This assumption allows us to exploit the following relation
+\begin{equation}
+\sum_{\alpha} \e^{\i (\bm{k} - \bm{k}') \bm{r}_{\alpha}} = (2 \pi)^3 n_0 \delta(\bm{k} - \bm{k}')\ ,
+\label{eq:NFS_macro-ensemble}
+\end{equation}
+where $n_0$ is the number of resonant nuclei per unit volume. Accordingly, the interplay of all individual nuclei contributing to the scattering process determines the directionality of NFS. If the number of contributing nuclear scatterers is macroscopic, the angular dependence of the scattering is proportional to the delta function $\delta(\bm{k} - \bm{k}')$, leading to nuclear forward scattering.
+
+Using the derived expression for the macroscopic current density $\boldsymbol{\mathcal{J}}(\bm{r},t)$ it is possible to express the wave equation of NFS in terms of individual nuclear current densities (see App.~\ref{app:NFS}), namely
+\begin{equation}
+\frac{\partial}{\partial y} \bm{E}(y,t) = -\sum_{\ell} K_{\ell} \bm{J}_{\ell}(\bm{k},t) \int_{-\infty}^t \d t'\, \bm{J}_{\ell}^{*}(\bm{k},t') \cdot \bm{E}(y,t')\ .
+\label{eq:NFS_wave-eq-general}
+\end{equation}
+The occurring matrix elements $\bm{J}_{\ell}^*$ and $\bm{J}_{\ell}$ describe the nuclear excitation and de-excitation, respectively. They are defined by
+\begin{align}
+%\label{eq:NFS_nucl-current-star}
+\bm{J}_{\ell}^{*}(\bm{k},t) &= \mem{\psi_{I _{\rm{e}} M _{\rm{e}}}(t)}{\bm{j}^{\dagger}(\bm{k})}{\psi_{I _{\rm{g}} M _{\rm{g}}}(t)} \e^{-\i \omega_0 t}\ , \nonumber \\
+\label{eq:NFS_nucl-current}
+\bm{J}_{\ell}(\bm{k},t) &= \mem{\psi_{I _{\rm{g}} M _{\rm{g}}}(t)}{\bm{j}(\bm{k})}{\psi_{I _{\rm{e}} M _{\rm{e}}}(t)} \e^{\i \omega_0 t}\ ,
+\end{align}
+where \ket{\psi_{I_{\lambda} M_{\lambda}}(t)} (${\lambda}=g,e$) are the time dependent eigenstates of the nuclear spin operators $\bm{I}_{\lambda}$. Note that $\ell$ is a multi-index standing for the projection quantum numbers $M _{\rm{g}}$ and $M _{\rm{e}}$. 
+
+Now, let us have a closer look on Eq.~(\ref{eq:NFS_wave-eq-general}). Under the integral sign on the RHS the scalar product $\bm{J}_{\ell}^{*}(\bm{k},t') \cdot \bm{E}(y,t')$ appears. It describes a nuclear excitation at time $t'$ induced by the electromagnetic field $\bm{E}$. This nuclear excitation subsequently decays via the emission of a photon at time $t$ which is represented by $\bm{J}_{\ell}(\bm{k},t)$ in front of the integral. Moreover, since it is a priori not known when the nuclear activation takes place, the excitation process needs to be integrated over all possible excitation times, hence, from $-\infty$ to $t$. The summation over $\ell$ comes from the fact that all allowed transitions need to be taken into account for the wave propagation. For instance, when several transitions with different frequencies are driven at once, the summation over $\ell$ results in the already mentioned quantum beat pattern.
+%Additionally, the scalar product ensures that only transition are excited where angular momentum is conserved. For instance, a linearly x-polarized field impinging on a nuclear target with magnetic field pointing along the z direction can only drive transitions where the magnetic projection quantum number does not change.
+Furthermore, the weight coefficients $K_{\ell}$ appearing in Eq.~(\ref{eq:NFS_wave-eq-general}) are given by
+\begin{equation}
+K_{\ell} = \frac{2 \pi n_0}{k c^2 (2 I _{\rm{g}} +1 )}  f_{\rm{LM}}(\bm{k})\ ,
+\label{eq:NFS_Kl}
+\end{equation}
+where $ f_{\rm{LM}}$ is the Lamb-M\"{o}ssbauer factor describing the probability of a recoilless absorption and $k$ denotes the absolute value of the wave vector $\bm{k}$. %Important to keep in mind is that $\bm{k}$ which is used in Eq.~\ref{} always coincides with the incident wave vector $\bm{k}_0$ in NFS.
+
+The wave equation (\ref{eq:NFS_wave-eq-general}) describes the coherent propagation of an electromagnetic field due to NFS under time-dependent hyperfine interactions. Because of the collective interplay between many nuclear scatterers, the nuclear scattering process exhibits a high directionality into the forward direction. Eq.~\eqref{eq:NFS_wave-eq-general} predicts the forward scattered response. The appearance of the characteristic NFS beat pattern, the dynamical and quantum beats, is treated in more detail in the next Sections. There, we first present a general solution of Eq.~(\ref{eq:NFS_wave-eq-general}). This solution is then afterwards applied to the special cases of static hyperfine interactions, instantaneous B-field rotations and prompt deactivation and activation of the magnetic field, which represent the basic tools for our control schemes of hard x-rays discussed in Chaps.~\ref{chap:pol-control}, \ref{chap:logical-gates} and \ref{chap:quantum-eraser}. 
+
+%------------------------------------------------------------------------------------%
+\section{General solution}
+\label{sec:solution}
+
+
+In order to solve Eq.~(\ref{eq:NFS_wave-eq-general}) it is helpful to introduce dimensionless space and time variables $\xi$ and $\tau$, respectively. They are defined by
+\begin{align}
+\xi &= \frac{1}{4} \sigma_{\rm{R}} n_0 y\ , \nonumber \\
+\label{eq:NFS_xi-tau}
+\tau &= \Gamma_0 t\ ,
+\end{align}
+where $\sigma_{\rm{R}}$ is the total nuclear cross section of resonant absorption and $\Gamma_0$ the full natural transition width. For the special case of $y=L$, the spatial variable $\xi$ is also known as effective thickness of the resonant scattering as it was introduced in the beginning of this Chapter. Using these definitions and after rescaling the nuclear transition currents $\bm{J}_{\ell}^{*}$ and $\bm{J}_{\ell}$ according to
+\begin{align}
+%\label{eq:NFS_nucl-current-transformation-star}
+\bm{J}_{\ell}^{*} &\mapsto \left[ \frac{ f_{\rm{LM}}(\bm{k}) (1+\alpha _{\rm{ic}}) 4\omega}{(2 I _{\rm{e}} +1) c^3 \Gamma_0} \right]^{1/2} \, \bm{J}_{\ell}^{*}\ , \nonumber \\
+\label{eq:NFS_nucl-current-transformation}
+\bm{J}_{\ell} &\mapsto \left[ \frac{ f_{\rm{LM}}(\bm{k}) (1+\alpha _{\rm{ic}}) 4\omega}{(2 I _{\rm{e}} +1) c^3 \Gamma_0}\right]^{1/2} \, \bm{J}_{\ell}\ ,
+\end{align}
+the wave equation reduces to
+\begin{equation}
+\frac{\partial}{\partial \xi} \bm{E}(\xi,\tau) = -\sum_{\ell} \bm{J}_{\ell}(\bm{k},\tau) \int_{-\infty}^{\tau} \d\tau'\, \bm{J}_{\ell}^{*}(\bm{k},\tau') \cdot \bm{E}(\xi,\tau')\ .
+\label{eq:NFS_wave-eq-dimensionless}
+\end{equation}
+
+This equation is similar to a Schr\"{o}dinger equation where time is replaced by the effective thickness $\xi$. Analogously to perturbation theory it is possible to represent the solution of Eq.~(\ref{eq:NFS_wave-eq-dimensionless}) as a power series in $\xi$,
+\begin{equation}
+\bm{E}(\xi,\tau) = \sum_{p=0}^{\infty} \bm{E}^{(p)}(\xi,\tau) = \sum_{p=0}^{\infty} \frac{(-\xi)^p}{p!} \bm{E}^{(p)}(\tau)\ .
+\label{eq:NFS_scattering-ampl}
+\end{equation}
+The term $p=0$ represents the boundary condition given in Eq.~\eqref{eq:NFS_Maxwell-boundary} and reads
+\begin{equation}
+\bm{E}^{(0)}(\xi,\tau) = \bm{E}_{\rm{in}}(\tau)\ .
+\label{eq:NFS_scattering-ampl-boundary}
+\end{equation}
+Accordingly, the 0$^{\rm{th}}$ order scattering experiences no resonant interaction because it leaves the nuclear target unperturbed. For this reason, $\bm{E}^{(0)}$ must be independent of the effective thickness $\xi$.
+
+All higher order terms are obtained from power matching in $\xi$ by inserting Eq.~(\ref{eq:NFS_scattering-ampl}) into the wave equation. It turns out (see App.~\ref{app:NFS}) that the $p^{\rm{th}}$ order scattering fulfills Eq.~(\ref{eq:NFS_wave-eq-dimensionless}), where $\bm{E}$ on the RHS is replaced by the $(p-1)^{\rm{th}}$ order term $\bm{E}^{(p-1)}$,
+\begin{equation}
+\frac{\partial}{\partial \xi} \bm{E}^{(p)}(\xi,\tau) = -\sum_{\ell} \bm{J}_{\ell}(\bm{k},\tau) \int_{-\infty}^{\tau} \d\tau'\, \bm{J}_{\ell}^{*}(\bm{k},\tau') \cdot \bm{E}^{(p-1)}(\xi,\tau')\ .
+\label{eq:NFS_wave-eq-scattering-ampl}
+\end{equation}
+By using the explicit $\xi$-dependence of $\bm{E}^{(p)}(\xi,\tau)$ given in Eq.~(\ref{eq:NFS_scattering-ampl}), the following recursion relation is obtained
+\begin{equation}
+\bm{E}^{(p)}(\tau) = \sum_{\ell} \bm{J}_{\ell}(\bm{k},\tau) \int_{-\infty}^{\tau} \d\tau'\, \bm{J}_{\ell}^{*}(\bm{k},\tau') \cdot \bm{E}^{(p-1)}(\tau')\ .
+\label{eq:NFS_scattering-ampl-solution}
+\end{equation}
+This equation shows that the order $p$ indicates the number of scattering events which occur inside the nuclear sample. For instance, $\bm{E}^{(1)}$ represents the single scattering solution with only one resonant absorption and reemission. Due to this interpretation the terms $\bm{E}^{(p)}$ are often referred as multiple scattering amplitudes.
+
+Since the first order is in most cases the dominating scattering contribution (in particular for thin samples or in general for small interaction times), it is useful to write down the explicit form of $\bm{E}^{(1)}$:
+\begin{align}
+%\label{eq:NFS_scattering-ampl-1st}
+\bm{E}^{(1)}(\tau) &= \sum_{\ell} \bm{J}_{\ell}(\bm{k},\tau) \int_{-\infty}^{\tau} \d\tau'\, \bm{J}_{\ell}^{*}(\bm{k},\tau') \cdot \bm{E}^{(0)}(\tau') \nonumber \\
+&= \sum_{\ell} \bm{J}_{\ell}(\bm{k},\tau) \left( \bm{J}_{\ell}^{*}(\bm{k},0) \cdot \bm{e}_{\rm{p}}\right)\ .
+\label{eq:NFS_scattering-ampl-1st-delta}
+\end{align}
+In the second line the incident radiation was assumed to be a SR pulse with polarization $\bm{e}_{\rm{p}}$ which can be represented as $\delta$-distribution in time,
+%
+\begin{equation}
+\bm{E}_{\rm{in}}(\tau) = \bm{e}_{\rm{p}} \delta(\tau)\ .
+\label{eq:NFS_scattering-ampl-boundary-delta}
+\end{equation}
+%
+This $\delta$-like pulse eliminates the integration over $\tau'$ in Eq.~\eqref{eq:NFS_scattering-ampl-1st-delta} and fixes the time of the initial nuclear excitation to $\tau'=0$.
+
+In general the integrals occurring in the recursion relation (\ref{eq:NFS_scattering-ampl-solution}) cannot be solved analytically and require a numerical treatment. Note that for most situations the number of scattering orders taken into account can be limited by some $p_{\rm{max}}$. However, if there is only a single resonance seen by the incident pulse (e.g. no hyperfine splitting), it will be possible to obtain an analytic solution as shown in the next Section.
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Static hyperfine interactions}
+\label{sec:static-hf}
+
+In the case of static hyperfine interactions the Hamiltonian $H _{\rm{hf}}$ can be written as
+\begin{equation}
+H _{\rm{hf}} = -\frac{\mu_{\lambda}}{I_{\lambda}} \bm{I}_{\lambda} \cdot \bm{B}\ ,
+\label{eq:NFS_Hamiltonian-hf-static}
+\end{equation}
+where $\bm{I}_{\lambda}$ is the nuclear spin operator, $I_{\lambda}$ its eigenvalue and $\bm{B}$ denotes the magnetic field at the nucleus. In the following it is assumed that the magnetic field points along the $z$-direction, $\bm{B}=B_0 \bm{e}_z$. Moreover, we introduce the factor $\epsilon_{\lambda}=\mu_{\lambda} B_0/I_{\lambda}$ standing for the energy splitting caused by the hyperfine interactions.
+
+In the case of a static magnetic field it is possible to express the time-dependent nuclear transition currents $\bm{J}_{\ell}^{*}$ and $\bm{J}_{\ell}$ in terms of the time-independent matrix elements of the current density operator \me{I _{\rm{e}} M _{\rm{e}}}{\bm{j}^{\dagger}}{I _{\rm{g}} M _{\rm{g}}} and \me{I _{\rm{g}} M _{\rm{g}}}{\bm{j}}{I _{\rm{e}} M _{\rm{e}}}, respectively. Therefore, the nuclear spin eigenstates must be evolved in time [see Eqs.~\eqref{eq:NFS_Hamiltonian} and \eqref{eq:NFS_time-evo-op}],
+\begin{equation}
+\ketm{\psi_{I_{\lambda} M_{\lambda}}(t)} = U(t,0) \ketm{I_{\lambda} M_{\lambda}} = \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}) t } \ketm{I_{\lambda} M_{\lambda}}\ ,
+\label{eq:NFS_psi-static}
+\end{equation}
+where it was assumed that \ket{\psi_{I_{\lambda} M_{\lambda}}(t)} coincides with \ket{I_{\lambda} M_{\lambda}} at $t=0$. Inserting Eq.~\eqref{eq:NFS_psi-static} into the definition of the nuclear transition currents given by Eqs.~\eqref{eq:NFS_nucl-current} leads to the following time dependence
+\begin{align}
+%\label{eq:NFS_nucl-current-static-star}
+\bm{J}_{\ell}^*(\bm{k},\tau) &= \e^{ \i \Omega_{\ell} \tau - \tau/2 } \bm{j}_{\ell}^*(\bm{k})\ , \nonumber \\
+\label{eq:NFS_nucl-current-static}
+\bm{J}_{\ell}(\bm{k},\tau) &= \e^{ -\i \Omega_{\ell} \tau - \tau/2 } \bm{j}_{\ell}(\bm{k})\ ,
+\end{align}
+with 
+\begin{equation}
+\Omega_{\ell} = \left( M _{\rm{g}} \epsilon _{\rm{g}} - M _{\rm{e}} \epsilon _{\rm{e}} \right) / \Gamma_0
+\label{eq:NFS_omegal}
+\end{equation}
+describing the frequency correction due to magnetic hyperfine splitting in units of $\Gamma_0$. The amplitudes $\bm{j}_{\ell}^*$ and $\bm{j}_{\ell}$ appearing in Eqs.~(\ref{eq:NFS_nucl-current-static}) denote the time-independent transition elements of the current density operators $\bm{j}^{\dagger}$ and $\bm{j}$, respectively,
+\begin{align}
+%\label{eq:NFS_trans-ampl-star}
+\bm{j}_{\ell}^*(\bm{k}) &= \left[ \frac{ f_{\rm{LM}}(\bm{k}) (1+\alpha _{\rm{ic}}) 4\omega}{(2 I _{\rm{e}} +1) c^3 \Gamma_0} \right]^{1/2} \mem{I _{\rm{e}} M _{\rm{e}}}{\bm{j}^{\dagger}}{I _{\rm{g}} M _{\rm{g}}}\ , \nonumber \\
+\label{eq:NFS_trans-ampl}
+\bm{j}_{\ell}(\bm{k}) &= \left[ \frac{ f_{\rm{LM}}(\bm{k}) (1+\alpha _{\rm{ic}}) 4\omega}{(2 I _{\rm{e}} +1) c^3 \Gamma_0} \right]^{1/2} \mem{I _{\rm{g}} M _{\rm{g}}}{\bm{j}}{I _{\rm{e}} M _{\rm{e}}}\ .
+\end{align}
+
+The explicit forms of $\bm{j}_{\ell}^*$ and $\bm{j}_{\ell}$ depend on the type of transition to which the electromagnetic field couples. In the case of $\mathcal{M}1$ transitions (e.g., the 14.4~keV transition in ${}^{57}$Fe) the amplitudes are given by
+\begin{align}
+%\label{eq:NFS_trans-ampl-M1-star}
+\bm{j}_{\ell}^*(\bm{k}) &= \sqrt{3  f_{\rm{LM}}(\bm{k})}  \sum_{q=0,\pm1} \threejm{I _{\rm{g}}}{1}{I _{\rm{e}}}{-M _{\rm{g}}}{q}{M _{\rm{e}}} (-1)^{q+I _{\rm{g}}-M _{\rm{g}}} \left( \hat{\bm{k}} \times \bm{\varepsilon}_{-q}^* \right)\ , \nonumber \\
+\label{eq:NFS_trans-ampl-M1}
+\bm{j}_{\ell}(\bm{k}) &= \sqrt{3  f_{\rm{LM}}(\bm{k})} \sum_{q=0,\pm1} \threejm{I _{\rm{g}}}{1}{I _{\rm{e}}}{-M _{\rm{g}}}{q}{M _{\rm{e}}} (-1)^{q+I _{\rm{g}}-M _{\rm{g}}} \left( \hat{\bm{k}} \times \bm{\varepsilon}_{-q} \right)\ ,
+\end{align}
+where $\hat{\bm{k}}=\bm{k}/k$ and \threej{I _{\rm{g}}}{1}{I _{\rm{e}}}{-M _{\rm{g}}}{q}{M _{\rm{e}}} stands for the Wigner 3$j$-symbol \cite{Edmonds} which dictates the selection rules of the driven transition and ensures angular momentum conservation. For instance, $\mathcal{M}1$ transitions only allow for a change in the magnetic projection quantum number of either $q=0$ or $q=\pm1$. Moreover, the cross products $\hat{\bm{k}} \times \bm{\varepsilon}_{-q}^*$ and $\hat{\bm{k}} \times \bm{\varepsilon}_{-q}$ determine the directions of the nuclear currents. Here, $\bm{\varepsilon}_{q}$ stands for the spherical unit vectors which can be expressed in terms of the Cartesian unit vectors $\bm{e}_x$, $\bm{e}_y$ and $\bm{e}_z$ [see Eq.~\eqref{eq:NFS_n+-1}].
+%
+%\begin{align}
+%\label{eq:NFS_n0}
+%\bm{\varepsilon}_0 &= \bm{e}_z\ , \\
+%\label{eq:NFS_n+-1}
+%\bm{\varepsilon}_{\pm1} &= \mp \frac{1}{\sqrt{2}} \left( \bm{e}_x \pm \i\bm{e}_y \right)\ .
+%\end{align}
+%\textcolor{red}{Vorsicht: wurden schon in chap. 2 definiert}
+%
+It is important that the spherical unit vectors are always chosen such that $\bm{\varepsilon}_0$ points along the quantization axis of the system. So far it was explicitly assumed that the magnetic field $\bm{B}$ and hence the quantization axis is parallel to $\bm{e}_z$. In order to generalize to arbitrary B-field directions only the spherical unit vectors need to be changed properly, meaning $\bm{\varepsilon}_0$ must coincide with the quantization axis. The vectors $\bm{\varepsilon}_{\pm1}$ can then be chosen arbitrarily under the condition that they are mutually orthogonal and perpendicular to $\bm{\varepsilon}_0$.
+
+By inserting the explicit forms of the nuclear transition currents $\bm{J}_{\ell}^{*}$ and $\bm{J}_{\ell}$ given in Eqs.~\eqref{eq:NFS_nucl-current-static} into Eq.~(\ref{eq:NFS_scattering-ampl-solution}) one obtains the recursive solution for static hyperfine interactions
+\begin{equation}
+\bm{E}^{(p)}(\tau) = \sum_{\ell} \e^{ -\i \Omega_{\ell} \tau - \tau/2 } \bm{j}_{\ell}(\bm{k}) \int_{-\infty}^{\tau} \d\tau'\, \e^{ \i \Omega_{\ell} \tau' - \tau'/2 } \bm{j}_{\ell}^{*}(\bm{k}) \cdot \bm{E}^{(p-1)}(\tau')\ .
+\label{eq:NFS_scattering-ampl-solution-static}
+\end{equation}
+In general, the integrals appearing in this equation need to be solved numerically. However, for the case of an absent magnetic field an analytic solution of the wave equation can be derived. The absence of the magnetic field implies that there is no Zeeman splitting of the nuclear states. Correspondingly, the frequency terms $\Omega_{\ell}$ which describe the correction to the nuclear resonance frequency $\omega_0$ in dependence of the magnetic projection quantum numbers vanish and the nuclear system reduces to a single resonance. According to Eq.~(\ref{eq:NFS_scattering-ampl-solution-static}) the $p^{\rm{th}}$ scattering amplitude can be written as
+\begin{equation}
+\bm{E}^{(p)}(\tau) = \sum_{\ell} \e^{ - \tau/2 } \bm{j}_{\ell}(\bm{k}) \int_{-\infty}^{\tau} \d\tau'\, \e^{ - \tau'/2 } \bm{j}_{\ell}^{*}(\bm{k}) \cdot \bm{E}^{(p-1)}(\tau')\ .
+\label{eq:NFS_scattering-ampl-solution-single}
+\end{equation}
+In the following the incident radiation is assumed to be $\delta$-like in time with polarization $\bm{e}_{\rm{p}}$. Moreover, we particularize to $\mathcal{M}1$ transitions in order to exploit the expression for $\bm{j}_{\ell}^*$ and $\bm{j}_{\ell}$ given in Eqs.~(\ref{eq:NFS_trans-ampl-M1}). Using the orthogonality property of the 3$j$-symbols one obtains
+\begin{equation}
+\bm{E}(\xi,\tau) = \bm{e}_{\rm{p}} \e^{-\tau/2} \left( \delta(\tau) - \xi \sum_{p=0}^{\infty} \frac{(-\xi \tau)^p}{(p+1)! p!} \right) 
+= \bm{e}_{\rm{p}} \e^{-\tau/2} \left( \delta(\tau) - \xi \frac{J_1(2\sqrt{\xi \tau})}{\sqrt{\xi \tau}}\right)\ .
+\label{eq:NFS_field-solution-single}
+\end{equation}
+The second term in Eq.~(\ref{eq:NFS_field-solution-single}) exactly describes the dynamical beat already provided in Eq.~(\ref{eq:NFS_bessel}). After the introduction of the scattering orders $\bm{E}^{(p)}$ it is now clear that multiple scattering effects are responsible for the dynamical beat pattern in the time spectrum.
+
+Note that for a single resonance the quantum beat pattern totally disappears because the nuclear system can be defined by a single frequency namely the resonance $\omega_0$. However, if the magnetic field is not equal to zero two or even more transitions may be driven simultaneously, e.g., $\ell_1$ and $\ell_2$ with $\Omega_{\ell_1} \neq \Omega_{\ell_2}$. Since the final scattering amplitude contains a summation over all contributing hyperfine transitions $\ell$, an interference between $\ell_1$ and $\ell_2$ may be imprinted in the measured time spectrum. This interference pattern will strongly depend on the frequency difference $(\Omega_{\ell_1} - \Omega_{\ell_2})$ and is called quantum beating.
+
+
+
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Instantaneous rotations of the magnetic field}
+\label{sec:rot-hf}
+
+
+In this Section nuclear forward scattering is studied in the presence of instantaneous magnetic field rotations. The corresponding Hamiltonian for the occurring hyperfine interactions can be written as
+\begin{equation}
+H _{\rm{hf}}(t) = - \mu_{\lambda} \frac{\bm{I}_{\lambda}}{I_{\lambda}} \cdot \left[ \bm{B}_{\mathrm{I}} \Theta(t_0-t) + \bm{B}_{\mathrm{II}} \Theta(t-t_0) \right]
+= \begin{cases} -\epsilon_{\lambda} (I_{\lambda})_{z_{\mathrm{I}}} & \mathrm{for}\quad t<t_0\ , \\
+                 -\epsilon_{\lambda} (I_{\lambda})_{z_{\mathrm{II}}} & \mathrm{for}\quad t>t_0\ , \end{cases}
+\label{eq:NFS_Hamiltonian-hf-rot}
+\end{equation}
+where the magnetic fields are defined by $\bm{B}_{\mathrm{I}} = B_0 \bm{e}_{z_{\mathrm{I}}}$ and $\bm{B}_{\mathrm{II}} = B_0 \bm{e}_{z_{\mathrm{II}}}$. The operators $(I_{\lambda})_{z_{\mathrm{I}}}$ and $(I_{\lambda})_{z_{\mathrm{II}}}$ represent the $z_{\mathrm{I}}$- and $z_{\mathrm{II}}$-components of the nuclear spin operator $\bm{I}_{\lambda}$. The time of rotation is represented by $t_0$.
+
+Analogously to the previous Section the main task is to express the time-dependent transition currents in terms of the amplitudes $\bm{j}_{\ell}^*$ and $\bm{j}_{\ell}$. This again requires to calculate the general time evolution of \ket{\psi_{I_{\lambda} M_{\lambda}}(t)} for $t>t_0$, but now under hyperfine interactions given by Eq.~(\ref{eq:NFS_Hamiltonian-hf-rot}). Since $H _{\rm{hf}}$ can be divided in two parts, $t<t_0$ and $t>t_0$ (each individual part describes a static B-field), the result of the previous Section can be used.
+
+The idea is first to propagate in time from $0$ to $t_0$ and afterwards from $t_0$ to $t$,
+\begin{equation}
+\ketm{\psi_{I_{\lambda} M_{\lambda}}(t)} = U(t,0) \ketm{I_{\lambda} M_{\lambda}} 
+= U_{\mathrm{II}}(t,t_0) U_{\mathrm{I}}(t_0,0) \ketm{I_{\lambda} M_{\lambda}}\ ,
+\label{eq:NFS_psi-rot-1}
+\end{equation}
+where the indices $\mathrm{I}$ and $\mathrm{II}$ indicate the splitting into two time sectors each with static hyperfine interactions. In order to apply the first evolution $U_{\mathrm{I}}(t_0,0)$, the system is assumed to be initially at time $t=0$ in an eigenstate of $\bm{I}_{\lambda}$ and $(I_{\lambda})_{z_{\mathrm{I}}}$ which is henceforth denoted by $\ketm{I_{\lambda} M_{\lambda}}_{z_{\mathrm{I}}}$. Note that the index $z_{\mathrm{I}}$ is usually omitted if it is not important to explicitly name the quantization axis. 
+
+The time evolution from $0$ to $t_0$ results in [see Eq.~\eqref{eq:NFS_time-evo-op}]
+%
+\begin{equation}
+U_{\mathrm{I}}(t_0,0) \ketm{I_{\lambda} M_{\lambda}}_{z_{\mathrm{I}}} = \e^{ -\i  \int_{0}^{t_0} \d t' \left( H_0 -\epsilon_{\lambda} (I_{\lambda})_{z_{\mathrm{I}}} \right) } \ketm{I_{\lambda} M_{\lambda}}_{z_{\mathrm{I}}} 
+= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}) t_0 } \ketm{I_{\lambda} M_{\lambda}}_{z_{\mathrm{I}}}\ .
+\label{eq:NFS_psi-rot-2}
+\end{equation}
+%
+In order to apply $U_{\mathrm{II}}$ onto Eq.~\eqref{eq:NFS_psi-rot-2} the eigenstates $\ketm{I_{\lambda} M_{\lambda}}_{z_{\mathrm{I}}}$ need to be expressed in terms of $\ketm{I_{\lambda} M_{\lambda}}_{z_{\mathrm{II}}}$ which represent the eigenstates $\bm{I}_{\lambda}$ and $(I_{\lambda})_{z_{\mathrm{II}}}$. This can be achieved by using the so-called Wigner rotation matrices $\mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I_{\lambda}}(\alpha,\beta,\gamma)$ \cite{Edmonds} according to
+\begin{equation}
+\ketm{I_{\lambda} M_{\lambda}}_{z_{\mathrm{I}}} = \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I}(\alpha,\beta,\gamma) \ketm{I_{\lambda} M_{\lambda}'}_{z_{\mathrm{II}}}\ ,
+\label{eq:NFS_D-matrices}
+\end{equation}
+where the Euler angles $\alpha$, $\beta$ and $\gamma$ define the rotation of the quantization axis from $z_{\mathrm{I}}$ to $z_{\mathrm{II}}$. Using this relation yields
+\begin{align}
+%\label{eq:NFS_psi-rot-3}
+U_{\mathrm{II}}(t,t_0) \ketm{I_{\lambda} M_{\lambda}}_{z_{\mathrm{I}}} &= \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I}(\alpha,\beta,\gamma) U_{\mathrm{II}}(t,t_0) \ketm{I_{\lambda} M_{\lambda}'}_{z_{\mathrm{II}}} \nonumber \\
+%\label{eq:NFS_psi-rot-4}
+&= \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I}(\alpha,\beta,\gamma) \e^{ -\i  \int_{t_0}^{t} \d t' \left( H_0 -\epsilon_{\lambda} (I_{\lambda})_{z_{\mathrm{II}}} \right) } \ketm{I_{\lambda} M_{\lambda}'}_{z_{\mathrm{II}}} \nonumber  \\
+\label{eq:NFS_psi-rot-5}
+&= \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I}(\alpha,\beta,\gamma) \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}') (t-t_0) } \ketm{I_{\lambda} M_{\lambda}'}_{z_{\mathrm{II}}}\ .
+\end{align}
+Finally, inserting Eq.~(\ref{eq:NFS_psi-rot-2}) and Eq.~(\ref{eq:NFS_psi-rot-5}) into Eq.~(\ref{eq:NFS_psi-rot-1}) leads to
+\begin{equation}
+\ketm{\psi_{I_{\lambda} M_{\lambda}}(t)} = \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} ) t} \e^{ \i \epsilon_{\lambda} M_{\lambda} t_0 } \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I_{\lambda}}(\alpha,\beta,\gamma)  \e^{ \i \epsilon_{\lambda} M_{\lambda}' (t-t_0) } \ketm{I_{\lambda} M_{\lambda}'}_{z_{\mathrm{II}}}\ .
+\label{eq:NFS_psi-rot-final}
+\end{equation}
+
+Now, we have everything at hand in order to express $\bm{J}_{\ell}^*$ and $\bm{J}_{\ell}$ in terms of $\bm{j}_{\ell}^*$ and $\bm{j}_{\ell}$. The procedure is analogue to the calculation for the case of static hyperfine interactions. We obtain for $\tau>\tau_0$
+\begin{align}
+%\label{eq:NFS_nucl-current-rot-star}
+\bm{J}_{\ell,\mathrm{II}}^*(\bm{k},\tau) &= \e^{\i \Omega_{\ell} \tau_0 - \tau/2} \sum_{\ell'} \mathcal{D}_{M _{\rm{g}}'M _{\rm{g}}}^{I _{\rm{g}} \,*}(\alpha,\beta,\gamma) \mathcal{D}_{M _{\rm{e}}'M _{\rm{e}}}^{I _{\rm{e}}}(\alpha,\beta,\gamma) \e^{\i \Omega_{\ell'} (\tau - \tau_0)} \bm{j}_{\ell',\mathrm{II}}^*(\bm{k})\ , \nonumber \\
+\label{eq:NFS_nucl-current-rot}
+\bm{J}_{\ell,\mathrm{II}}(\bm{k},\tau) &= \e^{-\i \Omega_{\ell} \tau_0 - \tau/2} \sum_{\ell'} \mathcal{D}_{M _{\rm{g}}'M _{\rm{g}}}^{I _{\rm{g}}}(\alpha,\beta,\gamma) \mathcal{D}_{M _{\rm{e}}'M _{\rm{e}}}^{I _{\rm{e}} \,*}(\alpha,\beta,\gamma) \e^{-\i \Omega_{\ell'} (\tau - \tau_0)} \bm{j}_{\ell',\mathrm{II}}(\bm{k})\ .
+\end{align}
+The index $\mathrm{II}$ indicates that for $\tau>\tau_0$ the quantization axis points along $\bm{e}_{z_{\mathrm{II}}}$ determining the spherical unit vectors included in $\bm{j}_{\ell',\mathrm{II}}^*$ and $\bm{j}_{\ell',\mathrm{II}}$. As can be seen from Eqs.~(\ref{eq:NFS_nucl-current-rot}) a rotation of the magnetic field leads to a redistribution of the nuclear currents. For $\tau>\tau_0$ the rotated currents are determined by a coherent superposition of the time-independent transition amplitudes. Thereby, the summation is performed over the whole spectrum of hyperfine transitions $\ell'$ with weight coefficients given by the product of the Wigner $\mathcal{D}$-matrices and phase factors $\e^{\pm \i\Omega_{\ell'} \tau}$ shifted backwards in time by $\tau_0$. In Chap.~\ref{chap:pol-control} it is shown how this transformation can be used for the control of the polarization properties of the scattered x-rays. For times $\tau<\tau_0$ the nuclear currents $\bm{J}_{\ell,\mathrm{I}}^*$ and $\bm{J}_{\ell,\mathrm{I}}$ are given by Eqs.~(\ref{eq:NFS_nucl-current-static}), respectively. Note that whenever we are discussing explicit rotation setups in the following Chapters, $\tau_0$ will be given in $\textit{nanoseconds}$ instead of using units of $1/\Gamma_0$ for the sake of convenience.
+
+
+
+
+
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Fast switchings of the magnetic field}
+\label{sec:switch-hf}
+
+
+In this Section the hyperfine interactions investigated so far are generalized to the case where it is not only allowed to rotate but also to switch the magnetic field off and on. Consider therefore an initially applied B-field to be switched off at time $t=t_0$ and on again at $t=t_1$. Thereby, the magnetic field after $t_1$ does not necessarily need to point in the same direction than the initial one, only their amplitudes are supposed to remain unchanged. For this situation the hyperfine interactions are determined by
+\begin{equation}
+H _{\rm{hf}}(t) = - \mu_{\lambda} \frac{\bm{I}_{\lambda}}{I_{\lambda}} \cdot \left[ \bm{B}_{\mathrm{I}} \Theta(t_0-t) + \bm{B}_{\mathrm{III}} \Theta(t-t_1) \right]
+= \begin{cases} -\epsilon_{\lambda} (I_{\lambda})_{z_{\mathrm{I}}} & \mathrm{for}\quad t<t_0\ , \\
+                0 & \mathrm{for}\quad t_0<t<t_1\ , \\
+                 -\epsilon_{\lambda} (I_{\lambda})_{z_{\mathrm{III}}} & \mathrm{for}\quad t>t_1\ . \end{cases}
+\label{eq:NFS_Hamiltonian-hf-switch}
+\end{equation}
+Here, the notations of the previous Section are adopted.
+
+Analogously to the previous Section, it is intended to express the nuclear currents $\bm{J}_{\ell}^*$ and $\bm{J}_{\ell}$ in terms of the time-independent transition amplitudes $\bm{j}_{\ell}^*$ and $\bm{j}_{\ell}$. In comparison to the case of instantaneous B-field rotations the only difference in the calculation is that the time evolution of \ket{\psi_{I_{\lambda} M_{\lambda}}(t)} splits up into three time sectors instead of two, but conceptually nothing changes. Hence, following the same steps as before, we obtain for $\tau_0<\tau<\tau_1$
+\begin{align}
+%\label{eq:NFS_nucl-current-switch-II-star}
+\bm{J}_{\ell,\mathrm{II}}^*(\bm{k},\tau) &= \e^{\i \Omega_{\ell} \tau_0 - \tau/2}  \bm{j}_{\ell',\mathrm{II}}^*(\bm{k})\ , \nonumber \\
+\label{eq:NFS_nucl-current-switch-II}
+\bm{J}_{\ell,\mathrm{II}}(\bm{k},\tau) &= \e^{-\i \Omega_{\ell} \tau_0 - \tau/2} \bm{j}_{\ell',\mathrm{II}}(\bm{k})\ ,
+\end{align}
+and for $\tau>\tau_1$
+\begin{align}
+%\label{eq:NFS_nucl-current-switch-III-star}
+\bm{J}_{\ell,\mathrm{III}}^*(\bm{k},\tau) &= \e^{\i \Omega_{\ell} \tau_0 - \tau/2} \sum_{\ell'} \mathcal{D}_{M _{\rm{g}}'M _{\rm{g}}}^{I _{\rm{g}} \,*}(\alpha,\beta,\gamma) \mathcal{D}_{M _{\rm{e}}'M _{\rm{e}}}^{I _{\rm{e}}}(\alpha,\beta,\gamma) \e^{\i \Omega_{\ell'} (\tau - \tau_1)} \bm{j}_{\ell',\mathrm{III}}^*(\bm{k})\ , \nonumber \\
+\label{eq:NFS_nucl-current-switch-III}
+\bm{J}_{\ell,\mathrm{III}}(\bm{k},\tau) &= \e^{-\i \Omega_{\ell} \tau_0 - \tau/2} \sum_{\ell'} \mathcal{D}_{M _{\rm{g}}'M _{\rm{g}}}^{I _{\rm{g}}}(\alpha,\beta,\gamma) \mathcal{D}_{M _{\rm{e}}'M _{\rm{e}}}^{I _{\rm{e}} \,*}(\alpha,\beta,\gamma) \e^{-\i \Omega_{\ell'} (\tau - \tau_1)} \bm{j}_{\ell',\mathrm{III}}(\bm{k})\ .
+\end{align}
+For $\tau<\tau_0$ the currents are again determined by Eqs.~(\ref{eq:NFS_nucl-current-static}).
+
+From Eqs.~(\ref{eq:NFS_nucl-current-switch-II}) it can be seen that by switching off the magnetic field the nuclear currents are frozen in time and only depend on the switching instant $\tau_0$. After the application of $\bm{B}_{\mathrm{III}}$ the currents are again given by a coherent summation of the transition amplitudes. However, the occurring phase factors $\e^{\pm \i\Omega_{\ell'} \tau}$ are now shifted backwards in time by $\tau_1$ instead of $\tau_0$ compared to the previous Section.
+
+
+
+
+
+
+
+
+
+%------------------------------------------------------------------------------------%
+%\section{Some equations usable for appendix}
+
+
+%\begin{align}
+%\mem{\psi_{\alpha}(t)}{\bm{j}(\bm{k})}{\psi_{\alpha}(t)} =& \mem{I _{\rm{g}} M _{\rm{g}}}{U^{\dagger}(t,-\infty)}{I _{\rm{g}} M _{\rm{g}}'} \mem{I _{\rm{g}} M _{\rm{g}}'}{\bm{j}(\bm{k})}{I _{\rm{e}} M _{\rm{e}}'} \int_{-\infty}^t \d t' \nonumber \\
+%& \mem{I _{\rm{e}} M _{\rm{e}}'}{U(t,t')}{I _{\rm{e}} M _{\rm{e}}} \mem{I _{\rm{e}} M _{\rm{e}}}{H_{\gamma}(t')}{I _{\rm{g}} M _{\rm{g}}''} \mem{I _{\rm{g}} M _{\rm{g}}''}{U(t',-\infty)}{I _{\rm{g}} M _{\rm{g}}}\ ,
+%\end{align}
+
+
+%\begin{equation}
+%\sum_{M _{\rm{e}},M _{\rm{g}}} \threejm{I _{\rm{g}}}{1}{I _{\rm{e}}}{-M _{\rm{g}}}{q'}{M _{\rm{e}}} \threejm{I _{\rm{g}}}{1}{I _{\rm{e}}}{-M _{\rm{g}}}{q}{M _{\rm{e}}} = \frac{1}{3} \delta_{q',q}
+%\end{equation}
+
+%\begin{equation}
+%\sum_{q} \left( \bm{k} \times \bm{\varepsilon}_{-q} \right) \left( \bm{k} \times \bm{\varepsilon}_{-q}^* \right) = 1
+%\end{equation}
+
+
+
+
+%\begin{align}
+%\ketm{\psi_{I_{\lambda} M_{\lambda}}(t)} &= \exp\left\{ -\i \int_{0}^t \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \exp\left\{ -\i \left( \int_{t_0}^{t} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) + \int_{0}^{t_0} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right) \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \exp\left\{ -\i \int_{t_0}^{t} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\}  \exp\left\{ -\i  \int_{0}^{t_0} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}) t_0 } \exp\left\{ -\i \int_{t_0}^{t} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}) t_0 } \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I_{\lambda}}(\alpha,\beta,\gamma) \exp\left\{ -\i \int_{t_0}^{t} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\}  \ketm{I_{\lambda} M_{\lambda}'}_{z'} \\
+%&= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}) t_0 } \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I_{\lambda}}(\alpha,\beta,\gamma) \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}') (t-t_0) } \ketm{I_{\lambda} M_{\lambda}'}_{z'} \\
+%&= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} ) t} \e^{ \i \epsilon_{\lambda} M_{\lambda} t_0 } \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I_{\lambda}}(\alpha,\beta,\gamma)  e^{ i \epsilon_{\lambda} M_{\lambda}' (t-t_0) } \ketm{I_{\lambda} M_{\lambda}'}_{z'} 
+%\end{align}
+
+
+
+
+%\begin{align}
+%\ketm{\psi_{I_{\lambda} M_{\lambda}}(t)} &= \exp\left\{ -\i \int_{0}^t \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \exp\left\{ -\i \left( \int_{t_1}^{t} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) + \int_{t_0}^{t_1} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) + \int_{0}^{t_0} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right) \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \exp\left\{ -\i \int_{t_1}^{t} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\}  \exp\left\{ -\i \int_{t_0}^{t_1} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\}  \exp\left\{ -\i  \int_{0}^{t_0} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}) t_0 } \exp\left\{ -\i \int_{t_1}^{t} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\} \exp\left\{ -\i \int_{t_0}^{t_1} \d t' H_0 \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e}) t_1 + \i \epsilon_{\lambda} M_{\lambda} t_0 } \exp\left\{ -\i \int_{t_1}^{t} \d t' \left( H_0 + H _{\rm{hf}}(t')\right) \right\} \ketm{I_{\lambda} M_{\lambda}}_z \\
+%&= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e}) t_1 + \i \epsilon_{\lambda} M_{\lambda} t_0 } \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I_{\lambda}}(\alpha,\beta,\gamma) \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e} - \epsilon_{\lambda} M_{\lambda}') (t-t_1) } \ketm{I_{\lambda} M_{\lambda}'}_{z'} \\
+%&= \e^{ -\i( E_{\lambda} - \i\frac{\Gamma_0}{2} \delta_{\lambda,e}) t } \e^{\i \epsilon_{\lambda} M_{\lambda} t_0 } \sum_{M_{\lambda}'} \mathcal{D}_{M_{\lambda}'M_{\lambda}}^{I_{\lambda}}(\alpha,\beta,\gamma) \e^{ \i \epsilon_{\lambda} M_{\lambda}' (t-t_1) } \ketm{I_{\lambda} M_{\lambda}'}_{z'}
+%\end{align}
+
+
+
+
+
+%check:
+
+%- consistency with hbar
+%- definitions k,$k_0$, $\omega$, $\omega_0$, ...
+
+

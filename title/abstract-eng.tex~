@@ -1,0 +1,21 @@
+%% Latex markup and citations may be used here
+
+{
+In the course of this Thesis the mutual control between x-rays and nuclear transitions is investigated theoretically. 
+%In particular, the commissioning of the highly brilliant and coherent x-ray free-electron laser (XFEL) is expected to strongly promote nuclear quantum optics studies from the weak to the multiple excitation regime. 
+%The commissioning of the highly brilliant and coherent x-ray free-electron lasers (XFELs) is expected to advance nuclear photoexcitation studies into the regime of multiple excitations.
+In the first part, we study the nuclear photoexcitation with the highly brilliant and coherent x-ray free-electron lasers (XFELs).
+%the changes which can be expected in this new regime of nuclear photoexcitation studies with the highly brilliant and coherent x-ray free-electron lasers (XFELs) are evaluated in terms of secondary nuclear processes. 
+Apart from amplifying the direct resonant interaction with nuclear transitions, the super-intense XFEL can produce new states of matter like cold, high-density plasmas where secondary nuclear excitation channels may come into play, e.g., nuclear excitation by electron capture (NEEC). 
+Our results predict that in the case of ${}^{57}$Fe targets secondary NEEC can be safely neglected, whereas it is surprisingly the dominating contribution (in comparison to the direct photoexcitation) for the XFEL-induced ${}^{93\rm{m}}$Mo isomer triggering. 
+Based on these case studies, we elaborate a general set of criteria to identify the prevailing excitation channel for a certain nuclear isotope.
+These criteria may be most relevant for future nuclear resonance experiments at XFEL facilities.
+On the opposite frontier, the interplay between single x-ray photons and nuclear transitions offer potential storage and processing applications for information science in their most compact form.
+In the second part of this thesis, we show that nuclear forward scattering off ${}^{57}$Fe targets can be employed to process polarization-encoded single x-rays via timed magnetic field rotations.
+Apart from the realization of logical gates with x-rays, the polarization encoding is used to design an x-ray quantum eraser scheme where the interference between scattering paths can be switched off and on in a controlled manner.
+%The realization of Boolean operations is put forward by dynamically controlling the nuclear polarization response via prompt magnetic field rotations. 
+%In the proposed polarization-control procedure, quantum interference between the scattering paths plays a crucial role. Considering an interferometer-like setup, it is further possible to construct a quantum eraser scheme where the interference can be switched off and on by gaining and erasing the ``\textit{which-way} information''. 
+Such setups may advance time-energy complementarity tests to so far unexplored paramater regimes, e.g., to the domain of x-ray quanta.
+}
+
+\thispagestyle{empty}

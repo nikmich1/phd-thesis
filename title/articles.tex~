@@ -1,0 +1,40 @@
+\ifthispageodd{}{\cleardoublepage}
+
+
+\noindent \normalfont
+In the course of this Thesis, the following article has been published in a peer-reviewed journal:
+
+\begin{itemize}
+\item Jonas Gunst, Yuri A.~Litvinov, Christoph H.~Keitel, Adriana P\'{a}lffy \\ 
+\textit{Dominant Secondary Nuclear Photoexcitation with the X-ray Free Electron Laser} \\ 
+Phys.~Rev.~Lett.~\textbf{112}, 082501 (2014) \vspace*{5pt} \\
+%
+\hspace*{0.2cm} -- Highlighted as Viewpoint in Physics, Physics \textbf{7}, 20 (2014) \\
+\hspace*{0.2cm} -- Editor's suggestion
+\end{itemize} 
+
+\vspace{1.5cm}
+
+\noindent
+Moreover, the following articles have been submitted for publication in peer-reviewed journals:
+\begin{itemize}
+\item Jonas Gunst, Christoph H.~Keitel, Adriana P\'{a}lffy \\ 
+\textit{Logical operations with single x-ray photons via dynamically-controlled nuclear resonances}\\
+arXiv:1506.00517 (2015)
+\item Jonas Gunst, Yuanbin Wu, Naveen Kumar, Christoph H.~Keitel, Adriana P\'{a}lffy \\ 
+\textit{Direct and secondary nuclear excitation with x-ray free-electron lasers}\\
+arXiv:1508.07264 (2015)
+\end{itemize} 
+
+\vspace{1.5cm}
+
+\noindent
+In addition, the following unrefereed research report was published:
+
+\begin{itemize}
+\item Jonas Gunst,  Yuri A.~Litvinov, Christoph H.~Keitel, Adriana P\'{a}lffy \\ 
+\textit{Dominant secondary nuclear photoexcitation with the XFEL} \\ 
+GSI scientific report 2013
+\end{itemize} 
+
+\thispagestyle{empty}

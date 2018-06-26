@@ -1,0 +1,314 @@
+\chapter{Light-induced resonant nuclear excitation}
+\label{chap:bloch}
+
+
+%------------------------------------------------------------------------------------%
+
+The study of the resonant laser-nucleus interaction is considered to be strongly promoted by the development of the fourth generation x-ray sources like super-intense XFEL. Although the XFEL-photon energies allow to employ solid-state target scenarios, the available frequency range is still limited ($\lesssim 25$~keV) such that the list of suitable nuclear transitions is short. In particular, low-lying electric dipole ($\mathcal{E}1$) transitions which are mainly used in atomic quantum optics, are hard to find in the nuclear domain. However, in Ref.~\cite{Adriana2008.PRC} it has been shown that in nuclear systems electric dipole-forbidden transition can have matrix elements of comparable magnitude with those of electric dipole-allowed transitions. Especially, $\mathcal{M}1$ and $\mathcal{E}2$ transitions are mostly found in the energy range where resonant photons are accessible by today's x-ray sources.
+
+In order to describe the direct, resonant light-nucleus interaction we use the density matrix formalism well known from quantum optics \cite{ScullyZubairy}. Within this formalism the dynamics of the nuclear system is determined in dependence of the considered interaction Hamiltonian including all relaxation channels. Here, a semiclassical approach is applied where the nuclear quantum system interacts with a classical radiation field. Furthermore, the theoretical approach is introduced on the example of a two-level system since the x-ray field is nearly resonant with a single nuclear transition.
+
+This Chapter mainly follows the approach presented in Refs.~\cite{Adriana2008.JoMO} and \cite{Adriana2008.PRC}, and references therein. The general framework of the density matrix formalism applied to quantum optical systems can also be found in standard textbooks like for instance Ref.~\cite{ScullyZubairy}. In particular Sec.~\ref{sec:QD} introducing the basic equations describing the quantum dynamics of the nuclear system follows Ref.~\cite{ScullyZubairy}. Afterwards the calculation of the interaction matrix elements is presented in Sec.~\ref{sec:rad-ampl}. Therein, the multipole expansion of the electromagnetic field is applied which allows to go beyond electric dipole transitions. The final Sec.~\ref{sec:collective} follows the work published in Ref.~\cite{Junker2012.NJP} where collective effects and their influence on the laser-induced nuclear excitation are studied. Atomic units $\hbar=m_{\rm{e}}=e=4\pi\varepsilon_0=1$ are used throughout this Chapter.
+
+
+%------------------------------------------------------------------------------------%
+\section{Basic quantum dynamics}
+\label{sec:QD}
+
+The natural and most convenient way to describe the direct laser-nucleus interaction is via the well-established density matrix formalism. In this formalism the time evolution of the density matrix $\rho$ is determined by the master equation \cite{ScullyZubairy}
+%
+\begin{equation}
+\i \frac{\partial}{\partial t} \rho=[H_0+H_{\rm{I}},\rho]+\mathcal{L}\rho\ .
+\label{eq:master}
+\end{equation}
+%
+The so-called Lindblad operator $\mathcal{L}$ includes decoherent relaxation processes of the system like spontaneous decay or dephasing of the laser field.
+
+Since we are interested here only in the interaction between the nuclear degrees of freedom and the electromagnetic field, the total Hamiltonian can be split into an unperturbed part $H_0$
+%describing the nuclear dynamics in absence of the laser field
+and a part $H_{\rm{I}}$ describing the laser-nucleus interaction which can be written as
+%
+\begin{equation}
+H_{I}=-\frac{1}{c}\int \d^3r \,  \bm{j}_{\rm{n}}(\bm{r})\cdot \bm{A}(\bm{r},t)\ .
+\label{H_int}
+\end{equation}
+%
+Here, $c$ stands for the speed of light and $\bm{j}_{\rm{n}}$ represents the nuclear current density. The vector potential of the electromagnetic field denoted by $\bm{A}$ is described classically. In the Coulomb gauge it is given by \cite{Adriana2008.PRC}
+%
+\begin{equation}
+\bm{A}(\bm{r},t)=\frac{c}{\omega_k}E_k \e^{-\i\omega_k t} \e^{-\i\bm{k}\cdot\bm{r}} \bm{e}^*_{\bm{k}\sigma}+{\rm c.c.}\ ,
+\label{eq:vector-pot}
+\end{equation}
+%
+where $E_k$ represents the electric field amplitude, $\bm{k}$, $\omega_k$ and $\sigma$ are the photonic wave vector, frequency and transversal polarization, respectively, and $\bm{r}_{\rm{n}}$ denotes the nuclear spatial coordinates. Here, we exemplarily consider polarization vectors $\bm{e}^*_{\bm{k}\sigma}$ with $\sigma=\pm1$ which refers to circularly polarized light. The generalization to arbitrary polarizations is straightforward.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.4\linewidth]{pics/2-level_scheme.pdf}
+\caption{Nuclear two-level system resonantly driven by a laser field. The ground state $G$ is considered to be stable, whereas the width of the excited state is composed of two parts: the decay back to the ground state $\Gamma^{E \to G}$ and a loss channel $\Gamma^E_{\rm{loss}}$ which removes nuclear state population from the system.}
+\label{fig:2-level}
+\end{figure}
+
+
+For the considered scenario of resonant or near-resonant photoexcitation it is adequate to describe the nucleus as a two-level quantum system consisting of the states \ket{G} and \ket{E} as shown in Fig.~\ref{fig:2-level}. Each of these states is composed of a set of hyperfine levels characterized by their total angular momentum $I_l$ and projection $M_l=-I_l, \dots,I_l$, with $l \in \{g,e\}$ referring to the states \ket{G} and \ket{E}, respectively. The unperturbed Hamiltonian of the considered two-level system can be represented by
+%
+\begin{equation}
+H_{0}= \omega_g \ketm{G}\bram{G} + \omega_e \ketm{E}\bram{E}\ .
+\label{H_0}
+\end{equation}
+%
+Furthermore, the laser is assumed to be nearly resonant to the nuclear transition energy $\omega_0 =  \omega_e - \omega_g$ in order to drive the nuclear population from the ground to the excited level. The ground state \ket{G} is thereby assumed to be stable, whereas the excited level \ket{E} has a natural transition width $\Gamma_0$ which can be written as
+%
+\begin{equation}
+\Gamma_0 = \Gamma^{E \to G} + \sum_{F \neq G} \Gamma^{E \to F} = \Gamma^{E \to G} + \Gamma^{E}_{\rm{loss}}\ ,
+\label{eq:Gamma_0}
+\end{equation}
+%
+where the contribution $\Gamma^{E}_{\rm{loss}}$ integrates possible loss channels removing occupation from the considered two-level system for instance by decay paths not reaching \ket{G}. This contribution is in particular important for the cases where the initial state \ket{G} does not coincide with the ground state of the nucleus.
+
+The main purpose of this Section is to derive the optical Bloch equations which fully determine the dynamics of the considered system. Therefore, the master equation (\ref{eq:master}) is projected onto the states \ket{G} and \ket{E} which results in a system of differential equations for the density matrix elements $\rho_{ab}$ with $a,b \in \{g,e\}$,
+%
+\begin{align}
+\frac{\partial}{\partial t}\rho_{\rm{gg}}(M_{\rm{g}}) &= -2\, {\mathrm{Im}}\left(\sum_{M_{\rm{e}}}\rho_{\rm{ge}}(M_{\rm{g}},M_{\rm{e}})\e^{\i\omega_kt}\langle I_{\rm{e}} M_{\rm{e}}|H_{\rm{I}}|I_{\rm{g}} M_{\rm{g}}\rangle\right)
+\nonumber \\
+&\qquad
++\sum_{M_{\rm{e}}}\gamma^{E \to G}(M_{\rm{g}},M_{\rm{e}})\rho_{\rm{ee}}(M_{\rm{e}})\ ,
+\nonumber \allowdisplaybreaks[2] \\
+%%
+\frac{\partial}{\partial t}\rho_{\rm{ge}}(M_{\rm{g}},M_{\rm{e}}) &= -\i\Delta\rho_{\rm{ge}}(M_{\rm{g}},M_{\rm{e}})
++\i \left (\rho_{\rm{gg}}(M_{\rm{g}})-\rho_{\rm{ee}}(M_{\rm{e}}) \right )\e^{-\i\omega_kt} 
+\langle I_{\rm{g}} M_{\rm{g}}|H_{\rm{I}}|I_{\rm{e}} M_{\rm{e}} \rangle
+\nonumber \\
+&\qquad
+-\frac{\gamma^{E \to G}(M_{\rm{g}},M_{\rm{e}})}{2}\rho_{\rm{ge}}(M_{\rm{g}},M_{\rm{e}})-\gamma_{\rm{dec}}\rho_{\rm{ge}}(M_{\rm{g}},M_{\rm{e}})\ ,
+\nonumber \allowdisplaybreaks[2]\\
+%%
+\frac{\partial}{\partial t}\rho_{\rm{ee}}(M_{\rm{e}}) &= 2\, {\mathrm{Im}}\left(\sum_{M_{\rm{g}}}\rho_{\rm{ge}}(M_{\rm{g}},M_{\rm{e}})\e^{\i\omega_kt}\langle I_{\rm{e}} M_{\rm{e}}|H_{\rm{I}}|I_{\rm{g}} M_{\rm{g}} \rangle\right)
+\nonumber \\ \label{eq:bloch}
+&\qquad
+-\rho_{\rm{ee}}(M_{\rm{e}})\sum_{M_{\rm{g}}}\gamma^{E \to G}(M_{\rm{g}},M_{\rm{e}})-\gamma_{\rm{loss}}^E(M_{\rm{e}})\rho_{\rm{ee}}(M_{\rm{e}})\ .
+\end{align}
+%
+In the derivation of Eqs.~\eqref{eq:bloch}, a transformation to a rotating frame was applied in order to eliminate the rapidly oscillating terms from the equations of motion. Moreover, the detuning $\Delta$ is defined by the difference of the transition frequency $\omega_0$ and the photon frequency $\omega_k$. The limited coherence time of the laser pulse is described as decay of the nuclear coherences $\rho_{\rm{ge}}$ with decay rate $\gamma_{\rm{dec}}$. The partial decay rates $\gamma^{E \to G}(M_{\rm{g}},M_{\rm{e}})$ of the upper level \ket{E} are given by \cite{Adriana2008.PRC}
+%
+\begin{equation}
+\gamma^{E \to G}(M_{\rm{g}},M_{\rm{e}})=\frac{2I_{\rm{e}}+1}{2L+1}C\big(I_{\rm{g}}\ I_{\rm{e}}\ L;M_{\rm{g}}\ -\!M_{\rm{e}} \ M\big)^2\:\Gamma^{E \to G}\ , 
+\end{equation}
+where $L$ and $M$ are the multipolarity and projection quantum numbers of the decay photon and $C(j_1\ j_2\ j_3; m_1\ m_2\ m_3)$ stand for the Clebsch-Gordan coefficients. Summing the partial decay rates $\gamma^{E \to G}(M_{\rm{g}},M_{\rm{e}})$ over all possible projections $M_{\rm{g}}$ and $M_{\rm{e}}$ recovers the total rate $\Gamma^{E \to G}$. Similarly, the contribution from the loss channel $\gamma^{E}_{\rm{loss}}(M_{\rm{e}})$ may depend on the projection quantum number $M_{\rm{e}}$. The optical Bloch equations (\ref{eq:bloch}) can be solved numerically once the interaction matrix elements \me{I_{\rm{e}} M_{\rm{e}}}{H_{\rm{I}}}{I_{\rm{g}} M_{\rm{g}}} are known.
+
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Interaction matrix elements}
+\label{sec:rad-ampl}
+
+In atomic physics the electromagnetic field is usually described in terms of plane waves as shown in Eq.~\eqref{eq:vector-pot}. The photons are characterized by their wave vector $\bm{k}$ and the polarization $\sigma$. In nuclear systems, it is often more convenient to use the angular momentum $L$ with projection $M$ and the transition parity to define the photonic states. Therefore, the electromagnetic field is expanded in terms of its electric and magnetic multipoles $\bm{A}_{LM}^{\mathcal{E}}$ and $\bm{A}_{LM}^{\mathcal{M}}$ \cite{Rose},
+%
+\begin{equation}
+\bm{A}(\bm{r},t) = \frac{c}{\omega_k}E_k \e^{-\i\omega_k t} \sum_{LM} \sqrt{2\pi(2L+1)}(-\i)^L \mathcal{D}^L_{M\,-\sigma}(\hat{\bm{k}}) \left( \bm{A}_{LM}^{\mathcal{M}}(\bm{r})+\i\sigma\bm{A}_{LM}^{\mathcal{E}}(\bm{r})\right)\ ,
+\label{multipole}
+\end{equation} 
+%
+where $\mathcal{D}^L_{M\,-\sigma}(\hat{\bm{k}})$ represents the Wigner rotation matrix \cite{Edmonds} turning the quantization axis ($z$-axis) into the direction of $\hat{\bm{k}} = \bm{k}/k$. The electric and magnetic multipole fields $\bm{A}_{LM}^{\mathcal{E}}$ and $\bm{A}_{LM}^{\mathcal{M}}$ are eigenfunctions of both $\bm{L}^2$ and $L_z$ and are themselves solutions of the field-free Maxwell equations. According to Ref.~\cite{Rose} they are given by
+%
+\begin{align}
+\bm{A}_{LM}^{\mathcal{M}}(\bm{r})&=j_L(kr)\bm{Y}_{LL}^M(\theta,\varphi)\ ,
+\nonumber \\
+\bm{A}_{LM}^{\mathcal{E}}(\bm{r})&=\sqrt{\frac{L+1}{2L+1}}j_{L-1}(kr)\bm{Y}_{LL-1}^M(\theta,\varphi)-\sqrt{\frac{L}{2L+1}}j_{L+1}(kr)\bm{Y}_{LL+1}^M(\theta,\varphi)
+\nonumber \\
+&= -\frac{\i}{k}\nabla\times \left(j_L(kr)\bm{Y}_{LL}^M(\theta,\varphi)\right)\ ,
+\label{eq:multipole-fields}
+\end{align}
+%
+where $j_L$ represent the spherical Bessel functions and $\bm{Y}^M_{JL}$ stand for the vector spherical harmonics defined by \cite{Edmonds}
+%
+\begin{equation}
+\bm{Y}^M_{JL}(\theta,\varphi)=\sum_\nu\sum_q C\big(L\ 1\ J;\nu\ q\ M\big)Y_{L\nu}(\theta,\varphi)\bm{\varepsilon}_q\ .
+\label{vsh}
+\end{equation}
+%
+Here, $Y_{L\nu}$ represent the spherical harmonics \cite{Edmonds} and $\bm{\varepsilon}_q$ ($q=0,\pm1$) stand for the spherical unit vectors which can be expressed in terms of the Cartesian unit vectors as follows
+\begin{align}
+\bm{\varepsilon}_0 &= \bm{e}_z\ , 
+\nonumber \\ 
+\label{eq:NFS_n+-1}
+\bm{\varepsilon}_{\pm1} &= \mp \frac{1}{\sqrt{2}} \left( \bm{e}_x \pm \i\bm{e}_y \right)\ .
+\end{align}
+%
+The vector spherical harmonics are irreducible tensors of rank $J$ with components $M=-J,\dots,J$. Thereby, $J$ is subject to $L-1 \le J \le L+1$ due to the Clebsch-Gordan coefficient $C(L\ 1\ J;\nu\ q\ M)$. 
+
+
+
+%------------------------------------------------------------------------------------%
+\subsection{Magnetic transitions}
+
+First, we consider the case of nuclear transition with magnetic multipolarity. Inserting the magnetic part of Eq.~\eqref{multipole} into Eq.~\eqref{H_int} leads to
+%
+\begin{equation}
+H_{\rm{I}}=-\frac{E_k}{\omega_k} \e^{-\i\omega_kt} \sqrt{2\pi}\sum_{LM}(-\i)^L\sqrt{2L+1} \mathcal{D}^L_{M\,-\sigma}(\hat{k})\int \d^3r\, j_L(kr)\bm{j}_{\rm{n}}(\bm{r})\cdot\bm{Y}^M_{LL}(\theta,\varphi)\ .
+\end{equation}
+%
+%Typically, the interaction is completely determined by taking only a few terms of multipolarity $L$ into account since the summation over $L$ converges rapidly. 
+In the following, the photons are assumed to move along the $z$-axis which reduces the Wigner rotation matrix to $\mathcal{D}^L_{M\,-\sigma}(\hat{k}) = \delta_{M,-\sigma}$. The Kronecker delta $\delta_{M,-\sigma}$ is 1 for $M=-\sigma$ and 0 otherwise.
+
+In nuclear physics, it is usually the case that the wavelength of the radiation is much longer than the nuclear dimension, $kR_0 \ll 1$ such that the long-wavelength approximation is applicable. In this case the spherical Bessel function $j_L(kr)$ can be expanded in terms of the small parameter $kr$. Following the procedure presented in Appendix B of Ref.~\cite{RingSchuck} it is possible to connect the interaction Hamiltonian with the magnetic multipole moments $\mathcalboondox{M}_{LM}$ by expanding up to first order,
+%
+\begin{equation}
+H_{\rm{I}} = E_k \e^{-\i\omega_kt}\sqrt{2\pi}\sum_{L}(-\i)^{L+1}\sqrt{\frac{(2L+1)(L+1)}{L}}
+\frac{k^{L-1}}{(2L+1)!!} \mathcalboondox{M}_{L\,-\sigma}\ .
+\label{H_int_mag}
+\end{equation}
+%
+Here, $!!$ stands for the double factorial giving $n!!= n (n-2)(n-4)\cdots\kappa_n$ with $\kappa_n=1$ for odd $n$ and $\kappa_n=2$ for even $n$. The magnetic multipole moment is defined by \cite{RingSchuck}
+%
+%\begin{equation}
+%\mathcalboondox{M}_{LM}=\frac{1}{c(L+1)}
+%\int d^3r \,
+%(\bm{r}\times\bm{j}_{\rm{n}}(\bm{r}))\cdot\bm{\nabla}(r^LY_{LM}(\theta,\varphi))\ .
+%\end{equation}
+%
+\begin{equation}
+\mathcalboondox{M}_{LM}=-\frac{\i}{c}\sqrt{\frac{L}{L+1}}\int \d^3r \, r^{L}\bm{Y}^{M}_{LL}(\theta,\varphi)\cdot\bm{j}_{\rm{n}}(\bm{r})\ .
+\label{eq:M_LM}
+\end{equation}
+%
+According to Eq.~\eqref{H_int_mag}, the calculation of the magnetic interaction matrix elements reduces to the evaluation of \me{I_{\rm{e}}M_{\rm{e}}}{\mathcalboondox{M}_{LM}}{I_{\rm{g}}M_{\rm{g}}}. Since $\mathcalboondox{M}_{LM}$ is a spherical tensor it is possible to apply the Wigner-Eckart theorem \cite{Edmonds} which isolates the dependence on the projection quantum numbers from the dynamics of the system,
+%
+\begin{equation}
+\langle I_{\rm{e}} M_{\rm{e}}|\mathcalboondox{M}_{LM}|I_{\rm{g}} M_{\rm{g}}\rangle=\frac{(-1)^{I_{\rm{g}}-M_{\rm{g}}}}{\sqrt{2L+1}}C\big(I_{\rm{e}}\ I_{\rm{g}}\ L;M_{\rm{e}}\ -\!M_{\rm{g}}\ M\big) \langle I_{\rm{e}}\|\mathcalboondox{M}_{L}\|I_{\rm{g}}\rangle \ .
+\label{eq:me-B_mag-0}
+\end{equation}
+%
+After utilizing the Wigner-Eckart theorem the angular dependence of the matrix element is now only included in the factor containing the Clebsch-Gordan coefficient $C(I_{\rm{e}}\ I_{\rm{g}}\ L;M_{\rm{e}}\ -\!M_{\rm{g}}\ M)$. The radial dependence has been separated into the reduced matrix element $\langle I_{\rm{e}}\|\mathcalboondox{M}_{L}\|I_{\rm{g}}\rangle$ which is independent of any projection quantum numbers. The latter can be related to the so-called reduced transition probability $\mathcal{B}$ \cite{RingSchuck},
+%
+\begin{equation}
+\mathcal{B} (\mathcal{M}L,I_{\rm{g}}\to  I_{\rm{e}})=\frac{1}{2I_{\rm{g}}+1}\big|\langle I_{\rm{e}}\|\mathcalboondox{M}_{L}\|I_{\rm{g}}\rangle \big|^2\ .
+\label{eq:B_mag}
+\end{equation}
+%
+Inserting this definition into Eq.~\eqref{eq:me-B_mag-0} leads to
+%
+\begin{equation}
+\langle I_{\rm{e}} M_{\rm{e}}|\mathcalboondox{M}_{LM}|I_{\rm{g}} M_{\rm{g}}\rangle= (-1)^{I_{\rm{g}}-M_{\rm{g}}} \sqrt{\frac{2I_{\rm{g}}+1}{2L+1}}C\big(I_{\rm{e}}\ I_{\rm{g}}\ L;M_{\rm{e}}\ -\!M_{\rm{g}}\ M\big)
+\sqrt{\mathcal{B}(\mathcal{M}L,I_{\rm{g}} \to I_{\rm{e}})}\ .
+\label{eq:me-B_mag}
+\end{equation}
+%
+%Since experimental values are available for the reduced transition probabilities $\mathcal{B}$, we are not reliant on any nuclear model. 
+Instead of constructing nuclear wave functions which are typically strongly model dependent, measured data of the reduced transition probabilities is used for the evaluation of the nuclear transition amplitudes. For a specific multipolarity $L$ we obtain the following interaction matrix element
+%
+\begin{align}
+\langle I_{\rm{e}} M_{\rm{e}}|H_{\rm{I}}|I_{\rm{g}} M_{\rm{g}}\rangle &\propto E_k \e^{-\i\omega_kt}
+C\big(I_{\rm{e}}\ I_{\rm{g}}\ L;M_{\rm{e}}\ -\!M_{\rm{g}}\ -\!\sigma\big)
+\nonumber \\
+&\qquad 
+\times 
+\sqrt{2\pi} 
+\sqrt{\frac{L+1}{L}}  \frac{k^{L-1}}{(2L+1)!!} \sqrt{2I_{\rm{g}}+1}
+\sqrt{\mathcal{B}({\mathcal{M}}L,I_{\rm{g}}\to I_{\rm{e}}) }\ .
+\end{align}
+%
+
+
+
+%------------------------------------------------------------------------------------%
+\subsection{Electric transitions}
+
+In the same manner as for magnetic transitions, the interaction Hamiltonian for electric transitions can be expressed in terms of the electric multipole moments $\mathcalboondox{Q}_{LM}$ as follows
+%
+\begin{equation}
+H_{\rm{I}} = E_k \e^{-\i\omega_kt}\sqrt{2\pi}\sum_{L}(-\i)^{L}\sqrt{\frac{(2L+1)(L+1)}{L}}
+\frac{\sigma k^{L-1}}{(2L+1)!!} \mathcalboondox{Q}_{L\,-\sigma}\ .
+\end{equation}
+%
+The multipole moment $\mathcalboondox{Q}_{LM}$ is defined by \cite{RingSchuck}
+%
+\begin{equation}
+\mathcalboondox{Q}_{LM}=\int \d^3r\, r^{L} Y_{LM}(\theta,\varphi)\rho_{\rm{n}}(\bm{r})\ ,
+\label{eq:Q_LM}
+\end{equation}
+%
+where $\rho_{\rm{n}}$ represents the nuclear charge density. The current density $\bm{j}_{\rm{n}}$ and charge density $\rho_{\rm{n}}$ are connected via the standard continuity equation \cite{BlattWeisskopf}.
+
+In order to express the matrix element $\langle I_{\rm{e}}M_{\rm{e}}|\mathcalboondox{Q}_{LM}|I_{\rm{g}}M_{\rm{g}}\rangle$ in terms of the reduced transition probabilities, the Wigner-Eckart theorem is again utilized resulting in
+%
+\begin{equation}
+\langle I_{\rm{e}}M_{\rm{e}}|\mathcalboondox{Q}_{LM}|I_{\rm{g}}M_{\rm{g}}\rangle = (-1)^{I_{\rm{g}}-M_{\rm{g}}} \sqrt{\frac{2I_{\rm{g}}+1}{2L+1}}C\big(I_{\rm{e}}\ I_{\rm{g}}\ L;M_{\rm{e}}\ -\!M_{\rm{g}}\ M\big)
+\sqrt{\mathcal{B}(\mathcal{E}L,I_{\rm{g}} \to I_{\rm{e}})}
+\label{eq:me-B_el}
+\end{equation}
+%
+with
+%
+\be
+\mathcal{B} (\mathcal{E}L,I_{\rm{g}}\to  I_{\rm{e}})=\frac{1}{2I_{\rm{g}}+1}\big|\langle I_{\rm{e}}\|\mathcalboondox{Q}_{L}\|I_{\rm{g}}\rangle \big|^2\ .
+\label{eq:B_el}
+\ee
+%
+Using Eq.~\eqref{eq:me-B_el} we obtain the following expression for the interaction matrix elements of electric multipolarity $L$
+%
+\begin{align}
+\langle I_{\rm{e}} M_{\rm{e}}|H_{\rm{I}}|I_{\rm{g}} M_{\rm{g}}\rangle &\propto E_k \e^{-\i\omega_kt}
+C\big(I_{\rm{e}}\ I_{\rm{g}}\ L;M_{\rm{e}}\ -\!M_{\rm{g}}\ -\!\sigma\big) 
+\nonumber \\
+&\qquad \times 
+\sqrt{2\pi}\sqrt{\frac{L+1}{L}}
+\frac{k^{L-1}}{(2L+1)!!}\sqrt{2I_{\rm{g}}+1}
+\sqrt{\mathcal{B}({\mathcal{E}}L,I_{\rm{g}}\to I_{\rm{e}}) }\ .
+\end{align}
+%
+
+
+
+
+
+%------------------------------------------------------------------------------------%
+\section{The collective nuclear decay rate}
+\label{sec:collective}
+
+The nuclear transition width $\Gamma_0$ introduced in Eq.~\eqref{eq:Gamma_0} is usually composed of two parts: (i) the radiative decay $A_{\rm{r}}$ where the nuclear excitation energy is released in form of a photon, and (ii) internal conversion (IC) which accelerates a bound electron into the continuum due to the nuclear de-excitation. The radiative decay rate $A_{\rm{r}}$ can be again expressed in terms of the reduced transition probabilities analogously to the previous Section. For a given multipolarity $L$, $A_{\rm{r}}$ is determined by \cite{RingSchuck}
+%
+\begin{equation}
+A_{\rm{r}}^{E \to G} = \frac{8\pi (L+1)}{L[(2L+1)!!]^2} \left(\frac{E_{\rm{n}}}{c}\right)^{2L+1} \mathcal{B} (\lambda L, I_{\rm{e}} \to I_{\rm{g}})  \ ,
+\label{eq:A_r}
+\end{equation}
+%
+where the parameter $\lambda$ determines whether the transition type is electric ($\lambda=\mathcal{E}$) or magnetic ($\lambda=\mathcal{M}$) and $E_{\rm{n}} = \omega_0$ represents the nuclear transition energy. Moreover, using the principle of detailed balance the transition probabilities corresponding to either down or up conversion can be related via \cite{Adriana2008.PRC}
+%
+\begin{equation}
+\mathcal{B} (\lambda L, I_{\rm{e}} \to I_{\rm{g}}) = \frac{2I_{\rm{g}}+1}{2I_{\rm{e}}+1}  \mathcal{B} (\lambda L, I_{\rm{g}} \to I_{\rm{e}}) \ .
+\end{equation}
+%
+Typically, $\Gamma_0$ is in the range of $10^{-5}$ to $10^{-10}$~eV in the case of nuclear transitions. The large discrepancy between the nuclear width $\Gamma_0$ and the XFEL bandwidths currently in the order of several eV is one of the main limiting factors for the direct laser-nucleus interaction. However, if solid-state targets are considered there can be a third decay channel, the collective or coherent decay, strongly enhancing the nuclear transition width and hence the laser-induced nuclear excitation. This collective decay relies on the fact that in solid-state targets with M\"{o}ssbauer nuclei photons can be absorbed and re-emitted recoillessly. The photon momentum is then rather transferred to the whole crystal lattice than to a single nucleus. The probability of recoilless scattering is described by the Lamb-M\"{o}ssbauer factor $f_{\rm{LM}}$ which in the Debye-model is given by \cite{Barb}
+%
+\begin{equation}
+f_{\rm{LM}} = \exp \left[ -\frac{2E_{\rm{R}}}{k_{\rm{B}} \theta_{\rm{D}}} \left( 1+4\frac{T^2}{\theta_{\rm{D}}^{2}} \int_{0}^{\theta_{\rm{D}}/T} \frac{x\, \d x}{\e^x-1} \right) \right] \ .
+\label{eq:LambMoessbauerFactor}
+\end{equation}
+%
+In this expression $k_{\rm{B}}$ stands for the Boltzmann constant, $\theta_{\rm{D}}$ is the material-specific Debye temperature and $E_{\rm{R}}$ denotes the recoil energy depending on $E_{\rm{n}}$. We will always assume the sample to be at room temperature $T=300$~K.
+
+Due to the recoilless scattering it is impossible to distinguish which nucleus has been excited such that a collective excitation also known as nuclear exciton is created \cite{NFS-bible}. Any process like IC, nuclear recoil or spin-flip leaving a trace of nuclear excitation immediately destroys the collective nature at the nucleus where it took place. The origin of the excitonic state is explained in much more detail in Chap.~\ref{chap:NFS}. Here, it is at first only important to know that the collective excitation predominantly decays by emitting a photon into the forward direction with an enhanced decay rate $\Gamma$ \cite{NFS-bible}. For instance, by considering a laser pulse $\delta$-like in time and $\Gamma^E_{\rm{loss}}=0$, the time dependence of the scattered intensity immediately after the interaction with the laser pulse can be approximated by \cite{NFS-bible,Shvydko1999.PRB}
+%
+\begin{equation}
+I(t) \propto \e^{-(\xi+1)\Gamma_0 t}\ ,
+\end{equation}
+%
+where $\xi=\frac{1}{4}\sigma_{\rm{R}} n_0 L$ stands for the dimensionless thickness parameter with $n_0$ denoting the number density of nuclei in a sample of length $L$. The radiative nuclear resonance cross section $\sigma_{\rm{R}}$ is given by
+%
+\begin{equation}
+\sigma_{\rm{R}} = 2\pi \frac{2I_{\rm{e}}+1}{2I_{\rm{g}}+1} \left(\frac{c}{E_{\rm{n}}}\right)^2 \frac{1}{1+\alpha_{\rm{ic}}} f_{\rm{LM}}\ .
+\end{equation}
+%
+Here, $\alpha_{\rm{ic}}$ represents the so-called IC coefficient which gives the ratio of the internal conversion and radiative decay rate. Including the collective decay channel the following formula for the total transition width is obtained
+%
+\begin{equation}
+\Gamma \simeq (\xi+1) \Gamma_0 \ .
+\label{eq:gamma-coll}
+\end{equation}
+%
+This enhancement is of course only valid as long as it is possible to build up the excitonic state. According to Ref.~\cite{Junker2012.NJP}, there are two length scales limiting the extension of the collective excitation: (i) the photoabsorption length $1/\mu$ describing incoherent scattering and absorption from electrons, and (ii) the focal length of the laser $L_{\rm{foc}}$ over which a resonant photon can be shared by the nuclear sample. The smaller one of these two always dictates the upper limit of $\xi$. In the case of ${}^{57}$Fe, for instance, the photoabsorption length lies around 22~$\mu$m for photons resonant to the nuclear transition from the ground to the first excited state ($\sim 14.4$~keV) \cite{Junker2012.NJP}. The focal length $L_{\rm{foc}}$ is determined by the focal diameter $d_{\rm{foc}}$ and the laser wavelength $\lambda$ via $L_{\rm{foc}}=\frac{2\pi}{\lambda} (d_{\rm{foc}}/2)^2$ which gives twice the Rayleigh length. For a photon energy of $14.4$~keV and moderate laser focusing of $d_{\rm{foc}}\sim100$~nm, $L_{\rm{foc}}$ is always larger than $1/\mu$ leading to a total transition width for the first excited state maximally enhanced by a factor of up to $\xi \sim 87$ \cite{Junker2012.NJP}.
+
+

@@ -1,0 +1,570 @@
+\chapter{Direct and secondary nuclear excitation with the XFEL}
+\label{chap:direct-secondary}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{pics/level-scheme_NEEC_mo_fe.pdf}%
+\caption{Nuclear excitation by electron capture for isomer triggering in ${}^{93}$Mo and ground-state excitation in ${}^{57}$Fe. A free electron (right-hand side) recombines into a highly charged ion with the simultaneous excitation of the nucleus (level schemes on the left-hand side). The ${}^{93}$Mo nucleus is initially in a metastable excited state whereas ${}^{57}$Fe is in the ground state. The
+nuclear excitation (red arrow) is induced by NEEC into the $L$ shell (right-hand side) with subsequent decay to the nuclear ground state (long blue solid and dashed arrows in the ${}^{93}$Mo level scheme, black arrow in the ${}^{57}$Fe scheme). The nuclear levels are labeled with their total angular momentum, parity and energy (in keV) \cite{ENSDF}.
+\label{fig:neec}}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Photon energies accessible with the new x-ray free-electron laser (XFEL) facilities open a way for the resonant driving of low-lying nuclear transitions in the keV range. In particular, the high brilliance and coherence features of the XFEL light promise an increase in magnitude of nuclear excitations in comparison to synchrotron radiation experiments as pointed out in Chap.~\ref{chap:XFEL}. While in the latter the electronic response only acted as background, the unique interaction between the super-intense XFEL pulses and matter can lead to new states of matter, like cold, high-density plasmas \cite{Vinko2012.N} where secondary nuclear processes from the coupling to the atomic shell are rendered possible, for instance, NEEC.
+
+We investigate and quantify the direct and secondary nuclear excitations in a normal incidence setup for two species of nuclei: 
+%(i)  $^{93\rm{m}}$Mo isomers and (ii) ${}^{57}$Fe nuclei initially in the ground state. 
+(i)  $^{93}$Mo isomer triggering where the isomeric state $IS$ is depopulated via a 4.85~keV transition to an above lying triggering level $T$, as depicted in Fig.~\ref{fig:neec}; and (ii) the resonant driving of the 14.4~keV transition in ${}^{57}$Fe from the ground state $G$ to the first excited level $E$. 
+The latter nucleus has been the ``working horse'' of the nuclear resonance scattering community at synchrotron sources \cite{Shvydko1996.PRL,Roehlsberger2004} and it is also the present candidate for x-ray quantum optics using nuclear transitions in thin film x-ray planar cavities \cite{Rohlsberger2010.S, Rohlsberger2012.N,heeg2013vacuum}. Many of the present studies at synchrotron sources have extensions envisaged with the XFEL as source of stronger, nonlinear nuclear excitation.
+In the case of $^{93}$Mo isomer triggering, the super-intense XFEL is a priori desirable in order to efficiently depopulate the isomeric state.  
+For these studies it is therefore vital to know whether also 
+additional plasma effects may play an important role for the nuclear excitation or for the sought-for coherence effects. 
+%In the first case, the long-lived isomeric state $IS$ of $^{93}$Mo is depopulated via a 4.85~keV transition to an above lying triggering level $T$, as depicted in Fig.~\ref{fig:neec}. For the resonant driving of the M\"{o}ssbauer transition in ${}^{57}$Fe from the ground state $G$ to the first excited level $E$ a photon energy of 14.4~keV is required.
+
+In the following we address in more detail the XFEL parameter choice and present our photoexcitation and NEEC numerical results for the competing excitation channels. A theoretical approach for describing NEEC inside a plasma environment as well a hydrodynamic model for the plasma expansion is set up in Sec.~\ref{sec:theory-plasma}. There, we also give a short overview about the considered nuclear targets. Afterwards, we investigate independently of each other the direct photoexcitation in Sec.~\ref{sec:direct-photo} and the secondary NEEC process in a stationary and in an expanding plasma environment in Secs.~\ref{sec:NEEC-stationary} and \ref{sec:NEEC-expanding}, respectively. In the latter, we furthermore discuss the initial plasma conditions in dependence of the considered laser parameters and elaborate the influence of atomic processes on the plasma expansion. Sec.~\ref{sec:plasma-comparison} concludes this Chapter with a comparison between the two excitation channels and a general set of qualitative criteria to identify the dominant nuclear excitation process.
+
+
+%------------------------------------------------------------------------------------%
+\section{Theoretical treatment}
+\label{sec:theory-plasma}
+
+The theoretical formalisms used to describe the direct photoexcitation and the microscopic NEEC process were introduced in Chaps.~\ref{chap:bloch} and \ref{chap:NEEC}, respectively. Here, we address NEEC as secondary process in the XFEL-produced cold plasma and the plasma dynamics described by means of a hydrodynamical model. The effects of the latter on the secondary excitation channel are quantified then in Sec.~\ref{sec:NEEC-expanding}. Finally, this Section ends with a short discussion about the considered nuclear samples and their manufacturing.
+
+
+%------------------------------------------------------------------------------------%
+\subsection{NEEC reaction rates in the plasma environment}
+\label{sec:neecinplasma}
+
+
+In a plasma, free electrons with different kinetic energies are available. 
+NEEC is a resonant process where a free electron is captured by an ion with the simultaneous excitation of its nucleus. The 
+resonance bandwidth is determined by the Lorentz profile (\ref{lorentz}). 
+Since the kinetic energy of free electrons in a plasma is distributed over a wide range, many resonant NEEC channels may exist. In the following we will shortly describe how such a situation can be handled theoretically in terms of reaction rates. Atomic units $\hbar=m_{\rm{e}}=e=4\pi\varepsilon_0=1$ are used throughout this subsection.
+
+As introduced in Sec.~\ref{sec:decomposition}, the initial and intermediate states are given by Eq.~(\ref{eq:psi_i}) and Eq.~(\ref{eq:dstate}), respectively. In order to restrict the number of possible initial configurations, for a lower-limit estimate,
+we consider in the following only NEEC into ions which are in their electronic ground states. In this case, the initial electronic configuration $\alpha_{\rm 0}$ is uniquely identified by the charge state number $q$ before electron capture. 
+In the isolated resonance approximation, the total NEEC reaction rate in the plasma can be written as a summation over all charge states $q$ and all capture channels $\alpha_{\rm{d}}$,
+%
+\begin{equation}
+\lambda_{\rm{neec}} = \sum_q \sum_{\alpha_{\rm{d}}} P_q \lambda^{q,\alpha_{\rm{d}}}_{\rm{neec}}\ ,
+\label{eq:neec-plasma.total}
+\end{equation}
+%
+where the partial NEEC rate into the capture level $\alpha_{\rm{d}}$ of an ion in the charge state $q$ is given by
+%
+\begin{equation}
+\lambda^{q,\alpha_{\rm{d}}}_{\rm{neec}} = \int \d E \, \sigma_{\rm{neec}}^{\rm{i} \to \rm{d}}(E) \phi_{\rm{e}}(E)\ .
+\label{eq:neec-plasma.partial}
+\end{equation}
+%
+The single-resonance  cross sections $\sigma^{\rm{i} \rightarrow \rm{d}}_{\rm{neec}}$ are defined in Eq.~(\ref{eq:sigma_neec_compact}). 
+The dependence on $q$ is hidden here in the NEEC resonance energy $E_{\rm{d}}$ entering $\sigma^{\rm{i} \rightarrow \rm{d}}_{\rm{neec}}$ in the Lorentz profile.
+The factor $P_q$ occurring in Eq.~(\ref{eq:neec-plasma.total}) denotes the probability that an ion of charge state $q$ is present in the plasma. The electron flux $\phi_{\rm{e}}$ in the plasma can be written as the product of the density of states $g(E)$, the Fermi-Dirac distribution $f_{\rm{FD}}(E,T_{\rm{e}})$ for a certain electron temperature $T_{\rm{e}}$ and the velocity $v(E)$,
+\begin{equation}
+\phi_{\rm{e}}(E) = g(E) f_{\rm{FD}}(E,T_{\rm{e}}) v(E)\ .
+\label{eq:electron.flux.definition}
+\end{equation}
+The temperature dependence of $\phi_{\rm{e}}$ is only included in the Fermi-Dirac statistics $f_{\rm{FD}}$. The density of states as well as the velocity are determined by taking the relativistic dispersion relation for the free electrons. 
+The chemical potential $\mu_{\rm{e}}$ of the electrons occurring in $f_{\rm{FD}}$ is fixed by adopting the normalization
+\begin{equation}
+\int \d E \, g(E) f_{\rm{FD}}(E,T_{\rm{e}}) = n_{\rm{e}}\ .
+\label{eq:electron.flux.norm}
+\end{equation}
+Thereby, $n_{\rm{e}}$ represents the number density of free electrons.
+By using the definition of the NEEC cross section and assuming that the free electron momentum and the NEEC interaction matrix elements are constant over the width of the Lorentz profile $L_{\rm{d}}(E-E_{\rm{d}})$, Eq.~(\ref{eq:neec-plasma.partial}) can be simplified to
+%
+\begin{equation}
+\lambda^{q,\alpha_{\rm{d}}}_{\rm{neec}} = \frac{2 \pi^2}{p^2} Y_{\rm{neec}}^{\rm{i} \rightarrow \rm{d}} \Phi_{\rm{e}}^{\rm{res}}(E_{\rm{d}})\ ,
+\label{eq:neec-plasma.partial2}
+\end{equation}
+%
+where the resonant electron flux is defined by
+%
+\begin{equation}
+\Phi_{\rm{e}}^{\rm{res}}(E_{\rm{d}}) = \int \d E \, L_{\rm{d}}(E-E_{\rm{d}}) \phi_{\rm{e}}(E)\ .
+\label{eq:res.electron.flux}
+\end{equation}
+%
+
+The net NEEC rate $\lambda_{\rm{neec}}$ provided by Eq.~\eqref{eq:neec-plasma.total} is strongly dependent on the available charge states and free electron energies which are both dictated by the plasma conditions. In turn, the latter will not be constant over time as the plasma undergoes expansion. We proceed to formulate a model that takes the spatial expansion of the plasma into account and provides the temporal dynamics of the plasma parameters required to calculate the net NEEC rates in the plasma environment.
+
+
+
+%------------------------------------------------------------------------------------%
+\subsection{Plasma expansion model}
+\label{sec:hydro}
+
+
+In the scenario under investigation, the plasma-formation occurs on the time scale of the XFEL pulse duration ($\sim$ 100~fs) while the plasma expansion 
+time is in the range of ps. Accordingly, we neglect the plasma expansion during its formation in the laser-target
+interaction. In order to ascertain the effect of the plasma expansion on atomic processes after the interaction of the laser pulse with the target, we model the expansion of the target plasma by a quasi-neutral expansion of spherical  clusters as studied in the context of the intense optical laser pulses interaction with spherical clusters \cite{KrainovS2002,DitmireDRFP1996,Ditmire1997N,Ditmire1997PRL,Ditmire1998PRA,
+LeziusDNS1998,MilchbergMP2001,KimAPM2003,PeanoFS2005,Skopalova2010PRL,Hickstein2014PRL}. We follow the analysis of Ref. \cite{KrainovS2002}  to describe the plasma expansion. 
+The target plasma is assumed to maintain a uniform (but
+decreasing) density throughout the plasma sphere during the
+expansion while the electron
+temperature decreases with the adiabatic expansion of the plasma, described by
+%
+\begin{equation}
+  \frac{3}{2} n_{\rm{e}} V~\d T_{\rm{e}} = -P_{\rm{e}}~\d V\ ,
+  \label{eq:Teexpan}
+\end{equation}
+%
+where $n_{\rm{e}}$ is the number density of free electrons, and
+$V$ is the volume of the plasma with the radius $R$, i.e., $V = 4\pi
+R^3 /3$. Here and in the following, we use the Lorentz-Heaviside natural units $\hbar=c=k_{\rm{B}}=\epsilon_0=\mu_0=1$ 
+for the plasma modeling part.
+The pressure of free electrons $P_{\rm{e}}$ is given by the
+ideal gas law, $P_{\rm{e}} = n_{\rm{e}} T_{\rm{e}}$. Therefore,
+the time-dependent electron temperature $T_{\rm{e}}(t)$ and the plasma radius
+$R(t)$ satisfy the relation
+%
+\begin{equation}
+  T_{\rm{e}} = T_{\rm{e,0}} \left(\frac{R_0}{R}\right)^2\ ,
+  \label{eq:Tetime}
+\end{equation}
+where $T_{\rm{e,0}}$ is the initial electron temperature and $R_0$
+the initial plasma radius. During the plasma expansion, the electrons loose their thermal energy to the ions  resulting into the electron and ion kinetic energies 
+%
+\begin{align}
+  n_{\rm{i}} V \frac{\d}{\d t} \left( \frac{3}{2} T_{\rm{i}} \right) &=
+  - n_{\rm{e}} V \frac{\d}{\d t} \left( \frac{3}{2} T_{\rm{e}} \right)\ ,
+\nonumber \\
+  \frac{1}{2} m_{\rm{i}} \left(\frac{\d R}{\d t}\right)^2 &= \frac{3}{2}
+  T_{\rm{i}}\ ,
+ \label{eq:eksurion}
+\end{align}
+%
+with $m_{\rm{i}}$ being the ion mass. The equation of plasma expansion then reads \cite{KrainovS2002}
+\begin{equation}
+  m_{\rm{i}} \frac{\d^2 R}{\d t^2} = 3\frac{n_{\rm{e}}}{n_{\rm{i}}}
+  \frac{T_{\rm{e,0}}~R_0^2}{R^3} = 3 Z_{\rm{i}} \frac{T_{\rm{e,0}}~R_0^2}{R^3}\ ,
+  \label{eq:expanri}
+\end{equation}
+where $Z_{\rm{i}}= n_{\rm{e}}/n_{\rm{i}}$ is the ratio of
+the electron density to the ion density. In the
+quasi-neutral limit, $Z_{\rm{i}}$ is therefore the average charge state of the
+ions. Integrating once for a fixed $Z_{\rm{i}}=Z_0$ yields
+\begin{equation}
+  \left(\frac{\d R}{\d t}\right)^2 =
+  v_{\rm{s}}^2 \left( 1- \frac{R_{0}^2}{R^2}
+  \right),
+  \label{eq:vspeed}
+\end{equation}
+where $v_{\rm{s}} = (3 T_{\rm{e,0}} Z_0 / m_{\rm{i}})^{1/2}$ is the ion sound velocity which, in the limit $R\rightarrow \infty$, is the characteristic speed for the
+plasma expansion \cite{KrainovS2002,DitmireDRFP1996}. It may be noted that Peano \emph{et al.}
+\cite{PeanoPMCS2006,PeanoCPMS2007} analyzed the expansion of
+spherical nanoplasmas with the Vlasov-Poisson equations, the
+particle-in-cell (PIC) method, and the ergodic model
+\cite{PeanoPMCS2006}. Comparisons between their results
+\cite{PeanoPMCS2006,PeanoCPMS2007} and those via the hydrodynamic
+expansion [Eq.\eqref{eq:expanri}] (atomic processes  not included) for
+ plasmas with the dimensionless parameter  $\tilde{T}_0 = 3 \lambda_{\rm{D}}^2/R_0^2=7.2 \times 10^{-3}$ or $\tilde{T}_0 =
+7.2 \times 10^{-2}$, where $\lambda_{\rm{D}}$ denotes the Debye length for the electrons, show that the hydrodynamic expansion model can adequately describe the expansion of spherical
+cluster targets heated by an intense optical laser pulse. In addition, 1D and 2D PIC simulations
+using the EPOCH code\footnote{The EPOCH code was developed as part of the UK EPSRC funded projects EP/G054940/1.} for plasmas (atomic processes  not included)
+with the parameters under consideration in this
+Chapter have also been performed. The expansion time obtained by the
+hydrodynamic expansion model is in good agreement with the PIC
+simulation results.
+
+The quasi-neutral hydrodynamic plasma expansion described above requires the plasma density and the charge state as  input parameters. One can exploit the different time scales involved in  the plasma formation and subsequent plasma expansion, and as a first step calculate the average charge state by using the electron temperature from the plasma expansion model. One can then use this charge state to estimate the plasma expansion and consequently the electron temperature at a later time, thus establishing a feedback loop between the effective atomic processes (represented by the average charge state) and the plasma expansion. This is discussed in Sec. \ref{sec:atomic}.
+
+
+%------------------------------------------------------------------------------------%
+\subsection{Nuclear targets}
+\label{sec:targets}
+
+As already pointed out, we are going to investigate the nuclear photoexcitation with the XFEL at two nuclear species, the ${}^{93\rm{m}}$Mo isomer and the ${}^{57}$Fe isotope.
+In the case of ${}^{57}$Fe, the initial state is the stable ground state of the isotope, such that bulk iron samples enriched with the ${}^{57}$Fe
+isotope (natural abundance 2.2\%) can be fabricated. On the other hand, the $^{93}$Mo solid-state sample should contain nuclei in the isomeric state with 2.5 MeV excitation energy. The isomers can be produced in 
+$^{93}_{41}$Nb(p,n)$^{93\mathrm{m}}_{\phantom{m} 42}$Mo reactions \cite{exfor},  directly embedded into 1~$\mu$m thick solid--state niobium foils \cite{Jonas2013.PRL}. Considering the production reaction cross section values \cite{exfor}, we estimate that a ${}^{93\rm m}$Mo isomer density of 10$^{16}$~cm$^{-3}$  can be achieved in the solid--state 1 $\mu$m-thick Nb foils \cite{Jonas2013.PRL} using standard proton 
+beams like the LINAC at GSI \cite{GSI-web,LINAC-web} as shown in App.~\ref{app:isomer}. Correspondingly, the majority of atoms in the isomeric sample belongs to the  niobium species ($Z=41$) and their interaction with the XFEL photons will play the dominant role for the plasma parameters estimates. However, due to the very close atomic number values of molybdenum and niobium, the photoelectric response of the two atomic species is very similar. 
+Here, we assume a thickness of 1 $\mu$m for both nuclear targets, which for the case of ${}^{57}$Fe corresponds to a resonant thickness of $\xi=3.9$. %The laser focal spot is assumed to be 10 $\mu$m$^2$ (i.e., focal radius of  approx.~1.8 $\mu$m). 
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Direct photoexcitation}
+\label{sec:direct-photo}
+
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}
+  \small
+  \centering
+  \begin{tabular}{lccccccc}
+  \hline\hline
+  & & & & & & & \tabularnewline[-0.4cm]
+  & \multicolumn{3}{c}{${}^{93\rm{m}}$Mo} & & \multicolumn{3}{c}{${}^{57}$Fe} \tabularnewline
+  & & & & & & & \tabularnewline[-0.4cm] \cline{2-4}\cline{6-8}
+  & & & & & & & \tabularnewline[-0.4cm]
+  & $I_{\rm{eff}}$ ($\frac{\rm{W}}{\rm{cm}^2}$) & $\rho_{\rm{ee}}^{\rm{laser}}$ & $R_{\gamma}^{\rm{laser}}$ ($\frac{1}{\rm{s}}$) & & $I_{\rm{eff}}$ ($\frac{\rm{W}}{\rm{cm}^2}$) & $\rho_{\rm{ee}}^{\rm{laser}}$ & $R_{\gamma}^{\rm{laser}}$ ($\frac{1}{\rm{s}}$) \tabularnewline
+  & & & & & & & \tabularnewline[-0.4cm] \hline
+  & & & & & & & \tabularnewline[-0.4cm]
+  LCLS & 5.2$\times$10$^{9}$ & 1.9$\times$10$^{-20}$ & 5.6$\times$10$^{-14}$ & & 3.1$\times$10$^{8}$ & 9.1$\times$10$^{-16}$ & 1.9$\times$10$^{-2}$ \tabularnewline
+  SACLA & 1.2$\times$10$^{9}$ & 1.7$\times$10$^{-20}$ & 1.7$\times$10$^{-14}$ & & 7.0$\times$10$^{7}$ & 9.5$\times$10$^{-16}$ & 6.6$\times$10$^{-3}$ \tabularnewline
+  Eur.~XFEL & 6.5$\times$10$^{9}$ & 2.4$\times$10$^{-21}$ & 9.6$\times$10$^{-12}$ & & 3.9$\times$10$^{8}$ & 1.2$\times$10$^{-16}$ & 3.2 \tabularnewline
+  XFELO & 6.7$\times$10$^{12}$ & 4.5$\times$10$^{-14}$ & 4.6$\times$10$^{-3}$ & & 4.0$\times$10$^{11}$ & 2.2$\times$10$^{-9}$ & 1.5$\times$10$^{9}$ \tabularnewline
+  & & & & & & & \tabularnewline[-0.4cm] \hline\hline
+  \end{tabular}
+  \caption{Calculated excited state occupation number $\rho_{\rm{ee}}^{\rm{laser}}$ and signal photon rate $R_{\gamma}^{\rm{laser}}$ for ${}^{93}$Mo and ${}^{57}$Fe \cite{Jonas2015-plasma-arxiv}. The laser parameters shown in Table \ref{table:laser} are employed here.}
+  \label{table:photoexcitation}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+
+The photoexcitation rates are calculated following the formalism introduced in Chap.~\ref{chap:bloch} using reduced transition probability values from Ref.~\cite{ENSDF}. The limited laser coherence time is accounted for by introducing a corresponding decoherence rate in the Lindblad operator. 
+The numerical solution of the master equation \eqref{eq:master} for the density matrix is then carried out with the procedures implemented in \textit{Mathematica}. We considered realistic parameters for the coherent high-frequency light sources shown in Table \ref{table:laser}, corresponding to a laser focal spot of 10 $\mu$m$^2$ (i.e., focal radius of  approx.~1.8 $\mu$m). 
+Results for the total population of the excited level $\rho_{\rm{ee}}^{\rm{laser}}$  after a single laser pulse with effective intensity $I_{\rm{eff}}$ [see Eq.~\eqref{eq:eff.intensity}] are presented in Table \ref{table:photoexcitation}. These populations are obtained by summing the elements $\rho_{\rm{ee}}(M_{\rm{e}})=\langle I_{\rm{e}} M_{\rm{e}}|\rho| I_{\rm{e}} M_{\rm{e}}\rangle$ evaluated at $t=T_{\rm{pulse}}$ over all possible projection quantum numbers $M_{\rm{e}}$ \cite{Adriana2008.PRC} where the populations $\rho_{\rm{ee}}(M_{\rm{e}})$ are determined by the set of differential equations \eqref{eq:bloch}. For both  ${}^{93\rm{m}}$Mo and ${}^{57}$Fe cases, the XFELO delivers the highest excitation rates per pulse among the considered laser facilities.
+
+Comparing the effective laser intensities displayed in Table \ref{table:photoexcitation}, it can be seen that the XFELO provides with $6.7\times10^{12}$~W/cm$^2$ for ${}^{93\rm{m}}$Mo and $4.0\times10^{11}$~W/cm$^2$ for ${}^{57}$Fe the highest value of $I_{\rm{eff}}$. The effective intensity of the LCLS, for instance, is 3 orders of magnitude smaller. Thus, due to its narrow bandwidth, the XFELO is able to provide in average 1000 times more resonant photons per pulse than the LCLS, SACLA or the Eur.~XFEL. 
+
+Another and possibly less obvious reason for the outstanding excitation capabilities of the XFELO is its coherence properties. As already mentioned in the previous Section, all currently operating XFELs lack a good temporal coherence (indicated by $T_{\rm{coh}}$ in Table \ref{table:laser}) because of the random fluctuations in the initial electron charge density. The poor temporal coherence is one of the main limiting factors for the nuclear excitation. For instance, the consideration of a totally coherent x-ray pulse ($T_{\rm{coh}}=\infty$) increases the nuclear excitation between 4 and 6 orders of magnitude.
+
+Experimentally, the nuclear excitation is best accessible by measuring the number of photons of a specific transition emitted in the decay of the excited nuclear state $E$. In the case of isomer triggering, for instance, the triggering level $T$ first decays to an intermediate state $F$ followed by a decay cascade to the nuclear ground state $G$. In this cascade a characteristic photon of 1~MeV is emitted which can be used as signature for the isomer triggering. The rate of $\gamma$-ray signal photons at the detector is directly proportional to $\rho_{\rm{ee}}$,
+%
+\begin{equation}
+R_{\gamma}^{\rm{laser}} = N_0 f_{\rm{rep}} B^{T \to F} \frac{1}{1+\alpha_{\rm{ic}}} \rho_{\rm{ee}}\ ,
+\label{eq:signal.rate}
+\end{equation}
+where  $N_0=n_0 A_{\rm{foc}} L$ represents the number of nuclei present in the focal spot $A_{\rm{foc}}$ and $\alpha_{\rm{ic}}$ stands for the IC coefficient of the transition producing the 1~MeV signal photon. Furthermore, $B^{T \to F}$ denotes the 
+branching ratio, i.e,  the probability of a nucleus in $T$ to not fall back to the state $IS$.  For ${}^{93}$Mo, this probability that the triggering level decays to the ground state via the emission of the 1~MeV signal photon can be approximated by one. In the case of ${}^{57}$Fe, the resonantly scattered photons via the transition from the excited state $E$ to the ground state $G$ can be used as detection signal. In this case, a similar expression as Eq.~(\ref{eq:signal.rate}) can be used, with a branching ratio value representing the probability that the excited nuclear state $E$ decays radiatively. Taking the collective channel into account, this probability is approx.~82\% for a sample thickness of 1~$\mu$m ($\xi=3.9$).
+
+Results for $R_{\gamma}^{\rm{laser}}$ are also shown in Table \ref{table:photoexcitation}. Since the nuclear excitation per pulse is typically very small, the pulse repetition frequency $f_{\rm{rep}}$ of the laser plays a crucial role in order to have detectable signal rates. The Eur.~XFEL, for instance, is expected to provide two orders of magnitude larger rates than the LCLS although the excited state population per pulse is smaller simply due to the high repetition frequency of 40,000 pulses per second. The XFELO may  produce $4.6\times10^{-3}$ and $1.5\times10^{9}$ signal photons per second for ${}^{93\rm{m}}$Mo and ${}^{57}$Fe, respectively. The large difference between ${}^{93\rm{m}}$Mo and ${}^{57}$Fe comes mainly from the magnitude of the interaction matrix elements and the numbers of nuclei present in the samples, which are orders of magnitude apart. This difference also compensates that the effective intensity for the resonant photoexcitation of ${}^{57}$Fe is about one order of magnitude smaller than for ${}^{93\rm{m}}$Mo.
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Secondary NEEC in a stationary plasma}
+\label{sec:NEEC-stationary}
+
+
+The net NEEC rate $\lambda_{\rm{neec}}$ provided by Eq.~\eqref{eq:neec-plasma.total} is strongly dependent on the available charge states and free electron energies which are in turn both dictated by the plasma conditions. The charge state distribution (CSD) can be calculated by applying the collisional-radiative model implemented in FLYCHK \cite{FLYCHK}. In this model the CSD is  completely determined by fixing the electron temperature $T_{\rm{e}}$ and the ion density $n_{\rm{i}}$ present in the plasma.  
+In the following we investigate the role of the plasma conditions, considered to be stationary here, on $\lambda_{\rm{neec}}$ for the numerical case of ${}^{93\rm{m}}$Mo isomer triggering. 
+
+
+The microscopic transition rates $Y_{\rm{neec}}$ given in Eqs.~(\ref{eq:Yneec_el}) and (\ref{eq:Yneec_mag}) are computed numerically  following the formalism introduced in Chap.~\ref{chap:NEEC}. The electronic wave functions and binding energies are calculated by the relativistic multi-configurational Dirac Fock (MCDF) method implemented in the computer code GRASP92 \cite{GRASP}. The probabilities $P_q$ are determined by the FLYCHK-CSD results  and the electron flux $\phi_{\rm{e}}$ is calculated following the expressions in Sec.~\ref{sec:neecinplasma}. Finally, the convolution integral over the Lorentz profile and the electron flux appearing in Eq.~(\ref{eq:neec-plasma.partial}) are solved by approximating the resonance profiles by Dirac delta distributions centered at $E_{\rm{d}}$.
+
+
+
+
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}
+  \small
+  \centering
+  \begin{tabular}{lcc}
+  \hline\hline
+  & & \tabularnewline[-0.4cm]
+  capture & $\Phi^{\rm{res}}_{\rm{e}}$ & $S^{IS \rightarrow F}_{\rm{neec}}$ \tabularnewline
+  orbital & [1/m$^2$/s/eV] & [b eV] \tabularnewline 
+  & & \tabularnewline[-0.4cm] \hline
+  & & \tabularnewline[-0.4cm]
+  3$d_{3/2}$ & $1.10\times 10^{31}$ & $3.04\times 10^{-8}$ \tabularnewline
+  3$d_{5/2}$ & $1.09\times 10^{31}$ & $4.28\times 10^{-8}$ \tabularnewline
+%  4 & -1 & 1/2 & $3.51\times 10^{30}$ & $4.97\times 10^{-9}$ \tabularnewline
+%  4 & 1 & 1/2 & $3.22\times 10^{30}$ & $2.62\times 10^{-7}$ \tabularnewline
+%  4 & -2 & 3/2 & $3.16\times 10^{30}$ & $4.64\times 10^{-7}$ \tabularnewline
+  4$d_{3/2}$ & $2.77\times 10^{30}$ & $1.05\times 10^{-8}$ \tabularnewline
+  4$d_{5/2}$ & $2.76\times 10^{30}$ & $1.50\times 10^{-8}$ \tabularnewline
+%  4 & 3 & 5/2 & $2.46\times 10^{30}$ & $4.18\times 10^{-10}$ \tabularnewline
+%  4 & -4 & 7/2 & $2.45\times 10^{30}$ & $5.38\times 10^{-10}$ \tabularnewline
+%  5 & -1 & 1/2 & $1.78\times 10^{30}$ & $2.09\times 10^{-9}$ \tabularnewline
+%  5 & 1 & 1/2 & $1.71\times 10^{30}$ & $1.17\times 10^{-7}$ \tabularnewline
+%  5 & -2 & 3/2 & $1.70\times 10^{30}$ & $2.09\times 10^{-7}$ \tabularnewline
+  5$d_{3/2}$ & $1.59\times 10^{30}$ & $5.10\times 10^{-9}$ \tabularnewline
+  5$d_{5/2}$ & $1.59\times 10^{30}$ & $7.28\times 10^{-9}$ \tabularnewline
+%  5 & 3 & 5/2 & $1.51\times 10^{30}$ & $2.82\times 10^{-10}$ \tabularnewline
+%  5 & -4 & 7/2 & $1.51\times 10^{30}$ & $3.63\times 10^{-10}$ \tabularnewline
+%  5 & 4 & 7/2 & $1.47\times 10^{30}$ & $5.6\times 10^{-12}$ \tabularnewline
+%  5 & -5 & 9/2 & $1.47\times 10^{30}$ & $6.84\times 10^{-12}$ \tabularnewline
+  & & \tabularnewline[-0.4cm] \hline\hline
+  \end{tabular}
+  \caption{NEEC  case study for a 350~eV plasma with ions initially in the charge state $q=24$. Values for the resonant electron flux $\Phi_{\rm{e}}^{\rm{res}}$ and the NEEC resonance strength $S^{IS \rightarrow F}_{\rm{neec}}$ are presented for captures into $d_{3/2}$ and $d_{5/2}$ orbitals at an electron temperature $T_{\rm{e}}=350$~eV.}
+  \label{table:cut-off}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{figure}
+\centering
+\includegraphics[width=0.75\linewidth]{pics/fig2.eps}%
+\caption{(a) NEEC resonance cross sections $\sigma_{\rm neec}$ for captures into the $L$, $M$, $N$ and $O$ shell (left axis) together with the electronic energy distribution (right axis). (b) Partial NEEC rate $\lambda^{q}_{\rm neec}$ (left axis) together with the corresponding CSD (right axis). Results are presented for two plasma temperatures, 350 eV and 500 eV \cite{Jonas2013.PRL}.
+\label{fig:neec-results}}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In Fig.~\ref{fig:neec-results}(a) NEEC cross sections are displayed for several capture levels together with the electron flux $\phi_{\rm{e}}$. For the latter we have exemplarily taken the temperatures $T_{\rm{e}}=350$~eV and $T_{\rm{e}}=500$~eV. The figure shows that the NEEC cross section decreases by going to more loosely bound capture levels. Due to the reduction of the binding energy, the kinetic energy of the initially free electron increases in order to still fulfill the NEEC resonance condition. Since $\sigma_{\rm{neec}}^{\rm{i} \rightarrow \rm{d}}$ is inversely proportional to the squared electron momentum, this leads to a decrease of the NEEC cross section. 
+
+Moreover, by comparing the cross section with the electron flux it can be seen that for $T_{\rm{e}}=350$~eV and $T_{\rm{e}}=500$~eV the resonance energies for $M$-, $N$- and $O$-shell recombinations are located at the tail of the electron distribution which diminishes exponentially. This behavior is once more explicitly shown in Table \ref{table:cut-off} where the resonant electron flux $\Phi_{\rm{e}}^{\rm{res}}$ for $T_{\rm{e}}=350$~eV and the integrated cross section -- the so-called resonance strength $S_{\rm{neec}}$ -- are presented for increasingly less bound capture shells. We have considered the example of Mo ions with initially fully occupied $K$, $L$, $M_1$, $M_2$ and $M_3$ shells, corresponding to charge state $q=24$. Moreover, NEEC into $d_{3/2}$ and $d_{5/2}$ orbitals has been considered. The results clearly show that both the NEEC resonance strength and the number of resonant electrons decrease by going to higher principal quantum numbers. This behavior can be recovered for all capture channels and initial charge states, as long as the NEEC resonance energy is much larger 
+than the plasma temperature. Hence, a ``cut-off'' atomic level can be found for each charge state $q$ starting from which the NEEC excitation can be neglected. Numerical results for $\lambda_{\rm{neec}}$  shown in the following always employ such cut-offs.
+
+For the final NEEC reaction rate calculation, the three main ingredients are
+the electron energy distribution in the plasma, the availability of capture charge states and the magnitude of the NEEC cross sections $\sigma_{\rm neec}$. 
+In order to maximize the NEEC excitation rate one would prefer to have as many resonant free electrons as possible. As shown in Fig.~\ref{fig:neec-results}(a) this is the case for the resonance energies of NEEC into the $L$ shell which lie in the region around the maximum of $\phi_{\rm{e}}$ in the case of $T_{\rm{e}}=350$~eV and $T_{\rm{e}}=500$~eV. However, as can be seen from the charge state distributions shown in Fig.~\ref{fig:neec-results}(b), the number of available charge states in the plasma will be limited for a given electron temperature $T_{\rm{e}}$. For instance, in the case of $T_{\rm{e}}=350$~eV and $T_{\rm{e}}=500$~eV only Mo charge states up to $q=29$ and $q=32$, respectively, are present in the plasma. Opening the NEEC resonance channels for the $L$ shell requires the Mo ions to be at least in the charge state $q=33$. Hence, we conclude that $L$-shell capture is not possible for the considered temperatures in Fig.~\ref{fig:neec-results}.
+
+In addition to the molybdenum CSD, Fig.~\ref{fig:neec-results}(b) shows also the nuclear excitation probability in dependence of the charge state $q$  obtained from Eq.~\eqref{eq:neec-plasma.partial} via a summation over all contributing $\alpha_{\rm{d}}$. Again, the temperatures $T_{\rm{e}}=350$~eV and $T_{\rm{e}}=500$~eV are considered. Our results show that the nuclear excitation probability growths with $q$ because higher charge states open NEEC capture channels more deeply bound to the nucleus \cite{Jonas2013.PRL}. 
+
+Finally, looking at the dependence of $\lambda_{\rm{neec}}$ on the electron temperature $T_{\rm{e}}$ we can conclude that increasing the temperature leads to a higher NEEC excitation rate for mainly two reasons: (i) higher temperatures involve higher available charge states which renders the capture into deeply bound electron shells possible; (ii) higher temperatures lead to an increase of the total number of available free electrons enhancing the resonant electron flux.
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Secondary NEEC in an expanding plasma}
+\label{sec:NEEC-expanding}
+
+%------------------------------------------------------------------------------------%
+\subsection{Initial plasma conditions}
+\label{sec:plasmainit}
+
+In contrast to optical or infrared laser light, x-rays are able to produce directly inner-shell holes by photoionization and penetrate much further into the material leading to a very uniform irradiation of the solid. Moreover, the solid-state target is heated very rapidly by the laser pulse with  duration of about 100~fs. On this time scale the ionic motion is negligible resulting in a plasma near to solid-state density. This rapid, isochoric heating of the plasma (the volume is nearly unaffected during the formation process) enables us to consider uniform temperature and density distributions at short times after the laser pulse.
+
+The laser-induced creation of the plasma is mainly dominated by two processes: (i) photoionization, and, (ii) Auger decay. In the latter process an electron on a higher atomic shell decays to an inner-shell hole with the simultaneous emission of another electron into the continuum.
+The process of photoionization prefers the interaction with inner-shell electrons provided the photon energy exceeds the ionization potential of the electrons. In the case of niobium, for instance, the ionization edges of the $K$ and $L_{1}$ shells lie at 19~keV and 2.7~keV \cite{Henke1993.ADaNDT}, respectively. Hence, at most $L$-shell holes can be produced considering the resonant 4.85~keV x-rays. The laser-produced inner-shell holes are then subsequently refilled by either radiative or Auger decay. 
+
+In order to get a rough  estimate of the initial plasma conditions directly after its creation, we follow the procedure used in Ref.~\cite{Tesla-TDR-2001}. We neglect the hydrodynamic expansion and the radiative losses for  the first 100~fs when the laser pulse is present. (We note here that an extension of FLYCHK, the SCFLY code \cite{SCFLY}, was particularly designed to model the plasma generation phase. Unfortunately, SCFLY is not freely available.)
+Assuming an instantaneous equilibration time, equations of state (EOS) can be used to estimate the initial plasma conditions. Thereby, the deposited internal energy per pulse can be approximated by $e(J/g) = I_{\rm{peak}}(W/cm^2) \kappa(cm^2/g) T_{\rm{pulse}}(s)$ where $\kappa$ represents the photoabsorption coefficient. Using the EOS tables $e(T_{\rm{e}},\rho_0)$ \cite{MPQeos}, the initial plasma temperature immediately after the creation process can be determined. Note that the ionic density is thereby assumed to remain initially at its solid-state density $\rho_0$ and at room temperature.
+
+By using the LCLS laser parameters  presented in Table \ref{table:laser}, we obtain an initial temperature of $T_{\rm{e,0}} \approx 350$~eV for the Nb target. For the calculation we used a photoabsorption coefficient of 551.6 cm$^2$/g. Analogously, the initial stage of the Fe plasma can be estimated. Since due to the higher photon energy, the photoabsorption coefficient (63.0 cm$^2$/g) is much smaller in this case, we obtain a colder electron temperature from start on, namely $T_{\rm{e,0}} \approx 75$~eV.
+
+
+
+%------------------------------------------------------------------------------------%
+\subsection{Atomic effects in plasma expansion}
+\label{sec:atomic}
+
+
+In dense plasmas, atomic processes such as recombination and ionization
+are expected to play an important role on the plasma dynamics. In the following we sketch
+an approximate way to include the effects of
+the atomic processes on the hydrodynamic plasma expansion model described in Sec.~\ref{sec:hydro} by
+using numerical results from the FLYCHK code \cite{FLYCHK}. 
+
+FLYCHK was developed for describing plasma states  like warm dense matter, highly transient states of matter or extremely hot and dense matter. It employs a schematic atomic structure in order to provide a fast and widely applicable plasma diagnosis tool. Each atomic level is represented only by its principal quantum number $n$. The atomic energy levels are computed from ionization potentials where the effect of the electronic continuum depression occurring in plasmas is taken into account by employing the model of Stewart and Pyatt \cite{SPJ66}. The population kinetics model implemented in FLYCHK is based on rate equations including radiative and collisional transitions between bound states, photoionization, collisional ionization processes, Auger decay, electron capture, radiative recombination and three-body recombination. These rate equations are solved for a finite set of atomic levels which consists of ground states, single excited states ($n\le10$), autoionizing doubly excited states and 
+inner shell excited states for all possible ionic stages.
+
+With the model briefly described above, FLYCHK is able to determine
+ionization and level population distributions of a plasma (for some
+given conditions such as a given electron temperature and density).
+It can be applied for low-to-high $Z$ ions under most conditions of
+laboratory plasmas, in either steady-state or time-dependent
+situations \cite{FLYCHK}.
+
+The plasma under consideration here is a cold dense plasma. Considering again the numerical
+example of isomer triggering of ${}^{93\rm{m}}$Mo, the initial
+density of niobium ions is considered to be solid density and the initial
+electron temperature is several hundred eV. The result from FLYCHK
+shows that the time required to reach the steady state (with regard to the
+atomic processes) of such a plasma is on the order of
+several hundred fs. With the radius of the considered plasma of around
+$1.8~\mu$m (according to the initial condition that the laser spot radius is
+around $1.8~\mu$m), the characteristic time scale for
+the plasma expansion  is on the order of $10$~ps. Thus, the
+time scale for reaching the steady state (with regard to the atomic
+processes) is much smaller than the time scale of expansion.
+Therefore, we can assume that the steady state with regard to the atomic
+processes establishes at each time instant during the expansion.
+As a first approximation, we can include the effects of atomic
+processes to the hydrodynamic expansion model by estimating the
+charge state of each time instant using FLYCHK.
+
+
+According to Eq.~(\ref{eq:Tetime}) and to the ion density dynamics given by
+%
+\begin{equation}
+  n_{\rm{i}} (R) = n_{\rm{i,0}} \left(\frac{R_0}{R}\right)^3\ ,
+  \label{eq:nionr}
+\end{equation}
+%
+we may derive the dependence of the steady-state average charge $Z_{\rm{i}} (R)$ of the plasma on the 
+plasma size $R$ using FLYCHK. In the equation above, $n_{\rm{i,0}}$ is the
+initial ion number density. Fig.~\ref{fig:zirflychk} shows the
+average charge state of the ions for the case of
+$n_{\rm{i,0}}=5.5\times 10^{22}$~cm$^{-3}$ and
+$T_{\rm{e,0}}=350~\rm{eV}$. The average charge state decreases with reducing
+temperature and ion density.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.56\columnwidth]{pics/Zbar_Nb-350eV.pdf}
+\caption{Steady-state average charge of niobium ions obtained
+from FLYCHK as a function of the plasma radius $R$ (points) and its interpolation (solid line).
+We consider $n_{\rm{i,0}}=5.5\times 10^{22}$~cm$^{-3}$ and
+$T_{\rm{e,0}}=350~\rm{eV}$. } \label{fig:zirflychk}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.56\columnwidth]{pics/Nb-350-plasma-expn_2.pdf}
+\caption{Plasma radius $R$ (a), expansion velocity $v_{\rm{expn}}$ (b), and
+electron temperature $T_{\rm{e}}$ (c) as functions of the expansion time. We
+use the parameter set 
+$n_{\rm{i,0}}=5.5\times 10^{22}$~cm$^{-3}$ (niobium ions) and
+$T_{\rm{e,0}}=350~\rm{eV}$. Dashed orange 
+curve denotes the result for the case where the steady-state average charge
+$Z_{\rm{i}} (R)$ provided by FLYCHK (and shown in Fig.~\ref{fig:zirflychk}) is employed in the calculations, i.e.,
+the atomic processes effects are taken into account \cite{Jonas2015-plasma-arxiv}. Solid green
+curve stands for the result for a fixed charge state 
+$Z_{\rm{i}} \approx 23.86$.  
+}\label{fig:expansion}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+With the average charge state shown in
+Fig.~\ref{fig:zirflychk} we can solve Eq.~(\ref{eq:expanri}) in order to
+study the plasma expansion. The results are shown in
+Figs.~\ref{fig:expansion}, where the expansion velocity $v_{\rm{expn}} = \d R/\d t$  has
+been introduced. For comparison, the solution of
+Eq.~(\ref{eq:expanri}) for the case where the charge state is
+fixed to $Z_{\rm{i}} \approx 23.86$ is also presented.  We observe that the
+expansion velocity is smaller when the effects of atomic processes in
+plasmas are taken into account. This is because the average charge state, originally 
+$Z_{\rm{i}} \approx 23.86$, decreases due to atomic processes with the
+plasma expansion. Thus, at larger times, the discrepancy between the two
+curves in Figs.~\ref{fig:expansion} increases. We note however that the discrepancy
+remains small, on the level of 10\%. Due to the plot scale, the discrepancy for $T_{\rm{e}}$ is less visible, although 
+it is exactly following the relation (\ref{eq:Tetime}) and it reaches the level of 10\% at later times.
+
+
+In order to ensure the self-consistency
+of our approximation (i.e., that the steady state with regard to the
+atomic processes establishes at each time instant during the
+expansion), a time-dependent FLYCHK calculation has also been performed, using the time-dependent $T_{\rm{e}}$ shown in
+Fig.~\ref{fig:expansion}(c), the time-dependent ion density given by
+Eq.~(\ref{eq:nionr}) and $R(t)$ in Fig.~\ref{fig:expansion}(a) as 
+input parameters. The results show that $Z_{\rm{i}}$ from the time-dependent FLYCHK
+calculation only slightly deviates ($\sim 5\%$) from the results in
+Fig.~\ref{fig:zirflychk} for large $R$, while the results agree well
+for small $R$ \cite{Jonas2015-plasma-arxiv}. We conclude that on the degree of accuracy required for our calculations, the approximation used performs sufficiently well.
+
+
+Further, we study the behavior of the average charge state and the plasma radius for several initial temperature values for both niobium (Figs.~\ref{fig:zirte}) and iron (Figs.~\ref{fig:ziFete}) plasmas. Higher initial temperatures lead to higher charge states with a very similar qualitative behavior at later times in the expansion when the temperature decreases \cite{Jonas2015-plasma-arxiv}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{pics/Nb-plasma-expn-Temp_2.pdf}
+\caption{Steady-state average charge of niobium ions (points) obtained
+from FLYCHK (a), and plasma radius $R$ as a function of the expansion time (b),
+for initial temperatures $T_{\rm{e,0}}=200~\rm{eV}$,
+$T_{\rm{e,0}}=300~\rm{eV}$, $T_{\rm{e,0}}=350~\rm{eV}$,
+$T_{\rm{e,0}}=400~\rm{eV}$, and $T_{\rm{e,0}}=500~\rm{eV}$ \cite{Jonas2015-plasma-arxiv}. Numerical interpolations are shown by the curves.
+We use $n_{\rm{i,0}}=5.5\times 10^{22}$~cm$^{-3}$. The lowest charge state points correspond to cooling down the plasma to $50~\rm{eV}$ electron temperature.} \label{fig:zirte}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{pics/Fe-plasma-expn-Temp_2.pdf}
+\caption{Steady-state average charge of iron ions (points) obtained
+from FLYCHK (a), and plasma radius $R$ as a function of the expansion time (b), for initial temperatures $T_{\rm{e,0}}=50~\rm{eV}$,
+$T_{\rm{e,0}}=75~\rm{eV}$, $T_{\rm{e,0}}=100~\rm{eV}$,
+$T_{\rm{e,0}}=150~\rm{eV}$, and $T_{\rm{e,0}}=200~\rm{eV}$ \cite{Jonas2015-plasma-arxiv}. Numerical interpolations are shown by the curves.
+The value
+$n_{\rm{i,0}}=8.5\times 10^{22}$ cm$^{-3}$ was used. The end points of the curves 
+correspond to the
+electron temperature cooled down to $15~\rm{eV}$ for
+$T_{\rm{e,0}}=50~\rm{eV}$, $25~\rm{eV}$ for
+$T_{\rm{e,0}}=75~\rm{eV}$ and $T_{\rm{e,0}}=100~\rm{eV}$, and
+$50~\rm{eV}$ for $T_{\rm{e,0}}=150~\rm{eV}$ and
+$T_{\rm{e,0}}=200~\rm{eV}$, respectively.} \label{fig:ziFete}
+\end{figure}
+
+
+
+%------------------------------------------------------------------------------------%
+\subsection{Total NEEC excitation}
+
+
+Due to the hydrodynamic expansion of the plasma, the electron temperature and density decrease with time during the plasma expansion leading to a time-dependent net NEEC rate. Fig.~\ref{fig:neec-hydro} presents the time dependence of $\lambda_{\rm{neec}}$ for several initial electron temperatures $T_{\rm{e,0}}$. The ion density is always assumed to be at its solid-state value immediately after the plasma creation. As expected, $\lambda_{\rm{neec}}$ drops down to zero with time in all cases (i.e., with the plasma expansion) and takes larger values with increasing initial temperature.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[width=0.75\linewidth]{pics/neec-rate-hydro-time_all.pdf}%
+\caption{NEEC reaction rate as a function of time for ${}^{93\rm{m}}$Mo (left graph column) and ${}^{57}$Fe (right graph column). In the case of ${}^{93\rm{m}}$Mo  initial electron temperatures of 200~eV, 350~eV and 500~eV have been considered; for ${}^{57}$Fe, the corresponding values are  75~eV, 100~eV and 200~eV, respectively \cite{Jonas2015-plasma-arxiv}.
+\label{fig:neec-hydro}}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The left column of Fig.~\ref{fig:neec-hydro}  presents  the NEEC reaction rates $\lambda_{\rm{neec}}$ for the case of ${}^{93\rm{m}}$Mo triggering. Comparing the orders of magnitude of $\lambda_{\rm{neec}}$ it can be seen that the NEEC excitation is strongly dependent on the initial plasma conditions dictated by the laser. Going from $T_{\rm{e,0}} = 200$~eV to $T_{\rm{e,0}} = 500$~eV enhances the NEEC excitation by approximately 7 orders of magnitude. The integration of $\lambda_{\rm{neec}}$ over time provides the excited state occupation number per nucleus (comparable to $\rho_{\rm{ee}}^{\rm{laser}}$),
+%
+\begin{equation}
+\rho_{\rm{ee}}^{\rm{neec}} = \int_0^{\infty} \d t \, \lambda_{\rm{neec}}\ .
+\end{equation}
+%
+Performing the integration for the case of ${}^{93\rm{m}}$Mo results in $\rho_{\rm{ee}}^{\rm{neec}} \approx 1.8 \times 10^{-20}$ for $T_{\rm{e,0}} = 200$~eV, $\rho_{\rm{ee}}^{\rm{neec}} \approx 1.4 \times 10^{-15}$ for $T_{\rm{e,0}} = 350$~eV and $\rho_{\rm{ee}}^{\rm{neec}} \approx 1.6 \cdot 10^{-13}$ for $T_{\rm{e,0}} = 500$~eV \cite{Jonas2015-plasma-arxiv}. For all the three cases, the integration converged after approximately 6~ps. This value gives us the dominant NEEC interaction time during the hydrodynamic plasma expansion. We recall that in Ref.~\cite{Jonas2013.PRL} the plasma conditions were considered constant for 100 ps. Our present results show that this is not the case and significant changes in the plasma affect the magnitude of the secondary nuclear excitation after already few ps. 
+
+We turn now to the NEEC reaction rates for  ${}^{57}$Fe presented in the right column of Fig.~\ref{fig:neec-hydro}. While the relevant time scales are similar to the ones of  ${}^{93\rm{m}}$Mo, on the order of 6 ps, the magnitude of the NEEC rates is in comparison  tens of orders of magnitude below, and for all practical purposes negligible \cite{Jonas2015-plasma-arxiv}. Let us investigate the reasons for such a dramatic difference. Iron has $Z=26$ and correspondingly smaller binding energies than molybdenum ($Z=43$), while at the same time the nuclear excitation energy is larger, 14.4 keV vs. 4.8 keV, respectively. The typical capture orbitals for both ions lie in the $M$ atomic shell. Correspondingly, the continuum electron energies required for NEEC will be much larger for  ${}^{57}$Fe than for ${}^{93\rm{m}}$Mo. While the $M$-shell NEEC requires continuum electron energies between 3 and 4 keV, where the electron flux still has large values, in the case of ${}^{57}$Fe the resonant continuum electrons should have more than 13 keV. For this energy value, the plasma at 75 eV temperature provides virtually no electrons at all, leading to the infinitesimal NEEC rate values in Fig.~\ref{fig:neec-hydro}. 
+
+
+
+%------------------------------------------------------------------------------------%
+\section{Comparison between direct and secondary excitation}
+\label{sec:plasma-comparison}
+
+In order to obtain comparable results for $\rho_{\rm{ee}}^{\rm{laser}}$ and $\rho_{\rm{ee}}^{\rm{neec}}$ we fix the initial plasma conditions according to the chosen laser parameters. In particular, the laser intensity plays here an important role as outlined in Sec.~\ref{sec:plasmainit}. Restricting ourselves to the LCLS laser parameters, an initial electron temperature of $T_{\rm{e,0}} = 350$~eV is estimated for the niobium target doped with ${}^{93\rm{m}}$Mo isomers. Comparing the corresponding excited state occupation numbers $\rho_{\rm{ee}}^{\rm{laser}}$ and $\rho_{\rm{ee}}^{\rm{neec}}$, we conclude that the indirect NEEC process is still about five orders of magnitude more efficient than the direct photoexcitation. One important aspect is here that the time of interaction is about 60 times longer for NEEC than for the direct photoexcitation. In contrast to ${}^{93\rm{m}}$Mo, the indirect NEEC process plays no role for the excitation of ${}^{57}$Fe, since the NEEC reaction rate values are for all practical purposes negligible. 
+
+One important remark here is that the direct photoexcitation can be switched off by tuning the laser off resonance. In contrast, the secondary excitation remains present since the XFEL-produced plasma is not sensitive to small detunings. For instance, in the case of ${}^{93\rm{m}}$Mo the nuclear transition energy is only known up to an uncertainty of 80~eV. Since the XFEL bandwidths are  several eV, this uncertainty can be a limiting factor for the experimental implementation of the direct photoexcitation channel. The secondary NEEC process occurs instead in the plasma environment with a rather broad electron distribution where many resonance channels can contribute. Hence, it is much more robust than photoexcitation against such uncertainties in the nuclear parameters. We also note that since the electron fluxes in the plasma are at the studied plasma temperatures several orders of magnitude larger than the corresponding photon fluxes, we neglect in our discussion the possible secondary nuclear photoexcitation process in the plasma. Other studies \cite{Gosselin2004.PRC,Morel2004.PRA,Gosselin2007.PRC,Morel2010.PRC,Stephan2014.PRC} on hot astrophysical plasmas show that this may change at higher, keV plasma temperatures. 
+The study of NEEC in plasmas was so far restricted to astrophysical environments \cite{Gosselin2004.PRC,Morel2004.PRA,Gosselin2007.PRC,Morel2010.PRC} or optical-laser-generated plasmas \cite{Harston1999.PRC} where no equivalent of the direct photoexcitation channel under investigation here exists.
+
+The values for $\rho_{\rm{ee}}^{\rm{neec}}$ are strongly dependent on the initial plasma conditions. Theoretically, the initial plasma conditions and in particular the electron temperature should be controllable by changing the laser intensity. Since $\rho_{\rm{ee}}^{\rm{neec}}$ grows exponentially with $T_{\rm{e,0}}$ saturating for large $T_{\rm{e,0}}$ in the considered temperature range and $T_{\rm{e,0}}$ furthermore depends linearly on the laser intensity $I$ between $10^{17}$ and $10^{18}$~W/cm$^2$, we expect for the considered parameter range an exponential dependence of the NEEC-induced excited state population $\rho_{\rm{ee}}^{\rm{neec}}$ on $I$. We note that for this estimate we consider the same initial size for the plasma, i.e., a constant laser focal spot. In contrast, the direct photoexcitation follows $\rho_{\rm{ee}}^{\rm{laser}}\propto I$. In addition, the XFEL intensity and consequently the plasma temperature can highly fluctuate from shot to shot. It is therefore reasonable to look at initial temperatures varying around the estimated value as it is realized in Fig.~\ref{fig:neec-hydro}. For ${}^{93\rm{m}}$Mo, the indirect process is still on the same order of magnitude as the direct one for $T_{\rm{e,0}} = 200$~eV. For an 
+initial temperature of 500~eV the indirect NEEC process becomes even competitive with the photo-induced excitation via the coherent XFELO $\rho_{\rm{ee}}^{\rm{laser}} \approx 4.5\times 10^{-14}$ although for the latter a 10 times longer pulse duration than for the LCLS has been considered. In the case of ${}^{57}$Fe, the indirect excitation channel remains negligibly small in comparison to the direct process even by considering an initial electron temperature of 200~eV.
+
+The reason why the nuclear excitation of ${}^{93\rm{m}}$Mo and ${}^{57}$Fe behave inversely with respect to the direct and indirect excitations is two-fold. First, in the case of ${}^{93\rm{m}}$Mo triggering the microscopic NEEC cross section is  much larger than the one for resonant photoexcitation, while the situation  is reversed in the case of ${}^{57}$Fe. The second and most important reason is related to the plasma conditions. In the case of resonant ${}^{93\rm{m}}$Mo triggering, the photoabsorption of the 4.85~keV photons by the niobium target ($\kappa=551.6$~cm$^2$/g) is much stronger than the analog for 14.4~keV photons in iron ($\kappa=63.0$~cm$^2$/g). Naturally, the more photons are absorbed, the more energy is initially deposited in the target leading to a higher initial electron temperature. Then for NEEC it is important that the available charge states in the plasma and the energy of the free electrons are not that far away from the resonance condition. While this is the case for ${}^{93\rm{m}}$Mo with a 4.85 keV nuclear transition energy,  it is especially hard to realize in the limit of high nuclear transition energies like for ${}^{57}$Fe.
+
+Let us generalize our results based on the arguments presented above.  A first insight into the relation between the resonant photoexcitation and microscopic NEEC cross sections can be gathered from the corresponding IC coefficients which are defined as the ratio between the IC and radiative decay rates. For high values of $\alpha_{\rm{ic}}$ we expect NEEC to dominate over photoexcitation, which is typically the case for small nuclear transition energies in the keV region. Next, the prevailing initial free electron conditions are strongly dependent on the occurring x-ray atomic photoabsorption. The photoabsorption coefficient growths with increasing $Z$ of the material and decreasing photon energy. Moreover,  shell edges may lead to a stepwise enhancement of $\kappa$. However, a high electron temperature simultaneously leads to higher available charge states which again require smaller kinetic electron energies in order to fulfill the NEEC resonance condition. These opposite trends need to 
+be balanced in order to match the available electron energies with the NEEC resonance condition for the open capture channels. Typically, in the temperature range of hundreds of eV the secondary excitation contributes significantly only for transition energies of few  keV.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}
+  \small
+  \centering
+  \begin{tabular}{lccccccccc}
+  \hline\hline
+  & & & & & & & & & \tabularnewline[-0.4cm]
+  Nuclide & $E_{\rm{n}}$ & $\mathcal{E}/\mathcal{M}L$ & $\kappa$ & ion. & $T_{\rm{e,0}}$ & $Z_{\rm{i}}$ & cap. & $E_{\rm{ion}}$  & \multicolumn{1}{c}{$\alpha_{\rm{ic}}$} \tabularnewline
+  & [keV] & & [cm$^2$/g] & shell & [eV] & & shell & [keV] & \tabularnewline
+  & & & & & & & & & \tabularnewline[-0.4cm] \hline
+  & & & & & & & & & \tabularnewline[-0.4cm]
+  ${}^{201}_{80}$Hg & 1.565 & $\mathcal{M}1$ & 1975 & $N_1$ & 670 & 43 & $N_4$ & 0.378 & 3.5e+01 \tabularnewline
+  ${}^{193}_{78}$Pt & 1.642 & $\mathcal{M}1$ & 1628 & $N_1$ & 510 & 40 & $N_3$ & 0.519 & 1.2e+02  \tabularnewline
+  ${}^{205}_{82}$Pb & 2.329 & $\mathcal{E}2$ & 911 & $N_1$ & 790 & 45 & $N_3$ & 0.645 & 1.8e+07 \tabularnewline
+  ${}^{151}_{62}$Sm & 4.821 & $\mathcal{M}1$ & 362 & $M_1$ & 740 & 42 & $M_3$ & 1.420 & 6.2e+00  \tabularnewline
+  ${}^{93\rm{m}}_{42}$Mo & 4.850 & $\mathcal{E}2$ & 552 & $L_1$ & 350 & 24 & $M_2$ & 0.410 & 2.5e+04  \tabularnewline
+  ${}^{171}_{69}$Tm & 5.036 & $\mathcal{M}1$ & 442 & $M_1$ & 850 & 46 & $M_4$ & 1.515 & 1.6e+00  \tabularnewline
+  ${}^{83}_{37}$Rb & 5.236 & $\mathcal{M}1$ & 328 & $L_1$ & 1080 & 32 & $L_1$ & 2.065 & 7.5e+01  \tabularnewline
+  ${}^{181}_{73}$Ta & 6.237 & $\mathcal{E}1$ & 300 & $M_1$ & 520 & 36 & $N_2$ & 0.465 & 7.7e--01 \tabularnewline
+  ${}^{169}_{69}$Tm & 8.410 & $\mathcal{M}1$ & 118 & $M_1$ & 630 & 43 & $M_5$ & 1.468 & 1.7e--01 \tabularnewline
+  ${}^{187}_{76}$Os & 9.756 & $\mathcal{M}1$ & 107 & $M_1$ & 510 & 37 & $N_3$ & 0.468 & 4.8e--01 \tabularnewline
+  ${}^{167}_{69}$Tm & 10.400 & $\mathcal{M}1$ & 291 & $L_1$ & 220 & 25 & $N_4$ & 0.180 & 3.1e--02 \tabularnewline
+  ${}^{137}_{57}$La & 10.590 & $\mathcal{M}1$ & 166 & $L_1$ & 580 & 37 & $M_3$ & 1.123 & 3.7e--01 \tabularnewline
+  ${}^{134}_{55}$Cs & 11.244 & $\mathcal{M}1$ & 129 & $L_1$ & 1420 & 43 & $L_3$ & 5.012 & 1.2e+00 \tabularnewline
+  ${}^{73}_{32}$Ge & 13.285 & $\mathcal{E}2$ & 124 & $K$ & 220 & 18 & $L_3$ & 1.217 & 4.1e+02  \tabularnewline
+  ${}^{57}_{26}$Fe & 14.413 & $\mathcal{M}1$ & 63 & $K$ & 75 & 12 & $M_1$ & 0.093 & 1.0e--01 \tabularnewline
+  ${}^{149}_{62}$Sm & 22.507 & $\mathcal{M}1$ & 28 & $L_1$ & 350 & 28 & $M_5$ & 1.080 & 3.1e--03 \tabularnewline
+  ${}^{119}_{50}$Sn & 23.871 & $\mathcal{M}1$ & 12 & $L_1$ & 120 & 14 & $N_2$ & 0.089 & 1.1e--02 \tabularnewline
+  & & & & & & & & & \tabularnewline[-0.4cm] \hline\hline
+  \end{tabular}
+  \caption{Low-lying nuclear transitions suitable for resonant photoexcitation via XFELs. Transition energies $E_{\rm{n}}$ and multipolarities $\mathcal{E}/\mathcal{M}L$, photoabsorption coefficients $\kappa$, deepest ionization subshells, estimates of the initial plasma temperature $T_{\rm{e,0}}$, the most probable charge states $Z_{\rm{i}}$ in the plasma, the  most advantageous capture orbitals for NEEC available in the plasma together with the corresponding  ionization energies $E_{\rm{ion}}$  and 
+IC coefficients $\alpha_{\rm{ic}}$ are presented in the columns. The list is sorted by increasing nuclear transition energies  $E_{\rm{n}}$.}
+  \label{table:general}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+
+More concretely, in Table \ref{table:general} we present the list of low-lying nuclear transitions first collected in Ref.~\cite{Junker2012.NJP} with the corresponding transition energy, multipolarity  and IC coefficient $\alpha_{\rm{ic}}$. Also provided are the photoabsorption coefficient $\kappa$, the deepest ionization shell, an approximation of the initial plasma temperature $T_{\rm{e,0}}$, the most probable charge state at this temperature  $Z_{\rm{i}}$, and finally the most NEEC-advantageous available capture shell in the plasma. The latter two quantities have been calculated with FLYCHK. For orientation, also the approximate ionization potential of the most advantageous available capture shell is presented. Since FLYCHK calculations are limited to the range $Z<80$, the entries $Z_{\rm{i}}$ and the capture shell for ${}^{201}_{80}$Hg and ${}^{205}_{82}$Pb have been estimated by taking $Z=79$. The initial temperatures in the table, with the exception of ${}^{93\rm{m}}$Mo and ${}^{57}$Fe, discussed in detail in Sec.~\ref{sec:plasmainit}, have been obtained  by accounting for the laser energy deposited into the sample with the help of mass photoabsorption coefficients \cite{XCOM}. Due to unavailable EOS tables, the averaged electron temperatures have been then roughly estimated by further considering energy conservation of the inner-shell photoionization and the first sequence of Auger decays.
+
+Based on the present analysis, we conclude that isotopes with high nuclear transition energies like ${}^{57}_{26}$Fe, ${}^{149}_{62}$Sm and ${}^{119}_{50}$Sn, which in addition only allow for NEEC into the $M$  or even higher shells, will not present significant secondary nuclear excitation in the XFEL-produced plasma \cite{Jonas2015-plasma-arxiv}. Nuclei with small transition energies as it is   the case for the first table entries down to
+${}^{83}_{37}$Rb are very likely to present significant secondary nuclear excitation in the plasma, due to the abundant electron flux at the required energies and the encouraging IC coefficient. As for the intermediate region with 6 keV$< E_{\rm{n}}<$13 keV, here a more careful analysis is required. The capture into $L$-shell orbitals in the case of ${}^{134}_{55}$Cs and ${}^{73}_{32}$Ge speaks for more available free electrons in the plasma at the resonance energy. However, due to the low $Z$ of germanium, it is likely that only in the case of  ${}^{134}_{55}$Cs secondary NEEC plays a role in the net nuclear excitation. In the cases of ${}^{169}_{69}$Tm, ${}^{187}_{76}$Os, ${}^{167}_{69}$Tm and ${}^{137}_{57}$La, the rather large transition energies, together with high capture orbitals into the $M$- or $N$-shell and the small IC coefficients indicate unlikely strong NEEC influence. Finally, the small IC coefficient in the case of ${}^{181}_{73}$Ta also rather speaks against strong secondary NEEC. However, since the arguments above do not relate to the time scale difference between NEEC and photoexcitation and the unavoidable detuning for the photoexcitation channel, we conclude that dedicated simulations are required to draw solid conclusions for the nuclei in the intermediate energy region.
+
+
+
+
+

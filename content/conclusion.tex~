@@ -1,0 +1,48 @@
+\chapter*{Summary \& Outlook}
+\markboth{Summary \& Outlook}{Summary \& Outlook}
+
+
+In this Thesis, light-nucleus interaction has been investigated following two directions. First, the qualitative and quantitative changes which can be expected for nuclear quantum optics experiments performed at high-intensity XFEL sources in the near future have been studied in terms of secondary nuclear excitation in potentially occurring plasma environments. Second, we have proposed control schemes for hard x-rays operated in the opposite limit, namely single-photon nuclear interfaces, which offer new prospects for quantum information studies and time-energy complementarity tests.
+
+In Chapter \ref{chap:direct-secondary}, the role of secondary nuclear excitation channels in photoexcitation scenarios with the XFEL has been investigated. The resonant driving of nuclear transitions with the XFEL is most likely to employ high-density, solid-state targets in order to improve the excitation rates. Secondary nuclear excitation might occur in the produced cold, dense plasma. We have quantified the magnitude of the possible secondary excitation via NEEC taking into account the plasma dynamics after the laser pulse via a hydrodynamic model. Our results show that the NEEC excitation process lasts for several ps until the plasma expansion completely diminishes the excitation rate. In contrast, the direct photoexcitation can only occur during the presence of the laser pulse, on the order of 100~fs. Due to the unique interaction between x-rays and matter, the XFEL-induced plasma is typically determined by a uniform state of well-characterized temperature and density in the beginning. The plasma conditions such as initial temperature, ion charge state distribution or electron flux play a crucial role for the magnitude of the occurring secondary excitation.
+
+Our results show that for small nuclear transition energies and advantageous free electron energy distributions, as it is the case for isomer triggering of ${}^{93\rm{m}}$Mo, secondary NEEC may exceed by as much as five orders of magnitude. For larger nuclear transition energies, in the case of the 14.4 keV M\"{o}ssbauer transition in ${}^{57}$Fe, secondary NEEC can be safely neglected. Therefore, we may conclude that nuclear quantum optics experiments with bulk iron samples in normal incidence will not suffer from strong decoherence rates due to plasma-related processes. Based on our present results for ${}^{93\rm{m}}$Mo and ${}^{57}$Fe, a general set of criteria for identifying the parameter regime for which secondary effects in the plasma are important has furthermore been worked out. Our findings will be of relevance for the layout of first nuclear excitation experiments at XFEL facilities in the near future.
+
+In Chapter \ref{chap:logical-gates}, the manipulation of hard x-rays at single-photon nuclear interfaces has been studied. Our findings prove that nuclear transitions can act as logical gates for polarization-encoded x-rays by controlling the collective nuclear response via timed rotations of the magnetic field. An x-ray photonic realization of single-input gates can be compiled by the mere variation of the magnetic field switching moment. Since the unary operations can be realized using a single setup, an additional control photon which triggers the magnetic field rotation can be exploited to design destructive operations with two input states, like a destructive x-ray C-NOT gate. The implementation of such basic logical operations with x-rays by using nuclear transitions may potentially advance quantum information in the future towards new and promising parameter regimes characterized by long coherence times and sub-\AA~spatial resolution, opening the perspective for more compact photonic devices.
+
+In Chapter \ref{chap:quantum-eraser}, we have proposed two quantum eraser schemes potentially shifting time-energy complementarity tests towards so-far unexplored parameter regimes in the hard x-ray domain. The essential idea of both schemes is to cancel the quantum interference between two hyperfine transitions by marking the scattering paths with orthogonal polarizations. The knowledge of the \textit{which-way} information leads to the cancellation of the quantum beat pattern in the NFS time spectrum. By using a polarizer projecting on the linear polarization basis, the \textit{which-way} information can be erased and the beat pattern is restored.
+
+In the following, a short outlook is given for possible future investigations based on our present results.
+
+\subsection*{Secondary nuclear processes in grazing incidence setups}
+The competition between the direct photoexcitation and the secondary NEEC process in XFEL-induced plasmas has been studied in normal-incidence setups with solid-state targets. Caution is however advised for extending these conclusions for experiments with x-ray thin film cavities containing ${}^{57}$Fe layers, which operate in grazing incidence. 
+These cavities have turned out to be an ideal playground for the mutual control of x-rays and nuclear transitions with synchrotron sources over the last years and are expected to play a crucial role in the further development of nuclear quantum optics in the nonlinear excitation domain.
+However, the usage of the XFEL in this case may lead to plasma formation which strongly influences the proper functionality of the x-ray cavities, potentially destroying envisaged enhancement or coherence effects. 
+Extending our ideas to this cavity geometry could help to reveal and predict the role of plasma-mediated processes in this case which is of importance for future nuclear quantum optics experiments at the XFEL employing x-ray thin film cavities. 
+
+
+\subsection*{Effect of nuclear processes for the plasma dynamics}
+In our current approach the nuclear excitation processes and the plasma expansion are treated separately. In order to reveal potential nuclear effects on the dynamics of the XFEL-induced plasma, a self-consistent treatment is required. One approach could be to incorporate the nuclear processes into the hydrodynamic expansion in terms of a rate equation model. Since NEEC is highly dependent on the prevailing electron energy and ion charge state distributions, measured excitation rates may even contain information usable for plasma analysis.
+
+
+\subsection*{XFEL-induced plasmas with optimized conditions for NEEC}
+Our investigation of secondary NEEC has so far been restricted to setups and parameter regimes initially designed for the direct nuclear photoexcitation. The frequency of the XFEL radiation, for instance, has been so far chosen resonant to the nuclear transition under investigation, in order to allow for direct photoexcitation. The theoretical framework derived in this Thesis can however be used to extract a parameter set optimized for very efficient secondary processes. Disregarding the direct excitation channel, the photon frequency can be determined such that a plasma state is created, optimized for secondary NEEC. 
+Since NEEC is anyway expected to give a valuable contribution to the plasma-mediated nuclear excitation in cold, high-density plasmas for certain nuclear transitions, such studies towards an optimized XFEL scenario may bring us a step closer to the first experimental NEEC signature.
+
+
+\subsection*{Extensions for the coherent manipulation of single hard x-rays}
+The control schemes presented in Part \ref{part:x-ray-control} of this Thesis employed NFS setups with temporally short, broadband x-ray pulses applied on ${}^{57}$Fe targets. Three possible directions how to extend these methods are sketched in the following.
+First, since in the optical domain quantum optical control schemes are mostly operated with spectrally narrow photons, it is natural to ask whether similar procedures can be designed for polarization-encoded x-ray pulses, spectrally on the order of the nuclear transition width. 
+Second, it may be helpful to consider other nuclear species than ${}^{57}$Fe, having nuclear spins different from $I_{\rm{g}}=1/2$ and $I_{\rm{e}}=3/2$. Utilizing the particular level structures could further improve and extend the proposed setups.
+Finally, one could also investigate quantum interference phenomena like the Houng-Ou-Mandel effect \cite{Agarwal}. Such photon-photon correlations have the potential to advance the presented binary logical operations to real non-destructive two-qubit gates.
+
+
+\subsection*{Fully quantum mechanical approach to NFS}
+The description of the light-nucleus interaction used in this Thesis follows a semiclassical approach where the radiation field is considered to behave classically. This treatment is valid for photons in a coherent state as it is the case, for instance, for SR pulses. The XFEL in contrast is a very powerful light source approaching the coherence properties of lasers in the conventional sense. This progress will help to leave the linear excitation regime, going from one to multiple nuclear excitations per pulse. In this regime, the study of photon-photon correlations becomes accessible where the quantum properties of the radiation field gain in importance. Therefore, the development of a fully quantum mechanical treatment of NFS becomes necessary in order to reveal quantum features of nuclear excitation and of x-ray pulse propagation. Such a theory would also allow to explore the preservation of the quantum characteristics of single x-ray quanta in recently proposed storage and release schemes employing NFS.
+
+
+
+
+
+
+

@@ -1,0 +1,266 @@
+%% Phd thesis: Niklas Michel
+%% ===========================
+%% based on the template of Phd thesis of Jonas Gunst
+%%
+%% You need at least KomaScript v3.0.0,
+%% e.g. available in Texlive 2009
+
+\documentclass  [
+  paper           = a4,
+  BCOR            = 13mm, %8.25mm bis 18mm
+  twoside,
+  fontsize        = 11pt, %12
+  DIV             = 12,   %oder: 10 bzw. 13 bzw. 14
+  %fleqn,
+  %bibtotoc,
+  %liststotoc,
+  %toc             = bibnumbered,
+  %toc             = listofnumbered,
+  chapterprefix,
+  numbers         = noendperiod,
+  headinclude     = true,
+  footinclude     = false,
+  headings        = big,
+  headings        = openright,
+  headsepline     = true,
+  footsepline     = false,
+  cleardoublepage = empty,
+%  listof          = leveldown,
+  titlepage       = true
+]                                       {scrbook}
+
+% used pagages
+\usepackage     [utf8]                  {inputenc}
+\usepackage     [T1]                    {fontenc}
+\usepackage                             {color}
+\usepackage                             {amsmath,amsfonts,amssymb}
+\usepackage                             {bm,bbold}
+%\usepackage                             {}
+\usepackage                             {graphicx,nicefrac}
+\usepackage     [english]               {babel}
+%\usepackage     [numbers,sort&compress] {natbib}
+\usepackage     [linktocpage={true}]    {hyperref}
+\usepackage                             {lmodern}
+%\usepackage                             {txfonts}
+%\usepackage                             {multirow}
+%\usepackage                             {hhline}
+\usepackage{enumerate}
+\usepackage[toc,page,header]{appendix}
+\usepackage{cite}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{combelow}
+\usepackage{scrlayer-scrpage}
+
+
+
+\usepackage[margin=10pt,format=plain,font=small,labelfont=bf,labelsep=colon]{caption}
+%indention=0.5cm,labelsep=endash
+\usepackage[caption=false]{subfig}
+
+\captionsetup[subfigure]{textfont=small, subrefformat=simple,labelformat=simple,listofformat=subsimple}
+%labelfont={normalsize,bf},
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+
+%
+%\usepackage{bbold,tikz,bm,nicefrac,slashed}
+%\usepackage{subfigure,url,booktabs,enumerate}
+%\usepackage[american]{babel}
+%\selectlanguage{american}
+%\usepackage[automark,headsepline]{scrpage2}
+%\usepackage{titlesec,cleveref}
+%\usepackage[inner=30mm,outer=30mm,top=25mm,bottom=30mm,a4paper,twoside]{geometry}
+%\usepackage{calc}
+%\usepackage{tocloft}
+
+
+% Mathcalboondox
+\DeclareFontFamily{U}{BOONDOX-calo}{\skewchar\font=45 }
+\DeclareFontShape{U}{BOONDOX-calo}{m}{n}{
+  <-> s*[1.05] BOONDOX-r-calo}{}
+\DeclareFontShape{U}{BOONDOX-calo}{b}{n}{
+  <-> s*[1.05] BOONDOX-b-calo}{}
+\DeclareMathAlphabet{\mathcalboondox}{U}{BOONDOX-calo}{m}{n}
+\SetMathAlphabet{\mathcalboondox}{bold}{U}{BOONDOX-calo}{b}{n}
+\DeclareMathAlphabet{\mathbcalboondox}{U}{BOONDOX-calo}{b}{n}
+
+%\usepackage{mathrsfs}
+%\usepackage[cal=cm,scr=boondoxo,scrscaled=1.05]{mathalfa}
+
+ 
+% Colors
+
+\definecolor{mpgcolor}{rgb}{0.00,0.494117647,0.478431373}
+\definecolor{goldenrod}{rgb}{0.85490196, 0.647058823, 0.125490196}
+\definecolor{gold}{rgb}{1, 0.843137254, 0.0}
+\definecolor{fore}{RGB}{249,242,215}
+\definecolor{back}{RGB}{51,51,51}
+\definecolor{keywords}{RGB}{255,0,90}
+\definecolor{comments}{RGB}{60,179,113}
+\definecolor{ubuntured}{rgb}{0.7882353, 0.0, 0.0862745}
+\definecolor{MYgreen}{rgb}{0.2352941, 0.7019608, 0.4431373}
+
+
+% Tables
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+
+% Captions
+%\setkomafont{caption}{\normalfont\small}
+%\setkomafont{captionlabel}{\sffamily\bfseries\small}  % oder \normalfont ?????
+%\setcapindent{0pt}
+
+
+% Head-/Footline
+%\clearscrheadfoot
+\setkomafont{pagefoot}{\small\scshape\mdseries}
+\setkomafont{pagenumber}{\small\normalfont}
+\setkomafont{pageheadfoot}{\small\scshape}
+
+\setkomafont{disposition}{\bfseries}
+\setkomafont{partnumber}{\LARGE}
+\setkomafont{chapterprefix}{\LARGE}
+%\setkomafont{chapter}{\normalfont\huge\bfseries}
+%\setkomafont{section}{\normalfont\Large\bfseries}
+
+
+
+% Numbering
+%\renewcommand{\thepart}{\Alph{part}}
+
+
+% links
+\definecolor{darkblue}{rgb}{0.0,0.0,0.4}
+\definecolor{darkgreen}{rgb}{0.0,0.4,0.0}
+
+\hypersetup{
+    pdftitle={PhD Thesis},
+    pdfauthor={Niklas Michel},
+    colorlinks,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+}
+
+
+% bibliography style
+
+
+%\bibliographystyle{prsty}
+%\bibliographystyle{wmaainf}
+%\bibliographystyle{alpha}
+%\bibliographystyle{amsalpha_cust}
+%\bibliographystyle{amsalphaurl}
+%\bibliographystyle{alphadin}
+
+
+% definitions to keep notation consistent.
+\input{latex/definitions.tex}
+
+
+\begin{document}
+
+ \urlstyle{same}
+
+%Titlepages
+%----------------------------------------------------------------------
+  %\include{titlepages-ger} % select either german
+  \include{title/titlepages-eng} % or english title page
+
+%Abstract
+%----------------------------------------------------------------------
+  \include{title/abstracts}
+  \include{title/articles}
+
+%TOC
+%----------------------------------------------------------------------
+  \frontmatter
+  \pagenumbering{Roman}
+
+  \tableofcontents
+    \thispagestyle{plain}
+
+%Text body
+%----------------------------------------------------------------------
+  \mainmatter
+
+  %introduction
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{part}{Introduction} %\protect\large
+  \include{content/introduction}
+
+  %content
+  %\part{Thesis can be devided into parts like this}
+  %\label{part:thesis}
+  \include{content/sample}
+
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{part}{Summary \& Outlook} %\protect\large
+  \include{content/conclusion}
+
+
+
+%Appendix
+%----------------------------------------------------------------------
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{part}{Appendix} %\protect\large
+  \appendix
+
+
+  \chapter{Sample chapter for appendix \label{app:sample}}
+    \input{appendix/sample_app}
+
+
+
+%References, List of Figures, ...
+%----------------------------------------------------------------------
+
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{part}{Bibliography} %\protect\large
+  \backmatter
+
+  \bibliography{mybib-articles,mybib-tdr,mybib-books,mybib-comments,mybib-web}
+    %\citestyle{egu}
+    \bibliographystyle{osajnl-mod}
+%    \bibliographystyle{thesis.bst}
+%    \bibliographystyle{amsalpha_cust}
+    \thispagestyle{plain}
+
+
+
+
+%Acknowledgements
+%----------------------------------------------------------------------
+
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{part}{Acknowledgements} %\protect\large
+
+  \include{content/acknowledgements}
+    \thispagestyle{plain}
+
+
+%Deposition
+%----------------------------------------------------------------------
+%  \include{content/deposition}
+
+
+%  \part{Appendix}
+%  \begin{appendix}
+%    \chapter{Lists}
+%    \listoffigures
+%    \listoftables
+%    \bibliography{references}{}
+%    \citestyle{egu}
+%    \bibliographystyle{plainnat}
+%    \include{deposition}
+%  \end{appendix}
+
+
+\end{document}

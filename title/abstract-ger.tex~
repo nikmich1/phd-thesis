@@ -1,0 +1,13 @@
+%% Latex markup und Zitate funktionieren auch hier
+
+{
+In dieser Arbeit wird die gegenseitige Wechselwirkung von R\"ontgenstrahlung und Kernen theoretisch untersucht.
+Im ersten Teil betrachten wir die Anregung von Kern\"uberg\"angen mit den hochbrillianten und koh\"arenten R\"ontgen-Freie-Elektronen-Lasern.
+Neben der verst\"arkten resonanten Kernanregung, k\"onnen durch die hohe Laserintensit\"at auch neue Materiezust\"ande, wie kalte, dichte Plasmen, erzeugt werden, in denen sekund\"are Kernprozesse, z.B. Kernanregung durch Elek\-tro\-nen\-ein\-fang, zu Tage kommen.
+Unsere Ergebnisse zeigen, dass im Falle von ${}^{57}$Fe-Kernen diese sekund\"are Kernanregung durch Elek\-tro\-nen\-ein\-fang verschwindend klein ist, wohingegen sie bei der Ak\-ti\-vier\-ung von ${}^{93\rm{m}}$Mo-Isomeren die dominierende Rolle spielt verglichen zur direkten Laseranregung. 
+Anhand dieser Fallstudien leiten wir allgemeing\"ultige Kriterien zur Iden\-ti\-fi\-zier\-ung des dominanten Anregungskanals ab, welche von großer Relevanz f\"ur k\"unftige Kern\-re\-so\-nanz\-stu\-dien an R\"ontgen-Freie-Elektronen-Lasern sind.
+Im zweiten Teil dieser Arbeit wird die Kontrolle einzelner R\"ontgenphotonen mithilfe von resonanten Kern\"uberg\"angen thematisiert. 
+Wir zeigen, dass durch abrupte Magnetfeldrotationen die Polarisation von R\"ontgenquanten im Zuge der Kern\-vor\-w\"arts\-streu\-ung an ${}^{57}$Fe-Targets bewusst manipuliert wer\-den kann, wodurch Bool'sche Operationen im R\"ontgenbereich m\"oglich werden. 
+Neben m\"oglichen An\-wen\-dungen in der Informationswissenschaft, weisen unsere Ergebnisse darauf hin, dass es durch Polarisationskodierung m\"oglich ist, Streupfade der R\"ontgenphotonen gezielt zu markieren, so dass deren Interferenz kontrolliert ab- und angeschaltet werden kann. 
+Die vorgeschlagenen Schemata treiben Zeit-Energie-Komplementarit\"atstests in den bislang unerforschten Parameterbereich der R\"ontgenstrahlung voran.
+}
