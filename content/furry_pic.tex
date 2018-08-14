@@ -1,14 +1,25 @@
 \chapter{Bound state QED in the Furry picture}
 \label{ch:furry_pic}
-
 \begin{itemize}
 \item Division of electromagnetic 4-potential in background and quantum part
 \item Bound states as poles in correlation functions
 \item Inclusion of background part in wave functions
 \item Quantum fluctuations around background as perturbation theory
 \item Treatment of perturbations in Furry picture(mixed QED+HFS)
-\item Treatment of nuclear structure effects in Furry picture (nuclear excited states)\cite{Michel2018}
+\item Treatment of nuclear structure effects in Furry picture (nuclear excited states)
 \end{itemize} 
+\section{Bound states in the external field approximation}
+A huge success of the Dirac equation~\cite{dirac1928} was the correct prediction of the fine structure of the hydrogen atom. Originally intended to be a relativistic generalization of the Schrödinger equation, it was a one-particle equation for a classical field. 
+However, a relativistic quantum theory always has to be a many-body theory, since for high energies effects like pair creation have to be considered. The relativistic quantum field theory suitable for describing the electromagnetic interaction is quantum electrodynamics (QED). In this framework, the bound state energies of atomic systems can be obtained including radiative corrections due to the quantized photon field and virtual particle-antiparticle pairs. 
+
+In this thesis, hydrogen-like systems and heavy nuclei are considered, so a single fermion (electron or muon) bound to a nucleus with a high charge number $Z$. The interaction strength of electron and nucleus is characterized by the parameter $Z\alpha$, where $\alpha \approx 1/137$ is the fine-structure constant. For high $Z$, this parameter is not small and as a result the Coulomb interaction between fermion and nucleus can not be treated in perturbation theory. 
+For heavy nuclei, the mass ratio $m/M$, where $m$ is the fermion and $M$ is the nuclear mass, is small. Accordingly, the external field approximation $m/M \righarraow 0$~\cite[sec.~13.6]{weinberg2005} can be used.
+
+The basis of the derivations in this chapter is the Lagrangian of quantum electrodynamics (QED), considering the fermion field coupled to the photon field such that the Lagrangian possesses a local $U(1)$ symmetry.
+\begin{equation}
+\mathcal{L}_{\text{QED}}=\bar{\psi}\left( i \gamma^\mu \partial_\mu -m  \right)\psi -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}-e\bar{\psi}\gamma^\mu \psi A_\mu,
+\end{equation}
+and $\psi$ is the fermion field operator, $F_{\mu\nu}=\partial_\mu A_\nu - \partial_\nu A_\mu$ the field strength tensor of the electromagnetic four-potential $A_\mu$.
 \newpage
 \section{Testsection}
 Lorem ipsum.
