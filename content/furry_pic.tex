@@ -6,9 +6,11 @@
 \item needed notation: sigma, gamma matrices, $\sqrt{p\cdot \sigma}$ in plane wave solutions, $\gamma$, $\alpha$ matrices, def of $a^\mu b_\mu$, def of $x=(x^0,\mathbf{x})$, vector are mathbf
 
 \item conventions for prefactors in lagrangian, def. of gamma matrices: peskin schröder
-\item for appendix:  feynman rules qed.
+\item conventions for propagators: itzykson
+\item for appendix:  feynman rules (position sp.) qed from itzykson
 \end{itemize} 
-\section{Bound states in the external field approximation}
+\section{The external field approximation in QED}
+\label{sec:ext_field}
 A huge success of the Dirac equation~\cite{dirac1928} was the correct prediction of the fine structure of the hydrogen atom. Originally intended to be a relativistic generalization of the Schrödinger equation, it was a one-particle equation for a classical field. 
 However, a relativistic quantum theory always has to be a many-body theory, since for high energies effects like pair creation have to be considered. The relativistic quantum field theory suitable for describing the electromagnetic interaction is quantum electrodynamics (QED). In this framework, the bound state energies of atomic systems can be obtained including radiative corrections due to the quantized photon field and virtual particle-antiparticle pairs. 
 
@@ -102,6 +104,7 @@ and that both $u_n(\mathbf{x})$ and $v_n(\mathbf{x})$ satisfy the Dirac equation
 \begin{alignat}{3}
 & \left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m + e\, \mathcal{A}^0 - e\, \pmb{\alpha}\cdot \pmb{\mathcal{A}} \right) u_n(\mathbf{x}) &&=&& \phantom{-}\;\, E_n u_n(\mathbf{x}) \notag\\
 & \left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m + e\, \mathcal{A}^0 - e\, \pmb{\alpha}\cdot \pmb{\mathcal{A}} \right) v_n(\mathbf{x}) &&=&& -E_n v_n(\mathbf{x})
+\label{eq:diraceq}
 \end{alignat}
 The Propagator in the external field is defined, similar to Eq.~\eqref{eq:freepropdef}, as the vacuum expectation value of time-ordered product
 \begin{equation}
@@ -118,7 +121,7 @@ Since the external field violates translation invariance, the propagator in the 
 \begin{alignat}{2}
 &\,S_{\mathcal{A}}(x,y)&&= \,S_F(x-y) 
 + \int\mathrm{d}x\, \,S_F(x-z)\left(-e\gamma^\mu A_\mu(z)\right)\,S_{\mathcal{A}}(z,y)\\
-& &&=\,S_F(x-y)+\int\mathrm{d}z\,\,S_F(x-z)(-e\gamma^\mu A_\mu(z))\,S_F(x-z)\\
+& &&=\,S_F(x-y)+\int\mathrm{d}z\,\,S_F(x-z)(-e\gamma^\mu A_\mu(z))\,S_F(z-y)\\
 &&&\phantom{=}+\iint\mathrm{d}z_1\mathrm{d}z_2\,\,S_F(x-z_1)(-e\gamma^\mu A_\mu(z_1))\,S_F(z_1-z_2)(-e\gamma^\mu A_\mu(z_2))\,S_F(z_2-y)\\
 &&&\phantom{=}+...\,\,.\label{eq:propeq}
 \end{alignat}
@@ -145,22 +148,22 @@ For a time-independent external field, a Fourier transformation in the zeroth co
 Therefore, bound states due to the external field lead to additional isolated poles in the propagator.
 
 \subsubsection*{Propagator of interacting theory}
-Finally, we will consider the propagator in the interacting theory, including the interaction with the quantized photon field. A similar argument as in the derivation of Eq.~\eqref{eq:spectralrep} also holds for the interacting theory~\cite[Section 14.2.]{weinberg2005}. This is, bound state energies including all radiative corrections appear as isolated poles of the full propagator. In order to locate the positions of these poles, perturbation theory with the propagator including the external field is used, expanding the propagator in powers of the finestructure constant $\alpha=e^2/(4\pi)$. The zero-order term is the dressed propagator in the background field, corresponding to solving the Dirac equation with the background field. The diagrams contributing to the radiative corrections to first order in $\alpha$ are the vacuum-polarization~(VP)and self-energy~(SE) diagrams shown in Fig.~\ref{fig:1loop} $(a)$ and $(b)$, respectively. Using the Feynman rules~\mbox{\cite[Section 6.1.]{itzykson2005}}, the propagator of the interacting theory $S_{I}(x,y)$ is expanded to first order in $\alpha$ as
+Finally, we will consider the propagator in the interacting theory, including the interaction with the quantized photon field. A similar argument as in the derivation of Eq.~\eqref{eq:spectralrep} also holds for the interacting theory~\cite[Section 14.2.]{weinberg2005}. This is, bound state energies including all radiative corrections appear as isolated poles of the full propagator. In order to locate the positions of these poles, perturbation theory with the propagator including the external field is used, expanding the propagator in powers of the finestructure constant $\alpha=e^2/(4\pi)$. The zero-order term is the dressed propagator in the background field, corresponding to solving the Dirac equation with the background field. The diagrams contributing to the radiative corrections to first order in $\alpha$ are the vacuum-polarization~(VP) and self-energy~(SE) diagrams shown in Fig.~\ref{fig:1loop} $(a)$ and $(b)$, respectively. Using the Feynman rules~\mbox{\cite[Section 6.1.]{itzykson2005}}, the propagator of the interacting theory $S_{I}(x,y)$ is expanded to first order in $\alpha$ as
 \begin{alignat}{2}
 &S_{I}(x,y) &&\approx S_{\mathcal{A}}(x,y) + \int \mathrm{d}^4z_1\,\mathrm{d}^4z_2\,
 S_{\mathcal{A}}(x,z_1)\,\left[\Sigma_{\text{VP}}(z_1,z_2)+\Sigma_{\text{SE}}(z_1,z_2)\right]\,S_{\mathcal{A}}(z_2,y),\notag\\
-&\Sigma_{\text{VP}}(z_1,z_2)&&=-\delta(z_1-z_2)(-ie\gamma^\mu)\int \text{d}z\,S_P(z_1-z)\Tr ((-ie\gamma_\mu)S_{\mathcal{A}}(z,z)),\notag\\
-&\Sigma_{\text{SE}}(z_1,z_2)&&=(-ie\gamma^\mu)S_{\mathcal{A}}(z_1,z_2)S_P(z_1-z_2)(-ie\gamma_\mu),
+&\text{with }\notag\\
+&\Sigma_{\text{VP}}(z_1,z_2)&&\coloneqq-\delta(z_1-z_2)(-ie\gamma^\mu)\int \text{d}z\,S_P(z_1-z)\Tr ((-ie\gamma_\mu)S_{\mathcal{A}}(z,z)),\notag\\
+&\Sigma_{\text{SE}}(z_1,z_2)&&\coloneqq(-ie\gamma^\mu)S_{\mathcal{A}}(z_1,z_2)S_P(z_1-z_2)(-ie\gamma_\mu),
 \end{alignat}
 where $g_{\mu\nu}S_P(x-y)$ is the photon propagator in position space~\mbox{\cite[Section 3.2.]{itzykson2005}}. Using the Fourier transformed functions
 \begin{equation}
 \Sigma_{\text{VP/SE}}(\mathbf{z}_1,\mathbf{z}_2,E)= \int \text{d}z_1^0\, \e^{iE(z_1^0-z_2^0)}\Sigma_{\text{VP/SE}}(z_1,z_2),
 \end{equation}
-and the spectral representation of the propagator from Eq.~\eqref{eq:spectralrep}, it can be shown~\mbox{\cite[Section 14.2.]{weinberg2005}} that the levelshifts of the $n$-th level read as
+and the spectral representation of the propagator from Eq.~\eqref{eq:spectralrep}, the levelshifts of the $n$-th level can be extracted from the shift of the poles~\mbox{\cite[Section 14.2.]{weinberg2005}} as
 \begin{equation}
-\Delta E_n = \int \text{d}^3\mathbf{x}\,\text{d}^3\mathbf{y}\,\bar{u}_n(\mathbf{x})\left( -\Sigma_{\text{VP}}(\mathbf{x},\mathbf{y},E_N)-\Sigma_{\text{SE}}(\mathbf{x},\mathbf{y},E_N) \right)u_N(\mathbf{y})
+\Delta E_n = \int \text{d}^3\mathbf{x}\,\text{d}^3\mathbf{y}\,\bar{u}_n(\mathbf{x})\left( -\Sigma_{\text{VP}}(\mathbf{x},\mathbf{y},E_N)-\Sigma_{\text{SE}}(\mathbf{x},\mathbf{y},E_N) \right)u_N(\mathbf{y}).
 \end{equation}
-
 %
 \begin{figure}%
 \centering
@@ -170,18 +173,55 @@ and the spectral representation of the propagator from Eq.~\eqref{eq:spectralrep
 \end{figure}
 %
 
-
 \subsection{Vacuum polarization potentials}
+For practical calculations of the order $\alpha$ vacuum polarization, the closed fermion loop in Fig.~\ref{fig:1loop}~b) can be expanded in numbers of interactions with the background field, using Eq.~\ref{eq:propeq}. For the case of atomic physics, since the nuclear potential is proportional to the nuclear charge number $Z$, this expansion is in powers of $Z\alpha$. The corresponding diagrams in order $\alpha(Z\alpha)$ (Uehling potential~\cite{uehling1935}) and $\alpha(Z\alpha)^3$ (Wichmann-Kroll potential~\cite{wichmann1956}) are shown in Fig.~\ref{fig:vac_pol_wk}. Since the closed loop now is formed by the free fermion propagator, all diagramms of order $\alpha(Z\alpha)^n$ with even $n$ vanish as a consequence of Furry's theorem~\mbox{\cite[Section~10.1.]{peskin1995}}. Formally, the order $\alpha (Z\alpha)$ correction $\delta S_{\text{Uehl}}$ from diagram (a) in Fig.~\ref{fig:vac_pol_uehl} to the propagator $S_{\mathcal{A}}$ reads
+\begin{alignat}{3}
+\label{eq:uehl}
+&\delta S_{\text{Uehl}}(x,y) &&=&& \int \mathrm{d}z_1\,S_{\mathcal{A}}(x,z_1)\Sigma_{\text{Uehl}}(z_1)S_{\mathcal{A}}(z_1,y)\\
+&\text{with}\notag\\
+&\Sigma_{\text{Uehl}}(z_1) &&\coloneqq&& -\int\mathrm{d}z_2(-ie\gamma^\mu)S_P(z_1-z_2)\notag\\
+&&&&&\times\int\mathrm{d}z_3\,\Tr((-ie\gamma_\mu)S_F(z_2-z_3)(-e\gamma^\nu A_\nu (z_3))S_F(z_3-z_2)).\notag
+\end{alignat}
+Analogously to the inclusion of the external field in the propagator from Eq.~\eqref{eq:extprop}, Eq.~\eqref{eq:uehl} and the corresponding iterations from diagrams (b), (c),$\,$... in Fig.~\ref{fig:vac_pol_uehl} can be summed to define a propagator $S_{\mathcal{A}+\text{Uehl}}$ which contains all iterations both in the external field and the order $\alpha (Z\alpha)$ vacuum polarization via
+\begin{equation}
+S_{\mathcal{A}+\text{Uehl}}(x,y) = S_{\mathcal{A}}(x,y) +  \int \mathrm{d}z_1\,S_{\mathcal{A}}(x,z_1)\Sigma_{\text{Uehl}}(z_1)S_{\mathcal{A}+\text{Uehl}}(z_1,y).
+\label{eq:uehlsum}
+\end{equation}
+This propagator is a Green's function for the Dirac equation including the external field and the Uehling potential as
+\begin{equation}
+\left(i\gamma^\mu \partial_\mu -m - e \gamma^\mu A_\mu + \Sigma_{\text{Uehl}}\right)S_{\mathcal{A}+\text{Uehl}}(x,y)=\delta(x-y).
+\label{eq:uehlprop}
+\end{equation}
+As a result, the diagrams in Fig.~\ref{fig:vac_pol_uehl} can be calculated by solving the Dirac equation~\eqref{eq:diraceq} including the Uehling potential. The same reasoning holds as well for the Wichmann-Kroll potential (Fig.~\ref{fig:vac_pol_wk}~b)) and for the order $\alpha^2(Z\alpha)$ vacuum polarization, referred to as the Källen-Sabry potential~\cite{kallen1955}, where the corresponding diagrams are shown in Fig.~\ref{fig:vac_pol_ks}. 
+
+Since the formal expressions for the vacuum polarization potentials contain divergences, they have to be renormalised. The corresponding expressions for the renormalized Uehling, Wichmann-Kroll and Källen-Sabry potentials are given in Section~\ref{sec:sph_dirac}.
 %
 \begin{figure}%
 \centering
-\includegraphics[width=0.9\linewidth]{pics/vac_pol.pdf}%
-\caption{Top row: Expansion of the order $\alpha$ vacuum polarization in powers of $(Z\alpha)$, in which the contributions with odd powers vanish. The $\alpha(Z\alpha)$ contribution (diagram $a$) is the Uehling term, the $\alpha(Z\alpha)^3$ contribution (diagram $b$) is the Wichmann-Kroll term. \\Bottom row: Contributions to the Källen-Sabry terms (diagrams $c$-$f$) of order $\alpha^2(Z\alpha)$.}%
-\label{fig:vac_pol}%
+\includegraphics[width=0.75\linewidth]{pics/vac_pol_wk.pdf}%
+\caption{Expansion of the order $\alpha$ vacuum polarization in powers of $(Z\alpha)$, i.e. in number of interactions with the nuclear field. The contributions with odd powers vanish due to Furry's theorem. The $\alpha(Z\alpha)$ contribution (diagram $a$) is the Uehling term, the $\alpha(Z\alpha)^3$ contribution (diagram $b$) is the Wichmann-Kroll term.}%
+\label{fig:vac_pol_wk}%
+\end{figure}
+%
+%
+\begin{figure}%
+\centering
+\includegraphics[width=0.8\linewidth]{pics/vac_pol_uehl.pdf}%
+\caption{Resummation of iterations of the Uehling potential needed for the modified Propagator from Eq.~\eqref{eq:uehlsum}.}%
+\label{fig:vac_pol_uehl}%
+\end{figure}
+%
+%
+\begin{figure}%
+\centering
+\includegraphics[width=0.9\linewidth]{pics/vac_pol_ks.pdf}%
+\caption{Feynman diagrams corresponding to the contributions to the Källen-Sabry potential of order $\alpha^2(Z\alpha)$.}%
+\label{fig:vac_pol_ks}%
 \end{figure}
 %
 \section{Dirac equation in central potentials}
-...
+\label{sec:sph_dirac}
+In the previous Section, the binding energies of a fermion bound by an atomic nucleus were investigated in the framework of the Furry picture of QED. The zeroth order approximations turned out to be the eigenenergies of the solutions of the Dirac equation (for a c-number field) including the nuclear background field. Furthermore, it was demonstrated that certain radiative corrections can be included as potentials in the Dirac equation as well. To a first approximation, the nuclear potential possesses spherical symmetry, and deviations thereof may be treated by perturbation theory later on. Thus, in this Section, the solutions of the Dirac equation for a spherical symmetric potential are discussed, mainly following~\cite{greiner2000}. Then, the case of the pure Coulomb potential is discussed, where the solution can be given in closed form due to the high degree of symmetry. Finally, the dual-kinetic-balance method~\cite{shabaev2004} for obtaining numerical solutions for arbitrary spherical symmetric potentials is discussed.
 \subsection{Solution of the Coulomb problem}
 ...
 \subsection{Numerical solution in a cavity}
