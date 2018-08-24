@@ -256,8 +256,8 @@ However, for a well defined total angular momentum and $z$-component of the tota
 \begin{equation}
 u_{n\kappa m_j}(\mathbf{r})=
 \begin{pmatrix}
-i g_{n\kappa}(r)\Omega_{\kappa m_j}(\vartheta,\varphi)\\
-- f_{n\kappa}(r) \Omega_{-\kappa m_j}(\vartheta,\varphi)
+g_{n\kappa}(r)\Omega_{\kappa m_j}(\vartheta,\varphi)\\
+i f_{n\kappa}(r) \Omega_{-\kappa m_j}(\vartheta,\varphi)
 \end{pmatrix}.
 \label{eq:ansatz_dirac}
 \end{equation}
@@ -275,7 +275,7 @@ For a point-like nucleus with charge number $Z$, the pure Coulomb potential read
 \begin{equation}
 V_C(r)=-\frac{Z\alpha}{r},
 \end{equation}
-and the radial equations~\ref{eq:radial_equations_small} can be solved analytically in this case. As a first step, the radial wave functions are substituted with
+and the radial equations~\eqref{eq:radial_equations_small} can be solved analytically in this case. As a first step, the radial wave functions are substituted with
 \begin{alignat}{2}
 &g_{n\kappa}(r)&&= \sqrt{1+E_{n\kappa}}\e^{-\lambda r}(\varphi_1(r)+\varphi_2(r)) \\
 &f_{n\kappa}(r)&&=\sqrt{1-E_{n\kappa}}\e^{-\lambda r}(\varphi_1(r)-\varphi_2(r)),
@@ -284,7 +284,7 @@ and for the functions $\varphi_i(r)$ the power-series ansatz
 \begin{equation}
 \varphi_i(r)=(2\lambda r)^\gamma \sum_{m=0}^\infty a^{(i)}_m (2\lambda r)^m,
 \end{equation}
-is assumed, where $\lambda = \sqrt{1-E^2_{n\kappa}}$ and $\gamma=\pm \sqrt{\kappa^2 - (Z\alpha)^2}$. Plugging this ansatz in the radial equations~\eqref{eq:radial_equations_small} results in recurrence relations, such that the solution can be expressed only in terms of the normalization coefficient $a^{(1)}_0$ in the series expansion as
+is assumed, where $\lambda = \sqrt{1-E^2_{n\kappa}}$ and $\gamma=\pm \sqrt{\kappa^2 - (Z\alpha)^2}$. Plugging this ansatz in the radial equations~\eqref{eq:radial_equations_small} results in recurrence relations, such that the solution can be expressed only in terms of the normalization coefficient $a^{(1)}_0$ as
 \begin{alignat}{2}
 & \varphi_1(r)&&=a^{(1)}_0 (2\lambda r)^\gamma \text{F}(1-n_r,2\gamma+1,2\lambda r)\\
 & \varphi_2(r) &&= a^{(1)}_0 (\kappa -Z\alpha / \lambda) (2\lambda r)^\gamma \text{F}(-n_r,2\gamma+1,x) /n_r,
@@ -299,7 +299,25 @@ These solution explains the spectrum of hydrogen-like atoms to a reasonable accu
 
 
 \subsection{Numerical solution in a cavity for arbitrary potentials}
-Expect the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (eg. Coulomb potential, spherical potential well), numerical methods have to be used to obtain approximations for $g(r)$ and $f(r)$. Especially for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and heavy muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution. 
+Except the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (eg. Coulomb potential, spherical potential well), numerical methods have to be used to obtain approximations for $g(r)$ and $f(r)$. Especially for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and heavy muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution. A problem with numerical solutions of the Dirac equation is the appearance of unphysical, or spurious states~\cite{johnson1988, drake1981}. A method circumventing this problem was presented in~\cite{shabaev2004}, which is shortly described in the following.
+
+The radial equations~\eqref{eq:radial_equations_small} can be rewritten in matrix form as
+\begin{equation}
+\begin{pmatrix}
+m+V(r)&(-\partial_r + \kappa/r)\\
+(\partial_r + \kappa/r)&-m+V(r)
+\end{pmatrix}
+\nu(r)
+= E\,\nu(r)
+\end{equation}
+for the function $\nu(r)=(G(r),F(r))^T=(r g(r),r f(r))^T$. As a finite set of Basis functions, B-splines $\Pi_{i,k}(r)$ of order $k$  with a suitable knot sequence as described in~\cite{johnson1988} are selected, where the first and last spline is set to zero. With the size of the basis set $n$, the solutions are expressed with $2n$ coefficients as
+\begin{equation}
+\nu(r)=\sum_{i=1}^n
+\begin{pmatrix}
+c_i \Pi_{i,k}(r)+c_{n+i}(\partial_r -\kappa/r)\Pi_{i,k}(r)/(2m)\\
+c_{n+i}\Pi_{i,k}(r)+ c_i (\partial_r +\kappa/r)\Pi_{i,k}(r)/(2m)
+\end{pmatrix}
+\end{equation}
 
 
 
