@@ -161,6 +161,29 @@
 % definitions to keep notation consistent.
 \input{latex/definitions.tex}
 
+%extra packages and commands from papers
+%%%%% arbitrary length colomn vector
+\newcount\colveccount
+\newcommand*\colvec[1]{
+        \global\colveccount#1
+        \begin{pmatrix}
+        \colvecnext
+}
+\def\colvecnext#1{
+        #1
+        \global\advance\colveccount-1
+        \ifnum\colveccount>0
+                \\
+                \expandafter\colvecnext
+        \else
+                \end{pmatrix}
+        \fi
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{braket}
+\usepackage{IEEEtrantools} %multi line eqns
+\usepackage{dcolumn}
+
 
 \begin{document}
 

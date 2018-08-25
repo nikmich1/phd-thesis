@@ -23,7 +23,7 @@ The basis of the derivations in this chapter is the Lagrangian of QED
 \mathcal{L}_{\text{QED}}&=\phantom{:}\bar{\psi}\left( i \gamma^\mu \partial_\mu -m  \right)\psi &&-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}&&-e\bar{\psi}\gamma^\mu \psi A_\mu,\\
 &\eqqcolon \mathcal{L}_{\text{free}}^{\text{D}} &&+ \mathcal{L}_{\text{free}}^{\text{E.M.}} &&+ \mathcal{L}_{\text{int}} \nonumber
 \end{alignat}
-which is the sum of the free Dirac, the free electromagnetic and the interaction Lagrangian. Here, $\psi(x)$ is the fermion field operator, $F_{\mu\nu}=\partial_\mu A_\nu - \partial_\nu A_\mu$ the field strength tensor of the electromagnetic four-potential $A_\mu(x)$. Detailed introductions to QED starting from this Lagrangian can be found in several excellent textbooks, e.g.~\cite{weinberg2005,itzykson2005,peskin1995}, thus the focus of this section is on the external field approximation and extraction of bound state energies. The counter terms are not included, so the derivations here should be understood on a formal level, for calculations including the counterterms and renormalization, see e.g. \cite[Section 14]{weinberg2005}, \cite{shabaev2002}.
+which is the sum of the free Dirac, the free electromagnetic and the interaction Lagrangian. Here, $\psi(x)$ is the fermion field operator, $F_{\mu\nu}=\partial_\mu A_\nu - \partial_\nu A_\mu$ the field strength tensor of the electromagnetic four-potential $A_\mu(x)$. Detailed introductions to QED starting from this Lagrangian can be found in several excellent textbooks, e.g.~\cite{weinberg2005,itzykson2005,peskin1995}, thus the focus of this section is on the external field approximation and extraction of bound state energies. The counter terms are not included, so the derivations here should be understood on a formal level, for calculations including the counterterms and renormalization, see e.g. \cite[Section 14]{weinberg2005}, \cite{shabaev2002_2}.
 
 In the external field approximation, the electromagnetic four-potential is written as
 \begin{equation}
@@ -221,7 +221,7 @@ Since the formal expressions for the vacuum polarization potentials contain dive
 %
 \section{Dirac equation in central potentials}
 \label{sec:sph_dirac}
-In the previous Section, the binding energies of a fermion bound by an atomic nucleus were investigated in the framework of the Furry picture of QED. The zeroth order approximations turned out to be the eigenenergies of the solutions of the Dirac equation (for a c-number field) including the nuclear background field. Furthermore, it was demonstrated that certain radiative corrections can be included as potentials in the Dirac equation as well. To a first approximation, the nuclear potential can be described by a static electric field which possesses spherical symmetry, and deviations thereof may be treated by perturbation theory later on. Thus, in this Section, the solutions of the Dirac equation for a spherical symmetric potential are discussed, mainly following~\cite{greiner2000, weinberg2005}. Then, the case of the pure Coulomb potential is discussed, where the solution can be given in closed form due to the high degree of symmetry. Finally, the dual-kinetic-balance method~\cite{shabaev2004} for obtaining numerical solutions for arbitrary spherical symmetric potentials is discussed.
+In the previous Section, the binding energies of a fermion bound by an atomic nucleus were investigated in the framework of the Furry picture of QED. The zeroth order approximations turned out to be the eigenenergies of the solutions of the Dirac equation (for a c-number field) including the nuclear background field. Furthermore, it was demonstrated that certain radiative corrections can be included as potentials in the Dirac equation as well. To a first approximation, the nuclear potential can be described by a static electric field which possesses spherical symmetry, and deviations thereof may be treated by perturbation theory later on. Thus, in this Section, the solutions of the Dirac equation for a spherical symmetric potential are discussed, mainly following~\cite{greiner2000, weinberg2005}. Then, the case of the pure Coulomb potential is discussed, where the solution can be given in closed form due to the high degree of symmetry. Finally, the dual-kinetic-balance method~\cite{Shabaev2004} for obtaining numerical solutions for arbitrary spherical symmetric potentials is discussed.
 
 Firstly, the Dirac equation~\eqref{eq:diraceq} for the functions $v_n$ is rewritten, such that it has the same form as for $u_n$. For this, add a new range of indices $\tilde{n}$ to the original $n$ and define $u_{\tilde{n}}(x)\coloneqq v_n(x)$, $E_{\tilde{n}}\coloneqq -E_n$. Secondly, static electric background fields are considered, which corresponds to a four potential
 \begin{equation}
@@ -292,14 +292,18 @@ is assumed, where $\lambda = \sqrt{1-E^2_{n\kappa}}$ and $\gamma=\pm \sqrt{\kapp
 where $n_r=Z\alpha E_{n\kappa}/\lambda - \gamma$ and $\text{F}(a,b,c)$ are the confluent hypergeometric function. Now, for the positive value of $\gamma$, the solutions are regular at the origin, but behave as $\e^{\lambda r}$ as $r\rightarrow \infty$. On the other hand, linear combination of positive and negative values of $\gamma$ enable solutions which are regular at infinity but behave badly at the origin. Solutions regular both at the origin and at infinity can only be obtained for certain energies, corresponding to integer values of $n_r$~\cite{rose1961}. With $n=n_r+|\kappa|$, the bound state energies read
 \begin{equation}
 \label{eq:finestructure_formula}
-E_{n\kappa}=\cfrac{(mc^2)}{\sqrt{1+\cfrac{(Z\alpha)^2}{\left( n-|\kappa|+\sqrt{|\kappa|^2-(Z\alpha)^2} \right)^2}}}.
+E_{n\kappa}=\cfrac{(mc^2)}{\sqrt{1+\cfrac{(Z\alpha)^2}{\left( n-|\kappa|+\sqrt{|\kappa|^2-(Z\alpha)^2} \right)^2}}},
 \end{equation}
+for $n\in [1,2,3,...]$ and $\kappa \in [...,{-}{2},{-}{1},1,2,...]$
 These solution explains the spectrum of hydrogen-like atoms to a reasonable accuracy, including fine structure splitting, as long as $Z\alpha\ll 1$. The solutions are degenerate in the sign of $\kappa$, i.e. states with the same $j$ but different $l$ have the same energy. As a result, the $2s\nicefrac{1}{2}$ and $2p\nicefrac{1}{2}$ states are degenerate. The lifting of this degeneracy (Lamb shift) is explained by radiative corrections and finite nuclear size effects. However, in situations where $Z\alpha$ is not much smaller than unity, the point-like approximation becomes increasingly worse and solutions of the Dirac equation for non-Coulomb potentials have to be used.
 
 
 
 \subsection{Numerical solution in a cavity for arbitrary potentials}
-Except the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (eg. Coulomb potential, spherical potential well), numerical methods have to be used to obtain approximations for $g(r)$ and $f(r)$. Especially for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and heavy muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution. A problem with numerical solutions of the Dirac equation is the appearance of unphysical, or spurious states~\cite{johnson1988, drake1981}. A method circumventing this problem was presented in~\cite{shabaev2004}, which is shortly described in the following.
+Except the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (eg. Coulomb potential, spherical potential well), numerical methods have to be used to obtain approximations for $g(r)$ and $f(r)$. Especially for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and heavy muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution.
+ 
+Generally, for finite basis set solutions of the Dirac equation, the radial equations~\eqref{eq:radial_equations_small} are considered, but the domain is changed from $r\in[0,\infty)$ to a finite cavity $r\in [0,R]$. On the original domain, the spectrum of the energy eigenvalues $E$ has a negative continuum $E\in (-\infty,-m]$, a positive continuum $E\in [m,\infty)$, and a discrete part $E\in (-m,m)$ of infinitely many bound states, where $m$ is the mass of the bound fermion. On the modified domain, the positive and negative continuum become discrete~\cite{johnson1988}, but still infinite.
+A problem with numerical solutions of the Dirac equation is the appearance of unphysical, or spurious states~\cite{johnson1988, drake1981}. A method circumventing this problem was presented in~\cite{Shabaev2004}, which is shortly described in the following.
 
 The radial equations~\eqref{eq:radial_equations_small} can be rewritten in matrix form as
 \begin{equation}
@@ -307,17 +311,32 @@ The radial equations~\eqref{eq:radial_equations_small} can be rewritten in matri
 m+V(r)&(-\partial_r + \kappa/r)\\
 (\partial_r + \kappa/r)&-m+V(r)
 \end{pmatrix}
-\nu(r)
+\nu(r)\eqqcolon\mathrm{H}_\kappa \nu(r)
 = E\,\nu(r)
+\label{eq:radmatrixEq}
 \end{equation}
-for the function $\nu(r)=(G(r),F(r))^T=(r g(r),r f(r))^T$. As a finite set of Basis functions, B-splines $\Pi_{i,k}(r)$ of order $k$  with a suitable knot sequence as described in~\cite{johnson1988} are selected, where the first and last spline is set to zero. With the size of the basis set $n$, the solutions are expressed with $2n$ coefficients as
+for the function $\nu(r)=(G(r),F(r))^T=(r g(r),r f(r))^T$. As a finite set of basis functions, B-splines $\Pi_{i,k}(r)$ of order $k$  with a suitable knot sequence as described in~\cite{johnson1988} are selected, where the first and last spline is set to zero. With the size of the basis set $n$, the solutions are expressed with $2n$ coefficients $c_i$ as
 \begin{equation}
-\nu(r)=\sum_{i=1}^n
-\begin{pmatrix}
-c_i \Pi_{i,k}(r)+c_{n+i}(\partial_r -\kappa/r)\Pi_{i,k}(r)/(2m)\\
-c_{n+i}\Pi_{i,k}(r)+ c_i (\partial_r +\kappa/r)\Pi_{i,k}(r)/(2m)
+\nu(r)=\hspace{-0.2cm}\sum_{i=1}^{2n}c_i\,\nu_i(r)\coloneqq \hspace{-0.2cm}\sum_{i=1}^n
+c_i\begin{pmatrix}
+\Pi_{i,k}(r)\\
+(\partial_r +\kappa/r)\Pi_{i,k}(r)/(2m).
 \end{pmatrix}
++\hspace{-0.3cm}
+\sum_{i=n+1}^{2n}c_i
+\begin{pmatrix}
+(\partial_r -\kappa/r)\Pi_{i,k}(r)/(2m)\\
+\Pi_{i,k}(r)
+\end{pmatrix}\hspace{-0.1cm}.
+\label{eq:finitebasis}
 \end{equation}
+Thereby, the infinite amount of discrete states in the cavity are reduced to $2n$ states. The finite basis expansion~\eqref{eq:finitebasis} can be plugged into the radial equations~\eqref{eq:radmatrixEq} which results in the generalized eigenvalue problem~\cite{Shabaev2004} for the $2n$ coefficients $c_j$
+\begin{equation}
+\sum_{j=1}^{2n} \left(\nu_i^T(r)\mathrm{H}_\kappa(r)\nu_j(r)+\nu_j^T(r)\mathrm{H}_\kappa(r)\nu_i(r)\right)/2 \times c_j = E \sum_{j=1}^{2n}(\nu_i(r)^T\nu_j(r))\times c_j,
+\label{eq:eigenvals}
+\end{equation}
+where $i\in [1,...,2n]$, 
+which can be solved efficiently with existing libraries for B-splines and linear algebra. In the case of a positively charged nucleus with $Z\alpha<1$, the eigenvalues of the solution of~\eqref{eq:eigenvals} consist of $n$ negative values, approximating the negative continuous spectrum and of $n$ positive values, approximation the bound state spectrum and the positive continuous spectrum~\cite{drake1981}. Besides the eigenenergies, approximations of the bound and continuum dirac wave functions are obtained in terms of the coefficients $c_i$ and Eq.~\eqref{eq:finitebasis}. This enables the numerical evaluation of intermediate sum of states occurring in second order perturbation theory or in the spectral representation of the Dirac propagator.
 
 
 
