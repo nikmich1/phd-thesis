@@ -121,6 +121,7 @@ The uncertainties include the error in the rms radius value as well as a model e
 \caption{\label{tab:sphDirac}
 Overview of the binding energies for muonic $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr, obtained by solving the Dirac equation with the spherically symmetric parts of the muon-nucleus interaction. The values for solving the Dirac equation only with the electric monopole potential, and with the electric monopole potential and the Uehling potential are presented to show the influence of the leading order vacuum polarization. The binding energies (\ref{eq:finestructure_formula_2}) for a  point like nucleus are shown as well. The reduced mass is used to include the non-relativistic recoil corrections from Section \ref{sec:recoil}. The corrections from section \ref{sec:screen} are not included in this table. All energies are in keV.}
 %\begin{ruledtabular}
+\centering
 \begin{tabular}{cclll}
 & state & \text{point like}& \text{finite size (fs)}\footnotemark[1] &\text{fs+Uehling}\footnotemark[2]\\ \hline \\[-7pt]
 $^{205}$Bi & 1s\nicefrac{1}{2} &\text{21573.3} & \text{10699.(51.)} &\text{10767.(52.)} \\
@@ -196,6 +197,7 @@ where $M_N$ is the mass of the nucleus, and the functions $h(r)$ and $P_1(r)$ ar
 \caption{\label{tab:recoil}Recoil corrections to the binding energies of the muon. fm (full mass) denotes the finite size binding energy, analogous to the fourth column of Table \ref{tab:sphDirac}, but with the rest mass of the muon used in the Dirac equation. $\Delta E_{\text{rec,nr}}$ is the non-relativistic recoil correction, which is the difference between the finite size Dirac solutions with reduced mass and full mass, respectively. $\Delta E^{\text{(rec,rel)}}_{n\kappa}$ is the leading relativistic recoil correction from Section \ref{sec:recoil}.
 All energies are in keV.}
 %\begin{ruledtabular}
+\centering
 \begin{tabular}{lllll}
 & state & $E^{\text{(fm)}}$ &$\Delta E^{\text{rec,nr}}$&$\Delta E^{\text{(rec,rel)}}_{n\kappa}$\footnotemark[1]\\ \hline \\[-7pt]
  $^{205}$Bi & 1s\nicefrac{1}{2} & \text{10702.(51.)} & \text{-2.80(4)} & \text{0.39(4)} \\
@@ -238,6 +240,7 @@ All energies are in keV.}
 \begin{table}
 \caption{\label{tab:screen}Electron screening corrections to the bound muon energy levels. $\Delta E_{\rm{S,eff}}^{(1)}$ and $\Delta E_{\rm{S,eff}}^{(1+2)}$ are the screening corrections with the effective nuclear charge method, whereas $\Delta E_{\rm{S,3step}}^{(1)}$ and $\Delta E_{\rm{S,3step}}^{(1+2)}$ use the 3 step calculation, both described in Section \ref{sec:screen}. For the superscript $(1)$, only the 1s electrons are considered, while for $({1}{+}{2})$, all electrons from the first and second shell are considered. All energies are in keV.}
 %\begin{ruledtabular}
+\centering
 \begin{tabular}{ccrrrr}
 &$\mu$-state & $\Delta E_{\rm{S,eff}}^{(1)}$  & $\Delta E_{\rm{S,eff}}^{(1+2)}$ & $\Delta E_{\rm{S,3step}}^{(1)}$ & $\Delta E_{\rm{S,3step}}^{(1+2)}$\\ \hline \\[-7pt]
  $^{205}$Bi & 1s\nicefrac{1}{2} & \text{5.555} & \text{10.825} & \text{5.555} & \text{10.825} \\
@@ -294,6 +297,7 @@ The interaction between the electrons is not taken into account here. Finally, t
 \caption{\label{tab:hfs}
 Results for the electric quadrupole and magnetic dipole hyperfine splitting for a selection of hyperfine states of muonic $^{205}_{83}$Bi ($I=\frac{9}{2}$), $^{147}_{62}$Sm ($I=\frac{7}{2}$), and $^{89}_{40}$Zr ($I=\frac{9}{2}$). $\braket{H_E^{(2)}}$ are the values of the electric quadrupole splitting. $\braket{H_M^{\rm{hom}}}$ is the magnetic dipole splitting from (\ref{eq:hmag}) using a homogeneous nuclear current distribution and $\braket{H_M^{\rm{sp}}}$ using the nuclear magnetization distribution in the single particle model. See Section \ref{sec:hfs} for definitions. All energies are in keV.}
 %\begin{ruledtabular}
+\centering
 \begin{tabular}{ccllllll}
  nucleus&state&\multicolumn{2}{c}{$\braket{H_E^{(2)}}$}&\multicolumn{2}{c}{$\braket{H_M^{\rm{hom}}}$}&\multicolumn{2}{c}{$\braket{H_M^{\rm{sp}}}$}\\
  & &$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$&$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$&$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$\\[2pt] \hline \\[-7pt]
@@ -415,7 +419,7 @@ Muonic relativistic units with ${\hbar}{=}{c}{=}{m_\mu}{=}{1}$ are used througho
 
 %
 %
-\section{Rotational Nuclear Model for \\Muonic Atoms}
+\section{Rotational Nuclear Model for Muonic Atoms}
 The typical energy scale for nuclear transitions is a few orders
 of magnitude larger than for an electronic transitions
 in atoms. Therefore, the electrons essentially interact only
@@ -466,9 +470,10 @@ where the ${l}{=}{0}$-term is the well-known Uehling potential for a spherically
 % figure quad uehling + mixed uehling quad
 %
 \begin{figure}[b]
-\includegraphics[width=0.22\textwidth]{pics/mixed}\hfill
+\centering
+\includegraphics[width=0.22\textwidth]{pics/mixed}\hspace{3.5cm}
 \includegraphics[width=0.22\textwidth]{pics/quehl}\\
-$\qquad\qquad\qquad$(a)\hfill(b)$\qquad\qquad\qquad$
+$\qquad\qquad\qquad\qquad\qquad$(a)\hfill(b)$\qquad\qquad\qquad\qquad\qquad$
 \caption{
 Feynman diagrams for the leading order contributions of the vacuum polarization to the quadrupole interaction in muonic atoms. An external double line stands for the bound-muon wave function. A single internal line for the free electron propagator, and a wave line for the photon propagator. A cross represents the interaction with the monopole potential, and a triangle the interaction with the quadrupole potential. Contribution (a) is calculated by including the spherically symmetric contribution of the Uehling potential in the Dirac equation~\eqref{eq:h0mu}; Contribution (b) by including the quadrupole contribution of the Uehling potential in the matrix elements from Eq.~\eqref{eq:quadel_uehl} and \eqref{eq:second}.
 }
@@ -499,6 +504,7 @@ where the diagonal elements correspond to the first order electric hyperfine spl
 \caption{\label{tab:params}%
 Nuclear parameters used in the numerical calculations. $I_0$ is the nuclear ground state angular momentum. RMS and $Q_\text{spec}$ are the nuclear RMS radius and spectroscopic quadrupole moment of the nuclear ground state from~\cite{Angeli2013,Stone2005}, respectively. $c$, $a$, $\beta$ are the parameters of the deformed Fermi distribution derived from RMS and $Q_\text{spec}$, see Sec. \ref{sec:num} for details. $E_{I}$ are the excitation energies of the nuclear rotational states with angular momentum $I$ in Eq.~\eqref{eq:enucl}, the values are taken from~\cite{ENSDF}.}
 %\begin{ruledtabular}
+\centering
 \begin{tabular}{rll}
 & $^{185}_{\phantom{1}75}$Re & $^{235}_{\phantom{1}92}$U\\ \hline \\[-10pt]
 $I_0$ \hfill$\phantom{.}$ & $5/2$ & $7/2$ \\
@@ -506,7 +512,7 @@ RMS \hfill[fm] & $5.3596(172)$ & $5.8337(41)$ \\
 $Q_\text{spec}$ \hfill[b] & $2.21(4)\phantom{111}$ & $4.936(6)\phantom{1}$ \\
 $c$ \hfill[fm] & $6.3517$ & $6.9562$ \\
 $a$ \hfill[fm] & 0.5234 & 0.5234 \\
-$\beta$ \hfill$\phantom{.}$ & 0.2322 & 0.2711 \\[7pt]
+$\beta$ \hfill$\phantom{.abc.}$ & 0.2322 & 0.2711 \\[7pt]
 $E_{I_0 + 1}$ \hfill[keV] & 125.3587(9) &  $\phantom{1}$46.108(8) \\
 $E_{I_0 + 2}$ \hfill[keV] & 284.2(3) & 103.903(8) \\
 $E_{I_0 + 3}$ \hfill[keV] & 475.7(4) & 171.464(13) \\
@@ -561,6 +567,7 @@ With these parameters, the electric and Uehling potentials, both monopole and qu
 Binding energies of the low-lying, unperturbed muonic states due to the spherically symmetric parts of the electric and Uehling potential obtained by solving Eq.~\eqref{eq:h0mu} for muonic Rhenium and Uranium. The first column shows the binding energies for a point-like Coulomb potential, the second and third column include the finite size corrections without and with Uehling potential, respectively. See Sec. \ref{sec:num} for details. All energies are in keV.
 }
 %\begin{ruledtabular}
+\centering
 \begin{tabular}{ccrrr}
 & state & \text{point like}& \text{finite size (fs)} &\text{fs+Uehling}\\ \hline \\[-7pt]
 $^{185}$Re &1s\nicefrac{1}{2} & 17229.12 & 9333.46 & 9394.02 \\
@@ -588,9 +595,11 @@ $^{235}$U&1s\nicefrac{1}{2} & 27351.29 & 12100.56 & 12175.51 \\
 %
 %begin hfs table
 \begin{table*}
+\begin{small}
 \caption{\label{tab:hfs_2}
 Overview of energy corrections due to residual second order electric quadrupole splitting~$\Delta E_{\text{2.ord.}}$ and quadrupole-Uehling interaction~$\Delta E_{\text{quad-uehl}}$ for $^{185}$Re and $^{235}$U. $F$ is the total angular momentum of muon and nucleus, $I_N$ is the nuclear angular momentum and $\mu$-state is the muonic state in spectroscopic notation. For the muonic $2p$ and $3d$ states, these are mixed by the dynamic hyperfine structure, thus $I_N$ (main) and $\mu$-state (main) show the states with the largest contribution. $E_{\text{quad}}$ is the binding energy without quadrupole Uehling and residual second order quadrupole interaction, see Sec. \ref{sec:num} for details. The states are ordered descending in the total energy~$E_{\text{tot}}$. All energies are in keV.}
 %\begin{ruledtabular}
+\centering
 \begin{tabular}{lrccccc|c}
  &F&\multicolumn{1}{c}{$I_{N}\,\text{(main)}$}&$\mu\text{-state (main)}$&\multicolumn{1}{c}{$E_{\text{quad}}$}&\multicolumn{1}{c}{$\Delta E_{\text{2.ord.}}$}&\multicolumn{1}{c}{$\Delta E_{\text{quad-uehl}}$}&\multicolumn{1}{c}{$E_{\text{tot}}$}\\\hline\\[-7pt]
 $^{185}\text{Re}$&  2 &   \nicefrac{5}{2} & 1s\nicefrac{1}{2} & 9394.02 &  3.21 &   0.00 & 9397.23 \\
@@ -638,6 +647,7 @@ $^{235}\text{U}$&  3 &   \nicefrac{7}{2} & 1s\nicefrac{1}{2} & 12175.51 &  6.83 
 &  1 &   \nicefrac{7}{2} & 3d\nicefrac{5}{2} & 2663.35 &  0.61 & -0.13 & 2663.83 \\
 \end{tabular}
 %\end{ruledtabular}
+\end{small}
 \end{table*}
 % end hfs table
 The quadrupole matrix elements from Eq.~\eqref{eq:quadel} can be calculated both for the rediagonalization in the dynamic hyperfine structure and for the evaluation of the residual second-order terms \eqref{eq:second}, using Eq.~\eqref{eq:matel}. As the next step, the total Hamiltonian~\eqref{eq:htot} is diagonalized in finite subspaces or modelspaces consisting of the muonic ($2p\nicefrac{1}{2}$, $2p\nicefrac{3}{2}$) or ($3d\nicefrac{3}{2}$, $3d\nicefrac{5}{2}$) doublet states and nuclear ground state rotational band. For Rhenium, the first six states with $I_N \in \{5/2,...,15/2\}$ are considered, and for Uranium with $I_N \in \{7/2,...,17/2\}$. The excitation energies of the nuclear states are summarized, along with other nuclear parameters, in Table~\ref{tab:params}. Thereby, the composite states and corresponding energies $E_{\text{quad}}$ from Eq.~\eqref{eq:compstate} are obtained and finally, for each of these states the residual second order quadrupole correction \eqref{eq:second} is calculated. Here, the intermediate sum goes over all nuclear and muonic states not included in the modelspace.
@@ -720,7 +730,7 @@ where the spherically averaged part of the charge distribution is
 \end{equation}
 %
 %
-\section{Matrix elements\\of quadrupole interactions}
+\section{Matrix elements of quadrupole interactions}
 \label{sec:mat}
 Both the electric and Uehling multipole interaction are a scalar product of rank-$l$ spherical tensors in the angular variables of the muon and of the nucleus. Thus, their matrix elements in states of defined total angular momentum can be reduced to a product of two reduced matrix elements~\cite{varshalovich1988} as
 \begin{align}

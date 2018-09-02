@@ -3,7 +3,7 @@
 \begin{itemize}
 \item Treatment of perturbations in Furry picture(mixed QED+HFS)
 \item Treatment of nuclear structure effects in Furry picture (nuclear excited states)
-\item needed notation: sigma, gamma matrices, $\sqrt{p\cdot \sigma}$ in plane wave solutions, $\gamma$, $\alpha$ matrices, def of $a^\mu b_\mu$, def of $x=(x^0,\mathbf{x})$, vector are mathbf
+\item needed notation: sigma, gamma matrices, $\sqrt{p\cdot \sigma}$ in plane wave solutions, $\gamma$, $\alpha$ matrices, def of $a^\mu b_\mu$, def of $x=(x^0,\mathbf{x})$, vector are mathbf, hypergeometric functions
 
 \item conventions for prefactors in lagrangian, def. of gamma matrices: peskin schröder
 \item conventions for propagators: itzykson
@@ -233,7 +233,7 @@ where the electric potential $\phi(\mathbf{r})$ can be expressed in terms of a s
 \end{equation}
 where $\int \mathrm{d}V\,\rho(|\mathbf{r}|)=1$. Since $\Phi$ only depends on $|\mathbf{r}|$, we define $V(r)\coloneqq \Phi((r,0,0))$ for spherical coordinates $\mathbf{r}=(r,\vartheta,\varphi)$. Thereby, the Dirac equation~\eqref{eq:diraceq} reads as
 \begin{equation}
-\left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m + V(r) \right) u_n(\mathbf{r}) =  E_n u_n(\mathbf{r}),
+\text{H}_D \, u_n(\mathbf{r})\coloneqq\left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m + V(r) \right) u_n(\mathbf{r}) =  E_n u_n(\mathbf{r}),
 \label{eq:sphdirac}
 \end{equation}
 where the eigenenergies $E_n$ contain both positive and negative values and the spectrum contains both continuum and discrete parts. $u_n(\mathbf{r})$ are the corresponding solutions in form of four-component spinors. For an arbitrary potential $V(r)$ possessing spherical symmetry, the solution can be simplified significantly by transforming the partial differential equation~\eqref{eq:sphdirac} into an ordinary differential equation.
@@ -286,15 +286,15 @@ and for the functions $\varphi_i(r)$ the power-series ansatz
 \end{equation}
 is assumed, where $\lambda = \sqrt{1-E^2_{n\kappa}}$ and $\gamma=\pm \sqrt{\kappa^2 - (Z\alpha)^2}$. Plugging this ansatz in the radial equations~\eqref{eq:radial_equations_small} results in recurrence relations, such that the solution can be expressed only in terms of the normalization coefficient $a^{(1)}_0$ as
 \begin{alignat}{2}
-& \varphi_1(r)&&=a^{(1)}_0 (2\lambda r)^\gamma \text{F}(1-n_r,2\gamma+1,2\lambda r)\\
-& \varphi_2(r) &&= a^{(1)}_0 (\kappa -Z\alpha / \lambda) (2\lambda r)^\gamma \text{F}(-n_r,2\gamma+1,x) /n_r,
+& \varphi_1(r)&&=a^{(1)}_0 (2\lambda r)^\gamma\, \text{F}(1-n_r,2\gamma+1,2\lambda r)\\
+& \varphi_2(r) &&= a^{(1)}_0 (\kappa -Z\alpha / \lambda) (2\lambda r)^\gamma\, \text{F}(-n_r,2\gamma+1,x) /n_r,
 \end{alignat}
 where $n_r=Z\alpha E_{n\kappa}/\lambda - \gamma$ and $\text{F}(a,b,c)$ are the confluent hypergeometric function. Now, for the positive value of $\gamma$, the solutions are regular at the origin, but behave as $\e^{\lambda r}$ as $r\rightarrow \infty$. On the other hand, linear combination of positive and negative values of $\gamma$ enable solutions which are regular at infinity but behave badly at the origin. Solutions regular both at the origin and at infinity can only be obtained for certain energies, corresponding to integer values of $n_r$~\cite{rose1961}. With $n=n_r+|\kappa|$, the bound state energies read
 \begin{equation}
 \label{eq:finestructure_formula}
 E_{n\kappa}=\cfrac{(mc^2)}{\sqrt{1+\cfrac{(Z\alpha)^2}{\left( n-|\kappa|+\sqrt{|\kappa|^2-(Z\alpha)^2} \right)^2}}},
 \end{equation}
-for $n\in [1,2,3,...]$ and $\kappa \in [...,{-}{2},{-}{1},1,2,...]$
+for $n\in \{1,2,3,...\}$ and $0\neq \kappa \in \{{-}{n},...,n-1\}$.
 These solution explains the spectrum of hydrogen-like atoms to a reasonable accuracy, including fine structure splitting, as long as $Z\alpha\ll 1$. The solutions are degenerate in the sign of $\kappa$, i.e. states with the same $j$ but different $l$ have the same energy. As a result, the $2s\nicefrac{1}{2}$ and $2p\nicefrac{1}{2}$ states are degenerate. The lifting of this degeneracy (Lamb shift) is explained by radiative corrections and finite nuclear size effects. However, in situations where $Z\alpha$ is not much smaller than unity, the point-like approximation becomes increasingly worse and solutions of the Dirac equation for non-Coulomb potentials have to be used.
 
 
