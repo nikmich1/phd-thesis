@@ -31,12 +31,13 @@ Furthermore, nuclear polarization effects~\cite{Nefiodov} are neglected, so it i
 \begin{alignat}{2}
 \label{eq:gfac_monopole}
 &V(r_e)&&=-Z\alpha \int\mathrm{d}^3\mathbf{r}^\prime_N\frac{\rho(\mathbf{r}_N^\prime)}{r_>}\\
-& &&= -\frac{Z\alpha}{r_e} \int_0^{r_e}\mathrm{d}r_N^\prime r_N^{\prime\,2}\rho_0(r_N^\prime) 
--Z\alpha \int_{r_e}^\infty\mathrm{d}r_N^\prime r_N^{\prime}\rho_0(r_N^\prime), \notag
+& &&= -\frac{Z\alpha}{r_e} 4\pi\int_0^{r_e}\mathrm{d}r_N^\prime r_N^{\prime\,2}\rho_0(r_N^\prime) 
+-Z\alpha 4\pi\int_{r_e}^\infty\mathrm{d}r_N^\prime r_N^{\prime}\rho_0(r_N^\prime), \notag
 \end{alignat}
 with the averaged charge distribution
 \begin{equation}
-\rho_0(r^\prime_N)=\int_0^{2\pi}\mathrm{d}\varphi_N^\prime \int_0^\pi \mathrm{d}\vartheta_N^\prime \sin\theta\,\rho(\mathbf{r}_N^\prime).
+\label{eq:rho_averaged}
+4\pi\rho_0(r^\prime_N)=\int_0^{2\pi}\mathrm{d}\varphi_N^\prime \int_0^\pi \mathrm{d}\vartheta_N^\prime \sin\theta\,\rho(\mathbf{r}_N^\prime).
 \end{equation}
 Thus, for spinless nuclei, the potential is spherically symmetric, although the charge distribution of the nucleus does not have to be. Therefore, the theory of the bound electron g-factor in a spherical potential can be applied also in this case.
 
@@ -91,7 +92,7 @@ For an extended nuclear charge distribution, the resulting bound-electron $g$ fa
 \caption{\label{fig:charge distr.}\\
 Upper figure: Deformed Fermi distribution for $^{238}$U, where the parameters and their uncertainties are taken from~\cite{kozhedub2008}. The light red border shows the uncertainties due to the parameters $a$, $\beta_2$, $\beta_4$, which is the remaining model uncertainty once the nuclear charge radius is fixed and which enables a reduced model uncertainty in the finite nuclear size $g$-facor correction.\\
 Middle figure: Normal Fermi distribution with $a=0.5234\,$fm and homogeneoulsy charged sphere with the same charge radius as the deformed Fermi distribution. The difference (in light orange) is the conventional model uncertainty of the unclear charge distribution, which is larger as in the upper figure.\\
-Lower figure: Comparison of normal and deformed Fermi distribution with the same RMS radius. The difference causes the nuclear deformation effect.}
+Lower figure: Comparison of normal and averaged, deformed Fermi distribution with the same RMS radius. The difference causes the nuclear deformation effect.}
 \end{figure*}
 % charge distribution figure end
 %
@@ -129,7 +130,7 @@ $^{248}_{\phantom{0}96}$Cm           & 5.825 & 0.299 & ${\text{-}}{1.70}{\script
 \end{table}
 % end table
 %
-For the deformed Fermi distribution~(\ref{eq:deffermi}) with a fixed charge number $Z$, the $g$~factor (\ref{eq:gfacgs}) is completely determined by the parameters $c$, $a$ and $\beta_i$, and therefore can be written for the ground state as
+For the deformed Fermi distribution~(\ref{eq:deffermi}) with a fixed charge number $Z$, the $g$~factor (\ref{eq:gfac_central}) is completely determined by the parameters $c$, $a$ and $\beta_i$, and therefore can be written for the ground state as
 \begin{equation}
 g = g_{\text{point}} + \delta g^{(ca\beta)}_{\text{FS}},
 \label{eq:finiteDef}
@@ -156,7 +157,7 @@ It was shown in~\cite{jacek2012} with the ERM \cite{Shabaev1993} that $\delta g_
 \delta g^{(ca\beta)}_{\text{FS}}=\frac{4}{3}\frac{\partial E_{\text{FS}}(c,a,\beta)}{\partial m_e},
 \label{eq:effrad}
 \end{equation}
-which is a direct consequence of Eq.~(\ref{eq:deriv}) and where $E_{\text{FS}}(c,a,\beta)$ is the energy correction due to $\rho_{ca\beta}(r,\vartheta)$ compared to the point like nucleus.
+which is a direct consequence of Eq.~(\ref{eq:gfac_viaDeriv}) and where $E_{\text{FS}}(c,a,\beta)$ is the energy correction due to $\rho_{ca\beta}(r,\vartheta)$ compared to the point like nucleus.
 The effective radius~$R$ is defined as the radius of a homogeneously charged sphere with the same energy correction $E^{(\text{sph})}_{\text{FS}}(R)$ as the deformed Fermi distribution via
 \begin{equation}
 E^{(\text{sph})}_{\text{FS}}(R) = E_{\text{FS}}(c,a,\beta).
@@ -177,8 +178,8 @@ R\approx\sqrt{\frac{5}{3}\left<r^2\right>_{\rho_{ca\beta}}\left[ 1-\frac{3}{4}(Z
 While \eqref{eq:effrad} is exact for an arbitrary central potential, provided that $E_{\text{FS}}$ is known exactly, \eqref{eq:efs} is an approximation derived under the assumption of the difference between point-like and extended potential being a perturbation. The calculation of the ND correction to the bound electron $g$~factor via the effective radius approach therefore relies on a perturbative evaluation of the energy derivative in Eq.~(\ref{eq:effrad}) and is limited by the accuracy of the finite size corrections.
 
 In this work, the ND $g$-factor correction is calculated with three methods:
-Firstly, with the previously used analytical ERM described above. Secondly, with a numerical ERM, where instead of the approximative Eqs.~\eqref{eq:efs} and \eqref{eq:radius}, Eq.~\eqref{eq:effradNum} is solved numerically for $R$ and the ND $g$-factor correction is obtained by using Eq.~\eqref{eq:gfacgs} with the wave functions of the corresponding charged sphere.
-Finally, we also calculate $\delta g_{\text{ND}}$ non-perturbatively by solving the Dirac equation (\ref{eq:diraceq_nucldef}) numerically with the dual kinetic balance method~\cite{dualkinetic} for the potential (\ref{eq:potdef}), including all finite size effects due to the deformed charge distribution $\rho_{ca\beta}(r,\vartheta)$. Then, the $g$~factors needed in Eq.~(\ref{eq:defdgnd}) for the ND correction can be obtained by numerical integration of the wave functions in Eq.~(\ref{eq:gfacgs}). Alternatively, the derivative of the energies in Eq.~(\ref{eq:deriv}) can be calculated numerically as 
+Firstly, with the previously used analytical ERM described above. Secondly, with a numerical ERM, where instead of the approximative Eqs.~\eqref{eq:efs} and \eqref{eq:radius}, Eq.~\eqref{eq:effradNum} is solved numerically for $R$ and the ND $g$-factor correction is obtained by using Eq.~\eqref{eq:gfac_central} with the wave functions of the corresponding charged sphere.
+Finally, we also calculate $\delta g_{\text{ND}}$ non-perturbatively by solving the Dirac equation (\ref{eq:diracSph}) numerically with the dual kinetic balance method~\cite{dualkinetic} for the potential (\ref{eq:gfac_monopole}), including all finite size effects due to the deformed charge distribution $\rho_{ca\beta}(r,\vartheta)$. Then, the $g$~factors needed in Eq.~(\ref{eq:defdgnd}) for the ND correction can be obtained by numerical integration of the wave functions in Eq.~(\ref{eq:gfac_central}). Alternatively, the derivative of the energies in Eq.~(\ref{eq:gfac_viaDeriv}) can be calculated numerically as 
 \begin{equation}
 \frac{\partial E_{n\kappa}}{\partial m_e} \approx \frac{E_{n\kappa}^{(m_e+\delta m)}-E_{n\kappa}^{(m_e-\delta m)}}{2 \delta m},
 \end{equation}
@@ -200,7 +201,7 @@ with a suitable ${\delta m / m_e}{\ll}{1}$. Here, $E_{n\kappa}^{(m_i)}$ stands f
   \end{minipage}
 \end{figure*}
 
-We calculated the ND $g$-factor correction for a wide range of even-even, both in the proton and neutron number, and therefore spinless nuclei with charge numbers between 16 and 96 using the deformed Fermi distribution from~Eq.~(\ref{eq:deffermi}) with parameters $a$, $c$, and $\beta$ obtained as described below Eq.~(\ref{eq:defdgnd}). The required RMS values for the nuclear charge radius are taken from~\cite{Angeli2013} and the reduced transition probabilities needed for the calculation of $\beta$ via (\ref{eq:beta}) from \cite{ENSDF}. The resulting values for $|\delta g_{\text{ND}}|$, obtained by the non-perturbative method, are shown in Fig.~\ref{fig:dg} as a function of the charge number $Z$ and the neutron number $N$. If proton or neutron number is in the proximity of a nuclear magic number 2, 8, 20, 28, 50, 82, and 126, which corresponds to a filled proton or neutron shell \cite{Ring}, the nuclear shell closure effects also transfer to the bound electron $g$~factor, and the ND correction is reduced~\cite{michel2015}. In Table \ref{tab:spline}, a comparison between our numerical approaches and the analytical ERM from \cite{jacek2012} is shown.
+We calculated the ND $g$-factor correction for a wide range of even-even, both in the proton and neutron number, and therefore spinless nuclei with charge numbers between 16 and 96 using the deformed Fermi distribution from~Eq.~(\ref{eq:deffermi}) with parameters $a$, $c$, and $\beta$ obtained as described below Eq.~(\ref{eq:defdgnd}). The required RMS values for the nuclear charge radius are taken from~\cite{Angeli2013} and the reduced transition probabilities needed for the calculation of $\beta$ via (\ref{eq:beta}) from \cite{ENSDF}. The resulting values for $|\delta g_{\text{ND}}|$, obtained by the non-perturbative method, are shown in Fig.~\ref{fig:dg} as a function of the charge number $Z$ and the neutron number $N$. If proton or neutron number is in the proximity of a nuclear magic number 2, 8, 20, 28, 50, 82, and 126, which corresponds to a filled proton or neutron shell \cite{Ring}, the nuclear shell closure effects also transfer to the bound electron $g$~factor, and the ND correction is reduced, as already indicated perturbatively in~\cite{michel2015}. In Table \ref{tab:spline}, a comparison between our numerical approaches and the analytical ERM from \cite{jacek2012} is shown.
 
 Now, let us discuss the main causes for the disagreement of the results as presented in Table~\ref{tab:spline}. Both Eqs.~\eqref{eq:efs} and~\eqref{eq:radius} are approximations derived by perturbation theory, which affects the accuracy of the analytical ERM ($\delta g_{\text{ND}}^{(\text{eff,A})}$). Eq.~\eqref{eq:efs} has an estimated relative uncertainty ${\scriptstyle\lesssim}\,0.2\,\%$~\cite{Shabaev1993} and \eqref{eq:radius} uses only the second and fourth moment of the nuclear charge distribution for finding the effective radius. Also, it was shown in~\cite{karshenboim2018} that the analytical ERM for arbitrary charge distributions is incomplete in order $(Z\alpha)^2m_e(Z\alpha m_e R_N)^3$, where $R_N$ is the nuclear RMS charge radius. Furthermore, even if the effective radius is calculated without approximations according to Eq.~\eqref{eq:effradNum}, the wave functions of the corresponding homogeneously charged sphere differ slightly from the ones of the deformed Fermi distribution with the same binding energy. This affects values of the $g$~factor and explains the difference between the numerical ERM ($\delta g_{\text{ND}}^{(\text{eff,N})}$) and the direct numerical calculations ($\delta g_{\text{ND}}^{(\text{num})}$). 
 Finally, being a difference of two small finite-nuclear-size corrections, the ND correction can exhibit enhanced sensitivity on the uncertainty of the ERM.
