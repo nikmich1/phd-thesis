@@ -1,2 +1,54 @@
 \chapter{Hyperfine structure of muonic atoms}
 \label{ch:muonic_atoms}
+This chapter is devoted to the prediction of the level structure and transition probabilities in muonic atoms with focus on high nuclear charge numbers. Compared to conventional atomic electrons, the much higher muon mass reduces the length- and  increases the energy scales by the muon-electron mass ratio. Thereby, all finite nuclear size and shape effects are much more important and also excited nuclear states have to be taken into account.\\
+This chapter is organized in the following way:\\
+At first, a motivation for the need for new structure calculations is given in Section~\ref{sec:muon_motivation} by comparing to existing methods and by pointing new experiments in the field out, which use the results presented in this thesis.\\
+Afterwards, the theoretical framework and implementation of several known effects is shown in Sections~\ref{sec:muon_framework} to \ref{sec:muon_dynamic}, using finite basis set methods suitable for precision calculations and presenting results for selected nuclei.\\
+In Sections~\ref{sec:muon_residualSO} and \ref{sec:muon_quadUehl}, improved methods for calculating higher order effects in the electric hyperfine interactions are presented.\\
+Finally, in Sections~\ref{sec:muon_re}, calculations in combination with experiments on isotopically pure Rhenium-185 are presented and in Section~\ref{sec:muon_he}, precision calculations for the bound-muon $g$ factor in muonic Helium-4 are shown.
+
+\section{Calculation of spectra for muonic atoms}
+\subsection{Motivation}
+\label{sec:muon_motivation}
+Atomic nuclei are one of the building blocks of matter and therefore, information on their structure, like the distribution of electric charge inside the nucleus, is of intrinsic interest. Furthermore, the charge radii of atomic nuclei are of importance as an input parameter for the interpretation of experiments. For example, radium atoms are a candidate for measuring atomic parity violation effects, but for this more accurate values of the radium charge radii are needed~\cite{wansbeek2012}.
+There are several methods for extracting information on the nuclear charge distribution, i.e. the distribution of protons inside the atomic nucleus, like electron scattering or precision spectroscopy. One method is also muonic atom spectroscopy. Here, a muon, which is a negatively charged elementary particle is brought in the proximity of an atomic nucleus. Then, the negatively charged muon forms bound states with the positively charged nucleus and radiation due to muonic transitions can be analyzed in order to obtain information on the nuclear charge distribution and measure quantities like nuclear charge radii and quadrupole moments.
+
+Correspondingly, the theory of muonic atoms has been developed in order to describe the level structure and the probabilities for muonic transitions. The general approach is that for a given nuclear charge distribution, the spectrum of the corresponding muonic atom needs to be predicted. Then, vice versa, for a measured spectrum the nuclear charge distribution can be extracted. An overview of the different contributions to the energy levels of muonic atoms can be found in~\cite{BorieRinker1982}. Hitherto, the majority of analyses of the spectra of heavy muonic atoms used the computer programs \textit{MUON} and \textit{RURP}~\cite{rinker1979}. There are two main differences compared to the approach used in this thesis:
+Firstly, the dual-kinetic-balance method~\cite{Shabaev2004} is used in this thesis. Being a finite basis set method, a approximation of the complete muon spectrum is obtained, i.e. bound states and positive as well as negative continuum states, including the effects of the finite nuclear charge distribution. Thereby, numerical summations over the complete muon spectrum are possible. This enables for example a complete treatment of the second order hyperfine interactions, as presented in Section~\ref{sec:muon_residualSO}.
+Secondly, whereas in the \textit{MUON} and \textit{RURP} codes, the fine and hyperfine structure are calculated separately, in this thesis the calculations of the fine and hyperfine structure are performed at once, based on a given nuclear charge distribution, enabling improved analysis of the dependence of the muonic spectrum on parameters of the nuclear charge distribution.
+
+Furthermore, there are new experiments on high $Z$ atomic system being performed by the muX-Collaboration at the Paul-Scherrer-Institute in Villigen, Switzerland~\cite{kirch2016}. One of the goals is to measure the charge radius for Radium, needed for experiments on atomic parity violations, as mentioned earlier in this Section. Furthermore, measurements on muonic atoms involving several nuclei have been or were performed for the first time, involving isotopically pure Rhenium. The corresponding structure calculations for muonic Rhenium were performed during the work on this thesis.
+
+\subsection{Theoretical framework}
+\label{sec:muon_framework}
+
+\subsection{Finestructure}
+\label{sec:muon_finestructure}
+\subsubsection{Finite nuclear size effect}
+\subsubsection{Vacuum polarization}
+\subsubsection{Recoil corrections}
+\subsubsection{Electron screening}
+
+\subsection{First order hyperfine structure}
+\subsubsection{Electric quadrupole splitting}
+\subsubsection{Magnetic dipole splittinge}
+
+\subsection{Dynamic hyperfine structure}
+\label{sec:muon_dynamic}
+
+\subsection{Residual second order corrections}
+\label{sec:muon_residualSO}
+
+\subsection{Quadrupole-Uehling interactions}
+\label{sec:muon_quadUehl}
+
+\section{Application to muonic Rhenium}
+\label{sec:muon_re}
+
+\subsection{Low lying states}
+\subsection{Extraction of quadrupole moment from $5g\rightarrow 4f$ transitions}
+
+
+
+\section{Bound muon g factor in Helium}
+\label{sec:muon_he}

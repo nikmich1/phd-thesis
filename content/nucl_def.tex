@@ -1,13 +1,15 @@
 \chapter{Nuclear shape effects on the bound-electron $\bf{g}$~factor}
 \label{ch:nucl_def}
+
+In this chapter, non-perturbative calculations of the ND correction to the bound electron $g$~factor are presented and the corresponding values for nuclei across the entire nuclear chart are shown, quantifying the non-perturbative corrections in the values of the bound electron $g$~factor. Furthermore, it is shown how the model dependence of the finite nuclear size correction can be reduced using deformed nuclear charge distributions and that in this connection the numerical calculations are necessary for obtaining precise results.
+
+\section{Motivation}
 The electron's $g$~factor characterizes its magnetic moment in terms of its angular momentum. For an electron bound to an atomic nucleus, the $g$~factor can be predicted in the framework of bound state quantum electrodynamics (QED) as well as measured in Penning traps, both with a very high degree of accuracy. This enables extraction of information on fundamental interactions, constants and nuclear structure. For example, the combination of theory and precise measurements of the bound electron $g$~factor has recently provided an enhanced value for the electron mass~\cite{Sturm2014}, and bound state QED in strong fields was tested with unprecedented precision~\cite{Haffner2000, Verdu2004, Kohler2015, Zatorski2017}. It also enables measurement on characteristics of nuclei such as electric charge radii, as shown for $\textrm{Si}^{13+}$ ion~\cite{Sturm2011}, or the isotopic mass difference as demonstrated for $\null^{48} \textrm{Ca}$ and $\null^{40} \textrm{Ca}$ in~\cite{Kohler2016}, or, as proposed theoretically, magnetic moments~\cite{Yerokhin2011}.  Also, it was argued that $g$-factor experiments with heavy ions could result in a value for the fine-structure constant which is more accurate than the presently established one~\cite{Shabaev2006}.
 With planned experiments involving high $Z$ nuclei~\cite{HITRAP2008,vogel2015} and current experimental accuracies on the $10^{-10}$ level for low $Z$, it is important to keep track also of higher order effects. In this context, besides QED, e.g.~\cite{Yerokhin2004,yerokhin2017,Pachucki2005, czarnecki2016,czarnecki2018}, and nuclear polarization~\cite{Nefiodov} corrections, also the influence of nuclear size and deformation is critical.
 In~\cite{jacek2012}, the nuclear shape correction to the bound electron $g$~factor was introduced and calculated for spinless nuclei using the perturbative effective radius method (ERM)~\cite{Shabaev1993,kozhedub2008}. This effect takes the influence of a deformed nuclear charge distribution into account, and changes the $g$~factor up to a $10^{-6}$ level for heavy nuclei, thus being potentially visible in future experiments.
 Additionally, the uncertainty of the finite nuclear size correction to the Lamb shift in hydrogenlike $^{238}$U was shown to be sensitive on nuclear deformation effects~\cite{kozhedub2008}.
 This motivates the possibility of a lowering of uncertainties for the bound electron $g$~factor by considering ND.
 Therefore, a comparison of experiment and theory for heavy nuclei demands a critical scrutiny of the validity of the previously used perturbative methods, as pointed out in \cite{karshenboim2018}.
-
-In this chapter, non-perturbative calculations of the ND correction to the bound electron $g$~factor are presented and the corresponding values for nuclei across the entire nuclear chart are shown, quantifying the non-perturbative corrections in the values of the bound electron $g$~factor. Furthermore, it is shown how the model dependence of the finite nuclear size correction can be reduced using deformed nuclear charge distributions.
 
 \section{Averaged Nuclear Potential}
 In this section, the electric interaction energy between a spinless atomic nucleus, described by a rigid rotor (Appendix~\ref{app:rig_rotor}), and an electron in a hydrogen-like ion is investigated, following~\cite{kozhedub2008,jacek2012}. In Chapter~\ref{ch:furry_pic}, it is shown that to leading order, this is without radiative corrections, the bound state energies can be obtained by solving the Dirac equation for the electron in the nuclear potential. For a rigid rotor, the charge density $\rho(\mathbf{r}^{\prime}_N)$ is given in the nuclear body fixed frame, and the position of the body fixed frame in the laboratory frame is described in terms of the Euler angles $(\phi,\theta,\psi)$. In the following, primed coordinates refer to the body fixed system and unprimed coordinates to the laboratory system, and vectors are written in spherical coordinates as $\mathbf{r}_i=(r_i,\vartheta_i,\varphi_i)$. The passive picture of rotations is used, i.e. the vectors are considered as invariant geometric objects and the Euler angles are used to describe the rotations of the coordinate axes. The electric potential energy of an electron at position $\mathbf{r}_{e}^\prime$ due to the nuclear electric field is
@@ -90,8 +92,8 @@ For an extended nuclear charge distribution, the resulting bound-electron $g$ fa
 \centering
 \includegraphics[width=\textwidth]{pics/chargeDistr.pdf}\\
 \caption{\label{fig:charge distr.}\\
-Upper figure: Deformed Fermi distribution for $^{238}$U, where the parameters and their uncertainties are taken from~\cite{kozhedub2008}. The light red border shows the uncertainties due to the parameters $a$, $\beta_2$, $\beta_4$, which is the remaining model uncertainty once the nuclear charge radius is fixed and which enables a reduced model uncertainty in the finite nuclear size $g$-facor correction.\\
-Middle figure: Normal Fermi distribution with $a=0.5234\,$fm and homogeneoulsy charged sphere with the same charge radius as the deformed Fermi distribution. The difference (in light orange) is the conventional model uncertainty of the unclear charge distribution, which is larger as in the upper figure.\\
+Upper figure: Averaged deformed Fermi distribution from Eq.~\ref{eq:rho_averaged} for $^{238}$U, where the parameters and their uncertainties are taken from~\cite{kozhedub2008}. The light red border shows the uncertainties due to the parameters $a$, $\beta_2$, $\beta_4$, which is the remaining model uncertainty once the nuclear charge radius is fixed and which enables a reduced model uncertainty in the finite nuclear size $g$-factor correction.\\
+Middle figure: Normal Fermi distribution with $a=0.5234\,$fm and homogeneoulsy charged sphere with the same charge radius as the deformed Fermi distribution. The difference (in light orange) is the conventional model uncertainty of the unclear charge distribution, which is larger compared to using the deformed Fermi distribution in the upper figure.\\
 Lower figure: Comparison of normal and averaged, deformed Fermi distribution with the same RMS radius. The difference causes the nuclear deformation effect.}
 \end{figure*}
 % charge distribution figure end
@@ -113,7 +115,7 @@ as a model of the nuclear charge distribution has proved to be very successful, 
 Comparison of the ND $g$~factor correction obtained by the ERM with the analytical expressions from Eqs.~\eqref{eq:efs} and \eqref{eq:radius} ($\delta g_{\text{ND}}^{(\text{eff,A})}$), by the ERM with effective radius and corresponding energy correction calculated numerically ($\delta g_{\text{ND}}^{(\text{eff,N})}$) and non-perturbatively by direct numerical calculations ($\delta g_{\text{ND}}^{(\text{num})}$) for several isotopes. $R_N$ is the RMS nuclear electric charge radius from literature \cite{Angeli2013} and $\beta_2$ is the parameter of the deformed Fermi distribution (\ref{eq:deffermi}). $\beta_4 \approx 0$ is assumed, according to~\cite{Moller1995}. All methods, as well as the procedure for obtaining the parameters of the deformed Fermi distribution, are described in the text.
 }
 \centering
-\begin{tabular}{lccccc}
+\begin{tabular}{l|ccccc}
  &$R{\scriptstyle _N(\text{fm})}$& $\beta_2$ & $\delta g_{\text{ND}}^{(\text{eff,A})}$ & $\delta g_{\text{ND}}^{(\text{eff,N})}$ & $\delta g_{\text{ND}}^{(\text{num})}$\\
 \hline\\[-5pt]
 $^{\phantom{0}58}_{\phantom{0}26}$Fe & 3.775 & 0.273 & ${\text{-}}{2.19}{\scriptstyle\times}{10^{\text{-}11}}$ &${\text{-}}{2.02}{\scriptstyle\times}{10^{\text{-}11}}$&${\text{-}}{2.11}{\scriptstyle\times}{10^{\text{-}11}}$\\[4pt]
@@ -209,12 +211,12 @@ From Table~\ref{tab:spline}, we conclude that for high $Z$, the difference betwe
 
 Concluding, the analytical ERM proved to be a good order-of-magnitude estimate of the ND correction, but for high-precision calculations, non-perturbative methods beyond the ERM and without an expansion in $Z\alpha$ or $Z\alpha\, m_e\, R_N$ are indispensable. Convergence of the numerical methods was checked by varying numerical parameters and using various grids, and the obtained accuracy permits the consideration of nuclear size and shape with an accuracy level much higher than the differences to the perturbative method.
 
-\begin{table}[t]
+\begin{table}[h]
 \caption{\label{tab:uranium}%
-Comparison of the finite nuclear size correction for the normal Fermi distribution $\delta g_{\text{FS}}^{\text{(Fermi)}}$ and the deformed Fermi distribution $\delta g^{(ca\beta)}_{\text{FS}}$, evaluated with the effective radius method (ERM) and numerically. The number in the first and second parenthesis is the uncertainty due to the RMS charge radius and the model uncertainty, respectively. Parameters are taken from Ref.~\cite{kozhedub2008}.
+Comparison of the finite nuclear size correction for the normal Fermi distribution $\delta g_{\text{FS}}^{\text{(Fermi)}}$ and the deformed Fermi distribution $\delta g^{(ca\beta)}_{\text{FS}}$, evaluated with the effective radius method (ERM) and numerically. The number in the first and second parenthesis is the uncertainty due to the RMS charge radius and the model uncertainty, respectively. Parameters are taken from Ref.~\cite{kozhedub2008}. The results show that considering a deformed charge distribution can significantly reduce the model uncertainty. Furthermore it demonstrates, that the numerical method needs to be used for precise calculations.
 }
 \centering
-\begin{tabular}{lcc}
+\begin{tabular}{l|cc}
 &ERM&Numerical\\\hline\\
 $\delta g_{\text{FS}}^{\text{(Fermi)}}$&$1.2860(11)(31)\times 10^{-3}$&$1.2739(11)(25)\times 10^{-3}$\\[0.4cm]
 $\delta g^{(ca\beta)}_{\text{FS}}$&$1.2852(11)(9)\phantom{0}\times 10^{-3}$&$1.2733(11)(7)\phantom{0}\times 10^{-3}$
