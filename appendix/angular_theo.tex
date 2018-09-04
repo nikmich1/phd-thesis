@@ -1,7 +1,43 @@
+Following the notation from~\cite{varshalovich1988}, important results from the theory of rotations and angular momenta are summarized in this Section.
+\subsubsection*{Rotation of coordinate systems}
+The passive point of view for rotations is used in this thesis, where vectors are invariant objects and the coordinate axes are rotated. Two systems, the laboratory system with unprimed coordinates and the body-fixed system with primed coordinates are considered. The position of the axes of the body-fixed system is described by the Euler angles $\Omega=(\phi,\theta,\psi)$ in terms of the following three successive rotations of the axes of the laboratory system:
+\begin{enumerate}
+\item Angle $\psi$ about $z$ axis
+\item Angle $\theta$ about $y$ axis
+\item Angle $\phi$ about $z$ axis
+\end{enumerate}
+Let $\mathbf{r}$ be a vector with coordinates $(r,\vartheta,\varphi)$ in the laboratory frame and $(r^\prime,\vartheta^\prime,\varphi^\prime)$ in the body fixed frame. Then, the primed angles are a function of the unprimed angles and the three Euler angles and the corresponding relations relations between the coordinates are
+\begin{alignat}{3}
+& r &&= &&r^\prime,\\
+\cos&\,\vartheta^\prime &&= \cos\vartheta && \cos\theta + \sin\vartheta\sin\theta\cos(\varphi-\phi),\\
+\cot (\varphi^\prime &+ \psi) &&= \cot (\varphi &&- \phi)\cos(\theta)-\frac{\cot\vartheta \sin\theta}{\sin(\varphi-\phi)}.
+\end{alignat}
+This gives the following relation for spherical harmonics as a function of $(\vartheta^\prime,\varphi^\prime)$ and the corresponding $(\vartheta,\varphi)$:
+\begin{equation}
+\label{eq:rot_sphHarm}
+\text{Y}_{lm}(\vartheta^\prime,\varphi^\prime)=\sum_{m_2=-l}^l \text{Y}_{lm_2}(\vartheta,\varphi) D^l_{m_2\,m}(\phi,\theta,\phi),
+\end{equation}
+where $D^l_{m_1\,m_2}(\alpha,\beta,\gamma)$ are the Wigner D functions defined as
+\begin{alignat}{3}
+\label{app:defDfunction}
+&D^l_{m_1\,m_2}(\alpha,\beta,\gamma) && = \e^{-i(m_1\alpha+m_2\gamma)}d^{\,l}_{m_1\,m_2}(\beta),&&\\[10pt]
+&d^{\,l}_{m_1\,m_2}(\beta)&& = \frac{\xi_{m_1m_2}}{\mu !}\left(\frac{(s+\mu+\nu)!(s+\mu)!}{s!(s+\nu)!}\right)^{1/2}&&\left(\sin \nicefrac{\beta}{2}\right)^\mu\left(\cos \nicefrac{\beta}{2}\right)^\nu\\
+&&&&&\times F(-s,s+\mu+\nu+1,\mu+1,\sin^2\nicefrac{\beta}{2}),
+\end{alignat}
+where $\mu = |m_1-m_2|$, $\nu=|m_1+m_2|$, $s=l-(\mu+\nu)/2$ and
+\begin{numcases}{\xi_{m_1\,m_2}=}
+\label{eq:radial_equations_small}
+1;  m_2 \leq m_1\\
+(-1)^{m_2-m_1}; m_2 < m_1,
+\end{numcases}
+and $F(a,b,c,x)$ are the hypergeometric functions.
+
+
 
 \begin{itemize}
 \item Introduction of spherical tensor operators
 \item Introduction scalar product of tensor operators
 \item Matrix elements of spherical tensor operators and scalar products of tensor operators
 \item connection to hyperfine operators with fermion angular variables and nuclear euler angles
+\item rotation of coordinate systems, spherical harmonics etc.
 \end{itemize}

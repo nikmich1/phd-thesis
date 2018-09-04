@@ -10,28 +10,99 @@ Finally, in Sections~\ref{sec:muon_re}, calculations in combination with experim
 \section{Calculation of spectra for muonic atoms}
 \subsection{Motivation}
 \label{sec:muon_motivation}
-Atomic nuclei are one of the building blocks of matter and therefore, information on their structure, like the distribution of electric charge inside the nucleus, is of intrinsic interest. Furthermore, the charge radii of atomic nuclei are of importance as an input parameter for the interpretation of experiments. For example, radium atoms are a candidate for measuring atomic parity violation effects, but for this more accurate values of the radium charge radii are needed~\cite{wansbeek2012}.
-There are several methods for extracting information on the nuclear charge distribution, i.e. the distribution of protons inside the atomic nucleus, like electron scattering or precision spectroscopy. One method is also muonic atom spectroscopy. Here, a muon, which is a negatively charged elementary particle is brought in the proximity of an atomic nucleus. Then, the negatively charged muon forms bound states with the positively charged nucleus and radiation due to muonic transitions can be analyzed in order to obtain information on the nuclear charge distribution and measure quantities like nuclear charge radii and quadrupole moments.
+Atomic nuclei are one of the building blocks of matter and therefore, information on their structure, like the distribution of electric charge inside the nucleus, is of intrinsic interest. Furthermore, the charge radii of atomic nuclei are of importance as an input parameter for the interpretation of other experiments. For example, radium atoms are a candidate for measuring atomic parity violation effects, but for this more accurate values of the radium charge radii are needed~\cite{wansbeek2012}.
+There are several methods for extracting information on the nuclear charge distribution, i.e. the distribution of protons inside the atomic nucleus, like electron scattering~\cite{devries1987} or laser spectroscopy~\cite{wang2004,dewitte2007,mueller2007}. One method is also muonic atom spectroscopy. Here, a muon, which is a negatively charged elementary particle is brought in the proximity of an atomic nucleus. Then, the negatively charged muon forms bound states with the positively charged nucleus and radiation due to muonic transitions can be analyzed in order to obtain information on the nuclear charge distribution and measure quantities like nuclear charge radii and quadrupole moments.
 
 Correspondingly, the theory of muonic atoms has been developed in order to describe the level structure and the probabilities for muonic transitions. The general approach is that for a given nuclear charge distribution, the spectrum of the corresponding muonic atom needs to be predicted. Then, vice versa, for a measured spectrum the nuclear charge distribution can be extracted. An overview of the different contributions to the energy levels of muonic atoms can be found in~\cite{BorieRinker1982}. Hitherto, the majority of analyses of the spectra of heavy muonic atoms used the computer programs \textit{MUON} and \textit{RURP}~\cite{rinker1979}. There are two main differences compared to the approach used in this thesis:
 Firstly, the dual-kinetic-balance method~\cite{Shabaev2004} is used in this thesis. Being a finite basis set method, a approximation of the complete muon spectrum is obtained, i.e. bound states and positive as well as negative continuum states, including the effects of the finite nuclear charge distribution. Thereby, numerical summations over the complete muon spectrum are possible. This enables for example a complete treatment of the second order hyperfine interactions, as presented in Section~\ref{sec:muon_residualSO}.
 Secondly, whereas in the \textit{MUON} and \textit{RURP} codes, the fine and hyperfine structure are calculated separately, in this thesis the calculations of the fine and hyperfine structure are performed at once, based on a given nuclear charge distribution, enabling improved analysis of the dependence of the muonic spectrum on parameters of the nuclear charge distribution.
 
-Furthermore, there are new experiments on high $Z$ atomic system being performed by the muX-Collaboration at the Paul-Scherrer-Institute in Villigen, Switzerland~\cite{kirch2016}. One of the goals is to measure the charge radius for Radium, needed for experiments on atomic parity violations, as mentioned earlier in this Section. Furthermore, measurements on muonic atoms involving several nuclei have been or were performed for the first time, involving isotopically pure Rhenium. The corresponding structure calculations for muonic Rhenium were performed during the work on this thesis.
+Furthermore, there are new experiments on high $Z$ muonic atoms being performed by the muX-Collaboration at the Paul-Scherrer-Institute in Villigen, Switzerland~\cite{kirch2016}. One of the goals is to measure the charge radius for Radium, needed for experiments on atomic parity violations, as mentioned earlier in this Section. Furthermore, measurements on muonic atoms involving several nuclei will be or have been performed for the first time, involving isotopically pure Rhenium. The corresponding structure calculations for muonic Rhenium were performed during the work on this thesis, and results are presented in Section~\ref{sec:muon_re}.
 
 \subsection{Theoretical framework}
 \label{sec:muon_framework}
+A muon is a charged elementary particle, which is in many aspects similar to the electron, in particular, it has the same electric charge, but it is ${\approx}\,{200}$ times heavier than the electron~\cite{codata}. When coming close to an atom, a muon can be captured by the nucleus and form a hydrogen-like muonic ion. This atomic system is commonly referred to as a muonic atom. The lifetime of the muon is big enough to be considered stable in the structure calculations of these muonic bound states.
+The reason why muonic atoms, compared to conventional electronic atoms, are suitable for extraction information on nuclear structure is that the muon is about 207 times heavier than the electron. This can be seen by considering the ratio of the nuclear radius and the Bohr radius of the bound fermion, which is the typical length scale for the bound muon or electron. The larger this ratio is, the larger are nuclear finite size effects. The Bohr radius for a hydrogen-like atomic system with a bound fermion of mass $m_f$ and a nuclear charge number $Z$ reads as
+\begin{equation}
+r_B = \hbar / (m_f c Z \alpha),
+\end{equation}
+where $\hbar$ is the Planck's constant, $\alpha$ is the finestructure constant and $c$ is the speed of light in vacuum. In Table~\ref{tab:nucl_radii}, the nuclear radius, the Bohr radius for the corresponding electronic and muonic hydrogen-like ion, and their ratio is shown for a selection of nuclei, from very light to very heavy.
+%
+%
+\begin{table}
+\caption{\label{tab:nucl_radii}
+Comparison of the ratio of nuclear charge radius $R_N$ to the Bohr radius $r_B$ of a bound electron or muon in the corresponding hydrogen-like atomic system for Hydrogen, Helium, Rhenium, and Uranium. If this ratio is small, the finite size of the nucleus does not influence the bound fermion significantly. On the other hand, if this ratio is on the order of 1, large finite nuclear size and nuclear structure effects can be expected. The nuclear charge radii are taken from~\cite{Angeli2013}.}
+\centering
+\begin{tabular}{ccccc}
+Fermion type & Nucleus & $R_N$[fm]&$r_B$[fm]&$R_N/r_B$\\\hline\\[-5pt]
+$e^-$&$^1_1$H&0.8783&$52917.721$&$1.660\times 10^{-5}$\\[3pt]
+$\mu^-$&$^1_1$H&0.8783&$\phantom{11}255.928$&$3.432\times 10^{-3}$\\[15pt]
+$e^-$&$^4_2$He&1.6755&$26458.861$&$6.332\times 10^{-5}$\\[3pt]
+$\mu^-$&$^4_2$He&1.6755&$\phantom{11}127.964$&$1.309\times 10^{-2}$\\[15pt]
+$e^-$&$^{185}_{\phantom{1}75}$Re&5.3596&$\phantom{11}705.570$&$7.596\times 10^{-3}$\\[3pt]
+$\mu^-$&$^{185}_{\phantom{1}75}$Re&5.3596&$\phantom{1111}3.412$&$1.571\phantom{111111}$\\[15pt]
+$e^-$&$^{238}_{\phantom{1}92}$U&5.8571&$\phantom{11}575.193$&$1.018\times 10^{-2}$\\[3pt]
+$\mu^-$&$^{238}_{\phantom{1}92}$U&5.8571&$\phantom{1111}2.782$&$2.105\phantom{111111}$
+\end{tabular}
+\end{table}
+%
+%
+It can be seen that, that for electronic atoms, the nucleus is generally a few orders of magnitude smaller compared to the extend of the electronic wave function, which is given by the Bohr radius, although for high $Z$, the electron is much closer to the nucleus due to the strong Coulomb attraction. Since the Bohr radius is inversely proportional to the mass of the bound fermion, the situation in muonic atomic systems is different. While for low $Z$, the extend of the muonic wave functions is still much larger than the nuclear radius, for high $Z$, the nuclear radius is actually larger than the muonic Bohr radius. This means the overlap between muonic wave functions and nucleus is large in this case. Also, a typical energy scale for hydrogen-like systems is the ground state binding energy from Eq.~\ref{eq:finestructure_formula} for a point-like nucleus, which reads as
+\begin{equation}
+E_{0,\text{point}}=m_f c^2 (1-\sqrt{1-(Z\alpha)^2}),
+\end{equation}
+and is proportional the fermion mass. As a consequence, for muonic atoms and high charge numbers, muonic transitions can have an energy of several mega electronvolts and fine structure splitting can be on the order of several hundreds of kilo electronvolts. This is of the same order as excitation energies of nuclear rotational states~\cite{ENSDF} and therefore a nuclear model has to be used, which besides an extended charge distribution also contains the excited nuclear states of the ground state rotational band. Here, the symmetric rigid rotor model model for nuclei with axial symmetry has proved successful in describing heavy muonic atoms, e.g.~\cite{tanaka1984,hitlin1970,wu1969,Devons1995} and also is used in this thesis. The rigid rotor model is introduced in Appendix~\ref{app:rig_rotor}, where also the expressions for the nuclear wave functions in terms of Wigner D functions can be found. Essentially, the nucleus is described by a charge distribution $\rho(\mathbf{r})$ given in the body fixed nuclear frame, and the Euler angles $\Omega=(\phi,\theta,\psi)$ describe its position in the laboratory frame. The rotational state of the nucleus $\left|IMK\right>$ is given by the total nuclear angular momentum quantum number $I$, its projection on the $z$ axis of the laboratory frame $M$ and on the $z$ axis of the body fixed frame $K$, where $K$ also corresponds to the ground state angular momentum. As derived in Chapter~\ref{ch:furry_pic}, the muonic bound states without radiative corrections can be obtained by solving the Dirac equation for the nuclear potential. The coupled system of muon as a Dirac particle and nucleus as a rigid rotor therefore is
+\begin{equation}
+\text{H} = \text{H}_{\text{N}} + \text{H}_\mu + V_{\text{el}},
+\label{eq:muon_htotal}
+\end{equation}
+where $H_{\text{N}}$ is the nuclear rigid rotor Hamiltonian, and ${H_\mu}{=}{\vec{\alpha} \cdot \vec{p} + \beta m_\mu}$ is the free Dirac Hamiltonian for the muon with momentum $\vec{p}$, and $\vec{\alpha}$ and $\beta$ are the four Dirac matrices. Following Eq.~\eqref{eq:furry_elPot}, the electric potential energy between muon and nuclear charge distribution reads as
+\begin{equation}
+\label{eq:muon_elInteract}
+V_{\text{el}}(\mathbf{r}_\mu^\prime)=-Z\alpha \int \mathrm{d}^3\mathbf{r}_N^\prime \frac{\rho(\mathbf{r}_N^\prime)}{|\mathbf{r}_\mu^\prime-\mathbf{r}_N^\prime|}.
+\end{equation}
+It is important to recall, that the nuclear charge distribution is given in the body fixed nuclear frame, thus the integration in Eq.~\eqref{eq:muon_elInteract} in most conveniently performed in this frame. The resulting expression in dependence of the position of the muon, however, is needed in the laboratory frame. Therefore, in the following, a multipole expansion of Eq.~\eqref{eq:muon_elInteract} is performed, and the result is given as a function of the muon position in the laboratory frame and the Euler angles describing the orientation of the nuclear frame. Here, vectors are written is spherical components as $\mathbf{r}_i = (r_i,\vartheta_i,\varphi_i)$ in the laboratory frame and as $\mathbf{r}_i^\prime = (r_i^\prime,\vartheta_i^\prime,\varphi_i^\prime)$ in the body-fixed nuclear frame. Since rotations do not change the absolute value of rotations, it holds that $r_i^\prime = r_i$.\\
 
-\subsection{Finestructure}
+With the multipole expansion of the Coulomb potential~\cite{jackson1999}
+\begin{equation}
+\frac{1}{|\mathbf{r}_\mu^{\,\prime}-\mathbf{r}_N^{\,\prime}|}=\sum_{l=0}^\infty \frac{r_<^l}{r_>^{l+1}}\sum_{m=-l}^l  \text{C}^*_{lm}(\vartheta_N^{\prime},\varphi_N^{\prime})\text{C}_{lm}(\vartheta_\mu^\prime,\varphi_\mu^\prime),
+\end{equation}
+where $r_<:=\min (r_\mu,r_N)$, $r_>:=\max (r_\mu,r_N)$, the electric potential~\eqref{eq:muon_elInteract} can be written as
+\begin{align}
+V_{\text{el}}(\mathbf{r}_\mu^{\,\prime})=&\sum_{l,m}-Z\alpha \left[ \int \text{d}^3r^{\prime}_N \frac{r_<^l}{r_>^{l+1}}\text{C}^*_{lm}(\vartheta_N^{\prime},\varphi_N^{\prime})\rho(\vec{r}_N^{\,\prime})\right]\notag\\
+&\,\times\text{C}_{lm}(\vartheta_\mu^{\prime},\varphi_\mu^\prime),
+\end{align}
+where ${\text{C}_{lm}(\vartheta,\varphi)}{=}{\sqrt{4\pi/(2l+1)}\text{Y}_{lm}(\vartheta,\varphi)}$ are the normalized spherical harmonics.
+For axially symmetric charge distributions, only the ${m}{=}{0}$-terms are non-zero after integrating over the charge distribution. The dependency on the muonic angular variables can be transformed to the laboratory system using the Euler angles by
+\begin{equation}
+\text{P}_{l}(\cos\vartheta_\mu^\prime)=
+ \sum_{m=-l}^l C^*_{lm}(\theta,\phi)C_{lm}(\vartheta_\mu,\varphi_\mu),
+\end{equation}
+which is a special case of Eq.~\eqref{eq:rot_sphHarm}.
+Thereby, the potential as a function of the Euler angles and the muon's position in the laboratory frame reads
+\begin{align}
+V_{\text{el}}(\mathbf{r}_\mu,\phi,\theta)=&\sum_{l=0}^\infty-Z\alpha \left[ \int \text{d}^3r^{\prime}_N \frac{r_<^l}{r_>^{l+1}}\text{P}_{l}(\cos \vartheta_N^{\prime})\rho(\vec{r}_N^{\,\prime})\right]\sum_{m=-l}^l \text{C}^*_{lm}(\theta,\phi)\text{C}_{lm}(\vartheta_\mu,\varphi_\mu).\notag\\
+\eqqcolon &\sum_{l=0}^\infty Q_{\text{el}}^{(l)}(r_\mu)\sum_{m=-l}^lC^*_{lm}(\theta,\phi)C_{lm}(\vartheta_\mu,\varphi_\mu)&\notag\\
+\eqqcolon& \sum_{l=0}^\infty V^{(l)}_{\text{el}}(\mathbf{r}_\mu,\phi,\theta),
+\label{eq:defmulti}
+\end{align}
+where $Q_{\text{el}}^{(l)}(r_\mu)$ describe the radial distribution of the multipole moments and the dependency on the muonic angles and the Euler angles is in form of a scalar product of spherical tensor operators. This means, as expected the interaction energy does only depend on the relative orientation of the muon with respect to the body fixed nuclear $z^\prime$ axis.
+
+Most nuclei turn out to be symmetric with respect to reflection in the $(x^\prime ,y^\prime)$-plane~\cite{zickendraht1991}. This results in only even-$l$ terms in Eq.~\eqref{eq:defmulti} being non-zero, thus the first to terms are the monopole term $l=0$ and the quadrupole term $l=2$. The next term would be the $l=4$ hexadecapole terms, however, usually, higher order terms are not needed for the correct description of the hyperfine level structure. It follows from Eq.~\ref{eq:defmulti}, that the monopole terms only depends on the muonic radial variable. In fact, the $l=0$ terms is the averaged nuclear potential already derived in Eq.~\eqref{eq:gfac_monopole} in the previous chapter on the $g$ factor of spinless nuclei. As a consequence, the $l=0$-term can be used as a potential in the spherically symmetric Dirac equation to define the unperturbed muonic states as
+\begin{equation}
+\left(\boldsymbol{\alpha} \cdot \mathbf{p} + \beta m_\mu + V_{\text{el}}^{(0)}(r_\mu) \right) \left|n\kappa m\right> = E_{n\kappa}\left|n\kappa m\right>.
+\end{equation}
+and the $l=2$ quadrupole term couples nuclear and muonic degrees of freedom and is treated in perturbation theory in Sections~\ref{sec:muon_elquad}, \ref{sec:muon_dynamic}, and \ref{sec:muon_residualSO}.
+
+\subsection{Fine and first order hyperfine structure}
 \label{sec:muon_finestructure}
 \subsubsection{Finite nuclear size effect}
 \subsubsection{Vacuum polarization}
 \subsubsection{Recoil corrections}
 \subsubsection{Electron screening}
-
-\subsection{First order hyperfine structure}
 \subsubsection{Electric quadrupole splitting}
-\subsubsection{Magnetic dipole splittinge}
+\label{sec:muon_elquad}
+\subsubsection{Magnetic dipole splitting}
 
 \subsection{Dynamic hyperfine structure}
 \label{sec:muon_dynamic}
@@ -52,3 +123,6 @@ Furthermore, there are new experiments on high $Z$ atomic system being performed
 
 \section{Bound muon g factor in Helium}
 \label{sec:muon_he}
+
+\section{Summary}
+\label{sec:muon_summary}

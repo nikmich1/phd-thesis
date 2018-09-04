@@ -1,3 +1,4 @@
+\label{app:rig_rotor}%
 In this thesis, a nuclear model is needed which can account for the two following aspects: Firstly, for the description of hyperfine interactions, it needs to describe the angular momentum of the nucleus in its ground state rotational band, both for nuclei with vanishing and integer or half-integer non-zero ground state angular momentum. Secondly, finite nuclear-size effects need to be included. Therefore, the nuclear model needs to include the charge distribution and correspondingly, the distribution of higher-order multipoles, like the electric quadrupole and magnetic dipole. The simplest collective nuclear model which complies with these requirements is the symmetric rigid rotor model. Here, the nucleus is described by rigid charge distribution in a body fixed nuclear frame, i.e. the nucleus does not change the shape of the charge distribution, but it can rotate, which is described by a rotation of the nuclear body-fixed frame in the laboratory frame. The following derivations follow~\cite{edmonds1960,brown_carrington,varshalovich1988}, where the notation and conventions follow~\cite{varshalovich1988}. Generally, rotations of coordinate system are described by the three Euler angles $\Omega=(\phi,\theta,\psi)$, where $\phi$, $\theta$ are the polar and azimuthal angles, respectively, describing the position of the body-fixed $z^{\prime}$ axis in the laboratory frame. $\psi$ is the polar angle describing the orientation of the $x^{\prime}$ and $y^{\prime}$ axes with respect to the $z^{\prime}$ axis. Correspondingly, these are the degrees of freedom for the rigid rotor model. Motivated by the classical kinetic energy of an axially symmetric rotating rigid body, the total energy can be expressed in terms of the moments of inertia ${\Theta_1}{=}{\Theta_2}$, $\Theta_3$ and corresponding angular velocities $\omega_i$ of the rigid body as
 \begin{alignat}{2}
 &E_{\text{rot}} &&= \frac{1}{2}\Theta_1 \left(\omega_1^2 +\omega_2^2\right)  + \frac{1}{2}\Theta_3 \omega_3 ^2\
@@ -26,8 +27,9 @@ E_{I\,K}=\frac{I(I+1)}{2\Theta_1}+ \left(\frac{1}{2\Theta_3}-\frac{1}{2\Theta_1}
 \end{equation}
 Here, $K$ is angular momentum in the body-fixed nuclear frame, corresponding to the ground state angular momentum, if the nucleus is in its ground-state rotational band, and $I(I+1)$ is the squared total angular momentum with the $z$ component in the laboratory frame $M$. With the correct normalization, the wave functions of the symmetric top read as
 \begin{equation}
-\left<\phi\,\theta\,\psi|IMK\right> = \sqrt{\frac{2I+1}{8\pi^2}}D^{I\,*}_{M\,K}(\phi,\theta,\psi).
+\left<\phi\,\theta\,\psi|IMK\right> = \sqrt{\frac{2I+1}{8\pi^2}}D^{I\,*}_{M\,K}(\phi,\theta,\psi),
 \end{equation}
+where the Wigner D functions are defined in Eq.~\eqref{app:defDfunction}. 
 Instead of the energies~$E_{I\,K}$, also the measured energies of the corresponding nuclear states~\cite{ENSDF} are used. Matrix elements of operators $O(\phi,\theta,\psi)$ depending on the Euler angles are calculated as
 \begin{alignat}{2}
 &\left< I^{\prime}M^{\prime}K^{\prime} \right|\hat{O}\left|IMK\right>=\\[4pt]
