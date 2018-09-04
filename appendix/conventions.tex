@@ -1,1 +1,71 @@
-In this Section, the ...
+\subsubsection{Variables}
+For the relativistic notation in Chapter~\ref{ch:furry_pic}, the symbols $x$, $y$, $z$, $z_1$, $z_2$, and $p$ are used for four vectors corresponding to $x^\mu=(x^0,\mathbf{x})=(x^0,x^1,x^2,x^3)$. The scalar product is $x_\mu y^\mu = x^0 y^0 - \mathbf{x}\cdot\mathbf{y}$, corresponding to the metric $g^{\mu\nu}=\text{diag}(1,-1,-1,-1)$.\\
+In all other chapters, three dimensional vectors in spherical coordinates are written as bold symbols $\mathbf{r}=(r,\vartheta,\varphi)$, where $\varphi$ is the polar angle and $\vartheta$ is the azimuthal angle. The volume element is as usual $\text{d}^3\mathbf{r}=\text{d}r\text{d}\varphi\text{d}\vartheta\, r^2 \sin\vartheta $
+\subsubsection{Dirac matrices}
+The following representation of the Dirac matrices is chosen, following~\cite{peskin1995}:\\
+\textit{$\gamma$ matrices:}
+\begin{equation}
+\gamma^0 =
+\begin{pmatrix}
+\boldsymbol{0}&\boldsymbol{1}\\
+\boldsymbol{1}&\boldsymbol{0}
+\end{pmatrix};\qquad
+\gamma^{i} = 
+\begin{pmatrix}
+\boldsymbol{0}&\boldsymbol{\sigma}^i\\
+-\boldsymbol{\sigma}^i&\boldsymbol{0}
+\end{pmatrix}
+\end{equation}
+with
+\begin{equation}
+\boldsymbol{0}=
+\begin{pmatrix}
+0&0\\0&0
+\end{pmatrix};\quad
+\boldsymbol{1}=
+\begin{pmatrix}
+1&0\\0&1
+\end{pmatrix};\quad
+\boldsymbol{\sigma}^1=
+\begin{pmatrix}
+0&1\\1&0
+\end{pmatrix};\quad
+\boldsymbol{\sigma}^2=
+\begin{pmatrix}
+0&-i\\i&0
+\end{pmatrix};\quad
+\boldsymbol{\sigma}^3=
+\begin{pmatrix}
+1&0\\0&-1
+\end{pmatrix};\quad
+\end{equation}
+\textit{$\alpha$ matrices:}
+\begin{equation}
+\boldsymbol{\alpha}^i = \gamma^0 \gamma^i;\quad\text{with }i \in \{1,2,3\}.
+\end{equation}
+
+\subsubsection{Feynmanrules}
+In Chapter~\ref{ch:furry_pic}, the Feynman rules in position space following~\cite{itzykson2005} are used.
+
+\newpage
+\subsubsection{System of units and physical constants}
+Natural units are used, where $\hbar=c=m_f=1$, where $\hbar$ is the reduced Planck's constant, $c$ is the speed of light in vacuum and $m_f$ is the mass of the considered bound fermion. As in Chapter~\ref{ch:nucl_def} the bound electron $g$ factor is considered, the electron mass is used $m_f=m_e$. In Chapter~\ref{ch:muonic_atoms} on muonic atoms, consequently the muon mass $m_f=m_\mu$. Table~\ref{tab:units} gives an overview of the two systems of units:\\[1.5cm]
+
+\begin{table}[h]
+\caption{\label{tab:units}Overview over the SI-equivalents of the basis units for the two different natural systems of units $(\hbar=c=m_f=1)$, where either the electron mass $m=m_e$ or the muon mass $m=m_\mu$ is used. SI Values for $\hbar$, $c$, $m_e$, $m_\mu$ are taken from~\cite{codata2016}.}
+\centering\setcellgapes{4pt}\makegapedcells
+\begin{tabular}{lc|c|c}
+\\
+angular momentum &$\hbar$ & \multicolumn{2}{l}{$1.054571800 \times 10^{-34} \,\text{J s}$} \\
+speed &$c$ & \multicolumn{2}{l}{$299792458 \,\phantom{\times 1001 ^{-34}} \text{ms}^{-1}$}\\
+electron mass &$m_e$ & \multicolumn{2}{l}{$9.10938356\phantom{0}\times 10^{-31}\, \text{kg} $}\\
+muon mass &$m_\mu$ & \multicolumn{2}{l}{$1.883531594 \times 10^{-28} \,\text{kg}$}\\[15pt]
+%\end{tabular}
+%\begin{tabular}{lc|c|c}
+&& $m_f=m_e$ & $m_f=m_\mu$ \\\cline{3-4}
+distance & $\hbar/(mc)$ & $386.159267\times10^{-15} \,\text{m}$ & $1.86759431\times 10^{-15}\,\text{m}$\\
+time & $\hbar /(m c^2)$ & $1.28808867\times 10^{-21}\,\text{s}$ & $6.22962405\times 10^{-24}\,\text{s}$\\
+energy & $mc^2$ & $8.18710565\times 10^{-14}\,\text{J}$ & $1.69283377\times 10^{-11}\,\text{J}$\\
+\end{tabular}
+\end{table}
+
