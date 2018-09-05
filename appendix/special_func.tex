@@ -1,0 +1,87 @@
+\subsubsection*{Gamma function}
+The Gamma funciton is defined as~\cite[Eq.~5.2.1]{NIST:DLMF}
+\begin{equation}
+\label{app:def_gamma}
+\Gamma\left(z\right)=\int_{0}^{\infty}e^{-t}t^{z-1}\mathrm{d}t,
+\end{equation}
+where the real part of the complex number $z$ has to be strictly greater than zero (otherwise via analytic continuation).
+\subsubsection*{Meijer G-function}
+The Meijer G-function is a general special function, which includes many other functions as special cases. It is defined as
+\begin{equation}
+\label{app:def_meijerG}
+G^{m,n}_{p,q}\left(z,
+\begin{matrix}
+a_1,...,a_p\\
+b_1,...,b_q
+\end{matrix}
+\right)
+=
+\frac{1}{2\pi\mathrm{i}}\int_{L%
+}\left({\textstyle\frac{\prod\limits_{\ell=1}^{m}\Gamma\left(b_{\ell}-s\right%
+)\prod\limits_{\ell=1}^{n}\Gamma\left(1-a_{\ell}+s\right)}{\left(\prod\limits_%
+{\ell=m}^{q-1}\Gamma\left(1-b_{\ell+1}+s\right)\prod\limits_{\ell=n}^{p-1}%
+\Gamma\left(a_{\ell+1}-s\right)\right)}}\right)z^{s}\mathrm{d}s,
+\end{equation}
+where the integration contour is a suitable path around the poles of $\Gamma(b_l-l)$ and \mbox{$\Gamma(1-a_l+s)$}~\cite[Eq.~16.17.1]{NIST:DLMF}, and $\Gamma(z)$ is defined in Eq.~\eqref{app:def_gamma}. $m$, $n$, $p$, $q$ are integers with $0 \leq m \leq q$ and $0 \leq n \leq p$, and $z,a_1,...,a_p,b_1,...,b_q$ are complex numbers where none of the differences $a_i-b_j$ must be a positive integers for $0\leq i \leq n$, $0\leq j \leq m$.
+
+Arbitrary precision implementations exist in several libraries and computer algebra systems, for example in \cite{mpmath,Mathematica}.
+
+\subsubsection*{Hypergeometric function}
+The Hypergeometric function $F(a,b,c,z)$ (or sometimes $_2F_1(a,b,c,z)$) is a special case of the Meijer G-function from Eq.~\eqref{app:def_meijerG} and can be obtained by
+\begin{equation}
+F(a,b,c,z)=\frac{\Gamma (c)}{\Gamma(a)\Gamma(b)}
+G^{1,2}_{2,2}\left(-z,
+\begin{matrix}
+1-a,1-b\\
+0,c
+\end{matrix}
+\right)
+\end{equation}
+It can also be written in terms of Gamma functions as~\cite[Eq.~15.2.1]{NIST:DLMF}
+\begin{equation}
+\label{app:def_hypergeo}
+F(a,b,c,z)= \frac{\Gamma(c)}{\Gamma(a)\Gamma(b)}\sum_{s=0}^\infty
+\frac{\Gamma(a+s)\Gamma(b+s)}{\Gamma(c+s)s!}z^s
+\end{equation}
+for $|z|<1$ (otherwise via analytic continuation) and $c$ must not be a negative integer or zero.
+
+\subsubsection*{Wigner D-function}
+The Wigner D-function is defined via the Hypergeometric function from Eq.~\eqref{app:def_hypergeo} as~\cite{varshalovich1988}
+\begin{alignat}{3}
+\label{app:defDfunction}
+&D^l_{m_1\,m_2}(\alpha,\beta,\gamma) && = \e^{-i(m_1\alpha+m_2\gamma)}d^{\,l}_{m_1\,m_2}(\beta),&&\\[10pt]
+&d^{\,l}_{m_1\,m_2}(\beta)&& = \frac{\xi_{m_1m_2}}{\mu !}\left(\frac{(s+\mu+\nu)!(s+\mu)!}{s!(s+\nu)!}\right)^{1/2}&&\left(\sin \nicefrac{\beta}{2}\right)^\mu\left(\cos \nicefrac{\beta}{2}\right)^\nu\\
+&&&&&\times F(-s,s+\mu+\nu+1,\mu+1,\sin^2\nicefrac{\beta}{2}),
+\end{alignat}
+where $\mu = |m_1-m_2|$, $\nu=|m_1+m_2|$, $s=l-(\mu+\nu)/2$ and
+\begin{numcases}{\xi_{m_1\,m_2}=}
+1;  m_2 \leq m_1\\
+(-1)^{m_2-m_1}; m_2 < m_1,
+\end{numcases}
+and $F(a,b,c,x)$ are the hypergeometric functions from Eq.~\eqref{app:def_hypergeo}.
+
+\subsubsection*{Spherical Harmonics}
+The spherical harmonics $\text{Y}_{lm}(\vartheta,\varphi)$ are special cases of the Wigner D-functions~\cite{varshalovich1988} from Eq.~\eqref{app:defDfunction}:
+\begin{equation}
+\label{app:defYlm}
+\text{Y}_{lm}(\vartheta,\varphi)=\sqrt{\frac{2l+1}{4\pi}}
+D^{l\,*}_{m\,0}(\varphi,\vartheta,0)
+\end{equation}
+The normalized spherical Harmonics $C_{lm}(\vartheta,\varphi)$ are used frequently, which are connected to the spherical harmonics as
+\begin{equation}
+C_{lm}(\vartheta,\varphi) = \sqrt{\frac{4\pi}{2l+1}}\text{Y}_{lm}(\vartheta,\varphi).
+\end{equation}
+The set of all spherical harmonics $\text{Y}_{lm}(\vartheta,\varphi)$ with positive integer $l$ and $-l\leq m \leq l$ is a complete orthonormal set~\cite{varshalovich1988} in the space of functions depending on $(\vartheta,\varphi)\in [0,\pi]\otimes [0,2\pi]$. Thus, an arbitrary function $f(\vartheta,\varphi)$ can be written as
+\begin{equation}
+f(\vartheta,\varphi)=\sum_{l=0}^\infty \sum_{m=-l}^l a_{lm}\text{Y}_{lm}(\vartheta,\varphi),
+\end{equation}
+with the expansion coefficients obtained by
+\begin{equation}
+a_{lm}=\int_0^{2\pi}\text{d}\varphi\int_0^\pi\text{d}\vartheta \sin\vartheta \text{Y}^{*}_{lm}(\vartheta,\varphi)f(\vartheta,\varphi)
+\end{equation}
+
+\subsubsection*{Legendre Polynomials}
+The Legendre Polynomials $P_l(\cos\vartheta)$ can be expressed in terms of the Spherical Harmonics from Eq.~\eqref{app:defYlm} as
+\begin{equation}
+P_l(\cos\vartheta)=\sqrt{\frac{4\pi}{2l+1}}\text{Y}_{l0}(\vartheta,0)
+\end{equation}

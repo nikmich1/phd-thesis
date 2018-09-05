@@ -3,8 +3,8 @@ Following the notation from~\cite{varshalovich1988}, important results from the 
 The passive point of view for rotations is used in this thesis, where vectors are invariant objects and the coordinate axes are rotated. Two systems, the laboratory system with unprimed coordinates and the body-fixed system with primed coordinates are considered. The position of the axes of the body-fixed system is described by the Euler angles $\Omega=(\phi,\theta,\psi)$ in terms of the following three successive rotations of the axes of the laboratory system:
 \begin{enumerate}
 \item Angle $\psi$ about $z$ axis
-\item Angle $\theta$ about $y$ axis
-\item Angle $\phi$ about $z$ axis
+\item Angle $\theta$ about (original) $y$ axis
+\item Angle $\phi$ about (original) $z$ axis
 \end{enumerate}
 Let $\mathbf{r}$ be a vector with coordinates $(r,\vartheta,\varphi)$ in the laboratory frame and $(r^\prime,\vartheta^\prime,\varphi^\prime)$ in the body fixed frame. Then, the primed angles are a function of the unprimed angles and the three Euler angles and the corresponding relations relations between the coordinates are
 \begin{alignat}{3}
@@ -17,27 +17,46 @@ This gives the following relation for spherical harmonics as a function of $(\va
 \label{eq:rot_sphHarm}
 \text{Y}_{lm}(\vartheta^\prime,\varphi^\prime)=\sum_{m_2=-l}^l \text{Y}_{lm_2}(\vartheta,\varphi) D^l_{m_2\,m}(\phi,\theta,\phi),
 \end{equation}
-where $D^l_{m_1\,m_2}(\alpha,\beta,\gamma)$ are the Wigner D functions defined as
-\begin{alignat}{3}
-\label{app:defDfunction}
-&D^l_{m_1\,m_2}(\alpha,\beta,\gamma) && = \e^{-i(m_1\alpha+m_2\gamma)}d^{\,l}_{m_1\,m_2}(\beta),&&\\[10pt]
-&d^{\,l}_{m_1\,m_2}(\beta)&& = \frac{\xi_{m_1m_2}}{\mu !}\left(\frac{(s+\mu+\nu)!(s+\mu)!}{s!(s+\nu)!}\right)^{1/2}&&\left(\sin \nicefrac{\beta}{2}\right)^\mu\left(\cos \nicefrac{\beta}{2}\right)^\nu\\
-&&&&&\times F(-s,s+\mu+\nu+1,\mu+1,\sin^2\nicefrac{\beta}{2}),
-\end{alignat}
-where $\mu = |m_1-m_2|$, $\nu=|m_1+m_2|$, $s=l-(\mu+\nu)/2$ and
-\begin{numcases}{\xi_{m_1\,m_2}=}
-\label{eq:radial_equations_small}
-1;  m_2 \leq m_1\\
-(-1)^{m_2-m_1}; m_2 < m_1,
-\end{numcases}
-and $F(a,b,c,x)$ are the hypergeometric functions.
+where $D^l_{m_1\,m_2}(\alpha,\beta,\gamma)$ are the Wigner D functions defined in Eq.~\eqref{app:defDfunction} and $\text{Y}_{lm}(\vartheta,\varphi)$ are defined in Eq.~\eqref{app:defDfunction}.
 
-
-
-\begin{itemize}
-\item Introduction of spherical tensor operators
-\item Introduction scalar product of tensor operators
-\item Matrix elements of spherical tensor operators and scalar products of tensor operators
-\item connection to hyperfine operators with fermion angular variables and nuclear euler angles
-\item rotation of coordinate systems, spherical harmonics etc.
-\end{itemize}
+\subsubsection*{Irreducible tensor operators}
+An irreducible tensor operator~\cite{varshalovich1988} of rank $l$ is a $m=2l+1$-component operator $t_{lm}(\mathbf{x})$, depending on the variables $\mathbf{x}$, where the components transform like the spherical harmonics in Eq.~\eqref{eq:rot_sphHarm} under a rotation of the coordinate system described by the Euler angles $(\phi,\theta,\psi)$ as
+\begin{equation}
+t_{lm}(\mathbf{x}^\prime) = \sum_{m_2=l}^l t_{lm_2}(\mathbf{x}) D^l_{m_2\,m}(\phi,\theta,\psi)
+\end{equation}
+where the new coordinates $\mathbf{x}^\prime$ are a function of the old $\mathbf{x}$ and the Euler angles $(\phi,\theta,\psi)$.\\ 
+The expectation values of irreducible tensor in rotational states $\left|l_1m_1\right>$, and $\left|l_2m_2\right>$ of defined angular momenta $l_1,\,l_2$ with projections $m_1,\,m_2$ on the $z$ axis, respectively, can be written as~\cite{varshalovich1988}
+\begin{equation}
+\label{app:wignerEckardt}
+\left< l_1 m_1 \middle| \hat{t}_{lm} \middle| l_2 m_2\right>=
+(-1)^{l_1-m_1}
+\begin{pmatrix}
+l_1 & l & l_2\\
+-m_1 & m & m_2
+\end{pmatrix}
+\left<l_1 \middle|\middle| \hat{t}_{l} \middle|\middle| l_2\right>,
+\end{equation}
+where the double-bar matrix element on the right hand side is called the \textit{reduced matrix element}, and the Wigner-$3j$-symbal is defined in~\cite[Section 8.]{varshalovich1988}. This is also known as the Wigner-Eckardt-theorem, and thereby, the dependence of the matrix element on $m_1$, $m_2$, and $m$ can be explicitly written in terms of the Wigner-$3j$-symbol. In practice, this means that matrix elements of irreducible operators only have to be calculated once for a convenient  choice of $m_1$, $m_2$, and $m$, and then can be translated to other values of the projections.\\[9pt]
+Let two systems, system 1 and 2, with rotational states $\left|j_1m_1\right>$ and $\left| j_2m_2\right>$ be  coupled to states with defined total angular momentum $j$ as
+\begin{equation}
+\left|jm\,j_1j_2\right> = \sum_{m_1,m_2}\text{C}^{jm}_{j_1m_1\,j_2m_2}
+\left|j_1m_1\right>\otimes\left| j_1m_1\right>,
+\end{equation}
+and analogously for $j^\prime,\, m^\prime,\,j_1^\prime,\,j_2^\prime$. Here, $\text{C}^{jm}_{j_1m_1\,j_2m_2}$ are the Clebsch-Gordan-coefficients, as defined in~\cite[Section 9.]{varshalovich1988}, and let $t^{(1)}_{l m_1}$, $t^{(2)}_{l m_2}$ be two irreducible tensor operators acting on system 1 and system 2, respectively. Then, the scalar product of these to operators is defined as
+\begin{equation}
+\label{app:tensor_scalarProd}
+t^{(1)}_{l}\cdot t^{(2)}_{l} = \sum_{m}(-1)^{-m}\,\, t^{(1)}_{lm}\cdot t^{(2)}_{l\,-m},
+\end{equation}
+and matrix elements thereof can be expressed in terms of the reduced matrix elements as~\cite{varshalovich1988}
+\begin{equation}
+\label{app:reducedMatEl_expectation}
+\left< j^\prime m ^\prime\,j_1^\prime j_2^\prime \middle| t^{(1)}_{l}\cdot t^{(2)}_{l} \middle| j m \,j_1 j_2\right>
+=
+\delta_{j^\prime j}\delta_{m^\prime m}(-1)^{j+j_1+j_2^\prime}
+\begin{Bmatrix}
+j_1^\prime&j_1&l\\
+j_2&j_2^\prime&j
+\end{Bmatrix}
+\left< j_1^\prime\middle|\middle| t^{(1)}_{l}\middle|\middle|j_1\right>
+\left< j_2^\prime\middle|\middle| t^{(2)}_{l}\middle|\middle|j_2\right>.
+\end{equation}

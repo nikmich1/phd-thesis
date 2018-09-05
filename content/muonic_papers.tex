@@ -501,7 +501,7 @@ with the Clebsch-Gordan coefficients $C^{jm}_{j_1m_1\,j_2m_2}$. The matrix eleme
 \Delta E^{(2)}_{\text{el}} = \left< FMn_1\kappa_1I_1K\right|{V_{\text{el}}^{(2)}}\left|FMn_2\kappa_2I_2K\right>,
 \label{eq:quadel}
 \end{equation}
-where the diagonal elements correspond to the first order electric hyperfine splitting~\cite{michel2017}. The explicit expressions are given in Eqs.~\eqref{eq:matel} and~\eqref{eq:defmulti} in the Appendix.
+where the diagonal elements correspond to the first order electric hyperfine splitting~\cite{michel2017}. The explicit expressions are given in Eqs.~\eqref{eq:matel} and~\eqref{eq:defmulti_2} in the Appendix.
 \begin{table}[b]
 \caption{\label{tab:params}%
 Nuclear parameters used in the numerical calculations. $I_0$ is the nuclear ground state angular momentum. RMS and $Q_\text{spec}$ are the nuclear RMS radius and spectroscopic quadrupole moment of the nuclear ground state from~\cite{Angeli2013,Stone2005}, respectively. $c$, $a$, $\beta$ are the parameters of the deformed Fermi distribution derived from RMS and $Q_\text{spec}$, see Sec. \ref{sec:num} for details. $E_{I}$ are the excitation energies of the nuclear rotational states with angular momentum $I$ in Eq.~\eqref{eq:enucl}, the values are taken from~\cite{ENSDF}.}
@@ -689,7 +689,7 @@ V_{\text{el}}(\vec{r}_\mu,\phi,\theta)=&\sum_{l=0}^\infty-Z\alpha \left[ \int \t
 &\quad\,\times \sum_{m=-l}^l \text{C}^*_{lm}(\theta,\phi)\text{C}_{lm}(\vartheta_\mu,\varphi_\mu).\notag\\
 =:&\sum_{l=0}^\infty Q_{\text{el}}^{(l)}(r_\mu)\sum_{m=-l}^lC^*_{lm}(\theta,\phi)C_{lm}(\vartheta_\mu,\varphi_\mu)&\notag\\
 =:& \sum_{l=0}^\infty V^{(l)}_{\text{el}}(\vec{r}_\mu,\phi,\theta),
-\label{eq:defmulti}
+\label{eq:defmulti_2}
 \end{align}
 where $Q_{\text{el}}^{(l)}(r_\mu)$ describe the radial distribution of the mulitpole moments.
 
@@ -711,7 +711,7 @@ c_l(r_\mu,r_N)=\frac{2l+1}{2} \int_{-1}^1 \text{d}y \frac{K_1(2m_e{|\vec{r}_\mu 
 \label{eq:defcl}
 \end{equation}
 and are evaluated by numerical integration.
-Thereby, the Uehling potential can be written, analogously to Eq.~\eqref{eq:defmulti}, as
+Thereby, the Uehling potential can be written, analogously to Eq.~\eqref{eq:defmulti_2}, as
 \begin{align}
 V_{\text{uehl}}(\vec{r}_\mu,\phi,\theta)=&\sum_{l=0}^\infty-Z\alpha\frac{2\alpha}{3\pi} \notag\\
 &\quad\times\left[ \int \text{d}^3r^{\prime}_N c_l(r_\mu,r_N)\text{P}_{l}(\cos \vartheta_N^{\prime})\rho(\vec{r}_N^{\,\prime})\right]\notag\\

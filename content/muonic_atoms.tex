@@ -51,12 +51,12 @@ It can be seen that, that for electronic atoms, the nucleus is generally a few o
 \begin{equation}
 E_{0,\text{point}}=m_f c^2 (1-\sqrt{1-(Z\alpha)^2}),
 \end{equation}
-and is proportional the fermion mass. As a consequence, for muonic atoms and high charge numbers, muonic transitions can have an energy of several mega electronvolts and fine structure splitting can be on the order of several hundreds of kilo electronvolts. This is of the same order as excitation energies of nuclear rotational states~\cite{ENSDF} and therefore a nuclear model has to be used, which besides an extended charge distribution also contains the excited nuclear states of the ground state rotational band. Here, the symmetric rigid rotor model model for nuclei with axial symmetry has proved successful in describing heavy muonic atoms, e.g.~\cite{tanaka1984,hitlin1970,wu1969,Devons1995} and also is used in this thesis. The rigid rotor model is introduced in Appendix~\ref{app:rig_rotor}, where also the expressions for the nuclear wave functions in terms of Wigner D functions can be found. Essentially, the nucleus is described by a charge distribution $\rho(\mathbf{r})$ given in the body fixed nuclear frame, and the Euler angles $\Omega=(\phi,\theta,\psi)$ describe its position in the laboratory frame. The rotational state of the nucleus $\left|IMK\right>$ is given by the total nuclear angular momentum quantum number $I$, its projection on the $z$ axis of the laboratory frame $M$ and on the $z$ axis of the body fixed frame $K$, where $K$ also corresponds to the ground state angular momentum. As derived in Chapter~\ref{ch:furry_pic}, the muonic bound states without radiative corrections can be obtained by solving the Dirac equation for the nuclear potential. The coupled system of muon as a Dirac particle and nucleus as a rigid rotor therefore is
+and is proportional the fermion mass. As a consequence, for muonic atoms and high charge numbers, muonic transitions can have an energy of several mega electronvolts and fine structure splitting can be on the order of several hundreds of kilo electronvolts. This is of the same order as excitation energies of nuclear rotational states~\cite{ENSDF} and therefore a nuclear model has to be used, which besides an extended charge distribution also contains the excited nuclear states of the ground state rotational band. Here, the symmetric rigid rotor model model for nuclei with axial symmetry has proved successful in describing heavy muonic atoms, e.g.~\cite{tanaka1984,hitlin1970,wu1969,Devons1995} and also is used in this thesis. The symmetric rigid rotor model is introduced in Appendix~\ref{app:rig_rotor}, where also the expressions for the nuclear wave functions in terms of Wigner D functions can be found. In the symmetric rigid rotor model, the nucleus is described by a charge distribution $\rho(\mathbf{r})$ given in the body fixed nuclear frame, and the Euler angles $\Omega=(\phi,\theta,\psi)$ describe its position in the laboratory frame. The rotational state of the nucleus $\left|IMK\right>$ is given by the total nuclear angular momentum quantum number $I$, its projection on the $z$ axis of the laboratory frame $M$ and on the $z$ axis of the body fixed frame $K$, where $K$ also corresponds to the ground state angular momentum. As derived in Chapter~\ref{ch:furry_pic}, the muonic bound states without radiative corrections can be obtained by solving the Dirac equation for the nuclear potential. The coupled system of muon as a Dirac particle and nucleus as a rigid rotor therefore is described by the eigenvalue equation
 \begin{equation}
-\text{H} = \text{H}_{\text{N}} + \text{H}_\mu + V_{\text{el}},
+\text{H} \left(\left|N\right>\otimes \left|\mu\right>\right)= \left(\text{H}_{\text{N}} + \text{H}_\mu + V_{\text{el}}\right) \left(\left|N\right>\otimes \left|\mu\right>\right)= E \left(\left|N\right>\otimes \left|\mu\right>\right),
 \label{eq:muon_htotal}
 \end{equation}
-where $H_{\text{N}}$ is the nuclear rigid rotor Hamiltonian, and ${H_\mu}{=}{\vec{\alpha} \cdot \vec{p} + \beta m_\mu}$ is the free Dirac Hamiltonian for the muon with momentum $\vec{p}$, and $\vec{\alpha}$ and $\beta$ are the four Dirac matrices. Following Eq.~\eqref{eq:furry_elPot}, the electric potential energy between muon and nuclear charge distribution reads as
+where $H_{\text{N}}$ is the nuclear rigid rotor Hamiltonian, and ${H_\mu}{=}{\vec{\alpha} \cdot \vec{p} + \beta m_\mu}$ is the free Dirac Hamiltonian for the muon with momentum $\vec{p}$, and $\vec{\alpha}$ and $\beta$ are the four Dirac matrices. $\left|N\right>$ is the nuclear state and $\left|\mu\right>$ is the muon state. Following Eq.~\eqref{eq:furry_elPot}, the electric potential energy between muon and nuclear charge distribution reads as
 \begin{equation}
 \label{eq:muon_elInteract}
 V_{\text{el}}(\mathbf{r}_\mu^\prime)=-Z\alpha \int \mathrm{d}^3\mathbf{r}_N^\prime \frac{\rho(\mathbf{r}_N^\prime)}{|\mathbf{r}_\mu^\prime-\mathbf{r}_N^\prime|}.
@@ -90,11 +90,25 @@ where $Q_{\text{el}}^{(l)}(r_\mu)$ describe the radial distribution of the multi
 
 Most nuclei turn out to be symmetric with respect to reflection in the $(x^\prime ,y^\prime)$-plane~\cite{zickendraht1991}. This results in only even-$l$ terms in Eq.~\eqref{eq:defmulti} being non-zero, thus the first to terms are the monopole term $l=0$ and the quadrupole term $l=2$. The next term would be the $l=4$ hexadecapole terms, however, usually, higher order terms are not needed for the correct description of the hyperfine level structure. It follows from Eq.~\ref{eq:defmulti}, that the monopole terms only depends on the muonic radial variable. In fact, the $l=0$ terms is the averaged nuclear potential already derived in Eq.~\eqref{eq:gfac_monopole} in the previous chapter on the $g$ factor of spinless nuclei. As a consequence, the $l=0$-term can be used as a potential in the spherically symmetric Dirac equation to define the unperturbed muonic states as
 \begin{equation}
+\label{eq:muonicEn}
 \left(\boldsymbol{\alpha} \cdot \mathbf{p} + \beta m_\mu + V_{\text{el}}^{(0)}(r_\mu) \right) \left|n\kappa m\right> = E_{n\kappa}\left|n\kappa m\right>.
 \end{equation}
-and the $l=2$ quadrupole term couples nuclear and muonic degrees of freedom and is treated in perturbation theory in Sections~\ref{sec:muon_elquad}, \ref{sec:muon_dynamic}, and \ref{sec:muon_residualSO}.
+The unperturbed nuclear states are the rigid rotor states from Eq.~\eqref{app:rigidRot_state} with
+\begin{equation}
+\label{eq:nuclEn}
+\text{H}_N \left|IMK\right> = E_N \left|IMK\right>,
+\end{equation}
+where the excitation energies of the nuclear rotational states are typically taken from experiment~\cite{ENSDF}, and not parametrized by the moment of inertia from Eq.~\eqref{eq:rig_rotorEn}.
+The $l=2$ quadrupole term couples nuclear and muonic degrees of freedom and is treated in perturbation theory in Sections~\ref{sec:muon_elquad}, \ref{sec:muon_dynamic}, and \ref{sec:muon_residualSO}. The multipole interaction from Eq.~\eqref{eq:defmulti} in general, and the quadrupole interaction with $l=2$ in particular has the structure of a scalar product of two irreducible tensor operators, as defined in Eq.~\eqref{app:tensor_scalarProd}. One operator acts on the nuclear angular variables, i.e. the Euler angles, and one on the muonic angular variables. 
+For these types of operators, the calculation of expectation values can be simplified by using the theory of irreducible tensor operators, as described in Appendix~\ref{app:ang_theo}. For applying formula~\eqref{app:reducedMatEl_expectation}. Therefore, states of defined total angular momentum have to be considered as
+\begin{equation}
+\left| FM\,IKj(\kappa)\right> = \sum_{M_N, m}\text{C}^{FM}_{IM_N\,jm}\left|IM_NK\right>\,\left|n\kappa m\right>
+\end{equation}
+with total angular momentum $F$, nuclear angular momentum $I$ and muonic angular momentum $j$ are defined. The muonic angular momentum $j$ is already composed out of the orbital angular momentum $l$ and the spin angular momentum, as described in Eq.~\eqref{eq:ansatz_dirac}. The total energy of the muon-nucleus system can be calculated as the sum of nuclear energy $E_N$ from Eq.~\eqref{eq:nuclEn}, the muonic energy from Eq.~\eqref{eq:muonicEn} and the expactation value of the quadrupole interaction $\left<V_{\text{el}}^{(2)}\right>$ from Eq.~\eqref{eq:defmulti}.
 
 \subsection{Fine and first order hyperfine structure}
+In this Section, the solution of the Dirac equation for the muon will be discussed, in particular the effects of vacuum polarization, recoil corrections, electron screening are implemented, using known methods. Especially, the usage of the dual-kinetic-balance method~\cite{Shabaev2004} in the framework of muonic atoms is presented. In the following the first order hyperfine structure is considered. Results are presented for muonic $^{205}$Bi, $^{147}$Sm, and $^{89}$Zr, following~\cite{michel2017}, which was published in the framework of this thesis.
+
 \label{sec:muon_finestructure}
 \subsubsection{Finite nuclear size effect}
 \subsubsection{Vacuum polarization}
@@ -113,7 +127,7 @@ and the $l=2$ quadrupole term couples nuclear and muonic degrees of freedom and 
 \subsection{Quadrupole-Uehling interactions}
 \label{sec:muon_quadUehl}
 
-\section{Application to muonic Rhenium}
+\section{Struture of muonic Rhenium-185}
 \label{sec:muon_re}
 
 \subsection{Low lying states}
@@ -121,7 +135,7 @@ and the $l=2$ quadrupole term couples nuclear and muonic degrees of freedom and 
 
 
 
-\section{Bound muon g factor in Helium}
+\section{Bound muon g factor in Helium-4}
 \label{sec:muon_he}
 
 \section{Summary}
