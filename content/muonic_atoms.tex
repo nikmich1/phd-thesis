@@ -57,7 +57,7 @@ and is proportional the fermion mass. As a consequence, for muonic atoms and hig
 \text{H} \left(\left|N\right>\otimes \left|\mu\right>\right)= \left(\text{H}_{\text{N}} + \text{H}_\mu + V_{\text{el}}\right) \left(\left|N\right>\otimes \left|\mu\right>\right)= E \left(\left|N\right>\otimes \left|\mu\right>\right),
 \label{eq:muon_htotal}
 \end{equation}
-where $H_{\text{N}}$ is the nuclear rigid rotor Hamiltonian, and ${H_\mu}{=}{\vec{\alpha} \cdot \vec{p} + \beta m_\mu}$ is the free Dirac Hamiltonian for the muon with momentum $\vec{p}$, and $\vec{\alpha}$ and $\beta$ are the four Dirac matrices. $\left|N\right>$ is the nuclear state and $\left|\mu\right>$ is the muon state. Following Eq.~\eqref{eq:furry_elPot}, the electric potential energy between muon and nuclear charge distribution reads as
+where $H_{\text{N}}$ is the nuclear rigid rotor Hamiltonian, and ${H_\mu}{=}{\boldsymbol{\alpha} \cdot \mathbf{p} + \beta m_\mu}$ is the free Dirac Hamiltonian for the muon with momentum $\mathbf{p}$, and $\boldsymbol{\alpha}$ and $\beta$ are the four Dirac matrices. $\left|N\right>$ is the nuclear state and $\left|\mu\right>$ is the muon state. Following Eq.~\eqref{eq:furry_elPot}, the electric potential energy between muon and nuclear charge distribution reads as
 \begin{equation}
 \label{eq:muon_elInteract}
 V_{\text{el}}(\mathbf{r}_\mu^\prime)=-Z\alpha \int \mathrm{d}^3\mathbf{r}_N^\prime \frac{\rho(\mathbf{r}_N^\prime)}{|\mathbf{r}_\mu^\prime-\mathbf{r}_N^\prime|}.
@@ -70,7 +70,7 @@ With the multipole expansion of the Coulomb potential~\cite{jackson1999}
 \end{equation}
 where $r_<:=\min (r_\mu,r_N)$, $r_>:=\max (r_\mu,r_N)$, the electric potential~\eqref{eq:muon_elInteract} can be written as
 \begin{align}
-V_{\text{el}}(\mathbf{r}_\mu^{\,\prime})=&\sum_{l,m}-Z\alpha \left[ \int \text{d}^3r^{\prime}_N \frac{r_<^l}{r_>^{l+1}}\text{C}^*_{lm}(\vartheta_N^{\prime},\varphi_N^{\prime})\rho(\vec{r}_N^{\,\prime})\right]\notag\\
+V_{\text{el}}(\mathbf{r}_\mu^{\,\prime})=&\sum_{l,m}-Z\alpha \left[ \int \text{d}^3r^{\prime}_N \frac{r_<^l}{r_>^{l+1}}\text{C}^*_{lm}(\vartheta_N^{\prime},\varphi_N^{\prime})\rho(\mathbf{r}_N^{\,\prime})\right]\notag\\
 &\,\times\text{C}_{lm}(\vartheta_\mu^{\prime},\varphi_\mu^\prime),
 \end{align}
 where ${\text{C}_{lm}(\vartheta,\varphi)}{=}{\sqrt{4\pi/(2l+1)}\text{Y}_{lm}(\vartheta,\varphi)}$ are the normalized spherical harmonics.
@@ -82,14 +82,18 @@ For axially symmetric charge distributions, only the ${m}{=}{0}$-terms are non-z
 which is a special case of Eq.~\eqref{eq:rot_sphHarm}.
 Thereby, the potential as a function of the Euler angles and the muon's position in the laboratory frame reads
 \begin{align}
-V_{\text{el}}(\mathbf{r}_\mu,\phi,\theta)=&\sum_{l=0}^\infty-Z\alpha \left[ \int \text{d}^3r^{\prime}_N \frac{r_<^l}{r_>^{l+1}}\text{P}_{l}(\cos \vartheta_N^{\prime})\rho(\vec{r}_N^{\,\prime})\right]\sum_{m=-l}^l \text{C}^*_{lm}(\theta,\phi)\text{C}_{lm}(\vartheta_\mu,\varphi_\mu).\notag\\
+V_{\text{el}}(\mathbf{r}_\mu,\phi,\theta)=&\sum_{l=0}^\infty-Z\alpha \left[ \int \text{d}^3\mathbf{r}^{\prime}_N \frac{r_<^l}{r_>^{l+1}}\text{P}_{l}(\cos \vartheta_N^{\prime})\rho(\mathbf{r}_N^{\,\prime})\right]\sum_{m=-l}^l \text{C}^*_{lm}(\theta,\phi)\text{C}_{lm}(\vartheta_\mu,\varphi_\mu).\notag\\
 \eqqcolon &\sum_{l=0}^\infty Q_{\text{el}}^{(l)}(r_\mu)\sum_{m=-l}^lC^*_{lm}(\theta,\phi)C_{lm}(\vartheta_\mu,\varphi_\mu)&\notag\\
 \eqqcolon& \sum_{l=0}^\infty V^{(l)}_{\text{el}}(\mathbf{r}_\mu,\phi,\theta),
 \label{eq:defmulti}
 \end{align}
 where $Q_{\text{el}}^{(l)}(r_\mu)$ describe the radial distribution of the multipole moments and the dependency on the muonic angles and the Euler angles is in form of a scalar product of spherical tensor operators. This means, as expected the interaction energy does only depend on the relative orientation of the muon with respect to the body fixed nuclear $z^\prime$ axis.
 
-Most nuclei turn out to be symmetric with respect to reflection in the $(x^\prime ,y^\prime)$-plane~\cite{zickendraht1991}. This results in only even-$l$ terms in Eq.~\eqref{eq:defmulti} being non-zero, thus the first to terms are the monopole term $l=0$ and the quadrupole term $l=2$. The next term would be the $l=4$ hexadecapole terms, however, usually, higher order terms are not needed for the correct description of the hyperfine level structure. It follows from Eq.~\eqref{eq:defmulti}, that the monopole terms only depends on the muonic radial variable. In fact, the $l=0$ terms is the averaged nuclear potential already derived in Eq.~\eqref{eq:gfac_monopole} in the previous chapter on the $g$ factor of spinless nuclei. As a consequence, the $l=0$-term can be used as a potential in the spherically symmetric Dirac equation to define the unperturbed muonic states as
+Most nuclei turn out to be symmetric with respect to reflection in the $(x^\prime ,y^\prime)$-plane~\cite{zickendraht1991}. This results in only even-$l$ terms in Eq.~\eqref{eq:defmulti} being non-zero, thus the first to terms are the monopole term $l=0$ and the quadrupole term $l=2$. The next term would be the $l=4$ hexadecapole terms, however, usually, higher order terms are not needed for the correct description of the hyperfine level structure. It follows from Eq.~\eqref{eq:defmulti}, that the monopole terms only depends on the muonic radial variable, since it can be written as
+\begin{equation}
+V_{\text{el}}^{(0)}(r_\mu)=-Z\alpha \int\text{d}^3\mathbf{r}_N^\prime \frac{\rho(\mathbf{r}_N^\prime)}{r_>}.
+\end{equation} 
+In fact, the $l=0$ terms is the averaged nuclear potential already derived in Eq.~\eqref{eq:gfac_monopole} in the previous chapter on the $g$ factor of spinless nuclei. As a consequence, the $l=0$-term can be used as a potential in the spherically symmetric Dirac equation to define the unperturbed muonic states as
 \begin{equation}
 \label{eq:muonicEn}
 \left(\boldsymbol{\alpha} \cdot \mathbf{p} + \beta m_\mu + V_{\text{el}}^{(0)}(r_\mu) \right) \left|n\kappa m\right> = E_{n\kappa}\left|n\kappa m\right>.
@@ -110,7 +114,7 @@ with total angular momentum $F$, nuclear angular momentum $I$ and muonic angular
 
 \subsection{Fine and first order hyperfine structure}
 \label{sec:muon_finestructure}
-In this Section, the solution of the Dirac equation for the muon will be discussed, in particular the effects of vacuum polarization in Uehling approximation, recoil corrections, electron screening are implemented, using known methods. Especially, the usage of the dual-kinetic-balance method~\cite{Shabaev2004} in the framework of muonic atoms is presented. In the following the first order hyperfine structure is considered. Results are presented for muonic $^{205}$Bi, $^{147}$Sm, and $^{89}$Zr, following~\cite{michel2017}, which was published in the framework of this thesis.
+In this Section, the solution of the Dirac equation for the muon will be discussed, in particular the effects of vacuum polarization in Uehling approximation, recoil corrections, electron screening are implemented, using known methods. Especially, the usage of the dual-kinetic-balance method~\cite{Shabaev2004} in the framework of muonic atoms is presented. In the following, the first order hyperfine structure is considered. Results are presented for muonic $^{205}$Bi, $^{147}$Sm, and $^{89}$Zr. This Section follows~\cite{michel2017}, which was published in the framework of this thesis.
 
 \subsubsection{Finite nuclear size corrections}
 \label{sec:radialEq}
@@ -136,7 +140,7 @@ In this Section, the solution of the Dirac equation for the muon will be discuss
 For considering monopole and quadrupole interactions, the nuclear charge distribution is divided into a spherically symmetric part $\rho_0(r)$ and a part $\rho_2(r)$ describing the quadrupole distribution in the nuclear frame as~\cite{hitlin1970}
 \begin{equation}
 \label{eq:rho}
-\rho(\vec{r}^{\,\prime}) = \rho_0(r^{\prime}) + \rho_2(r^{\prime}) \, Y_{20}(\vartheta^\prime,\varphi^\prime),
+\rho(\mathbf{r}^{\,\prime}) = \rho_0(r^{\prime}) + \rho_2(r^{\prime}) \, Y_{20}(\vartheta^\prime,\varphi^\prime),
 \end{equation}
 with the spherical harmonics $Y_{lm}(\vartheta,\varphi)$. Since an analogous part for the dipole distribution would be an operator of odd parity, it would vanish after averaging with muon wave functions of defined parity~\cite{johnson2007}, and thus it is not considered here and neither are higher multipoles beyond the quadrupole term. Correspondingly, the electric potential from~\eqref{eq:defmulti} contains only the monopole and quadrupole part, and can be written as
 \begin{equation}
@@ -153,9 +157,9 @@ with $r_>=\text{max}(r,r_\mu)$. This interaction potential will be included in t
 For evaluating these Hamiltonians, the appropriate states are states of defined total angular momentum, as introduced in Eq.~\eqref{eq:totalState}. As a basis for further calculations, the Dirac equation
 \begin{equation}
 \label{eq:diracSph}
-\left( \vec{\alpha}\cdot \vec{p}+ \beta + V(r_\mu) \right) \ket{n \kappa m} = (1-E^{(B)}_{n \kappa}) \ket{n \kappa m}
+\left( \boldsymbol{\alpha}\cdot \mathbf{p}+ \beta + V_{\text{el}}^{(0)}(r_\mu) \right) \ket{n \kappa m} = (1-E^{(B)}_{n \kappa}) \ket{n \kappa m}
 \end{equation}
-is solved for the muon. Here, $\vec{\alpha}$ and $\beta$ are the four Dirac matrices, $E^{(B)}_{n \kappa}$ are the binding energies, and the potential $V(r)$ is the spherically symmetric part of the interaction with the nucleus, which is the monopole contribution from the electric interaction in Eq.~\eqref{eq:Hmonopole} and, if vacuum polarization is considered, the Uehling potential from Eq.~\eqref{eq:uehl_2}. A Fermi type charge distribution~\cite{Beier2000} is used to model the monopole charge distribution as
+is solved for the muon. Here, $\boldsymbol{\alpha}$ and $\beta$ are the four Dirac matrices, $E^{(B)}_{n \kappa}$ are the binding energies, and the potential $V(r)$ is the spherically symmetric part of the interaction with the nucleus, which is the monopole contribution from the electric interaction in Eq.~\eqref{eq:Hmonopole} and, if vacuum polarization is considered, the Uehling potential from Eq.~\eqref{eq:uehl_2}. A Fermi type charge distribution~\cite{Beier2000} is used to model the monopole charge distribution as
 \begin{equation}
 \label{eq:fermi}
 \rho_0 (r)=\frac{N}{1+\text{exp}((r-c)/a)},
@@ -245,7 +249,7 @@ m_r=\frac{m_N}{m_N+1},
 and the Dirac equation is accordingly modified to
 \begin{equation}
 \label{eq:diracSphRed}
-\left( \vec{\alpha}\cdot \vec{p}+ \beta\,m_r + V(r_\mu) \right) \ket{n \kappa m} = (m_r-E^{(B)}_{n \kappa}) \ket{n \kappa m}.
+\left( \boldsymbol{\alpha}\cdot \mathbf{p}+ \beta\,m_r + V_{\text{el}}^{(0)}(r_\mu) \right) \ket{n \kappa m} = (m_r-E^{(B)}_{n \kappa}) \ket{n \kappa m}.
 \end{equation}
 In relativistic quantum mechanics, this separation is not possible. We follow an approach used in Refs.~\cite{friar1973,BorieRinker1982}, which includes the nonrelativistic part of the recoil correction already in the wave functions by using the reduced mass in the Dirac equation and calculating the leading relativistic corrections perturbatively. If $E^{\text{(fm)}}_{n\kappa}$ denotes the binding energy of Eq.\eqref{eq:diracSph} with the finite size potential from Eq.~\eqref{eq:Hmonopole} but with the reduced mass replaced by the full muon rest mass, and $E^{\text{(rm)}}_{n\kappa}$ the binding energy in the same potential but with the reduced mass from Eq.~\eqref{eq:redmass}, then the leading relativistic recoil correction $\Delta E^{\text{(rec,rel)}}_{n\kappa}$ according to Ref.~\cite{BorieRinker1982} reads
 \begin{equation}
@@ -339,11 +343,11 @@ All energies are in keV.}
 The effect of the surrounding electrons on the binding energies of the muon was estimated following Ref.~\cite{vogel1973} by calculating an effective screening potential from the charge distribution of the electrons as
 \begin{equation}
 \label{eq:screenPot}
-V_{e}(\vec{r}_\mu)=-\alpha \int \mathrm{d}V\frac{\rho_e (\vec{r})}{|\vec{r}_\mu-\vec{r}|},
+V_{e}(\mathbf{r}_\mu)=-\alpha \int \mathrm{d}V\frac{\rho_e (\mathbf{r})}{|\mathbf{r}_\mu-\mathbf{r}|},
 \end{equation}
-and using this potential in the Dirac equation for the muon. The charge distribution of the electrons is obtained by their Dirac wave functions as $\rho_e (\vec{r})=\sum_i \psi_{e_i}^*(\vec{r})\cdot \psi_{e_i}(\vec{r})$, where $\psi_{e_i}(\vec{r})$  is the four component spinor of the $i$-th considered electron. In order to obtain the wave functions of the electrons, it has to be taken into account, that the muon essentially screens one unit of charge from the nucleus. The simplest possibility is to replace the nuclear charge by an effective charge $\tilde{Z}=Z-1$ and then solve the Dirac equation for the electron with this modified nuclear potential. Another possibility is to start solving the Dirac equation for the muon in the nuclear potential without electron screening. Then, the Dirac equation for the electron is solved for all required states, adding the screening potential due to the bound muon
+and using this potential in the Dirac equation for the muon. The charge distribution of the electrons is obtained by their Dirac wave functions as $\rho_e (\mathbf{r})=\sum_i \psi_{e_i}^*(\mathbf{r})\cdot \psi_{e_i}(\mathbf{r})$, where $\psi_{e_i}(\mathbf{r})$  is the four component spinor of the $i$-th considered electron. In order to obtain the wave functions of the electrons, it has to be taken into account, that the muon essentially screens one unit of charge from the nucleus. The simplest possibility is to replace the nuclear charge by an effective charge $\tilde{Z}=Z-1$ and then solve the Dirac equation for the electron with this modified nuclear potential. Another possibility is to start solving the Dirac equation for the muon in the nuclear potential without electron screening. Then, the Dirac equation for the electron is solved for all required states, adding the screening potential due to the bound muon
 \begin{equation}
-V_{\mu}(\vec{r}_e)=-\alpha \int \mathrm{d}V\frac{\psi_\mu^*(\vec{r})\cdot \psi_\mu(\vec{r})}{|\vec{r}_e-\vec{r}|},
+V_{\mu}(\mathbf{r}_e)=-\alpha \int \mathrm{d}V\frac{\psi_\mu^*(\mathbf{r})\cdot \psi_\mu(\mathbf{r})}{|\mathbf{r}_e-\mathbf{r}|},
 \end{equation}
 analogously to Eq.~\eqref{eq:screenPot}.
 The interaction between the electrons is not taken into account here. Finally, the Dirac equation for the muon is solved again, now including the nuclear potential and the screening potential \eqref{eq:screenPot} due the atomic electrons from the considered electron configuration. This procedure can be repeated in the spirit of Hartree's method~\cite{bethe_salpeter} until the electrons and the muon are self-consistent in the fields of each other, but our studies show that one iteration is usually enough since the overlap of muon and electron wave functions in heavy muonic atoms is small. It is important to note, that here the screening potential depends to a small extent on the state of the muon, since the muon wave function is used in the calculation for the electron wave function. The atomic electrons primarily behave like a charged shell around the muon and the nucleus; thus every muon level is mainly shifted by a constant term, which is not observable in muonic transitions. The screening correction $\Delta E_S$ is defined as the difference of the binding energy without screening potential and with screening potential, therefore a positive value indicates that the muon is less bound due to the screening effect. The main contribution to the nonconstant part of the screening potential comes from the 1$s$ electrons, since their wave functions have the biggest overlap with the muon; therefore the exact electron configuration has only a minor effect on transition energies~\cite{vogel1973}. In Table~\ref{tab:screen}, results for the screening correction are shown for both mentioned methods and for different electron configurations. Values of the screening correction for different electron configurations show that a 10\% error for the non-constant part is a reasonable estimate.
@@ -444,17 +448,17 @@ The values for the nuclear rms-radii $R_N$ and the spectroscopic quadrupole mome
 As for the magnetic part, we consider dipole interaction. Therefore, the corresponding interaction Hamiltonian reads~\cite{Elizarov2005}
 \begin{equation}
 \label{eq:Hmag}
-H_{M} = \frac{|e|}{4 \pi}\,\vec{\mu}\cdot \left( F_{\text{BW}}(r) \frac{\vec{r}}{r^3} \times \vec{\alpha} \right),
+H_{M} = \frac{|e|}{4 \pi}\,\boldsymbol{\mu}\cdot \left( F_{\text{BW}}(r) \frac{\mathbf{r}}{r^3} \times \boldsymbol{\alpha} \right),
 \end{equation}
-with the charge of the muon $e=-|e|$, the nuclear magnetic moment $\vec{\mu}$, its distribution function $F_{\text{BW}}$, and the Dirac matrices $\vec{\alpha}$. If the nuclear current density is described by a normalized scalar function $f_\mu(r)$ as
+with the charge of the muon $e=-|e|$, the nuclear magnetic moment $\boldsymbol{\mu}$, its distribution function $F_{\text{BW}}$, and the Dirac matrices $\boldsymbol{\alpha}$. If the nuclear current density is described by a normalized scalar function $f_\mu(r)$ as
 \begin{equation}
 \label{eq:currentdistr}
-\vec{j}(r)= \text{rot}\left(\vec{\mu}f_\mu(r)\right),
+\mathbf{j}(r)= \text{rot}\left(\boldsymbol{\mu}f_\mu(r)\right),
 \end{equation}
 then the distribution function is given by
 \begin{equation}
 \label{eq:Fbw}
-F_{\text{BW}}(r)=-r^2 \frac{\partial}{\partial r}\,\int \text{d}V^{\prime}\,\frac{f_\mu(r^{\prime})}{|\vec{r}-\vec{r}\,^{\prime}|}.
+F_{\text{BW}}(r)=-r^2 \frac{\partial}{\partial r}\,\int \text{d}V^{\prime}\,\frac{f_\mu(r^{\prime})}{|\mathbf{r}-\mathbf{r}\,^{\prime}|}.
 \end{equation}
 The difference in the hyperfine splitting between a point-like magnetic moment and a spacial distribution of the magnetization is called the Bohr-Weisskopf effect~\cite{bohrWeisskopf1950}. In Sec.~\ref{sec:elQuad1}, the matrix elements of the magnetic interaction are analyzed, paying special attention to the distribution function $F_{\text{BW}}$. We expect the contribution of the higher-order terms, namely electric octupole, magnetic quadrupole, and beyond, to be smaller than the uncertainty of the considered terms~\cite{Devons1995,Steffen1985}. Therefore they can be ignored here.
 
@@ -465,7 +469,7 @@ In addition, the hyperfine splitting arises from the interaction of the nuclear 
 \,\,\left[ F(F+1)-I(I+1)-j(j+1)\right] \\[7.5pt]
 \qquad\qquad\qquad\qquad\,\,\times\frac{\alpha}{2 m_p}\frac{\mu}{\mu_N}\frac{\kappa}{Ij(j+1)}\int_0^\infty \frac{G_{n\kappa}(r_\mu)F_{n\kappa}(r_\mu)F_{\text{BW}}(r_\mu)}{r_\mu^2}\mathrm{d}r_\mu,\nonumber
 \end{IEEEeqnarray}
-where $m_p$ is the proton mass, and the ratio of the observed magnetic moment $\mu:=\bra{II}(\vec{\mu})_z\ket{II}$ and the nuclear magneton $\mu_N$ can be found in the literature~\cite{Stone2005}. For the simple model of a homogeneous nuclear current distribution the distribution function from Eq.~\eqref{eq:Fbw} of the Bohr-Weisskopf effect reads
+where $m_p$ is the proton mass, and the ratio of the observed magnetic moment $\mu:=\bra{II}(\boldsymbol{\mu})_z\ket{II}$ and the nuclear magneton $\mu_N$ can be found in the literature~\cite{Stone2005}. For the simple model of a homogeneous nuclear current distribution the distribution function from Eq.~\eqref{eq:Fbw} of the Bohr-Weisskopf effect reads
 \begin{equation}
 \label{eq:bwsimple}
 F_{\rm{BW}}(r_\mu)=\begin{cases}
@@ -484,9 +488,9 @@ Firstly, the fine-structure splitting between states of the same parity, especia
 
 Secondly, the energy scale of the fine structure and electric quadrupole splitting on the order of hundred keV or more is on the same scale as the typical excitation energy of the excited nuclear states in the rotational ground state band. In addition, the nuclear states in the ground state rotational band have the same parity and thus are coupled by the quadrupole interaction. This means, the expectation value of the quadrupole operator is generally non-zero, also for the case of different nuclear rotational states. As a consequence, the excited nuclear states have to be taken into account when rediagonalizing the quadrupole interaction in finite-dimensional subspaces as discussed above.
 
-\subsubsection{Almost degenerate perturbation theory}
+\subsubsection{Almost-degenerate perturbation theory}
 \label{sec:almostDeg}
-In this Section, the general approach to almost degenerate perturbation theory is briefly reviewed, following~\cite{BorieRinker1982,sakurai1994}, before it is applied to muonic atoms in the following sections. For simplicity, a system with unperturbed eigenstates $\left|n\right>$ and corresponding unperturbed energies $\mathcal{E}_n$ is investigated with the unperturbed eigenvalue equation
+In this Section, the general approach to almost-degenerate perturbation theory is briefly reviewed, following~\cite{BorieRinker1982,sakurai1994}, before it is applied to muonic atoms in the following sections. For simplicity, a system with unperturbed eigenstates $\left|n\right>$ and corresponding unperturbed energies $\mathcal{E}_n$ is investigated with the unperturbed eigenvalue equation
 \begin{equation}
 H_0 \left|n\right> = \mathcal{E}_n \left|n\right>,
 \end{equation}
@@ -496,7 +500,7 @@ The connection to the muonic atom case can be made by considering $n$ as a multi
 \label{eq:pert_Htot}
 \left(H_0 + H_1\right) \left|a\right> = E_a \left|a\right>.
 \end{equation}
-If $m$ different states $\left| n_i \right>$ are almost degenerate, which means their energy separation is small, the corresponding modelspace is defined as all $\left| n_i \right>$ with $i\in \{1,...,m\}$, if necessary the states have to be relabeled, such that the lowest indeces correspond to the states defining the model space. The projector $\text{P}$ on the modelspace is defined by acting on an eigenstate $\left|a\right> = \sum_n a_n \left|n\right>$ of Eq.~\eqref{eq:pert_Htot} as
+If $m$ different states $\left| n_i \right>$ are almost degenerate, which means their energy separation is on the same order as the first order correction due to $H_1$, the corresponding modelspace is defined as all $\left| n_i \right>$ with $i\in \{1,...,m\}$, if necessary the states have to be relabeled, such that the lowest indices correspond to the states defining the model space. The projector $\text{P}$ on the modelspace is defined by acting on an eigenstate $\left|a\right> = \sum_n a_n \left|n\right>$ of Eq.~\eqref{eq:pert_Htot} as
 \begin{equation}
 \text{P}\left|a\right> = \sum_{i=1}^m a_i \left|n_i\right>,
 \end{equation}
@@ -518,7 +522,7 @@ which is suitable for an expansion in $\text{Q}$, so expansion in the considerat
 \label{eq:pert_firstOrder}
 \text{P}\left(H_0+H_1-E_a\right) \text{P}\left|a\right> = 0.
 \end{equation}
-This is essentially Eq.~\eqref{eq:pert_Htot}, but projected onto the modelspace. As expected, to first order the states outside of the modelspace can be neglected. Since this is a finite dimensional system, this corresponds to constructing the Hamiltonian matrix and diagonalizing it. 
+This is essentially Eq.~\eqref{eq:pert_Htot}, but projected onto the modelspace. As expected, to zeroth order the states outside of the modelspace can be neglected. Since this is a finite dimensional system, this corresponds to constructing the Hamiltonian matrix and diagonalizing it. 
 
 Applied to muonic atoms, the unperturbed Hamiltonian is the sum of rigid rotor Hamiltonian for the nucleus and Dirac Hamiltonian with the monopole potential for the muon, and the perturbation is the hyperfine (mainly quadrupole) interaction. Then a modelspace needs to be chosen, for example the first few nuclear rotational states and a muonic fine-structure doublet like the ($2p3/2$, $2p1/2$) or ($3d5/2$, $3d3/2$) states. Finally the diagonal and non-diagonal matrix elements of the hyperfine interactions need to be calculated for all states in the modelspace and the matrix representation of the total Hamiltonian in the modelspace needs to be diagonalized.
 
@@ -527,36 +531,92 @@ The solution of Eq.~\eqref{eq:pert_firstOrder} results in an approximation for t
 \label{eq:pert_firstOrderState}
 \left|a\right>\approx \left|a^{(0)}\right> = \sum_{i=1}^m a_i^{(0)}\left|n_i\right>,
 \end{equation}
-which is a linear combination of the unperturbed states forming the modelspace, with the coefficients obtained from the diagonalization of the Hamiltonian matrix. The corresponding eigenvalues are the approximations of the eigenenergy $E_a^{(0)}$.
+which is a linear combination of the unperturbed states forming the modelspace, with the coefficients obtained from the diagonalization of the Hamiltonian matrix. The corresponding eigenvalues are the approximations $E_a^{(0)}$ of the eigenenergy.
 
 For the leading order corrections due to the operator $\text{Q}$, Eq.~\eqref{eq:pert_projectionEq} is used, including the Q-dependent term, however, only the effect on the modelspace is investigated, corresponding to the approximation $\left|a\right> \approx \text{P}\left|a\right>$. Using the property of a projection operator $\text{P}^2=\text{P}$, Eq.~\eqref{eq:pert_projectionEq} can be written as
 \begin{equation}
 \label{eq:pert_secondOrder}
  \underbrace{\text{P}(H_0+H_1-E_a)\text{P}}_{\tilde{H}_0} + \underbrace{\text{P}(H_1(E_a-H_0)^{-1}\text{Q}H_1)\text{P}}_{\tilde{H}_1} \left|a\right> = 0,
 \end{equation}
-which takes the form of a eigenvalue problem with the unperturbed Hamiltonian $\tilde{H}_0$ and the perturbation $\tilde{H}_1$. Because of $\text{P}$ on the left and right side, this is a finite dimensional problem, although each matrix element of $\tilde{H}_1$ involves a summation over the complete spectrum, as shown below. The unperturbed solutions are already known from Eq.~\eqref{eq:pert_firstOrderState}, thereby the energy correction due to the perturbation $\tilde{H}_1$ can be calculated within first order perturbation theory as
+which takes the form of an eigenvalue problem with the unperturbed Hamiltonian $\tilde{H}_0$ and the perturbation $\tilde{H}_1$. Because of $\text{P}$ on the left and right side, this is a finite dimensional problem, although each matrix element of $\tilde{H}_1$ involves a summation over the complete spectrum, as shown below. The unperturbed solutions are already known from Eq.~\eqref{eq:pert_firstOrderState}, thereby the energy correction due to the perturbation $\tilde{H}_1$ can be calculated within first order perturbation theory as
 \begin{alignat}{2}
 \label{eq:pert_secondOrderEnerg}
 &E_a^{(1)}&&= \left<a^{(0)} \middle| \tilde{H}_1 \middle| a^{(0)} \right>\\[7.5pt]
 & &&= \sum_{k>m} \frac{\left<a^{(0)}\middle|H_1\middle|n_k\right>\left<n_k\middle|H_1\middle|a^{(0)}\right>}{E_a^{(0)}-\mathcal{E}_{n_k}}\\[7.5pt]
 & &&= \sum_{i,j=1}^m a_i^{(0)\,*}a_j^{(0)} \sum_{k>m} \frac{\left<n_i\middle|H_1\middle|n_k\right>\left<n_k\middle|H_1\middle|n_j\right>}{E_a^{(0)}-\mathcal{E}_{n_k}}\notag,
 \end{alignat}
-where the projector on states outside of the modelspace is formally written as $\text{Q}=\sum_{k>m}\left|n_k\right>\left<n_k\right|$, if there are continuous parts in the spectrum, this sum also involves integrals. The meaning of Eq.~\eqref{eq:pert_secondOrderEnerg} is the following: Once the zero order energies and states are found by diagonalizing the Hamiltionian in the modelspace, the first order energy correction due to states outside of the modelspace is calculated by calculating the second order energy correction due to the original perturbation $H_1$, but the intermediate sum only involves states not contained in the modelspace, i.e. not already considered in the diagonalization. As a result, the sum $E_a\approx E_a^{(0)}+E_a^{(1)}$ contains a complete second order treatment of the perturbation $H_1$, and additionally the contributions of the states in the modelspace to all orders.
+where the projector on states outside of the modelspace is formally written as $\text{Q}=\sum_{k>m}\left|n_k\right>\left<n_k\right|$. If there are continuous parts in the spectrum, this sum also involves integrals. The meaning of Eq.~\eqref{eq:pert_secondOrderEnerg} is the following: Once the zero order energies and states are found by diagonalizing the Hamiltionian in the modelspace, the first order energy correction due to states outside of the modelspace is calculated by calculating the second order energy correction due to the original perturbation $H_1$, but the intermediate sum only involves states not contained in the modelspace, i.e. not already considered in the diagonalization. As a result, the sum $E_a\approx E_a^{(0)}+E_a^{(1)}$ contains a complete second order treatment of the perturbation $H_1$, and additionally the contributions of the states in the modelspace to all orders.
 
-For actual calculations in the context of muonic atoms, these calculations turn out to be expensive for the following reasons: Already the unperturbed Hamiltonian involves a numerical solution of the Dirac equation with an extended nuclear monopole potential. The diagonal and non-diagonal matrix elements of the electric quadrupole interaction have to be calculated via numerical integrations as well, before diagonalizing the total Hamiltonian. Since finite basis set methods~\cite{Shabaev2004} are used in this thesis for solving the Dirac equation, a numerical approximation of the complete muonic spectrum is obtained. Therefore, in the framework of this thesis, numerical evaluations of the corrections in Eq.~\eqref{eq:pert_secondOrderEnerg} without approximations is possible. 
+For actual calculations in the context of muonic atoms, these calculations turn out to be expensive for the following reasons: Already the unperturbed Hamiltonian involves a numerical solution of the Dirac equation with an extended nuclear monopole potential. The diagonal and non-diagonal matrix elements of the electric quadrupole interaction have to be calculated via numerical integrations as well, before diagonalizing the total Hamiltonian. Since finite basis set methods~\cite{Shabaev2004} are used in this thesis for solving the Dirac equation, a numerical approximation of the complete muonic spectrum is obtained. Therefore, in the framework of this thesis, numerical evaluations of the corrections in Eq.~\eqref{eq:pert_secondOrderEnerg} without approximations is possible.\\ 
 
-\subsubsection{Non-diagonal elements of hyperfine interactions}
 In the following Sections, the approach of almost degenerate perturbation theory from Section~\ref{sec:almostDeg} will be applied to muonic atoms considering electric monopole and quadrupole interaction, as well as magnetic dipole interaction. The starting point is a given deformed nuclear charge distribution $\rho(\mathbf{r})$ and a distribution of the static currents $\mathbf{j}(\mathbf{r})$ inside the nucleus.
 The necessary steps are the following:
 \begin{itemize}
+\item Definition of the unperturbed  and perturbed Hamiltonian
 \item Calculation of the potentials starting from the given charge and current distribution
-\item Definition of the unperturbed  and perturbed Hamiltonian 
 \item Solving the unperturbed Hamiltonian
 \item Definition of modelspace(s)
 \item Calculation of diagonal and non-diagonal matrix elements of the perturbation in the modelspace and rediagonalization
 \item Calculation of energy correction due to states outside of the modelspace
-
 \end{itemize}
+
+
+\subsubsection{Non-diagonal elements of hyperfine interactions}
+The unperturbed Hamiltonian for describing the muonic atom are already given for the nuclear part in Eq.~\eqref{eq:muonicEn} and for the muonic part in Eq.~\eqref{eq:nuclEn} in terms of the nuclear charge distribution $\rho(\mathbf{r})$. The corresponding states of define total angular momentum $F$ are given in Eq.~\eqref{eq:totalState}.
+The next step for calculating the hyperfine structure of muonic atoms in the framework of almost degenerate perturbation theory is the calculation of the diagonal and non-diagonal matrix elements of the electric quadrupole and magnetic dipole interaction.
+
+For the electric quadrupole interaction, the starting point is the multipole expansion of the electric potential from Eq.~\eqref{eq:defmulti}. The quadrupole terms with $l=2$ is
+\begin{equation}
+V^{(2)}_{\text{el}}(\mathbf{r}_\mu,\phi,\theta)=-Z\alpha \left[ \int \text{d}^3\mathbf{r}^{\prime}_N \frac{r_<^2}{r_>^{3}}\text{P}_{2}(\cos \vartheta_N^{\prime})\rho(\mathbf{r}_N^{\,\prime})\right]\sum_{m=-2}^2 \text{C}^*_{2m}(\theta,\phi)\text{C}_{2m}(\vartheta_\mu,\varphi_\mu).
+\label{eq:quadPot}
+\end{equation}
+As a next step, the matrix element of~\eqref{eq:quadPot} with two arbitrary states from Eq.~\eqref{eq:totalState} is considered, which reads as
+\begin{equation}
+\Delta E^{(2)}=\left<F_1M_1\,I_1K \,n_1\kappa_1 \middle| V^{(2)}_{\text{el}} \middle|F_2M_2\,I_2K \,n_2\kappa_2 \right>.
+\label{eq:quadPotEl}
+\end{equation}
+Keeping in mind that $\text{C}_{lm}^*(\vartheta,\varphi) =(-1)^m\text{C}_{l\,(-m)}(\vartheta,\varphi)$, and that the normalized spherical harmonic are irreducible tensor operators as introduced in Appendix~\ref{app:ang_theo}, the sum in Eq.~\eqref{eq:quadPot} is a scaler product of two rank-2 irreducible tensors. Therefore, Eq.~\eqref{app:reducedMatEl_expectation} can be used for expressing the matrix element from Eq.~\eqref{eq:quadPotEl} in terms of the reduced matrix elements of the spherical harmonics as
+\begin{alignat}{2}
+&\Delta E^{(2)} =&& -Z\alpha\delta_{F_1F_2}\delta_{M_1M_2} (-1)^{F+I_2+j(\kappa_1)}
+\begin{Bmatrix}
+I_1 & I_2 & 2 \\
+j(\kappa_2) & j(\kappa_1)&F
+\end{Bmatrix}
+\left<I_1K\middle|\middle|\text{C}_2 \middle|\middle| I_2 K \right>\\[7.5pt]
+&&&\times\left<n_1\kappa_1\middle|\middle|\text{C}_2  \int \text{d}^3\mathbf{r}^{\prime}_N \frac{r_<^2}{r_>^{3}}\text{P}_{2}(\cos \vartheta_N^{\prime})\rho(\mathbf{r}_N^{\,\prime}) \middle|\middle| n_2\kappa_2 \right>,
+\end{alignat} 
+where it is useful to define
+\begin{equation}
+\label{eq:quadDistr}
+f_Q(r_\mu)/r_\mu^3 \coloneqq \int \text{d}^3\mathbf{r}^{\prime}_N \frac{r_<^2}{r_>^{3}}\text{P}_{2}(\cos \vartheta_N^{\prime})\rho(\mathbf{r}_N^{\,\prime}),
+\end{equation}
+since for the approximation of a point-like quadrupole moment or in general for large $r_\mu$ it holds that $f_Q(r_\mu)=1$, and thus the usual $r_\mu^{-3}$ radial integral for quadrupole hyperfine structure is recovered. Accordingly, $f_Q(r_\mu)$ describes the finite distribution of the quadrupole moment inside the nucleus. The reduced matrix element in the nuclear coordinates can be calculated using the rigid rotor wave functions from Appendix~\ref{app:rig_rotor} and the definition of the reduce matrix element from Eq.~\eqref{app:wignerEckardt}. It is given in Eq.~\eqref{eq:rigidRotRedElement} and reads as
+\begin{equation}
+\left< I_1K\middle|\middle|\text{C}_l\middle|\middle|I_2K\right>=(-1)^{I_2+K}
+\sqrt{(2I_1+1)(2I_2+1)}
+\left(
+\begin{matrix}
+I_1&I_2&l\\
+-K&K&0
+\end{matrix}
+\right).
+\end{equation}
+The reduced matrix elements in the muonic variables can be evaluated as~\cite{johnson2007}
+\begin{alignat}{2}
+&&&\left< n_1\kappa_1\big{|}\big{|}f(r_\mu)\text{C}_l(\vartheta_\mu,\varphi_\mu) \big{|}\big{|}n_2\kappa_2\right> =  
+ (-1)^{j(\kappa_1)+1/2} \sqrt{(2j(\kappa_1)+1)(2j(\kappa_2)+1)}
+\notag\\[7.5pt]
+&&&\times
+\left(
+\begin{matrix}
+j(\kappa_1)&j(\kappa_2)&l\\
+-\frac{1}{2}&\frac{1}{2}&0
+\end{matrix}
+\right)\pi(l(\kappa_1)+l(\kappa_2))\int \text{d}rr^2 ({g_{n_1\kappa_1}(r)g_{n_2\kappa_2}(r)}{+}{f_{n_1\kappa_1}(r)f_{n_2\kappa_2}(r)}) f(r_\mu),
+\end{alignat}
+where $f_{n\kappa}(r_\mu)$ and $g_{n\kappa}(r_\mu)$ are the radial wave function~\eqref{eq:radial_equations_small} obtained by solving the Dirac equation~\eqref{eq:muonicEn}.
+The function $\pi(x) = 1,\,\text{if x even}$; $=0$ otherwise; is needed for parity selection rules.
+Thus, the evaluation of one reduced muonic matrix element requires one numerical integration, and for every calculation of $f_Q(r_\mu)$ therein, a numerical integration of Eq.~\eqref{eq:quadDistr} has to be performed.
 
 \subsection{Residual second order corrections}
 \label{sec:muon_residualSO}
