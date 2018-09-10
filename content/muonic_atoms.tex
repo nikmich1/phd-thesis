@@ -445,7 +445,7 @@ The values for the nuclear rms-radii $R_N$ and the spectroscopic quadrupole mome
 %
 \subsubsection{Magnetic dipole splitting}
 \label{sec:magndip}
-As for the magnetic part, we consider dipole interaction. Therefore, the corresponding interaction Hamiltonian reads~\cite{Elizarov2005}
+As for the magnetic part, dipole interaction is considered. Therefore, the corresponding interaction Hamiltonian reads~\cite{Elizarov2005}
 \begin{equation}
 \label{eq:Hmag}
 H_{M} = \frac{|e|}{4 \pi}\,\boldsymbol{\mu}\cdot \left( F_{\text{BW}}(r) \frac{\mathbf{r}}{r^3} \times \boldsymbol{\alpha} \right),
@@ -460,9 +460,9 @@ then the distribution function is given by
 \label{eq:Fbw}
 F_{\text{BW}}(r)=-r^2 \frac{\partial}{\partial r}\,\int \text{d}V^{\prime}\,\frac{f_\mu(r^{\prime})}{|\mathbf{r}-\mathbf{r}\,^{\prime}|}.
 \end{equation}
-The difference in the hyperfine splitting between a point-like magnetic moment and a spacial distribution of the magnetization is called the Bohr-Weisskopf effect~\cite{bohrWeisskopf1950}. In Sec.~\ref{sec:elQuad1}, the matrix elements of the magnetic interaction are analyzed, paying special attention to the distribution function $F_{\text{BW}}$. We expect the contribution of the higher-order terms, namely electric octupole, magnetic quadrupole, and beyond, to be smaller than the uncertainty of the considered terms~\cite{Devons1995,Steffen1985}. Therefore they can be ignored here.
+The difference in the hyperfine splitting between a point-like magnetic moment and a spacial distribution of the magnetization is called the Bohr-Weisskopf effect~\cite{bohrWeisskopf1950}. In the following, the diagonal matrix elements of the magnetic interaction are analyzed, paying special attention to the distribution function $F_{\text{BW}}$. We expect the contribution of the higher-order terms, namely electric octupole, magnetic quadrupole, and beyond, to be smaller than the uncertainty of the considered terms~\cite{Devons1995,Steffen1985}. Therefore they can be ignored here.
 
-In addition, the hyperfine splitting arises from the interaction of the nuclear magnetic moment with the muon's magnetic moment, which is also sensitive to the spatial distribution of the nuclear currents. Since the magnetic moment of the muon is inversely proportional to its mass, the magnetic hyperfine splitting in muonic atoms is less important than in electronic atoms. The matrix elements of the corresponding Hamiltonian~\eqref{eq:Hmag} in the state~\eqref{eq:totalState} are~\cite{Korzinin2005}
+The hyperfine splitting arises from the interaction of the nuclear magnetic moment with the muon's magnetic moment, which is also sensitive to the spatial distribution of the nuclear currents. Since the magnetic moment of the muon is inversely proportional to its mass, the magnetic hyperfine splitting in muonic atoms is less important than in electronic atoms. The matrix elements of the corresponding Hamiltonian~\eqref{eq:Hmag} in the state~\eqref{eq:totalState} are~\cite{Korzinin2005}
 \begin{IEEEeqnarray}{l}
 \label{eq:hmag}
 \bra{FM_FI\kappa}H_M\ket{FM_FI\kappa}=
@@ -562,10 +562,11 @@ The necessary steps are the following:
 
 
 \subsubsection{Non-diagonal elements of hyperfine interactions}
+\label{sec:non-diagElements}
 The unperturbed Hamiltonian for describing the muonic atom are already given for the nuclear part in Eq.~\eqref{eq:muonicEn} and for the muonic part in Eq.~\eqref{eq:nuclEn} in terms of the nuclear charge distribution $\rho(\mathbf{r})$. The corresponding states of define total angular momentum $F$ are given in Eq.~\eqref{eq:totalState}.
 The next step for calculating the hyperfine structure of muonic atoms in the framework of almost degenerate perturbation theory is the calculation of the diagonal and non-diagonal matrix elements of the electric quadrupole and magnetic dipole interaction.
 
-For the electric quadrupole interaction, the starting point is the multipole expansion of the electric potential from Eq.~\eqref{eq:defmulti}. The quadrupole terms with $l=2$ is
+For expressing the electric quadrupole interaction in terms of the charge distribution $\rho(\mathbf{r})$ including the non-diagonal matrix elements, the starting point is the multipole expansion of the electric potential from Eq.~\eqref{eq:defmulti}. The quadrupole terms with $l=2$ is
 \begin{equation}
 V^{(2)}_{\text{el}}(\mathbf{r}_\mu,\phi,\theta)=-Z\alpha \left[ \int \text{d}^3\mathbf{r}^{\prime}_N \frac{r_<^2}{r_>^{3}}\text{P}_{2}(\cos \vartheta_N^{\prime})\rho(\mathbf{r}_N^{\,\prime})\right]\sum_{m=-2}^2 \text{C}^*_{2m}(\theta,\phi)\text{C}_{2m}(\vartheta_\mu,\varphi_\mu).
 \label{eq:quadPot}
@@ -615,8 +616,93 @@ j(\kappa_1)&j(\kappa_2)&l\\
 \right)\pi(l(\kappa_1)+l(\kappa_2))\int \text{d}rr^2 ({g_{n_1\kappa_1}(r)g_{n_2\kappa_2}(r)}{+}{f_{n_1\kappa_1}(r)f_{n_2\kappa_2}(r)}) f(r_\mu),
 \end{alignat}
 where $f_{n\kappa}(r_\mu)$ and $g_{n\kappa}(r_\mu)$ are the radial wave function~\eqref{eq:radial_equations_small} obtained by solving the Dirac equation~\eqref{eq:muonicEn}.
-The function $\pi(x) = 1,\,\text{if x even}$; $=0$ otherwise; is needed for parity selection rules.
+The function
+\begin{equation}
+\pi(x) =
+\left\{
+\begin{matrix}
+1\,\text{, x even;}\phantom{11}\\
+0\,\text{, otherwise}
+\end{matrix}
+\right.
+\end{equation}
+is needed for parity selection rules.
 Thus, the evaluation of one reduced muonic matrix element requires one numerical integration, and for every calculation of $f_Q(r_\mu)$ therein, a numerical integration of Eq.~\eqref{eq:quadDistr} has to be performed.
+
+For the magnetic dipole interaction, the diagonal matrix elements have been given in Eq.~\eqref{eq:hmag}. In the following, it will be extended to non-diagonal matrix elements in the framework of the rigid roton nuclear model, following the analysis in~\cite{Steffen1985}. The magnetic Hamiltonian due to the vector potential $\mathbf{A}_N$ caused by the nuclear static currents reads in the nuclear body fixed frame as
+\begin{equation}
+\label{eq:Hmag_rot}
+\text{H}_{M}(\mathbf{r}_\mu) = |e|\,\boldsymbol{\alpha}\cdot \mathbf{A}_N(\mathbf{r}_\mu),
+\end{equation}
+where the vector potential is generated by the static currents in the nucleus, and the connection reads~\cite{jackson1999}
+\begin{equation}
+\mathbf{A}_N(\mathbf{r}_\mu) = \frac{1}{4\pi}\int\text{d}^3\mathbf{r}^\prime \frac{\mathbf{j}(\mathbf{r}^\prime)}{|\mathbf{r}_\mu-\mathbf{r}^\prime|}.
+\end{equation}
+For extended nuclei, i.e. without a divergence in the origin, the current distribution can be expressed in terms of the curl of another vector field, since the divergence of the current distribution in the static case is zero~\cite{jackson1999}. This field is called magnetization $\mathbf{M}(\mathbf{r})$, and the connection between current distribution and magnetization is
+\begin{equation}
+\mathbf{j}(\mathbf{r}) = \boldsymbol{\nabla} \times  \mathbf{M}(\mathbf{r}).
+\end{equation}
+The restriction to magnetic dipole interactions is done by writing the magnetization as
+\begin{equation}
+\mathbf{M}(\mathbf{r})=\boldsymbol{\mu}f(r)=|\boldsymbol{\mu}|\mathbf{e}_z^\prime\,f(r),
+\end{equation}
+where $\boldsymbol{\mu}$ is the nuclear magnetic dipole operator and the second equality follows from the fact, that the symmetric rigid rotor model is used and the magnetic moment has to be aligned with the nuclear body fixed $z$-axis $\mathbf{e}_z^\prime$ for not violating axial symmetry. 
+In Cartesian coordinates in the laboratory system, the basis vector $\mathbf{e}_z^\prime$ of the body fixed system reads as
+\begin{equation}
+\label{eq:magMomOp}
+\boldsymbol{\mu}(\theta,\phi)=|\boldsymbol{\mu}|
+\begin{pmatrix}
+\sin\theta\cos\phi \\ \sin\theta\sin\phi \\ \cos\theta
+\end{pmatrix}.
+\end{equation}
+The scalar function $f(r)$ describes the finite distribution of the dipole moment in the nucleus, which is responsible for the Bohr-Weisskopf effect~\cite{bohrWeisskopf1950} and is normalized by
+\begin{equation}
+4\pi\int_0^\infty \text{d}r\,r^2\,f(r)=1.
+\end{equation}
+Thereby, the magnetic Hamiltonian can be written as
+\begin{equation}
+\label{eq:hmag_rot2}
+\text{H}_M(\mathbf{r}_\mu,\theta,\phi) =\frac{|e|}{4\pi}\boldsymbol{\mu}(\theta,\phi)\cdot
+\left( F_{\text{BW}}(r)\frac{\mathbf{r}}{r^3}\times \boldsymbol{\alpha}\right),
+\end{equation}
+which agrees with Eq.~\eqref{eq:Hmag}, and the function $F_{\text{BW}}(r)$ is connected to the distribution function $f(r)$ as
+\begin{equation}
+F_{\text{BW}}(r)=-4\pi r^2\partial_r \left(\int_0^\infty\text{d}r^\prime \frac{r^{\prime\,2}f(r^\prime)}{\max (r,r^\prime)}\right).
+\end{equation}
+The magnetic dipole Hamiltonien from Eq.~\eqref{eq:hmag_rot2} can be written as a scalar product of two rank-1 irreducible tensor operator acting on the muonic and nuclear coordinates, respectively, as~\cite{johnson2007}
+\begin{alignat}{2}
+&\text{H}_M  (\mathbf{r}_\mu,\theta,\phi) &&=\sum_{\lambda=-1}^1 (-1)^\lambda \;t_\lambda(\mathbf{r}_\mu) \;\;\mu_{-\lambda}(\theta,\phi),\notag\\[7.5pt]
+&t_\lambda(\mathbf{r}_\mu) &&= \frac{-i\sqrt{2}|e|}{4\pi}\left(\boldsymbol{\alpha}\cdot\mathbf{C}^{(0)}_{1\lambda}(\vartheta_\mu,\varphi_\mu)\right)\frac{F_{\text{BW}}(r_\mu)}{r_\mu^2}\,\notag,
+\end{alignat}
+where $\mathbf{C}^{(a)}_{b\,c}(\vartheta,\varphi)$ are the vector spherical harmonics~\cite[Section 7.]{varshalovich1988}, and $\mu_\lambda$ with $\lambda \in \left\{-1,0,1\right\}$ the spherical components~\cite[Section 1.]{varshalovich1988} of the magnetic moment operator from Eq.~\eqref{eq:magMomOp}. Correspondingly, Eq.~\eqref{app:reducedMatEl_expectation} can be used for the calculation of expectation values, and the result is
+\begin{alignat}{2}
+& \left<F_1M_1\,I_1K\,n_1\kappa_1 \middle|\text{H}_M \middle|F_2M_2\,I_2K\,n_2\kappa_2 \right> = \delta_{F_1F_2}\delta_{M_1M_2}(-1)^{F_1+j(\kappa_2)+I_1}\\[7.5pt]
+&\qquad\qquad\qquad\times
+\begin{Bmatrix}
+j(\kappa_1)&j(\kappa_2)&1\\
+I_2&I_1&F_1
+\end{Bmatrix}
+\left< n_1\kappa_1\middle|\middle|t \middle|\middle| n_2\kappa_2\right>
+\left< I_1K\middle|\middle|\mu \middle|\middle|I_2K\right>.
+\end{alignat}
+The reduced matrix elements of the magnetic moment operator can be obtained by using literature values of the magnetic moment  from~\cite{Stone2005} and using Eq.~\eqref{eq:rigidRotRedElement} and the relation
+\begin{equation}
+\left< IK\middle|\middle|\mu \middle|\middle|IK\right> = 
+|\mathbf{\mu}| \left< IK\middle|\middle|C_1 \middle|\middle|IK\right>.
+\end{equation}
+The reduced matrix elements in the muonic coordinates can be evaluated to~\cite{johnson2007}
+\begin{alignat}{2}
+\left< n_1\kappa_1\middle|\middle|t \middle|\middle| n_2\kappa_2\right> = \frac{-|e|}{4\pi}(\kappa_1+\kappa_2)(-1)^{j(\kappa_1)+1/2}\sqrt{(2j(\kappa_1)+1)+(2j(\kappa_2)+1)}\\[7.5pt]
+\begin{pmatrix}
+j(\kappa_1)&j(\kappa_2)&1\\
+-1/2&1/2&0
+\end{pmatrix}
+\pi(l(-\kappa_1)+l(\kappa_2)+1)\int_0^\infty \text{d}r F_{\text{BW}}(r)\left(f_{n_1\kappa_1}g_{n_2\kappa_2}+f_{n_2\kappa_2}g_{n_1\kappa_1} \right).
+\end{alignat}
+
+\subsubsection{Toy model for Rediagonalization}
+The concept of rediagonalization in the context of almost degenerate perturbation theory was introduced in Section~\ref{sec:almostDeg}. The unperturbed Hamiltonian is introduced in Eqs.\eqref{eq:muonicEn} and~\eqref{eq:nuclEn} for the unperturbed state~\eqref{eq:totalState}. The matrix elements necessary for the rediagonalization of the hyperfine states are discussed in Section~\ref{sec:non-diagElements} in the general case. Thereby, all necessary ingredients for the rediagonalization in the dynamic hyperfine structure of muonic atoms is available. In this Section, the concept is applied to a simplified part of the muonic $^{185}$Re spectrum for clarification. The $^{185}$Re nucleus has a ground state angular momentum of $5/2$~\cite{Stone2005}, and in this Section, the first two excited nuclear states with angular momentum quantum numbers of $7/2$ and $9/2$ are considered. As for the muonic states, the $2p$ fine-structure doublet is considered, these are the $2p1/2$ and $2p3/2$ states. This modelspace is called $M$ from hereon.
+This corresponds to the values for the quantum numbers $(n,\kappa)$ being $(2,1)$, and $(2,-2)$. As a first step, it has to be considered, which unperturbed states $\left|FM\,IK\,n\kappa\right>$ can be formed by the nuclear and muonic states. In general, for every possible $F$, $M\in \{-F,...,F\}$ and the maximal value for $F$ is $F_{\text{max}}=\max(j(\kappa)+I)_{\kappa, I \in M}$. The minimal value for F is $F_{\text{min}}=\min(|j(\kappa)-I|)_{\kappa, I \in M}$. In this example, the values are $F_{\text{max}}=6$ and $F_{\text{min}}=1$ and correspondingly $F\in\{1,2,3,4,5,6\}$. As a next step, it has to be checked for every value of $F$, which combinations of muonic and nuclear states of the modelspace are able to form the $F$ value. For this, it has to hold that $|j(\kappa)-I|\leq F \leq j(\kappa)+I$. In this way, a modelspace is separated into distinct block with value of $F$ and a corresponding subset of states from the modelspace, which can form this $F$ value. Since the hyperfine interactions are diagonal in $F$ and $M$, the rediagonalization has to be performed only in the block separately, not in the entire modelspace.
 
 \subsection{Residual second order corrections}
 \label{sec:muon_residualSO}
