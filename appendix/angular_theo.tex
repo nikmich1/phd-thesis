@@ -39,6 +39,7 @@ l_1 & l & l_2\\
 where the double-bar matrix element on the right hand side is called the \textit{reduced matrix element}, and the Wigner-$3j$-symbal is defined in~\cite[Section 8.]{varshalovich1988}. This is also known as the Wigner-Eckardt-theorem, and thereby, the dependence of the matrix element on $m_1$, $m_2$, and $m$ can be explicitly written in terms of the Wigner-$3j$-symbol. In practice, this means that matrix elements of irreducible operators only have to be calculated once for a convenient  choice of $m_1$, $m_2$, and $m$, and then can be translated to other values of the projections.\\[9pt]
 Let two systems, system 1 and 2, with rotational states $\left|j_1m_1\right>$ and $\left| j_2m_2\right>$ be  coupled to states with defined total angular momentum $j$ as
 \begin{equation}
+\label{eq:coupledState}
 \left|jm\,j_1j_2\right> = \sum_{m_1,m_2}\text{C}^{jm}_{j_1m_1\,j_2m_2}
 \left|j_1m_1\right>\otimes\left| j_1m_1\right>,
 \end{equation}
@@ -59,4 +60,20 @@ j_2&j_2^\prime&j
 \end{Bmatrix}
 \left< j_1^\prime\middle|\middle| t^{(1)}_{l}\middle|\middle|j_1\right>
 \left< j_2^\prime\middle|\middle| t^{(2)}_{l}\middle|\middle|j_2\right>.
+\end{equation}
+
+\newpage
+Another frequently used application of the coupled representation is calculation of the matrix element of one operator $t^{(1)}_{l m_1}$ acting only on the coordinates of system 1, when the states are given in the coupled representation from Eq.~\eqref{eq:coupledState}. In this case, the matrix element reads as~\cite{varshalovich1988}
+\begin{equation}
+\label{app:subsystem_expectation}
+\left< j^\prime m ^\prime\,j_1^\prime j_2^\prime \middle| t^{(1)}_{lm_l} \middle| j m \,j_1 j_2\right>
+=
+\delta_{j_2^\prime j_2}(-1)^{j+j_1^\prime+j_2-l}
+\sqrt{2j+1}
+\text{C}^{j^\prime m^\prime}_{j m\,lm_l}
+\begin{Bmatrix}
+j_1&j_2&j\\
+j^\prime&l&j_1^\prime
+\end{Bmatrix}
+\left< j_1^\prime\middle|\middle| t^{(1)}_{l}\middle|\middle|j_1\right>.
 \end{equation}

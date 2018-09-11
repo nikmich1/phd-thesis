@@ -618,6 +618,7 @@ j(\kappa_1)&j(\kappa_2)&l\\
 where $f_{n\kappa}(r_\mu)$ and $g_{n\kappa}(r_\mu)$ are the radial wave function~\eqref{eq:radial_equations_small} obtained by solving the Dirac equation~\eqref{eq:muonicEn}.
 The function
 \begin{equation}
+\label{eq:parityFunc}
 \pi(x) =
 \left\{
 \begin{matrix}
@@ -692,7 +693,8 @@ The reduced matrix elements of the magnetic moment operator can be obtained by u
 \end{equation}
 The reduced matrix elements in the muonic coordinates can be evaluated to~\cite{johnson2007}
 \begin{alignat}{2}
-\left< n_1\kappa_1\middle|\middle|t \middle|\middle| n_2\kappa_2\right> = \frac{-|e|}{4\pi}(\kappa_1+\kappa_2)(-1)^{j(\kappa_1)+1/2}\sqrt{(2j(\kappa_1)+1)+(2j(\kappa_2)+1)}\\[7.5pt]
+\left< n_1\kappa_1\middle|\middle|t \middle|\middle| n_2\kappa_2\right> = \frac{-|e|}{4\pi}(\kappa_1+\kappa_2)(-1)^{j(\kappa_1)+1/2}\sqrt{(2j(\kappa_1)+1)+(2j(\kappa_2)+1)}\qquad\quad\;\\[7.5pt]
+\times
 \begin{pmatrix}
 j(\kappa_1)&j(\kappa_2)&1\\
 -1/2&1/2&0
@@ -701,8 +703,104 @@ j(\kappa_1)&j(\kappa_2)&1\\
 \end{alignat}
 
 \subsubsection{Toy model for Rediagonalization}
-The concept of rediagonalization in the context of almost degenerate perturbation theory was introduced in Section~\ref{sec:almostDeg}. The unperturbed Hamiltonian is introduced in Eqs.\eqref{eq:muonicEn} and~\eqref{eq:nuclEn} for the unperturbed state~\eqref{eq:totalState}. The matrix elements necessary for the rediagonalization of the hyperfine states are discussed in Section~\ref{sec:non-diagElements} in the general case. Thereby, all necessary ingredients for the rediagonalization in the dynamic hyperfine structure of muonic atoms is available. In this Section, the concept is applied to a simplified part of the muonic $^{185}$Re spectrum for clarification. The $^{185}$Re nucleus has a ground state angular momentum of $5/2$~\cite{Stone2005}, and in this Section, the first two excited nuclear states with angular momentum quantum numbers of $7/2$ and $9/2$ are considered. As for the muonic states, the $2p$ fine-structure doublet is considered, these are the $2p1/2$ and $2p3/2$ states. This modelspace is called $M$ from hereon.
-This corresponds to the values for the quantum numbers $(n,\kappa)$ being $(2,1)$, and $(2,-2)$. As a first step, it has to be considered, which unperturbed states $\left|FM\,IK\,n\kappa\right>$ can be formed by the nuclear and muonic states. In general, for every possible $F$, $M\in \{-F,...,F\}$ and the maximal value for $F$ is $F_{\text{max}}=\max(j(\kappa)+I)_{\kappa, I \in M}$. The minimal value for F is $F_{\text{min}}=\min(|j(\kappa)-I|)_{\kappa, I \in M}$. In this example, the values are $F_{\text{max}}=6$ and $F_{\text{min}}=1$ and correspondingly $F\in\{1,2,3,4,5,6\}$. As a next step, it has to be checked for every value of $F$, which combinations of muonic and nuclear states of the modelspace are able to form the $F$ value. For this, it has to hold that $|j(\kappa)-I|\leq F \leq j(\kappa)+I$. In this way, a modelspace is separated into distinct block with value of $F$ and a corresponding subset of states from the modelspace, which can form this $F$ value. Since the hyperfine interactions are diagonal in $F$ and $M$, the rediagonalization has to be performed only in the block separately, not in the entire modelspace.
+The concept of rediagonalization in the context of almost degenerate perturbation theory was introduced in Section~\ref{sec:almostDeg}. The unperturbed Hamiltonian is introduced in Eqs.~\eqref{eq:muonicEn} and~\eqref{eq:nuclEn} for the unperturbed states from Eq.~\eqref{eq:totalState}. The matrix elements necessary for the rediagonalization of the hyperfine states are discussed in Section~\ref{sec:non-diagElements} in the general case. Thereby, all necessary ingredients for the rediagonalization in the dynamic hyperfine structure of muonic atoms is available. In this Section, the concept is applied to a simplified part of the muonic $^{185}$Re spectrum for clarification. The $^{185}$Re nucleus has a ground state angular momentum of $5/2$~\cite{Stone2005}, and in this Section, the first two excited nuclear states with angular momentum quantum numbers of $7/2$ and $9/2$ are considered. As for the muonic states, the $2p$ fine-structure doublet is considered, these are the $2p1/2$ and $2p3/2$ states, whis corresponds to the values for the quantum numbers $(n,\kappa)$ being $(2,1)$, and $(2,-2)$. This modelspace is called $M$ from hereon. 
+As a first step, it has to be considered, which unperturbed states $\left|FM\,IK\,n\kappa\right>$ can be formed by the nuclear and muonic states. In general, for every possible value of $F$, the projection quantum number $M\in \{-F,...,F\}$. The maximal value for $F$ is $F_{\text{max}}=\max(j(\kappa)+I)_{\kappa, I \in M}$. The minimal value for F is $F_{\text{min}}=\min(|j(\kappa)-I|)_{\kappa, I \in M}$. In this example, the values are $F_{\text{max}}=6$ and $F_{\text{min}}=1$ and correspondingly $F\in\{1,2,3,4,5,6\}$. As a next step, it has to be checked for every value of $F$, which combinations of muonic and nuclear states of the modelspace are able to form the $F$ value. For this, it has to hold that $|j(\kappa)-I|\leq F \leq j(\kappa)+I$. In this way, a modelspace is separated into distinct blocks, each with a value of $F$ and a corresponding subset of states from the modelspace, which can form this $F$ value. Since the hyperfine interactions are diagonal in $F$ and $M$, the rediagonalization has to be performed only in the block separately, not in the entire modelspace. The separation of the modelspace into the different blocks is shown in Fig.~\ref{fig:blockRe}. For the nuclear excitation energies from~\cite{ENSDF} and the RMS radius from~\cite{Angeli2013}, the resulting level scheme without and with rediagonalized quadrupole interaction is shown in Fig.~\ref{fig:quad2}, which demonstrates the rich level structure in this case. Furthermore, there is no clear distinction between the fine- and hyperfine structure, sine the nuclear rotational states, the fine-structure splitting and the quadrupole matrix elements are all on the same energy scale. In practice, for the calculations is Sec.~\ref{sec:muon_re}, up to five excited nuclear states are used, which leads to even more energy levels.
+
+Due to the rediagonalization, the unperturbed states $\left|FM\,IK\,n\kappa\right>$ are mixed. The quantum numbers $F$ and $M$, describing the total angular momentum of the muon-nucleus system are still good quantum numbers, since the hyperfine structure is diagonal therein. However, different $I$, $\kappa$, and in principle also $n$ are mixed by the rediagonalization, and a mixed state are written as
+\begin{equation}
+\label{eq:rediagonState}
+\left|FM,\,i\right> = \sum_{k=1}^d \alpha^{(i)}_k \left| FM\,I_kK\,n_k\kappa_k\right>,
+\end{equation}
+where $i\in \{1,...,d\}$ and $d$ is the number of states in the modelspace, which can form the total angular momentum $F$. For the example of Rhenium in this Section, $d=1$ for $F=1,6$; $d=3$ for $F=2,5$; and $d=5$ for $F=3,4$ (see Fig.~\ref{fig:blockRe}). Thus, e.g. for $F=3$, a 5x5-matrix has to be rediagonalized, and the coefficient-matrix $\alpha^{(i)}_k$ in Eq.~\eqref{eq:rediagonState} corresponds to the matrix of eigenvectors.
+%
+\begin{figure}%
+\centering
+\includegraphics[width=0.91\linewidth]{pics/blocksRe.pdf}%
+\caption{Separation of the modelspace consisting of the muonic $2p\nicefrac{1}{2}$ and $2p\nicefrac{3}{2}$ states coupled to the nuclear states with angular momentum $5/2$, $7/2$, and $9/2$. For every possible value of $F\in \{1,...,6\}$, the states are shown, which are involved in the rediagonalization of the hyperfine interaction.}%
+\label{fig:blockRe}%
+\end{figure}
+%
+%
+\begin{figure}%
+\centering
+\includegraphics[width=0.88\linewidth]{pics/quad2.pdf}%
+\caption{Level scheme of the muonic $2p\nicefrac{1}{2}$ and $2p\nicefrac{3}{2}$ states coupled to the nuclear 5/2, 7/2, and 9/2  states in $^{185}$Re. Zero energy corresponds to the free, resting muon and the nuclear ground state. Through the nuclear rotational states and the strong quadrupole interaction, there is no clear distinction between fine- and hyperfine structure, which results in a rich structure of the energy levels.}%
+\label{fig:quad2}%
+\end{figure}
+%
+
+\subsection{Transition probabilities and intensities}
+It has been shown in Sec.~\ref{sec:muon_dynamic} that the coupling of muonic states and nuclear rotational states in connection with a strong quadrupole interaction leads to a rich and complicated level structure without a clear distinction of fine- and hyperfine structure. As a result, there is a large number of potential transitions between the states. For example, if the $L$ x rays are considered, i.e. the transitions from the $3d$ fine structure doublet to the $2p$ fine structure doublet, there are only four transitions if the hyperfine structure is not considered. One of these transitions is suppressed because it is not an electric dipole transition. On the other hand, due to the dynamic hyperfine structure, there are in principle hundreds of $L$ x rays, many of them electric dipole type. As a consequence, for the comparison with experimental spectra, not only the level structure is needed, but also the corresponding relative intensities. Important for the comparison with experiments in the intensity of a transition, which is proportional to the number of measured photons with the energy of the transitions. The intensities are a product of two quantities: Firstly, the intensity is proportional to the transition probability, which can be calculated in principle, as soon as the wave functions and corresponding energies are known. Secondly, the intensities are proportional to the population of the initial state. However, for calculating the population of the initial states, all transition to the initial state from even higher states has to be considered. This eventually leads to a cascade calculation for the muon. Therefore, in the following the transition probabilities and the the population and cascade calculations are discussed separately.
+
+\subsubsection{Transition probabilities}
+\label{sec:tranProbs}
+In this Section, the transition probabilities due to spontaneous emission of a photon in a muonic transition is analyzed. Starting point is the general formula for the Einstein coefficient (transition probability per time) for state with defined total angular momentum from an initial state $\left|F_iM_i,i_i\right>$ to a final state $\left|F_fM_f,i_f\right>$, where the states are defined in Eq.~\eqref{eq:rediagonState}. Following~\cite[Section 6.]{johnson2007}, this expression reads as
+\begin{equation}
+\label{eq:transitionGeneral}
+A^{(\lambda)}_{J}=\frac{2\alpha (2J+1)(J+1)}{J}\Delta E\,\sum_{M,M_i,M_f} \left|\left<F_fM_f,i_f\middle|\hat{t}^{(\lambda)}_{JM}\middle|F_iM_f,i_i\right>\right|^2,
+\end{equation}
+where $\Delta E$ is the energy difference of the initial and final state, $J$ is the total angular momentum of the photon and $\lambda=1$ is an electric transition, whereas $\lambda=0$ is a magnetic transition. The multipole transition operator $\hat{t}^{(\lambda)}_{JM}$ is defined in Eqs.~(6.120), (6.121), (6.128),(6.129) of~\cite{johnson2007} in terms of the multipole components of the vectorpotential $\mathbf{a}^{(\lambda)}_{JM}$ and of the scalar potential $\Phi_{JM}$ as
+\begin{equation}
+\boldsymbol{\alpha}\cdot \mathbf{a}^{(\lambda)}_{JM}(\mathbf{r}_\mu) - \Phi_{JM}(\mathbf{r}_\mu) = i\sqrt{\frac{(2J+1)(J+1)}{4\pi J}}\hat{t}^{(\lambda)}_{JM}(\mathbf{r}_\mu).
+\end{equation}
+Using the definition of Eq.~\eqref{eq:rediagonState}, the matrix elements are written as
+\begin{equation}
+\label{eq:tranElement1}
+\left<F_fM_f,i_f\middle|\hat{t}^{(\lambda)}_{JM}\middle|F_iM_f,i_i\right> = 
+\sum_{k_i,\,k_f}\alpha^{(i_f)\,*}_{k_f} \alpha^{(i_i)}_{k_i}\left<F_fM_f\,I_{k_f}K\,n_{k_f}\kappa_{k_f} \middle|\hat{t}^{(\lambda)}_{JM}\middle|F_iM_i\,I_{k_i}K\,n_{k_i}\kappa_{k_i}\right>.
+\end{equation}
+Since muonic transitions are considered in this section, it acts on the muonic coordinates $\mathbf{r}_\mu$, which is one subsystem of the composite states in Eq.~\eqref{eq:transitionGeneral} with total angular momentum $F_i$ and $F_f$, respectively. Since the multipole transition operator is an irreducible tensor operator of rank $J$, Eq.~\eqref{app:subsystem_expectation} can be used for calculating the matrix elements. This results in the following expression for the matrix elements:
+\begin{alignat}{2}
+\left<F_fM_f\,I_{k_f}K\,n_{k_f}\kappa_{k_f} \middle|\hat{t}^{(\lambda)}_{JM}\middle|F_iM_i\,I_{k_i}K\,n_{k_i}\kappa_{k_i}\right>=\delta_{I_{k_f}I_{k_i}}(-1)^{F_i+j(\kappa_{k_f})+I_{k_i}-J}
+\notag\\[7.5pt]
+\times\sqrt{2F_i+1}\text{C}^{F_fM_f}_{F_iM_i\,JM}
+\begin{Bmatrix}
+j(\kappa_{k_i})&I_{ki}&F_i\\
+F_f&J&j(\kappa_{k_f})
+\end{Bmatrix}
+\left< n_{k_f}\kappa_{k_f}\middle|\middle|\hat{t}^{(\lambda)}_{J}\middle|\middle|n_{k_i}\kappa_{k_i}\right>
+\label{eq:tranElement2}
+\end{alignat}
+The Clebsch-Gordan coefficients in Eq.~\eqref{eq:tranElement2} do not depend on the summation indices $k_i$ and $k_f$, and the only dependency on the projection numbers $M$, $M_f$, and $M_i$ are as arguments of the Clebsch-Gordan coefficients. Therefore, the summation over $M$, $M_f$, $M_i$ only affacts the Clebsch-Gordan coefficient and the sum rule~\cite{varshalovich1988}
+\begin{equation}
+\sum_{M,M_i,M_f}\left(C^{F_fM_f}_{F_iM_i\,JM}\right)^2 = 2F_f+1
+\end{equation}
+can be used to simplify the calculation of Eq.~\eqref{eq:transitionGeneral} considerably. The reduced matrix elements in the muonic variables in Eq.\eqref{eq:tranElement2} can be evaluated in length gauge as~\cite{johnson2007}
+\begin{alignat}{2}
+&\left< n_{f}\kappa_{f}\middle|\middle|\hat{t}^{(1)}_{J}\middle|\middle|n_{i}\kappa_{i}\right>=&&
+\left<n_f\kappa_f\middle|\middle|C_J\middle|\middle|n_i\kappa_i\right>\\
+&&&\times\int\text{d}r \text{\huge[}\frac{\kappa_f-\kappa_i}{J+1}\left(j^\prime_J(\Delta E\,r)\right)(G_{n_f\kappa_f}(r)F_{n_i\kappa_i}(r)+G_{n_i\kappa_i}(r)F_{n_f\kappa_f}(r))\\
+&&& \hspace{1.5cm}+J\frac{j_J(\Delta E\,r)}{\Delta E\,r}\left(F_{n_f\kappa_f}(r)G_{n_i\kappa_i}(r)-G_{n_f\kappa_f}(r)F_{n_i\kappa_i}(r)\right)\text{\huge]}
+\end{alignat}
+for electric transitions with $\lambda= 1 $ and as
+\begin{alignat}{2}
+&\left< n_{f}\kappa_{f}\middle|\middle|\hat{t}^{(0)}_{J}\middle|\middle|n_{i}\kappa_{i}\right>=&&
+\left<n_f\,-\kappa_f\middle|\middle|C_J\middle|\middle|n_i\kappa_i\right>\notag\\
+&&&\times\int\text{d}r\frac{\kappa_i+\kappa_f}{J+1}j_J(\Delta E\,r)\left(-G_{n_f\kappa_f}(r)F_{n_i\kappa_i}(r)-F_{n_f\kappa_f}(r)G_{n_i\kappa_i}(r)\right)
+\end{alignat}
+for magnetic transitions with $\lambda = 0$. The reduce matrix elements of the normalized spherical harmonics $\text{C}_{JM}(\vartheta,\varphi)$ read as~\cite{johnson2007}
+\begin{equation}
+\left<n_f\kappa_f\middle|\middle|C_J\middle|\middle|n_i\kappa_i\right>=(-1)^{j(\kappa_f)+1/2}\sqrt{(2j(\kappa_i)+1)(2j(\kappa_f)+1)}
+\begin{pmatrix}
+j(\kappa_f)&j(\kappa_i)&J\\
+-\nicefrac{1}{2}&\nicefrac{1}{2}&0
+\end{pmatrix}
+\pi(l(\kappa_f)+l(\kappa_i)+J),
+\end{equation}
+where the function $\pi(x)$ is defined in Eq.~\eqref{eq:parityFunc}.
+\subsubsection{Population of initial states and muonic cascade}
+After the transition probabilities have been discussed in Sec.~\ref{sec:tranProbs}, the remaining issue of the initial population is discussed in this Section.
+The muonic cascade is visualized in Fig.~\ref{fig:cascade}.
+%
+\begin{figure}%
+\centering
+\includegraphics[width=0.62\linewidth]{pics/cascade.pdf}%
+\caption{Visualization of the muonic cascade, starting from the muonic $4f$ states and the nucleus in its ground state, Then, the muon is cascading towords its ground state through the $3d$ and $2p$ states. The population of a state in the $3d$ modelspace is obtained by summing up all transitions from the $4f$ states to this state. In this way, all intensities can be calculated starting from a given initial population of the $4f$ states.}%
+\label{fig:cascade}%
+\end{figure}
+%
+
+\section{Higher order corrections for the dynamic hyperfine structure}
 
 \subsection{Residual second order corrections}
 \label{sec:muon_residualSO}
