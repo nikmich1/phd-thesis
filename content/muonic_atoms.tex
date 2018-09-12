@@ -767,29 +767,41 @@ The Clebsch-Gordan coefficients in Eq.~\eqref{eq:tranElement2} do not depend on 
 \end{equation}
 can be used to simplify the calculation of Eq.~\eqref{eq:transitionGeneral} considerably. The reduced matrix elements in the muonic variables in Eq.\eqref{eq:tranElement2} can be evaluated in length gauge as~\cite{johnson2007}
 \begin{alignat}{2}
+\label{eq:relElTrans}
 &\left< n_{f}\kappa_{f}\middle|\middle|\hat{t}^{(1)}_{J}\middle|\middle|n_{i}\kappa_{i}\right>=&&
 \left<n_f\kappa_f\middle|\middle|C_J\middle|\middle|n_i\kappa_i\right>\\
-&&&\times\int\text{d}r \text{\huge[}\frac{\kappa_f-\kappa_i}{J+1}\left(j^\prime_J(\Delta E\,r)\right)(G_{n_f\kappa_f}(r)F_{n_i\kappa_i}(r)+G_{n_i\kappa_i}(r)F_{n_f\kappa_f}(r))\\
-&&& \hspace{1.5cm}+J\frac{j_J(\Delta E\,r)}{\Delta E\,r}\left(F_{n_f\kappa_f}(r)G_{n_i\kappa_i}(r)-G_{n_f\kappa_f}(r)F_{n_i\kappa_i}(r)\right)\text{\huge]}
+&&&\times\int\text{d}r \text{\huge[}j_J(\Delta E\,r)\left(G_{n_f\kappa_f}(r)G_{n_i\kappa_i}(r)+F_{n_i\kappa_i}(r)F_{n_f\kappa_f}(r)\right)\\
+&&& +j_J(\Delta E\,r)\text{\huge(}\frac{\kappa_i-\kappa_f}{J+1}
+\left(G_{n_f\kappa_f}(r)F_{n_i\kappa_i}(r)+G_{n_i\kappa_i}(r)F_{n_f\kappa_f}(r)\right)\\
+&&& +\left(G_{n_i\kappa_i}(r)F_{n_f\kappa_f}(r)-G_{n_f\kappa_f}(r)F_{n_i\kappa_i}(r)\right) 
+ \text{\huge)}\text{\huge]}
 \end{alignat}
 for electric transitions with $\lambda= 1 $ and as
 \begin{alignat}{2}
 &\left< n_{f}\kappa_{f}\middle|\middle|\hat{t}^{(0)}_{J}\middle|\middle|n_{i}\kappa_{i}\right>=&&
-\left<n_f\,-\kappa_f\middle|\middle|C_J\middle|\middle|n_i\kappa_i\right>\notag\\
+\left<n_f\,{-}{\kappa_f}\middle|\middle|C_J\middle|\middle|n_i\kappa_i\right>\notag\\
 &&&\times\int\text{d}r\frac{\kappa_i+\kappa_f}{J+1}j_J(\Delta E\,r)\left(-G_{n_f\kappa_f}(r)F_{n_i\kappa_i}(r)-F_{n_f\kappa_f}(r)G_{n_i\kappa_i}(r)\right)
 \end{alignat}
-for magnetic transitions with $\lambda = 0$. The reduce matrix elements of the normalized spherical harmonics $\text{C}_{JM}(\vartheta,\varphi)$ read as~\cite{johnson2007}
-\begin{equation}
-\left<n_f\kappa_f\middle|\middle|C_J\middle|\middle|n_i\kappa_i\right>=(-1)^{j(\kappa_f)+1/2}\sqrt{(2j(\kappa_i)+1)(2j(\kappa_f)+1)}
+for magnetic transitions with $\lambda = 0$. $j_J(x)$ are the spherical Bessel functions~\cite[Eq. 10.47.3]{NIST:DLMF}.
+The reduced matrix elements of the normalized spherical harmonics $\text{C}_{JM}(\vartheta,\varphi)$ read as~\cite{johnson2007}
+\begin{alignat}{2}
+&\left<n_f\kappa_f\middle|\middle|C_J\middle|\middle|n_i\kappa_i\right>=&&(-1)^{j(\kappa_f)+1/2}\sqrt{(2j(\kappa_i)+1)(2j(\kappa_f)+1)}
 \begin{pmatrix}
 j(\kappa_f)&j(\kappa_i)&J\\
 -\nicefrac{1}{2}&\nicefrac{1}{2}&0
 \end{pmatrix}
-\pi(l(\kappa_f)+l(\kappa_i)+J),
+\notag\\
+&&&\times\pi(l(\kappa_f)+l(\kappa_i)+J),
+\end{alignat}
+where the function $\pi(x)$ is defined in Eq.~\eqref{eq:parityFunc}. The relativistic expression for the electric transitions in Eq.~\eqref{eq:relElTrans} can be simplified in the non-relativistic and long-wavelenth approximation. The non-relativstic approximation means, the lower component of the radial spinors $F_{n\kappa}(r)$ is small, and therefore mixed terms $F_{n_1\kappa_1}(r)G_{n_2\kappa_2}(r)$ can be neglected. The term $\sim F_{n\kappa}(r)^2$ is kept for convenience, since $G_{n\kappa}(r)^2+F_{n\kappa}(r)^2$ corresponds to the probability density. The long-wavelength approximation means, that $\Delta E \, r$ is small, and therefore the corresponding spherical Bessel function can be expanded. The spherical Bessel functions can be approximated as
+\begin{equation}
+j_J(x)\approx \frac{x^J}{(2+1)!!},
 \end{equation}
-where the function $\pi(x)$ is defined in Eq.~\eqref{eq:parityFunc}.
+where the double factorial is evaluated as $y!! = y \cdot (y-2) \cdot (y-4) \cdot ...\,\,$. Thereby, Eq.~\eqref{eq:relElTrans} becomes
+
+
 \subsubsection{Population of initial states and muonic cascade}
-After the transition probabilities have been discussed in Sec.~\ref{sec:tranProbs}, the remaining issue of the initial population is discussed in this Section.
+After the transition probabilities have been discussed in Sec.~\ref{sec:tranProbs}, the remaining issue of the population of the initial states is discussed in this Section. 
 The muonic cascade is visualized in Fig.~\ref{fig:cascade}.
 %
 \begin{figure}%
@@ -808,7 +820,7 @@ The muonic cascade is visualized in Fig.~\ref{fig:cascade}.
 \subsection{Quadrupole-Uehling interactions}
 \label{sec:muon_quadUehl}
 
-\section{Struture of muonic Rhenium-185}
+\section{Structure of muonic Rhenium-185}
 \label{sec:muon_re}
 
 \subsection{Low lying states}
