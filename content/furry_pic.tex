@@ -163,7 +163,7 @@ where $g_{\mu\nu}S_P(x-y)$ is the photon propagator in position space~\mbox{\cit
 \end{equation}
 and the spectral representation of the propagator from Eq.~\eqref{eq:spectralrep}, the levelshifts of the $n$-th level can be extracted from the shift of the poles~\mbox{\cite[Section 14.2.]{weinberg2005}} as
 \begin{equation}
-\Delta E_n = \int \text{d}^3\mathbf{x}\,\text{d}^3\mathbf{y}\,\bar{u}_n(\mathbf{x})\left( -\Sigma_{\text{VP}}(\mathbf{x},\mathbf{y},E_N)-\Sigma_{\text{SE}}(\mathbf{x},\mathbf{y},E_N) \right)u_N(\mathbf{y}).
+\Delta E_n = \int \text{d}^3\mathbf{x}\,\text{d}^3\mathbf{y}\,\bar{u}_n(\mathbf{x})\left( -\Sigma_{\text{VP}}(\mathbf{x},\mathbf{y},E_n)-\Sigma_{\text{SE}}(\mathbf{x},\mathbf{y},E_n) \right)u_N(\mathbf{y}).
 \end{equation}
 %
 \begin{figure}%
@@ -292,12 +292,12 @@ is assumed, where $\lambda = \sqrt{1-E^2_{n\kappa}}$ and $\gamma=\pm \sqrt{\kapp
 & \varphi_1(r)&&=a^{(1)}_0 (2\lambda r)^\gamma\, \text{F}(1-n_r,2\gamma+1,2\lambda r)\\
 & \varphi_2(r) &&= a^{(1)}_0 (\kappa -Z\alpha / \lambda) (2\lambda r)^\gamma\, \text{F}(-n_r,2\gamma+1,x) /n_r,
 \end{alignat}
-where $n_r=Z\alpha E_{n\kappa}/\lambda - \gamma$ and $\text{F}(a,b,c)$ are the confluent hypergeometric function. Now, for the positive value of $\gamma$, the solutions are regular at the origin, but behave as $\e^{\lambda r}$ as $r\rightarrow \infty$. On the other hand, linear combination of positive and negative values of $\gamma$ enable solutions which are regular at infinity but behave badly at the origin. Solutions regular both at the origin and at infinity can only be obtained for certain energies, corresponding to integer values of $n_r$~\cite{rose1961}. With $n=n_r+|\kappa|$, the bound state energies read
+where $n_r=Z\alpha E_{n\kappa}/\lambda - \gamma$ and $\text{F}(a,b,c)$ are the hypergeometric function, as defined in Eq.~\eqref{app:def_hypergeo}. Now, for the positive value of $\gamma$, the solutions are regular at the origin, but behave as $\e^{\lambda r}$ as $r\rightarrow \infty$. On the other hand, linear combination of positive and negative values of $\gamma$ enable solutions which are regular at infinity but behave badly at the origin. Solutions regular both at the origin and at infinity can only be obtained for certain energies, corresponding to integer values of $n_r$~\cite{rose1961}. With $n=n_r+|\kappa|$, the bound state energies read
 \begin{equation}
 \label{eq:finestructure_formula}
 E_{n\kappa}=\cfrac{(mc^2)}{\sqrt{1+\cfrac{(Z\alpha)^2}{\left( n-|\kappa|+\sqrt{|\kappa|^2-(Z\alpha)^2} \right)^2}}},
 \end{equation}
-for $n\in \{1,2,3,...\}$ and $0\neq \kappa \in \{{-}{n},...,n-1\}$.
+for $n\in \{1,2,3,...\}$ and $\kappa \in \{{-}{n},...,-1,1,...,n-1\}$.
 These solution explains the spectrum of hydrogen-like atoms to a reasonable accuracy, including fine structure splitting, as long as $Z\alpha\ll 1$. The solutions are degenerate in the sign of $\kappa$, i.e. states with the same $j$ but different $l$ have the same energy. As a result, the $2s\nicefrac{1}{2}$ and $2p\nicefrac{1}{2}$ states are degenerate. The lifting of this degeneracy (Lamb shift) is explained by radiative corrections and finite nuclear size effects. However, in situations where $Z\alpha$ is not much smaller than unity, the point-like approximation becomes increasingly worse and solutions of the Dirac equation for non-Coulomb potentials have to be used.
 
 
