@@ -936,7 +936,7 @@ The rediagonalization of the hyperfine interaction in muonic atoms is explained 
 
 After the subspace has been chosen and rediagonalization has been performed, the quadrupole interaction with states outside of the subspace leads to residual second order corrections to the energy levels~\cite{chen1970}. 
 For the total second order correction a summation/integration over the complete (discrete and continous) spectrum for both nuclear and muonic states has to be performed. For the complete nuclear spectrum, sophisticated models or numerous experimental data are required. However, the muon is a point-like particle and can be described as a Dirac particle. Therefore, in this work, we calculate the second order corrections due to the electric quadrupole (Eq.~\eqref{eq:quadPot}) and quadrupole-Uehling interaction (${l}{=}{2}$-term in Eq.~\eqref{eq:defmultiuehl}), where the nucleus stays in the rotational ground state, but the complete muonic spectrum is considered.
-The second order energy shift is
+For a composite state from Eq.~\eqref{eq:rediagonState}, where the hyperfine interaction is diagonalized in the modelspace, the second order energy shift due to states outside of the modelspace is
 \begin{equation}
 \Delta E_{\text{2.ord.}}^{(F,k)}= \sum_{i\notin M}\frac{\left|\left< FMk\right|{V_{\text{el}}^{(2)}}{+}{V_{\text{uehl}}^{(2)}}\left|FMn_i\kappa_iI_iK \right>\right|^2}{E_{F,k}-E_i},
 \label{eq:second}
@@ -973,13 +973,12 @@ With these parameters, the electric and Uehling potentials, both monopole and qu
 The quadrupole matrix elements can be calculated both for the rediagonalization in the dynamic hyperfine structure and for the evaluation of the residual second-order terms \eqref{eq:second}, using Eq.~\eqref{eq:quadNonDiagEl}. As the next step, the total Hamiltonian~\eqref{eq:muon_htotal} is diagonalized in finite subspaces or modelspaces consisting of the muonic ($2p\nicefrac{1}{2}$, $2p\nicefrac{3}{2}$) or ($3d\nicefrac{3}{2}$, $3d\nicefrac{5}{2}$) doublet states and nuclear ground state rotational band. For Rhenium, the first six states with $I_N \in \{5/2,...,15/2\}$ are considered, and for Uranium with $I_N \in \{7/2,...,17/2\}$. The excitation energies of the nuclear states are summarized, along with other nuclear parameters, in Table~\ref{tab:params}. Thereby, the composite states and corresponding energies $E_{\text{quad}}$ from Eq.~\eqref{eq:rediagonState} are obtained and finally, for each of these states the residual second order quadrupole correction \eqref{eq:second} is calculated. Here, the intermediate sum goes over all nuclear and muonic states not included in the modelspace.
 Note that for the muonic ground state, a rediagonalization is not necessary, since the diagonal matrix elements of the quadrupole interactions vanish for muonic states with $j=1/2$.
 The quadrupole-Uehling contribution to the binding energies can be obtained by performing the calculations for the dynamic hyperfine structure twice; once with the matrix elements both for the rediagonalization and for the residual second-order corrections containing both the electric and Uehling interaction ${V_{\text{el}}^{(2)}}{+}{V_{\text{uehl}}^{(2)}}$ and a second time only with the electric part ${V_{\text{el}}^{(2)}}$ from Eq.\eqref{eq:quadNonDiagEl}. The difference between those two approaches gives the quadrupole-Uehling corrections. Results for the residual second order quadrupole correction from Eq.~\eqref{eq:second} and for the quadrupole-Uehling corrections can be found in Table~\ref{tab:hfs_2} for a number of states.
-
-The quadrupole interaction in the framework of the dynamic hyperfine structure in heavy muonic atoms was analyzed by an fully relativistic treatment of the quadrupole-Uehling potential and of the residual second order terms.
+%
+To conclude the improved calculation of the higher order effects, the quadrupole interaction in the framework of the dynamic hyperfine structure in heavy muonic atoms was analyzed by an fully relativistic treatment of the quadrupole-Uehling potential and of the residual second order terms.
 The quadrupole-Uehling interaction was obtained by a multipole expansion of the Uehling potential for an arbitrary nuclear charge distribution without the assumption on the distance between muon and nuclear charge being large.
 Since it has the same angular structure as the conventional quadrupole interaction, the quadrupole-Uehling expectation value vanishes between two muonic states with $j=1/2$, thus it does not affect the muonic ground state.
 The calculations for Uranium show that it can lead to energy corrections almost on the keV level for very heavy nuclei with muonic $2p$ states and thus can be potentially relevant for comparison between theoretical predictions and experiments. Being a short-ranged potential, it falls of quickly for states further away from the nucleus. For states with $n\geq3$, we find values below $0.15\,$keV, even for high Z.
 The generalization to Uehling corrections for higher order multipole is straight forward. In the case of muonic atoms, since the influence of higher order multipoles is already small, we expect this correction will not contribute significantly.
-
 The residual second order quadrupole corrections in the dynamic hyperfine structure were calculated numerically using a basis of relativistic wave functions including nuclear finite size correction and Uehling correction due to the monopole part of the nuclear potential.
 In contrast to the first order terms, the muonic ground state energy is affected by the second order corrections. Here, the energy correction amounts up to several keV. Also for muonic $2p$ states, it is of similar size. For the $3d$ levels, we find the energy corrections below half a keV, both for Rhenium and Uranium.
 If a more complete nuclear model instead the rotational model is used, the additional nuclear states appear as intermediate state in the second order corrections, leading to the nuclear polarization corrections. Therefore, the approach presented in this work provides a basis for an accurate treatment of the muonic spectrum for the nuclear polarization effect in deformed muonic atoms.
@@ -1140,8 +1139,9 @@ $^{235}\text{U}$&  3 &   \nicefrac{7}{2} & 1s\nicefrac{1}{2} & 12175.51 &  6.83 
 \section{Structure of muonic Rhenium-185}
 \label{sec:muon_re}
 
-\subsection{Low lying states}
+
 \subsection{Extraction of quadrupole moment from $5g\rightarrow 4f$ transitions}
+\subsection{Low lying states}
 
 
 

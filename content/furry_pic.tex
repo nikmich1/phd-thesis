@@ -176,7 +176,7 @@ and the spectral representation of the propagator from Eq.~\eqref{eq:spectralrep
 
 \subsection{Vacuum polarization potentials}
 \label{sec:vacPolTheory}
-For practical calculations of the order $\alpha$ vacuum polarization, the closed fermion loop in Fig.~\ref{fig:1loop}~b) can be expanded in numbers of interactions with the background field, using Eq.~\ref{eq:propeq}. For the case of atomic physics, since the nuclear potential is proportional to the nuclear charge number $Z$, this expansion is in powers of $Z\alpha$. The corresponding diagrams in order $\alpha(Z\alpha)$ (Uehling potential~\cite{uehling1935}) and $\alpha(Z\alpha)^3$ (Wichmann-Kroll potential~\cite{wichmann1956}) are shown in Fig.~\ref{fig:vac_pol_wk}. Since the closed loop now is formed by the free fermion propagator, all diagramms of order $\alpha(Z\alpha)^n$ with even $n$ vanish as a consequence of Furry's theorem~\mbox{\cite[Section~10.1.]{peskin1995}}. Formally, the order $\alpha (Z\alpha)$ correction $\delta S_{\text{Uehl}}$ from diagram (a) in Fig.~\ref{fig:vac_pol_uehl} to the propagator $S_{\mathcal{A}}$ reads
+For practical calculations of the order $\alpha$ vacuum polarization, the closed fermion loop in Fig.~\ref{fig:1loop}~b) can be expanded in numbers of interactions with the background field, using Eq.~\ref{eq:propeq}. For the case of atomic physics, since the nuclear potential is proportional to the nuclear charge number $Z$, this expansion is in powers of $Z\alpha$. The corresponding diagrams in order $\alpha(Z\alpha)$ (Uehling potential~\cite{uehling1935}) and $\alpha(Z\alpha)^3$ (Wichmann-Kroll potential~\cite{wichmann1956}) are shown in Fig.~\ref{fig:vac_pol_wk}. Since the closed loop now is formed by the free fermion propagator, all diagramms of order $\alpha(Z\alpha)^n$ with even $n$ vanish as a consequence of Furry's theorem~\mbox{\cite[Section~10.1.]{peskin1995}}. Formally, the order $\alpha (Z\alpha)$ correction $\delta S_{\text{Uehl}}$ from diagram~(a) in Fig.~\ref{fig:vac_pol_uehl} to the propagator $S_{\mathcal{A}}$ reads
 \begin{alignat}{3}
 \label{eq:uehl}
 &\delta S_{\text{Uehl}}(x,y) &&=&& \int \mathrm{d}z_1\,S_{\mathcal{A}}(x,z_1)\Sigma_{\text{Uehl}}(z_1)S_{\mathcal{A}}(z_1,y)\\
@@ -196,7 +196,31 @@ This propagator is a Green's function for the Dirac equation including the exter
 \end{equation}
 As a result, the diagrams in Fig.~\ref{fig:vac_pol_uehl} can be calculated by solving the Dirac equation~\eqref{eq:diraceq} including the Uehling potential. The same reasoning holds as well for the Wichmann-Kroll potential (Fig.~\ref{fig:vac_pol_wk}~b)) and for the order $\alpha^2(Z\alpha)$ vacuum polarization, referred to as the Källen-Sabry potential~\cite{kallen1955}, where the corresponding diagrams are shown in Fig.~\ref{fig:vac_pol_ks}. 
 
-Since the formal expressions for the vacuum polarization potentials contain divergences, they have to be renormalised. The corresponding expressions for the renormalized Uehling, Wichmann-Kroll and Källen-Sabry potentials are given in Section~\ref{sec:sph_dirac}.
+Since the formal expressions for the vacuum polarization potentials contain divergences, they have to be renormalised. This Section concludes with giving the corresponding expressions for the renormalized Uehling (order $\alpha(Z\alpha)$) and Källen-Sabry (order $\alpha^2(Z\alpha)$) potentials for a virtual electron-positron pair and an extended, spherically symmetric nuclear charge distribution $\rho(r)$, which can be included in the Dirac equation. The Uehling potential reads as~\cite{Fullerton1976,Elizarov2005}
+\begin{alignat}{2}
+&V_{\text{Uehl}}(r)&&=-\alpha \frac{2\alpha}{3\pi}\int_0^\infty \text{d}r^{\prime}\,4\pi \rho(r^\prime)\int_1^\infty \text{d}t\,\left( 1+\frac{1}{2t^2} \right)\nonumber\\[7.5pt]
+&&&\times\frac{\sqrt{t^2-1}}{t^2} \frac{\text{exp}(-2m_e|r-r^\prime|t)-\text{exp}(-2m_e(r+r^\prime)t)}{4m_er t},
+\label{eq:uehlPot}
+\end{alignat}
+and the Källen-Sabry potential, corresponding to the diagrams in Fig.~\ref{fig:vac_pol_ks}, is derived in~\cite{Barbieri1970,Barbieri1972,Barbieri1972_2,Barbieri1973} and given e.g. in~\cite{indelicato2013,Fullerton1976} as
+\begin{alignat}{2}
+V_{\text{KS}}(r)=\frac{\alpha^2(Z\alpha)}{\pi r}\int\limits_0^\infty\text{d}r^\prime\,r^\prime \rho(r^\prime)\left( L_0(2m_e|r-r^\prime|)-L_0(2m_e(r+r^\prime))\right),
+\end{alignat}
+with
+\begin{alignat}{2}
+&L_0(x)&&=-\int^x\text{d}yL_1(y),\\[7.5pt]
+&L_1(x) &&= \int\limits_1^\infty\text{d}t\,\e^{-rt}\text{\huge\{}
+\left(\frac{2}{3t^5}-\frac{8}{3t}\right)f(t)
++\left(\frac{2}{3t^4}+\frac{4}{3t^2}\right)\sqrt{t^2-1}\ln[8t(t^2-1)]\\
+&&&+\left(\frac{2}{9t^2}+\frac{7}{108t^4}+\frac{13}{54t^2}\right)\sqrt{t^2-1}
++\ln (\sqrt{t^2-1}+t)\left(\frac{2}{9t^7}+\frac{5}{4t^5}+\frac{2}{3t^3}-\frac{44}{9t}\right)
+\text{\huge\}},\\[7.5pt]
+&f(t) &&= \int\limits_t^\infty\text{d}x\,
+\left[
+\frac{(3x^2-1)\ln (\sqrt{x^2-1}+x)}{x(x^2-1)}-
+\frac{\ln(8x(x^2-1))}{\sqrt{x^2-1}}
+\right].
+\end{alignat}
 %
 \begin{figure}%
 \centering
