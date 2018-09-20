@@ -9,6 +9,7 @@ Finally, in Sections~\ref{sec:muon_re}, calculations in combination with experim
 In Section~\ref{sec:muon_he}, precision calculations for the vacuum polarization corrections to the bound-muon $g$ factor in muonic Helium-4 are shown.
 
 \section{Calculation of spectra for muonic atoms}
+\label{sec:calculationSpectraMuon}
 \subsection{Motivation}
 \label{sec:muon_motivation}
 Atomic nuclei are one of the building blocks of matter and therefore, information on their structure, like the distribution of electric charge inside the nucleus, is of intrinsic interest. Furthermore, the charge radii of atomic nuclei are of importance as an input parameter for the interpretation of other experiments. For example, radium atoms are a candidate for measuring atomic parity violation effects, but for this more accurate values of the radium charge radii are needed~\cite{wansbeek2012}.
@@ -462,7 +463,8 @@ F_{\text{BW}}(r)=-r^2 \frac{\partial}{\partial r}\,\int \text{d}V^{\prime}\,\fra
 \end{equation}
 The difference in the hyperfine splitting between a point-like magnetic moment and a spacial distribution of the magnetization is called the Bohr-Weisskopf effect~\cite{bohrWeisskopf1950}. In the following, the diagonal matrix elements of the magnetic interaction are analyzed, paying special attention to the distribution function $F_{\text{BW}}$. We expect the contribution of the higher-order terms, namely electric octupole, magnetic quadrupole, and beyond, to be smaller than the uncertainty of the considered terms~\cite{Devons1995,Steffen1985}. Therefore they can be ignored here.
 
-The hyperfine splitting arises from the interaction of the nuclear magnetic moment with the muon's magnetic moment, which is also sensitive to the spatial distribution of the nuclear currents. Since the magnetic moment of the muon is inversely proportional to its mass, the magnetic hyperfine splitting in muonic atoms is less important than in electronic atoms. The matrix elements of the corresponding Hamiltonian~\eqref{eq:Hmag} in the state~\eqref{eq:totalState} are~\cite{Korzinin2005}
+The hyperfine splitting arises from the interaction of the nuclear magnetic moment with the muon's magnetic moment, which is also sensitive to the spatial distribution of the nuclear currents. 
+Since the magnetic moment of the muon is inversely proportional to its mass, the magnetic hyperfine splitting in muonic atoms is less important than in electronic atoms. The matrix elements of the corresponding Hamiltonian~\eqref{eq:Hmag} in the state~\eqref{eq:totalState} are~\cite{Korzinin2005}
 \begin{IEEEeqnarray}{l}
 \label{eq:hmag}
 \bra{FM_FI\kappa}H_M\ket{FM_FI\kappa}=
@@ -732,6 +734,7 @@ where $i\in \{1,...,d\}$ and $d$ is the number of states in the modelspace, whic
 %
 
 \subsection{Transition probabilities and intensities}
+\label{sec:transitions}
 It has been shown in Sec.~\ref{sec:muon_dynamic} that the coupling of muonic states and nuclear rotational states in connection with a strong quadrupole interaction leads to a rich and complicated level structure without a clear distinction of fine- and hyperfine structure. As a result, there is a large number of potential transitions between the states. For example, if the $L$ x rays are considered, i.e. the transitions from the $3d$ fine structure doublet to the $2p$ fine structure doublet, there are only four transitions if the hyperfine structure is not considered. One of these transitions is suppressed because it is not an electric dipole transition. On the other hand, due to the dynamic hyperfine structure, there are in principle hundreds of $L$ x rays, many of them electric dipole type. As a consequence, for the comparison with experimental spectra, not only the level structure is needed, but also the corresponding relative intensities. Important for the comparison with experiments in the intensity of a transition, which is proportional to the number of measured photons with the energy of the transitions. The intensities are a product of two quantities:
 Firstly, the intensity is proportional to the transition probability, which can be calculated in principle, as soon as the wave functions and corresponding energies are known. In this thesis, the transition probabilities are calculated relativistically and without the long-wavelength approximation.
 Secondly, the intensities are proportional to the population of the initial state. However, for calculating the population of the initial states, all transitions to the initial state from even higher states have to be considered. This eventually leads to a cascade calculation for the muon, where the muon is . In the following the transition probabilities and the the population and cascade calculations are discussed separately.\\
@@ -831,6 +834,7 @@ The muonic cascade starting from the muonic $4f$ states is visualized in Fig.~\r
 %
 \newpage
 \section{Higher order corrections for the dynamic hyperfine structure}
+\label{sec:higherorder}
 In this Section, the improved calculations of two higher order contributions to the dynamic hyperfine structure are discussed, namely the second order quadrupole interaction beyond the rediagonalization in the modelspaces and the correction to the matrix elements of the quadrupole interactions due to leading order vacuum polarization (VP) due to a virtual electron-positron pair.\\
 The contribution of leading order vacuum polarization (VP) to the spherically symmetric part of the charge distribution was briefly discussed in Sec.~\ref{sec:qed}. However, VP influences multipole interactions of all orders, thus in the context of the dynamic hyperfine structure especially the matrix elements of the quadrupole interaction. In the past, the corresponding correction to the quadrupole interaction between muon and nucleus has at most been considered with a power-series expansion~\cite{Fricke1969vp,zehnder1975} or for specific forms of the nuclear charge distribution~\cite{pearson1963}, which does not enable precision calculations for heavy muonic atoms. In this thesis, a new approach is developed in Section~\ref{sec:muon_quadUehl} by performing a multipole expansion of the Uehling potential. This enables the calculation of the leading order VP correction to the quadrupole matrix elements for arbitrary charge distributions, including all finite size effects.\\
 The approach of almost degenerate perturbation theory is discussed in Sec.~\ref{sec:almostDeg}, and the rediagonalization of the perturbation is applied to the hyperfine interaction in Sec.~\ref{sec:non-diagElements} and~\ref{sec:toyModelRediag}. However, there are residual second order corrections due to contrubutions from outside of the modelspace, as introduced in Eq.~\eqref{eq:pert_secondOrderEnerg}. A non-relativistic estimation of the residual second order electric quadrupole interaction with states outside of this modelspace has been presented in Ref.~\cite{chen1970}. In this thesis, a fully relativistic approach is presented in Sec.~\ref{sec:muon_residualSO}.
@@ -1135,18 +1139,79 @@ $^{235}\text{U}$&  3 &   \nicefrac{7}{2} & 1s\nicefrac{1}{2} & 12175.51 &  6.83 
 
 
 
-
+\cleardoublepage
 \section{Structure of muonic Rhenium-185}
 \label{sec:muon_re}
+The analysis of x rays emitted due to transitions in muonic atoms is one possibility to obtain information on the nuclear charge distribution and measure properties like RMS charge radii, or nuclear quadrupole moments. This Section is about the structure of muonic Rhenium-185. So far, there is no absolute measurement of the charge radius of $^{185}$Re~\cite{schopper2004} and the only experiment reported on muonic rhenium is an extraction of the quadrupole moments of $^{185}$Re and $^{187}$Re from the N x rays (${n}{=}{5}\rightarrow{n}{=}{4}$) of natural Re~\cite{konijn1979}, which is mainly a mixture of these two isotopes. Measurements of muonic x rays with isotopically pure Rhenium have been recently performed by the MuX Collaboration, using the high intensity muon beam at the Paul-Scherrer-Institut~\cite{psiExperiments,psiFacilities}.
+
+In the following, the muonic transition energies and transition probabilities are analyzed, using the methods described in Sections~\ref{sec:calculationSpectraMuon} and~\ref{sec:higherorder}. Thereby, the dependence of transitions and intensities of the $N$ x rays on the quadrupole is used in combination with experimental data on isotopically pure $^{185}$Re to extract the nuclear quadrupole moment. Also, a good qualitative discription of the $K$- and $L$ x rays is given.
 
 
 \subsection{Extraction of quadrupole moment from $5g\rightarrow 4f$ transitions}
+After a muon is captured and starts cascading towards its ground state, there is an intermediate region, where finite nuclear size effects are still rather small and the muon is not influenced by the surrounding atomic electrons. Therefore, the system is essentially hydrogen-like and no many-body problem needs to be solved. It has been realized, that in this region, corresponding to the ${n}{=}{5}\rightarrow{n}{=}{4}$ transitions, nuclear quadrupole moments can be extracted, which has been done for Lutetium-175 in Ref.~\cite{Dey1979} and for natural Rhenium in Ref.~\cite{konijn1979}.
+As a first application of the spectrum-calculation presented in this thesis, the dependence of the transition energies and intensities of the muonic $N$ x rays on the nuclear quadrupole moment is calculated, and by comparing to recent measurements of isotopically pure $^{185}$Re, a new value for its quadrupole moment is obtained.
+
+Following Sec.~\ref{sec:transitions}, the most intense transitions are the $E1$-transitions in the circular orbits $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ and $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$. However, it turns out that also the $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ transitions have to be considered, since the almost coincide in energy. Therefore, the following approach is chosen for the theoretical prediction:
+
+
+
 \subsection{Low lying states}
 
 
 
 \section{Bound muon g factor in Helium-4}
 \label{sec:muon_he}
+
+
+
+%
+%
+\begin{table}
+%\begin{ruledtabular}
+\centering
+\begin{footnotesize}
+\begin{tabular}{llll}
+Effect                  & Term                  & Numerical value                 & Ref. \\
+\hline
+Dirac value             &                       & \phantom{-}1.999 857 988 8      & \cite{breit1928,CODATA2014} \\
+Finite nuclear size     &                       & \phantom{-}0.000 000 094 6(4)   & \cite{Angeli2013} \\
+Nuclear pol.    &                       & \phantom{-}0.000 000 000 0(10)  &  \\
+One-loop SE             & $(Z \alpha)^0$        & \phantom{-}0.002 322 819 5      & \cite{Schwinger48,CODATA2014} \\
+                        & all-order binding     & \phantom{-}0.000 000 084 9(10)  & \\
+One-loop VP             & \textcolor{red}{$e$VP, Uehling}        & \textcolor{red}{-0.000 000 479 6}                & \cite{Karshenboim2001} \\
+                        & $e$VP, magnetic loop  & \phantom{-}0.000 000 127 2(4)   & \\
+                        & \textcolor{red}{$\mu$VP, Uehling}      &           \textcolor{red}{-0.000 000 000 1}      & \cite{Karshenboim2001}\\
+                        & hadronic VP, Uehling  &           -0.000 000 000 1(1)   & \\
+Two-loop QED            &  $(Z \alpha)^0$       & \phantom{-}0.000 008 264 4      &  \cite{Peterman57,Sommerfield58} \\
+                        & SE-SE, $(Z \alpha)^2$--- $(Z \alpha)^5$ & -0.000 000 000 1& \cite{Eides1997,Czarnecki2000,Pachucki2005,czarnecki2018}\\
+                        & S(eVP)E, $(Z \alpha)^2$                 & \phantom{-}0.000 000 000 4& \cite{Peterman57,Sommerfield58,Eides1997,Czarnecki2000}\\
+                        & \textcolor{red}{Second-order Uehling}  & \textcolor{red}{-0.000 000 001 1(4)}             & \\
+                        & \textcolor{red}{K\"all\'en-Sabry}      & \textcolor{red}{-0.000 000 003 5}                & \\
+                        & magnetic loop+Uehling & \phantom{-}0.000 000 000 3      & \\
+                        & uncalculated LBL      & \phantom{-}0.000 000 000 0 (50) & \\
+$\ge$ Three-loop QED    & $(Z \alpha)^0$        & \phantom{-}0.000 000 610 6      & \cite{Laporta96,Aoyama07,Aoyama12,CODATA2014} \\
+Nuclear recoil          & $\left(\frac{m_{\mu}}{M}\right)^1$, all orders in $Z \alpha$  & \phantom{-}0.000 006 038 2 &  \cite{Shabaev2002}\\
+                        & $\left(\frac{m_{\mu}}{M}\right)^{2+}$, $(Z \alpha)^2$ & -0.000 000 488 7 &  \cite{Pachucki2008}\\
+                        & radiative recoil      &  -0.000 000 004 7 & \cite{Grotch1970}\\
+Weak interaction        & $(Z\alpha)^0$         &  \phantom{-}0.000 000 003 1     & \cite{Czarnecki96,CODATA2014} \\
+Hadronic  &  $(Z\alpha)^0$        &  \phantom{-}0.000 000 139 3(12) & \cite{Prades10,Nomura13,Kurz14,CODATA2014} \\
+\hline\\
+Sum of terms calculated &     &  \hspace{-1.0cm}\phantom{-}2.002 195 193 4(20)${}_{\rm calc}$(50)${}_{\rm uncalc}$ & \\
+\end{tabular}
+\caption{\label{tab:gHe} Various contributions to the $g$ factor of $\mu{}^4$He$^+$. The abbreviations are:
+{eVP}/{$\mu$VP}: VP due to virtual $e^-e^+$/$\mu^- \mu^+$ pairs. The estimated uncertainty of the nuclear size
+effect stems from the error bar of the root-mean-square nuclear radius and the uncertainty of the nuclear charge distribution
+model. The uncertainty is negligible, i.e., much less than 1 in the last digit, in the case of the terms for which none is indicated.
+In the last row, the uncertainties due to the calculated and uncalculated (two-loop LBL) terms are given separately. The table is taken from Ref~\cite{sikora2018} and the contributions highlighted in red were performed in the framework of this thesis.
+}
+%\end{ruledtabular}
+\end{footnotesize}
+\end{table}
+%
+%
+
+
+
 
 \section{Summary}
 \label{sec:muon_summary}
