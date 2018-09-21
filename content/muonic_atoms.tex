@@ -184,6 +184,7 @@ The uncertainties include the error in the rms radius value as well as a model e
 
 %begin table
 \begin{table}[b]
+\setlength\extrarowheight{3pt}
 \caption{\label{tab:sphDirac}
 Overview of the binding energies for muonic $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr, obtained by solving the Dirac equation with the spherically symmetric parts of the muon-nucleus interaction. The values for solving the Dirac equation only with the electric monopole potential, and with the electric monopole potential and the Uehling potential are presented to show the influence of the leading order vacuum polarization. The binding energies \eqref{eq:finestructure_formula_2} for a  point like nucleus are shown as well. The reduced mass is used to include the non-relativistic recoil corrections from Section~\ref{sec:recoil}. The corrections from section~\ref{sec:screen} are not included in this table. All energies are in keV.}
 %\begin{ruledtabular}
@@ -260,6 +261,7 @@ In relativistic quantum mechanics, this separation is not possible. We follow an
 where $M_N$ is the mass of the nucleus, and the functions $h(r)$ and $P_1(r)$ are defined in Eqs. (109) and (111) of Ref.~\cite{BorieRinker1982}, respectively. In Table~\ref{tab:recoil}, the binding energies obtained from solving the Dirac equation with the muon rest mass and the reduced mass of the muon-nucleus system are compared, and the leading relativistic recoil correction is shown. The uncertainties include errors in the rms radius, the model of the charge distribution and for the relativistic recoil, and a $(m_\mu/M_N)^2$ term due to higher-order corrections in the mass ratio of muon and nucleus, which dominates the uncertainty for lower $Z$.
 %begin table
 \begin{table}
+\setlength\extrarowheight{3pt}
 \caption{\label{tab:recoil}Recoil corrections to the binding energies of the muon. fm (full mass) denotes the finite size binding energy, analogous to the fourth column of Table~\ref{tab:sphDirac}, but with the rest mass of the muon used in the Dirac equation. $\Delta E_{\text{rec,nr}}$ is the non-relativistic recoil correction, which is the difference between the finite size Dirac solutions with reduced mass and full mass, respectively. $\Delta E^{\text{(rec,rel)}}_{n\kappa}$ is the leading relativistic recoil correction from Section~\ref{sec:recoil}.
 All energies are in keV.}
 %\begin{ruledtabular}
@@ -304,6 +306,7 @@ All energies are in keV.}
 \label{sec:screen}
 %begin table
 \begin{table}
+\setlength\extrarowheight{3pt}
 \caption{\label{tab:screen}Electron screening corrections to the bound muon energy levels. $\Delta E_{\rm{S,eff}}^{(1)}$ and $\Delta E_{\rm{S,eff}}^{(1+2)}$ are the screening corrections with the effective nuclear charge method, whereas $\Delta E_{\rm{S,3step}}^{(1)}$ and $\Delta E_{\rm{S,3step}}^{(1+2)}$ use the 3 step calculation, both described in Section~\ref{sec:screen}. For the superscript $(1)$, only the 1s electrons are considered, while for $({1}{+}{2})$, all electrons from the first and second shell are considered. All energies are in keV.}
 %\begin{ruledtabular}
 \centering
@@ -360,6 +363,7 @@ The interaction between the electrons is not taken into account here. Finally, t
 \label{sec:elQuad1}
 %begin hfs table
 \begin{table*}
+\setlength\extrarowheight{3pt}
 \begin{small}
 \caption{\label{tab:hfs}
 Results for the electric quadrupole and magnetic dipole hyperfine splitting for a selection of hyperfine states of muonic $^{205}_{83}$Bi ($I=\frac{9}{2}$), $^{147}_{62}$Sm ($I=\frac{7}{2}$), and $^{89}_{40}$Zr ($I=\frac{9}{2}$). $\braket{H_E^{(2)}}$ are the values of the electric quadrupole splitting. $\braket{H_M^{\rm{hom}}}$ is the magnetic dipole splitting from Eq.~\ref{eq:hmag} using a homogeneous nuclear current distribution and $\braket{H_M^{\rm{sp}}}$ using the nuclear magnetization distribution in the single particle model. See Sections~\ref{sec:elQuad1} and~\ref{sec:magndip} for definitions. All energies are in keV.}
@@ -1148,17 +1152,225 @@ In the following, the muonic transition energies and transition probabilities ar
 
 
 \subsection{Extraction of quadrupole moment from $5g\rightarrow 4f$ transitions}
+\label{sec:extraction}
 After a muon is captured and starts cascading towards its ground state, there is an intermediate region, where finite nuclear size effects are still rather small and the muon is not influenced by the surrounding atomic electrons. Therefore, the system is essentially hydrogen-like and no many-body problem needs to be solved. It has been realized, that in this region, corresponding to the ${n}{=}{5}\rightarrow{n}{=}{4}$ transitions, nuclear quadrupole moments can be extracted, which has been done for Lutetium-175 in Ref.~\cite{Dey1979} and for natural Rhenium in Ref.~\cite{konijn1979}.
 As a first application of the spectrum-calculation presented in this thesis, the dependence of the transition energies and intensities of the muonic $N$ x rays on the nuclear quadrupole moment is calculated, and by comparing to recent measurements of isotopically pure $^{185}$Re, a new value for its quadrupole moment is obtained.
 
-Following Sec.~\ref{sec:transitions}, the most intense transitions are the $E1$-transitions in the circular orbits $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ and $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$. However, it turns out that also the $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ transitions have to be considered, since the almost coincide in energy. Therefore, the following approach is chosen for the theoretical prediction:
+Following Sec.~\ref{sec:transitions}, the most intense transitions are the $E1$-transitions in the circular orbits $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ and $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$. However, it turns out that also the $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ transitions have to be considered, since the almost coincide in energy with the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$ energies around $365\,$keV. Therefore, the following approach is chosen for the theoretical prediction: The four fine structure states of the initial states $5g\nicefrac{9}{2},\,5g\nicefrac{7}{2},\,5f\nicefrac{7}{2}\,,5f\nicefrac{5}{2}$ together with the nuclear ground state with $I=5/2$ define a first model space. Now, the formalism described in Sec.~\ref{sec:muon_dynamic} can be used to calculate the energies in this modelspace, including finite size effects, vacuum polarization (Uehling, Källen-Sabry, Wichmann-Kroll in point-like approximation, quadrupole-Uehling), and rediagonalization of the electric quadrupole and magnetic dipole hyperfine interaction.
+Excited nuclear states do not need to be considered, since these states only contribute, if the quadrupole interaction is on the same order of magnitude compared to the nuclear rotational states. For the $N$ x rays, the nuclear energy splitting is around three orders of magnitude larger. Furthermore, due to the small hyperfine splitting in the ${n}{\in}{\{4,5\}}$ states, the residual second order terms, as described in Sec.~\ref{sec:muon_residualSO}, are very small.
+The same procedure is repeated for the final states with ${n}{=}{4}$, i.e. $4f\nicefrac{7}{2},\,4f\nicefrac{5}{2},\,4d\nicefrac{5}{2},\,4f\nicefrac{3}{2}$. Then, the transition probabilities can be calculated from each initial to each final state. For this analysis, the relativistic formulas for $E1$ and $M1$ transitions from Sec.~\ref{sec:transitions} are used, assuming an initial population $\sim 2F+1$ for each initial state with total angular momentum $F$. With this approach, every transition energy and corresponding intensity can be calculated for a give nuclear charge distribution. A deformed Fermi distribution is assumed, which reads as
+\begin{equation}
+\rho_N(r_N,\vartheta_N)=\cfrac{N}{1+\e^{\frac{r-c(1+\beta \text{Y}_{20}(\vartheta))}{a}}},
+\end{equation}
+where $N$ is a normalization constant fixed by the condition $\int\text{d}V \rho(r,\vartheta) = Z$.
+The three parameters $a$, $c$, $\beta$ are calculated using $a=2.3\,\text{fm}/(4\ln3)$, which is a reasonable estimate for most nuclei~\cite{Beier2000}, such that the RMS charge radius agrees with the literature value from Ref.~\cite{Angeli2013}, and the spectroscopic quadrupole moment with some given value $Q$. The connection of the spectroscopic quadrupole $Q$ moment with the nuclear charge distribution for a nucleus with ground state angular momentum $I$ is
+\begin{equation}
+Q = 4\pi\frac{I(2I-1)}{(I+1)(2I+3)}\int\limits_0^\infty\text{d}r_N \int\limits_0^\pi\text{d}\vartheta_N\,
+r_N^4 \sin\vartheta_N \rho_N(r_N,\vartheta_N)\text{P}_2(\cos\vartheta_N),
+\end{equation}
+where $\text{P}_l(x)$ are the Legendre polynomials from Appendix~\ref{app:special_func}.
+The value of the magnetic moment needed for the calculation of the magnetic dipole interaction is taken from~\cite{STONE2016}. The influence of finite size effects was checked by also using charged shell and homogeneously charged sphere distribution.
+With this parametrization, the entire spectrum can be calculated for a given spectroscopic quadrupole moment and by fitting the theoretically calculated spectrum to the experimental measured one, the quadrupole moment can be extracted. 
+% check what really is fitted.
+The difference of two transition energies is especially sensitive on the quadrupole moment, since
+the majority of the uncertainty due to finite nuclear size effects cancels, as described in~\cite{konijn1979}. Therefore, the energy differences of all $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ compared to the most intense transition in this group is calculated and analogously the corresponding intensities are given relative to the most intense transition. The same holds for the group of the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{5}{2}$ and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ transitions. The absolute intensity and energy of the most intense transition is then fitted to the experimental spectrum. As a consequence, the theoretical calculations need to provide all relative transition energies and intensities compared to the most intense transition in the corresponding group as a function of the quadrupole moment. Here, it is too expensive to perform full calculations in the fitting process. Instead, the full calculations are performed for several values of the quadrupole moment in the proximity of the expected value and a quadratic function is fitted for every transition energy and intensity. The resulting dependencies are given in Table~\ref{tab:re185energ} for the relative transition energies and in Table~\ref{tab:re185intens} for the intensities.
+
+The fitted experimental spectrum is shown in Fig.~\ref{fig:re54} and thereby, the extracted spectroscopic quadrupole moment of $^{185}$Re is
+\begin{equation}
+Q_{\text{Re-}185} = 2.15(5)\,\text{barn}???.
+\end{equation}
 
 
-
+%re185 5-4 figure
+\begin{figure}%
+\centering
+\includegraphics[width=0.99\textwidth]{pics/Re185_Exp}
+\caption{
+Experimental spectrum for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The black dots are the measurements, the red line is the total theoratical predicition, and the colored lines below are the separate lines convoluted with the detector response function.
+}
+\label{fig:re54}
+\end{figure}
+%
+%
+%
+%re185 tables
+%
+\begin{table}[b]
+%\setlength\extrarowheight{1pt}
+\caption{\label{tab:re185energ}%
+Quadratic fits of the transitions energies for the 15 most intense transitions each for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The formula for the transition energy in terms of a give quadrupole moment $Q$ is $E(Q)=A_q \, Q^2 + A_l \, Q + A_c$. See Sec.~\ref{sec:extraction} for details.}
+%\begin{ruledtabular}
+\centering
+\begin{small}
+\begin{tabular}{cc|rrr}
+Group& $F_i \rightarrow F_f$ & $A_q [\text{eV/barn}^2]$ & $A_l [\text{eV/barn}]$ & $A_c [\text{eV}]$\\[1pt]\hline%\\[1pt]
+$5g\nicefrac{9}{2} \rightarrow 4f\nicefrac{7}{2}$ &7 $\rightarrow$ 6&0.000&0.000&0.000\\
+&6 $\rightarrow$ 6&0.436&-113.004&-4.375\\
+&6 $\rightarrow$ 5&-4.010&375.085&8.167\\
+&5 $\rightarrow$ 6&0.008&-130.644&-8.610\\
+&5 $\rightarrow$ 5&-4.437&357.446&3.932\\
+&5 $\rightarrow$ 4&-0.001&385.944&20.415\\
+&4 $\rightarrow$ 5&-4.347&397.780&0.588\\
+&4 $\rightarrow$ 4&0.089&426.279&17.071\\
+&4 $\rightarrow$ 3&-1.339&210.326&28.123\\
+&3 $\rightarrow$ 4&0.245&494.714&14.351\\
+&3 $\rightarrow$ 3&-1.183&278.762&25.403\\
+&3 $\rightarrow$ 2&-2.381&-23.728&33.770\\
+&2 $\rightarrow$ 3&-1.218&351.042&23.416\\
+&2 $\rightarrow$ 2&-2.416&48.552&31.783\\
+&2 $\rightarrow$ 1&-1.505&-218.762&36.596\\[10pt]
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$ &6 $\rightarrow$ 5&0.000&0.000&0.000\\
+&5 $\rightarrow$ 5&0.428&-116.820&-6.093\\
+&5 $\rightarrow$ 4&-4.024&397.880&15.168\\
+&4 $\rightarrow$ 5&0.337&-125.046&-11.358\\
+&4 $\rightarrow$ 4&-4.115&389.654&9.903\\
+&4 $\rightarrow$ 3&-2.681&339.955&29.045\\
+&3 $\rightarrow$ 4&-4.270&441.263&5.736\\
+&3 $\rightarrow$ 3&-2.837&391.564&24.878\\
+&3 $\rightarrow$ 2&-1.625&86.361&39.154\\
+&2 $\rightarrow$ 3&-2.802&464.360&21.699\\
+&2 $\rightarrow$ 2&-1.590&159.157&35.976\\
+&2 $\rightarrow$ 1&-2.486&-173.161&46.258\\
+&1 $\rightarrow$ 2&-1.371&223.978&33.798\\
+&1 $\rightarrow$ 1&-2.267&-108.340&44.081\\
+&1 $\rightarrow$ 0&-3.990&-313.013&49.331\\[10pt]
+$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ &6 $\rightarrow$ 5&0.000&0.000&0.000\\
+&5 $\rightarrow$ 5&2.362&-252.893&-6.398\\
+&5 $\rightarrow$ 4&-39.316&1143.990&-7.719\\
+&4 $\rightarrow$ 5&0.008&-267.574&-14.961\\
+&4 $\rightarrow$ 4&-41.671&1129.310&-16.283\\
+&4 $\rightarrow$ 3&-3.004&941.964&47.554\\
+&3 $\rightarrow$ 4&-40.921&1241.180&-21.987\\
+&3 $\rightarrow$ 3&-2.253&1053.834&41.849\\
+&3 $\rightarrow$ 2&-21.172&231.728&70.440\\
+&2 $\rightarrow$ 3&-1.623&1210.520&37.533\\
+&2 $\rightarrow$ 2&-20.541&388.414&66.123\\
+&2 $\rightarrow$ 1&-23.480&-470.776&68.557\\
+&1 $\rightarrow$ 2&-21.020&526.858&63.654\\
+&1 $\rightarrow$ 1&-23.959&-332.332&66.088\\
+&1 $\rightarrow$ 0&1.647&-870.304&73.088
+\end{tabular}
+%\end{ruledtabular}
+\end{small}
+\end{table}
+%
+%
+%
+\begin{table}[b]
+%\setlength\extrarowheight{1pt}
+\caption{\label{tab:re185intens}%
+Quadratic fits of the intensities for the 15 most intense transitions each for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The formula for the transition energy in terms of a give quadrupole moment $Q$ is $E(Q)=B_q \, Q^2 + B_l \, Q + B_c$. See Sec.~\ref{sec:extraction} for details.}
+%\begin{ruledtabular}
+\centering
+\begin{small}
+\begin{tabular}{cc|rrr}
+Group& $F_i \rightarrow F_f$ & $B_q [\%\text{/barn}^2]$ & $B_l [\%\text{/barn}]$ & $B_c [\%]$\\[1pt]\hline%\\[1pt]
+$5g\nicefrac{9}{2} \rightarrow 4f\nicefrac{7}{2}$ & 7 $\rightarrow$ 6&0.000&0.000&100.000\\
+ & 6 $\rightarrow$ 6&-0.011&-0.115&8.045\\
+ & 6 $\rightarrow$ 5&-0.009&0.384&78.602\\
+ & 5 $\rightarrow$ 6&0.000&-0.002&0.311\\
+ & 5 $\rightarrow$ 5&-0.012&0.036&12.375\\
+ & 5 $\rightarrow$ 4&0.000&0.215&60.644\\
+ & 4 $\rightarrow$ 5&-0.001&0.012&0.669\\
+ & 4 $\rightarrow$ 4&-0.001&0.109&13.527\\
+ & 4 $\rightarrow$ 3&-0.002&0.007&45.818\\
+ & 3 $\rightarrow$ 4&0.000&0.019&0.837\\
+ & 3 $\rightarrow$ 3&-0.001&0.104&11.900\\
+ & 3 $\rightarrow$ 2&-0.002&-0.103&33.944\\
+ & 2 $\rightarrow$ 3&0.000&0.013&0.619\\
+ & 2 $\rightarrow$ 2&-0.001&0.050&7.725\\
+ & 2 $\rightarrow$ 1&-0.001&-0.105&25.000\\[10pt]
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$ & 6 $\rightarrow$ 5&0.000&0.000&100.000\\
+ & 5 $\rightarrow$ 5&0.022&0.218&12.062\\
+ & 5 $\rightarrow$ 4&0.037&0.360&72.591\\
+ & 4 $\rightarrow$ 5&0.003&0.024&0.730\\
+ & 4 $\rightarrow$ 4&0.008&0.088&18.102\\
+ & 4 $\rightarrow$ 3&0.021&0.398&50.423\\
+ & 3 $\rightarrow$ 4&0.001&0.009&1.642\\
+ & 3 $\rightarrow$ 3&0.012&-0.046&19.212\\
+ & 3 $\rightarrow$ 2&0.013&0.257&33.003\\
+ & 2 $\rightarrow$ 3&0.002&-0.022&2.192\\
+ & 2 $\rightarrow$ 2&0.009&-0.097&16.477\\
+ & 2 $\rightarrow$ 1&0.009&0.094&19.797\\
+ & 1 $\rightarrow$ 2&0.001&-0.027&1.829\\
+ & 1 $\rightarrow$ 1&0.004&-0.078&10.989\\
+ & 1 $\rightarrow$ 0&0.005&-0.008&10.262\\[10pt]
+$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ & 6 $\rightarrow$ 5&0.000&0.000&100.000\\
+ & 5 $\rightarrow$ 5&-0.042&-0.308&12.106\\
+ & 5 $\rightarrow$ 4&-0.106&1.217&72.303\\
+ & 4 $\rightarrow$ 5&0.000&-0.002&0.738\\
+ & 4 $\rightarrow$ 4&-0.106&0.344&18.039\\
+ & 4 $\rightarrow$ 3&-0.007&0.381&50.338\\
+ & 3 $\rightarrow$ 4&-0.016&0.086&1.639\\
+ & 3 $\rightarrow$ 3&-0.002&0.330&19.267\\
+ & 3 $\rightarrow$ 2&-0.019&-0.188&32.976\\
+ & 2 $\rightarrow$ 3&-0.001&0.097&2.206\\
+ & 2 $\rightarrow$ 2&-0.009&0.170&16.510\\
+ & 2 $\rightarrow$ 1&-0.018&-0.276&19.773\\
+ & 1 $\rightarrow$ 2&0.000&0.056&1.836\\
+ & 1 $\rightarrow$ 1&-0.010&0.009&10.995\\
+ & 1 $\rightarrow$ 0&0.000&-0.157&10.257\\
+\end{tabular}
+%\end{ruledtabular}
+\end{small}
+\end{table}
+%
+%
+%
 \subsection{Low lying states}
+\label{sec:low_lying}
+
+
+The corresponding comparison for the $K$ x rays is shown in Fig.~\ref{fig:185Re_K} and in Fig.~\ref{fig:re54_L} for the L x rays.
+% figure k x rays
+\begin{figure}%
+\centering
+\includegraphics[width=0.99\textwidth]{pics/185Re_K}
+\caption{
+Comparison of experimental spectrum and theoretical calculations in the area of the $K$ x rays for muonic Re-185. For details of the calculations, see Sec.~\ref{sec:low_lying}.
+}
+\label{fig:re54_K}
+\end{figure}
+%
+%
+% figure l x rays
+\begin{figure}%
+\centering
+\includegraphics[width=0.99\textwidth]{pics/185Re_L}
+\caption{
+Comparison of experimental spectrum and theoretical calculations in the area of the $L$ x rays for muonic Re-185. For details of the calculations, see Sec.~\ref{sec:low_lying}.
+}
+\label{fig:re54_L}
+\end{figure}
+% 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\cleardoublepage
 \section{Bound muon g factor in Helium-4}
 \label{sec:muon_he}
 
@@ -1167,6 +1379,7 @@ Following Sec.~\ref{sec:transitions}, the most intense transitions are the $E1$-
 %
 %
 \begin{table}
+\setlength\extrarowheight{7pt}
 %\begin{ruledtabular}
 \centering
 \begin{footnotesize}
@@ -1196,7 +1409,7 @@ Nuclear recoil          & $\left(\frac{m_{\mu}}{M}\right)^1$, all orders in $Z \
 Weak interaction        & $(Z\alpha)^0$         &  \phantom{-}0.000 000 003 1     & \cite{Czarnecki96,CODATA2014} \\
 Hadronic  &  $(Z\alpha)^0$        &  \phantom{-}0.000 000 139 3(12) & \cite{Prades10,Nomura13,Kurz14,CODATA2014} \\
 \hline\\
-Sum of terms calculated &     &  \hspace{-1.0cm}\phantom{-}2.002 195 193 4(20)${}_{\rm calc}$(50)${}_{\rm uncalc}$ & \\
+Sum of terms calculated &     &  \multicolumn{2}{l}{\phantom{-}2.002 195 193 4(20)${}_{\rm calc}$(50)${}_{\rm uncalc}$}  \\[8pt]
 \end{tabular}
 \caption{\label{tab:gHe} Various contributions to the $g$ factor of $\mu{}^4$He$^+$. The abbreviations are:
 {eVP}/{$\mu$VP}: VP due to virtual $e^-e^+$/$\mu^- \mu^+$ pairs. The estimated uncertainty of the nuclear size
