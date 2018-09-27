@@ -1,6 +1,6 @@
-\chapter{Bound state QED in the Furry picture}
+\chapter{Bound state quantum electrodynamics in the Furry picture}
 \label{ch:furry_pic}
-In this thesis, relativistic atomic structure calculations for investigating nuclear effects on the energy levels of electrons or muons bound in the potential of an atomic nucleus are performed. This is based on solving the Dirac equation for the bound fermion in the nuclear potential. Here, the Dirac equation is often seen as a one particle equation describing the bound muon or electron. However, the one particle interpretation of the Dirac equation is problematic, especially if radiative effects like vacuum polarization are considered. The relativistic quantum field theory for describing the electromagnetic interaction on an atomic scale is quantum electrodynamics (QED). Therefore, in this chapter, the starting point is the Lagrangian of QED, and results will be derived from thereon.
+In this thesis, relativistic atomic structure calculations are performed in order to investigate nuclear effects on the energy levels of electrons or muons bound in the potential of an atomic nucleus. In this chapter, the starting point is the Lagrangian of quantum electrodynamics (QED), and results will be derived from thereon. This includes the derivation of the Dirac equation for a classical field as the zero-order solution and radiative corrections due to virtual particles. The analytical solution of the Dirac equation for the relativistic Coulomb problem is discussed, as well as numerical solutions for arbitrary nuclear potentials. Finally, the leading order Vacuum polarization corrections are considered.
 %\begin{itemize}
 %\item Treatment of perturbations in Furry picture(mixed QED+HFS)
 %\item Treatment of nuclear structure effects in Furry picture (nuclear excited states)
@@ -10,21 +10,22 @@ In this thesis, relativistic atomic structure calculations for investigating nuc
 %\item conventions for propagators: itzykson
 %\item for appendix:  feynman rules (position sp.) qed from itzykson
 %\end{itemize} 
-\section{The external field approximation in QED}
+\section{The external field approximation}
 \label{sec:ext_field}
 A huge success of the Dirac equation~\cite{dirac1928} was the correct prediction of the fine structure of the hydrogen atom. Originally intended to be a relativistic generalization of the Schrödinger equation, it was a one-particle equation for a classical field. 
-However, a relativistic quantum theory always has to be a many-body theory, since for high energies effects like pair creation have to be considered. The relativistic quantum field theory suitable for describing the electromagnetic interaction is quantum electrodynamics (QED). In this framework, the bound state energies of atomic systems can be obtained including radiative corrections due to the quantized photon field and virtual particle-antiparticle pairs. 
+However, a relativistic quantum theory always has to be a many-body theory, since for high energies effects like pair creation have to be considered. The relativistic quantum field theory suitable for describing the electromagnetic interaction is QED. In this framework, the bound state energies of atomic systems can be obtained including radiative corrections due to the quantized photon field and virtual particle-antiparticle pairs. 
 
-In this thesis, hydrogen-like systems and heavy nuclei are considered, so a single fermion (electron or muon) bound to a nucleus with a high charge number $Z$. The interaction strength of electron and nucleus is characterized by the parameter $Z\alpha$, where $\alpha \approx 1/137$ is the fine-structure constant. For high $Z$, this parameter is not small and as a result the Coulomb interaction between fermion and nucleus cannot be treated in perturbation theory. 
-For heavy nuclei, the mass ratio $m/M$, where $m$ is the fermion and $M$ is the nuclear mass, is small. Accordingly, the external field approximation ~\cite[\mbox{Section~13.6}]{weinberg2005} $m/M \rightarrow 0$ can be used, which is also called the Furry picture of QED~\cite{furry1951}. Here, recoil effects are neglected and the nucleus is considered as the source of a classical electromagnetic field, which the bound fermion is exposed to.
+In this thesis, hydrogen-like systems and heavy nuclei are considered, so a single fermion (electron or muon) bound to a nucleus with a high charge number $Z$. The interaction strength of electron and nucleus is characterized by the parameter $Z\alpha$, where $\alpha \approx 1/137$ is the fine-structure constant. For high $Z$, this parameter is not small and as a result the Coulomb interaction between fermion and nucleus cannot be treated in perturbation theory effectively. 
+For heavy nuclei, the fermion-nucleus mass ratio $m_f/M$ is small. Accordingly, the external field approximation ~\cite[\mbox{Section~13.6}]{weinberg2005} $m_f/M \rightarrow 0$ can be used, which is also called the Furry picture of QED~\cite{furry1951}. Here, recoil effects are neglected and the nucleus is considered as the source of a classical electromagnetic field, which the bound fermion is exposed to.
 
-The basis of the derivations in this chapter is the Lagrangian of QED
+The starting point of the derivations in this chapter is the QED Lagrangian 
 \begin{alignat}{6}
 \label{eq:Lqed}
-\mathcal{L}_{\text{QED}}&=\phantom{:}\bar{\psi}\left( i \gamma^\mu \partial_\mu -m  \right)\psi &&-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}&&-e\bar{\psi}\gamma^\mu \psi A_\mu,\\
-&\eqqcolon \mathcal{L}_{\text{free}}^{\text{D}} &&+ \mathcal{L}_{\text{free}}^{\text{E.M.}} &&+ \mathcal{L}_{\text{int}} \nonumber
+\mathcal{L}_{\text{QED}}
+&\coloneqq \mathcal{L}_{\text{free}}^{\text{D}} &&+ \mathcal{L}_{\text{free}}^{\text{E.M.}} &&+ \mathcal{L}_{\text{int}} \\
+&\coloneqq\bar{\psi}\left( i \gamma^\mu \partial_\mu -m_f \right)\psi &&-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}&&-e\bar{\psi}\gamma^\mu \psi A_\mu,\notag
 \end{alignat}
-which is the sum of the free Dirac, the free electromagnetic and the interaction Lagrangian. Here, $\psi(x)$ is the fermion field operator, $F_{\mu\nu}=\partial_\mu A_\nu - \partial_\nu A_\mu$ the field strength tensor of the electromagnetic four-potential $A_\mu(x)$. Detailed introductions to QED starting from this Lagrangian can be found in several excellent textbooks, e.g.~\cite{weinberg2005,itzykson2005,peskin1995}, thus the focus of this section is on the external field approximation and extraction of bound state energies. The counter terms are not included, so the derivations here should be understood on a formal level, for calculations including the counterterms and renormalization, see e.g. \cite[Section 14]{weinberg2005}, \cite{shabaev2002_2}.
+which is the sum of free Dirac, free electromagnetic and interaction Lagrangian. Here, $\psi(x)$ is the fermion field operator, $F_{\mu\nu}=\partial_\mu A_\nu - \partial_\nu A_\mu$ the field strength tensor of the electromagnetic four-potential $A_\mu(x)$. Detailed introductions to QED starting from this Lagrangian can be found in several excellent textbooks, e.g.~\cite{weinberg2005,itzykson2005,peskin1995}, thus the focus of this section is on the external field approximation and extraction of bound state energies. The counter terms are not included, so the derivations here should be understood on a formal level, for calculations including the counterterms and renormalization, see \mbox{e.g.~\cite[Section 14]{weinberg2005},~\cite{shabaev2002_2}.}
 
 In the external field approximation, the electromagnetic four-potential is written as
 \begin{equation}
@@ -35,28 +36,28 @@ where $\mathcal{A}_\mu(x)$ is the classical four-potential, caused by the nuclea
 \label{eq:Lint}
 \mathcal{L}_{\text{int}}=-e\bar{\psi}\gamma^\mu \psi \mathcal{A}_\mu-e\bar{\psi}\gamma^\mu \psi \hat{A}_\mu\eqqcolon\mathcal{L}_{\text{int}}^{\text{C}} + \mathcal{L}_{\text{int}}^{\text{Q}}.
 \end{equation}
-For hydrogen-like systems, bound state energies can be extracted from the poles of the fermion propagator. In the following, it is demonstrated how the poles of the propagator in the interacting theory can be obtained approximately by perturbation theory in powers of the finestructure constant $\alpha$, including the interaction with the classical field to all orders. For this, the full propagator is connected to the propagator in the external classical field and to the propagator of the free theory.
+For hydrogen-like systems, bound state energies can be extracted from the poles of the fermion propagator. In the following, it will be demonstrated how the poles of the propagator in the interacting theory can be obtained approximately by perturbation theory in powers of the fine structure constant $\alpha$, including the interaction with the classical field to all orders. For this, the full propagator is connected to the propagator in the external classical field and to the propagator of the free theory.
 \subsubsection*{Propagator in the free Dirac theory}
 As a start, the Lagrangian of the free Dirac theory $\mathcal{L}_{\text{free}}^{\text{D}}$ from Eq.~\eqref{eq:Lqed} is considered. The Euler-Lagrange equations result in the Dirac equation as the equation of motion for the quantum field as
 \begin{equation}
 \label{eq:dirac}
-\left( i\gamma^\mu \partial_\mu -m \right) \psi(x) = 0.
+\left( i\gamma^\mu \partial_\mu -m_f \right) \psi(x) = 0.
 \end{equation}
 The solution of Eq.~\eqref{eq:dirac} is written as a superposition of plane-wave solutions~\mbox{\cite[Section~3.3.]{peskin1995}} as
 \begin{alignat}{2}
 & \psi(x) = 
 \int \frac{\mathrm{}d^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_\mathbf{p}}} 
-\sum_{s=1}^{2} \left(a^s_\mathbf{p}u^s(p) \e^{-ip\cdot x} + b^{s\,\dagger}_{\mathbf{p}}v^s(p) \e^{ip\cdot x} \right),\\
+\sum_{s=1}^{2} \left(a^s_\mathbf{p}u^{(s)}(p) \e^{-ip\cdot x} + b^{s\,\dagger}_{\mathbf{p}}v^{(s)}(p) \e^{ip\cdot x} \right),\\
 & \bar{\psi}(x) = 
 \int \frac{\mathrm{}d^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_\mathbf{p}}} 
-\sum_{s=1}^{2} \left(b^s_\mathbf{p}\bar{v}^s(p) \e^{-ip\cdot x} + a^{s\,\dagger}_{\mathbf{p}}\bar{u}^s(p) \e^{ip\cdot x} \right),\\
+\sum_{s=1}^{2} \left(b^s_\mathbf{p}\bar{v}^{(s)}(p) \e^{-ip\cdot x} + a^{s\,\dagger}_{\mathbf{p}}\bar{u}^{(s)}(p) \e^{ip\cdot x} \right),\\
 \end{alignat}
 where the plane wave solutions read as
 \begin{alignat}{4}
-& u_1(p)= \begin{pmatrix}\sqrt{p\cdot \sigma}\xi_1\\\sqrt{p\cdot \bar{\sigma}}\xi_1\end{pmatrix},\,&& 
-u_2(p)= \begin{pmatrix}\sqrt{p\cdot \sigma}\xi_2\\\sqrt{p\cdot \bar{\sigma}}\xi_2\end{pmatrix},\,&& 
-v_1(p)= \begin{pmatrix}\phantom{-}\sqrt{p\cdot \sigma}\xi_1\\-\sqrt{p\cdot \bar{\sigma}}\xi_1\end{pmatrix},\,&& 
-v_2(p)= \begin{pmatrix}\phantom{-}\sqrt{p\cdot \sigma}\xi_2\\-\sqrt{p\cdot \bar{\sigma}}\xi_2\end{pmatrix}\notag\\
+& u^{(1)}(p)= \begin{pmatrix}\sqrt{p\cdot \sigma}\xi_1\\\sqrt{p\cdot \bar{\sigma}}\xi_1\end{pmatrix},\,&& 
+u^{(2)}(p)= \begin{pmatrix}\sqrt{p\cdot \sigma}\xi_2\\\sqrt{p\cdot \bar{\sigma}}\xi_2\end{pmatrix},\,&& 
+v^{(1)}(p)= \begin{pmatrix}\phantom{-}\sqrt{p\cdot \sigma}\xi_1\\-\sqrt{p\cdot \bar{\sigma}}\xi_1\end{pmatrix},\,&& 
+v^{(2)}(p)= \begin{pmatrix}\phantom{-}\sqrt{p\cdot \sigma}\xi_2\\-\sqrt{p\cdot \bar{\sigma}}\xi_2\end{pmatrix}\notag\\
 &\text{with}\\
 &\xi_1=\begin{pmatrix}1\\0\end{pmatrix},\quad
 \xi_2=\begin{pmatrix}0\\1\end{pmatrix}.\notag
@@ -65,7 +66,7 @@ The Operators $a^{s}_{\mathbf{p}}$, $b^{s}_{\mathbf{p}}$ fulfill the anticommuta
 \begin{equation}
 \left\{ a^{r}_\mathbf{p},a^{s\,\dagger}_\mathbf{q}\right\} = \left\{ b^{r}_\mathbf{p},b^{s\,\dagger}_\mathbf{q}\right\} = (2\pi)^3 \delta (\mathbf{p}-\mathbf{q})\delta_{rs},
 \end{equation}
-and zero for all other cases. The vacuum state of the theory is defined as the state destroyed by the annihilation operators as
+and zero for other combinations. The vacuum state of the theory is defined as the state destroyed by the annihilation operators as
 \begin{equation}
 a^s_\mathbf{p}\left|0\right> = b^s_\mathbf{p}\left|0\right> = 0,
 \end{equation}
@@ -76,18 +77,18 @@ while the one-particle fermion and anti-fermion states are created from the vacu
 \end{align}
 Now, the Feynman propagator can be defined as the vacuum expectation value of the time-ordered product~\cite[Section 3.5.]{peskin1995} and reads as
 \begin{equation}
-S_F(x-y)\coloneqq \left<0\right|T\psi(x)\bar{\psi}(x)\left|0\right>=\int \frac{\mathrm{d}^4p}{(2\pi)^4}\frac{ (\gamma^\mu p_\mu+m)}{p^2-m^2+i\epsilon}\e^{-ip\cdot(x-y)}.
+S_F(x-y)\coloneqq \left<0\right|T\psi(x)\bar{\psi}(x)\left|0\right>=\int \frac{\mathrm{d}^4p}{(2\pi)^4}\frac{ (\gamma^\mu p_\mu+m_f)}{p^2-m_f^2+i\epsilon}\e^{-ip\cdot(x-y)}.
 \label{eq:freepropdef}
 \end{equation}
 The Feynman propagator is a Green's function of the Dirac equation~\eqref{eq:dirac}, thus
 \begin{equation}
-\left(i\gamma^\mu \partial_\mu -m\right)S_F(x-y)=\delta(x-y)
+\left(i\gamma^\mu \partial_\mu -m_f\right)S_F(x-y)=\delta(x-y)
 \label{eq:freeprop}
 \end{equation} 
 \subsubsection*{Propagator in the external field}
 As a next step, we will consider the sum $\mathcal{L}_{\text{free}}^{\text{D}} + \mathcal{L}_{\text{int}}^{\text{C}}$ of free Dirac Lagrangian  and the interaction with the classical external field  from Eq.~\eqref{eq:Lint}. In the following, it is assumed that the external field is independent of time. The equations of motion for the fermion field are
 \begin{equation}
-\left( i \gamma^\mu \partial_\mu - m - e \gamma^\mu \mathcal{A}_\mu \right)
+\left( i \gamma^\mu \partial_\mu - m_f - e \gamma^\mu \mathcal{A}_\mu \right)
 \psi(x) = 0,
 \end{equation}
 which simply is the Dirac equation in an external field. However, this is still an equation for the quantum field. The corresponding equation for the classical Dirac field is obtained by using a complete set of states $\left|n\right>$ with energies $E_n$, where $\left|0\right>$ is the vacuum state, and define the Dirac wave functions as matrix elements of the fermion field operator~\mbox{\cite[Section 14.1]{weinberg2005}} as
@@ -103,11 +104,11 @@ Then, it can be shown from the anti-commutation relations of the field operator 
 \end{equation}
 and that both $u_n(\mathbf{x})$ and $v_n(\mathbf{x})$ satisfy the Dirac equation, now for classical fields:
 \begin{alignat}{3}
-& \left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m + e\, \mathcal{A}^0 - e\, \pmb{\alpha}\cdot \pmb{\mathcal{A}} \right) u_n(\mathbf{x}) &&=&& \phantom{-}\;\, E_n u_n(\mathbf{x}) \notag\\
-& \left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m + e\, \mathcal{A}^0 - e\, \pmb{\alpha}\cdot \pmb{\mathcal{A}} \right) v_n(\mathbf{x}) &&=&& -E_n v_n(\mathbf{x})
+& \left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m_f + e\, \mathcal{A}^0 - e\, \pmb{\alpha}\cdot \pmb{\mathcal{A}} \right) u_n(\mathbf{x}) &&=&& \phantom{-}\;\, E_n u_n(\mathbf{x}) \notag\\
+& \left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m_f + e\, \mathcal{A}^0 - e\, \pmb{\alpha}\cdot \pmb{\mathcal{A}} \right) v_n(\mathbf{x}) &&=&& -E_n v_n(\mathbf{x})
 \label{eq:diraceq}
 \end{alignat}
-The Propagator in the external field is defined, similar to Eq.~\eqref{eq:freepropdef}, as the vacuum expectation value of time-ordered product
+The propagator in the external field is defined, similar to Eq.~\eqref{eq:freepropdef}, as the vacuum expectation value of time-ordered product
 \begin{equation}
 S_{\mathcal{A}}(x,y):=\left<0_\mathcal{A}\right|T\psi(x)\bar{\psi}(x) \left|0_\mathcal{A}\right>,
 \label{eq:extpropdef}
@@ -115,10 +116,10 @@ S_{\mathcal{A}}(x,y):=\left<0_\mathcal{A}\right|T\psi(x)\bar{\psi}(x) \left|0_\m
 where $\left|0_\mathcal{A}\right>$ denotes the vacuum state in the external field.
 It is a Green's function of the equation of motion of the fermion field operator, analogously to Eq.~\eqref{eq:freeprop}:
 \begin{equation}
-\left(i\gamma^\mu \partial_\mu -m - e \gamma^\mu A_\mu\right)S_{\mathcal{A}}(x,y)=\delta(x-y)
+\left(i\gamma^\mu \partial_\mu -m_f - e \gamma^\mu A_\mu\right)S_{\mathcal{A}}(x,y)=\delta(x-y).
 \label{eq:extprop}
 \end{equation}
-Since the external field violates translation invariance, the propagator in the external field no depends on $x$ and $y$ separately, and not only on the difference $x-y$. Radiative corrections in the Furry picture can be calculated by using the usual Feynman rules and using the dressed propagator instead of the free propagator as well as solutions of the Dirac equation including the external field for the in and out states. Combining Eq.~\eqref{eq:freeprop} with Eq.~\eqref{eq:extprop} gives a relation between the propagators of the free theory and in the external field~\mbox{\cite[Section 2.5.]{itzykson2005}}, which can be solved iteratively, as
+Since the external field violates translation invariance, the propagator in the external field no depends on $x$ and $y$ separately, and not only on the difference $(x-y)$. Radiative corrections in the Furry picture can be calculated by using the usual Feynman rules and the dressed propagator instead of the free propagator as well as solutions of the Dirac equation including the external field for the in and out states. Combining Eq.~\eqref{eq:freeprop} with Eq.~\eqref{eq:extprop} gives a relation between the propagators of the free theory and in the external field~\mbox{\cite[Section 2.5.]{itzykson2005}}, which can be solved iteratively, as
 \begin{alignat}{2}
 &\,S_{\mathcal{A}}(x,y)&&= \,S_F(x-y) 
 + \int\mathrm{d}x\, \,S_F(x-z)\left(-e\gamma^\mu A_\mu(z)\right)\,S_{\mathcal{A}}(z,y)\\
@@ -135,7 +136,7 @@ As demonstrated in Fig.~\ref{fig:propagator}, this gives an intuitive picture of
 \label{fig:propagator}%
 \end{figure}
 %
-Another useful form of the Propagator in the external field is the spectral representation in terms of the Dirac wave functions~\eqref{eq:wavefct}. By inserting a complete set of states in Eq.~\eqref{eq:extpropdef}, one obtains
+Another useful form of the propagator in the external field is the spectral representation in terms of the Dirac wave functions~\eqref{eq:wavefct}. By inserting a complete set of states in Eq.~\eqref{eq:extpropdef}, one obtains
 \begin{equation}
 S_\mathcal{A}(x,y)=\Theta(x^0-y^0) \sum_n u_n(x)\bar{u}_n(y)
 -\Theta(y^0-x^0)\sum_m v_m(x)\bar{v}_m(y).
@@ -149,15 +150,15 @@ For a time-independent external field, a Fourier transformation in the zeroth co
 Therefore, bound states due to the external field lead to additional isolated poles in the propagator.
 
 \subsubsection*{Propagator of interacting theory}
-Finally, we will consider the propagator in the interacting theory, including the interaction with the quantized photon field. A similar argument as in the derivation of Eq.~\eqref{eq:spectralrep} also holds for the interacting theory~\cite[Section 14.2.]{weinberg2005}. This is, bound state energies including all radiative corrections appear as isolated poles of the full propagator. In order to locate the positions of these poles, perturbation theory with the propagator including the external field is used, expanding the propagator in powers of the finestructure constant $\alpha=e^2/(4\pi)$. The zero-order term is the dressed propagator in the background field, corresponding to solving the Dirac equation with the background field. The diagrams contributing to the radiative corrections to first order in $\alpha$ are the vacuum-polarization~(VP) and self-energy~(SE) diagrams shown in Fig.~\ref{fig:1loop} $(a)$ and $(b)$, respectively. Using the Feynman rules~\mbox{\cite[Section 6.1.]{itzykson2005}}, the propagator of the interacting theory $S_{I}(x,y)$ is expanded to first order in $\alpha$ as
+Finally, we will consider the propagator in the interacting theory, including the interaction with the quantized photon field. A similar argument as in the derivation of Eq.~\eqref{eq:spectralrep} also holds for the interacting theory~\cite[Section 14.2.]{weinberg2005}. This is, bound state energies including all radiative corrections appear as isolated poles of the full propagator. In order to locate the positions of these poles, perturbation theory with the propagator including the external field is used, expanding the propagator in powers of the fine-structure constant $\alpha$. The zero-order term is the dressed propagator in the background field, corresponding to solving the Dirac equation with the background field. The diagrams contributing to the radiative corrections to first order in $\alpha$ are the vacuum-polarization~(VP) and self-energy~(SE) diagrams shown in Fig.~\ref{fig:1loop} $(a)$ and $(b)$, respectively. Using the Feynman rules~\mbox{\cite[Section 6.1.]{itzykson2005}}, the propagator of the interacting theory $S_{I}(x,y)$ is expanded to first order in $\alpha$ as
 \begin{alignat}{2}
 &S_{I}(x,y) &&\approx S_{\mathcal{A}}(x,y) + \int \mathrm{d}^4z_1\,\mathrm{d}^4z_2\,
 S_{\mathcal{A}}(x,z_1)\,\left[\Sigma_{\text{VP}}(z_1,z_2)+\Sigma_{\text{SE}}(z_1,z_2)\right]\,S_{\mathcal{A}}(z_2,y),\notag\\
-&\text{with }\notag\\
-&\Sigma_{\text{VP}}(z_1,z_2)&&\coloneqq-\delta(z_1-z_2)(-ie\gamma^\mu)\int \text{d}z\,S_P(z_1-z)\Tr ((-ie\gamma_\mu)S_{\mathcal{A}}(z,z)),\notag\\
+&\hspace{-0.35cm}\text{with }&&\notag\\
+&\Sigma_{\text{VP}}(z_1,z_2)&&\coloneqq-\delta(z_1-z_2)(-ie\gamma^\mu)\int \text{d}z\,S_P(z_1-z)\Tr [(-ie\gamma_\mu)S_{\mathcal{A}}(z,z)],\notag\\
 &\Sigma_{\text{SE}}(z_1,z_2)&&\coloneqq(-ie\gamma^\mu)S_{\mathcal{A}}(z_1,z_2)S_P(z_1-z_2)(-ie\gamma_\mu),
 \end{alignat}
-where $g_{\mu\nu}S_P(x-y)$ is the photon propagator in position space~\mbox{\cite[Section 3.2.]{itzykson2005}}. Using the Fourier transformed functions
+where $g_{\mu\nu}S_P(x-y)$ is the photon propagator in position space (Appendix~\ref{app:conventions}). Using the Fourier transformed functions
 \begin{equation}
 \Sigma_{\text{VP/SE}}(\mathbf{z}_1,\mathbf{z}_2,E)= \int \text{d}z_1^0\, \e^{iE(z_1^0-z_2^0)}\Sigma_{\text{VP/SE}}(z_1,z_2),
 \end{equation}
@@ -169,34 +170,34 @@ and the spectral representation of the propagator from Eq.~\eqref{eq:spectralrep
 \begin{figure}%
 \centering
 \includegraphics[width=0.9\linewidth]{pics/1loop.pdf}%
-\caption{Perturbative expansion of the propagator of the interacting theory in powers of~$e^2$. The zero-order contribution is the propagator in the external field. To first order in~$e^2$, the contributions are the vacuum-polarization diagramm~$(a)$ and the self-energy diagram~$(b)$.}%
+\caption{Perturbative expansion of the propagator of the interacting theory in powers of the fine-structure constant~$\alpha$. The zero-order contribution is the propagator in the external field. To first order in~$\alpha$, the contributions are the vacuum-polarization diagramm~$(a)$ and the self-energy diagram~$(b)$.}%
 \label{fig:1loop}%
 \end{figure}
 %
 
 \subsection{Vacuum polarization potentials}
 \label{sec:vacPolTheory}
-For practical calculations of the order $\alpha$ vacuum polarization, the closed fermion loop in Fig.~\ref{fig:1loop}~b) can be expanded in numbers of interactions with the background field, using Eq.~\ref{eq:propeq}. For the case of atomic physics, since the nuclear potential is proportional to the nuclear charge number $Z$, this expansion is in powers of $Z\alpha$. The corresponding diagrams in order $\alpha(Z\alpha)$ (Uehling potential~\cite{uehling1935}) and $\alpha(Z\alpha)^3$ (Wichmann-Kroll potential~\cite{wichmann1956}) are shown in Fig.~\ref{fig:vac_pol_wk}. Since the closed loop now is formed by the free fermion propagator, all diagramms of order $\alpha(Z\alpha)^n$ with even $n$ vanish as a consequence of Furry's theorem~\mbox{\cite[Section~10.1.]{peskin1995}}. Formally, the order $\alpha (Z\alpha)$ correction $\delta S_{\text{Uehl}}$ from diagram~(a) in Fig.~\ref{fig:vac_pol_uehl} to the propagator $S_{\mathcal{A}}$ reads
+For practical calculations of the vacuum polarization of order $\alpha$, the closed fermion loop in Fig.~\ref{fig:1loop}~b) can be expanded in numbers of interactions with the background field, using Eq.~\ref{eq:propeq}. For the case of atomic physics, since the nuclear potential is proportional to the nuclear charge number $Z$, this expansion is in powers of $Z\alpha$. The corresponding diagrams in order $\alpha(Z\alpha)$ (Uehling potential~\cite{uehling1935}) and $\alpha(Z\alpha)^3$ (Wichmann-Kroll potential~\cite{wichmann1956}) are shown in Fig.~\ref{fig:vac_pol_wk}. Since the closed loop now is formed by the free fermion propagator, all diagramms of order $\alpha(Z\alpha)^n$ with even $n$ vanish as a consequence of Furry's theorem~\mbox{\cite[Section~10.1.]{peskin1995}}. Formally, the order $\alpha (Z\alpha)$ correction $\delta S_{\text{Uehl}}$ from diagram~(a) in Fig.~\ref{fig:vac_pol_uehl} to the propagator $S_{\mathcal{A}}$ reads
 \begin{alignat}{3}
 \label{eq:uehl}
 &\delta S_{\text{Uehl}}(x,y) &&=&& \int \mathrm{d}z_1\,S_{\mathcal{A}}(x,z_1)\Sigma_{\text{Uehl}}(z_1)S_{\mathcal{A}}(z_1,y)\\
-&\text{with}\notag\\
+&\hspace{-1.2cm}\text{with}\notag\\
 &\Sigma_{\text{Uehl}}(z_1) &&\coloneqq&& -\int\mathrm{d}z_2(-ie\gamma^\mu)S_P(z_1-z_2)\notag\\
-&&&&&\times\int\mathrm{d}z_3\,\Tr((-ie\gamma_\mu)S_F(z_2-z_3)(-e\gamma^\nu A_\nu (z_3))S_F(z_3-z_2)).\notag
+&&&&&\times\int\mathrm{d}z_3\,\Tr\left[(-ie\gamma_\mu)S_F(z_2-z_3)(-e\gamma^\nu A_\nu (z_3))S_F(z_3-z_2)\right].\notag
 \end{alignat}
-Analogously to the inclusion of the external field in the propagator from Eq.~\eqref{eq:extprop}, Eq.~\eqref{eq:uehl} and the corresponding iterations from diagrams (b), (c),$\,$... in Fig.~\ref{fig:vac_pol_uehl} can be summed to define a propagator $S_{\mathcal{A}+\text{Uehl}}$ which contains all iterations both in the external field and the order $\alpha (Z\alpha)$ vacuum polarization via the integral equation
+Analogously to the inclusion of the external field in the propagator from Eq.~\eqref{eq:extprop}, Eq.~\eqref{eq:uehl} and the corresponding iterations from diagrams~(b),~(c),~... in Fig.~\ref{fig:vac_pol_uehl} can be summed to define a propagator $S_{\mathcal{A}+\text{Uehl}}$ which contains all iterations both in the external field and the order~$\alpha (Z\alpha)$ vacuum polarization via the integral equation
 \begin{equation}
 S_{\mathcal{A}+\text{Uehl}}(x,y) = S_{\mathcal{A}}(x,y) +  \int \mathrm{d}z_1\,S_{\mathcal{A}}(x,z_1)\Sigma_{\text{Uehl}}(z_1)S_{\mathcal{A}+\text{Uehl}}(z_1,y).
 \label{eq:uehlsum}
 \end{equation}
 This propagator is a Green's function for the Dirac equation including the external field and the Uehling potential as
 \begin{equation}
-\left(i\gamma^\mu \partial_\mu -m - e \gamma^\mu A_\mu + \Sigma_{\text{Uehl}}\right)S_{\mathcal{A}+\text{Uehl}}(x,y)=\delta(x-y).
+\left(i\gamma^\mu \partial_\mu -m_f - e \gamma^\mu A_\mu + \Sigma_{\text{Uehl}}\right)S_{\mathcal{A}+\text{Uehl}}(x,y)=\delta(x-y).
 \label{eq:uehlprop}
 \end{equation}
-As a result, the diagrams in Fig.~\ref{fig:vac_pol_uehl} can be calculated by solving the Dirac equation~\eqref{eq:diraceq} including the Uehling potential. The same reasoning holds as well for the Wichmann-Kroll potential (Fig.~\ref{fig:vac_pol_wk}~b)) and for the order $\alpha^2(Z\alpha)$ vacuum polarization, referred to as the Källen-Sabry potential~\cite{kallen1955}, where the corresponding diagrams are shown in Fig.~\ref{fig:vac_pol_ks}. 
+As a result, the diagrams in Fig.~\ref{fig:vac_pol_uehl} can be teated by solving the Dirac equation~\eqref{eq:diraceq} including the Uehling potential. The same reasoning holds as well for the Wichmann-Kroll potential (Fig.~\ref{fig:vac_pol_wk}~b)) and for the order $\alpha^2(Z\alpha)$ vacuum polarization, referred to as the Källen-Sabry potential~\cite{kallen1955}, where the corresponding diagrams are shown in Fig.~\ref{fig:vac_pol_ks}. 
 
-Since the formal expressions for the vacuum polarization potentials contain divergences, they have to be renormalised. This Section concludes with giving the corresponding expressions for the renormalized Uehling (order $\alpha(Z\alpha)$) and Källen-Sabry (order $\alpha^2(Z\alpha)$) potentials for a virtual electron-positron pair and an extended, spherically symmetric nuclear charge distribution $\rho(r)$, which can be included in the Dirac equation. The Uehling potential reads as~\cite{Fullerton1976,Elizarov2005}
+Since the formal expressions for the vacuum polarization potentials contain divergences, they have to be renormalised. This Section concludes with giving the corresponding expressions for the renormalized Uehling (order $\alpha(Z\alpha)$) and Källen-Sabry (order $\alpha^2(Z\alpha)$) potentials for a virtual electron-positron pair and an extended, spherically symmetric nuclear charge distribution $\rho(r)$, which can be included in the Dirac equation. It is important to note, that the virtual particle in the loop can be a different one compared to the considered fermion. For example, the electronic vacuum polarization is muonic atoms is more impartent than the muonic vacuum polarization. The Uehling potential reads as~\cite{Fullerton1976,Elizarov2005}
 \begin{alignat}{2}
 &V_{\text{Uehl}}(r)&&=-\alpha \frac{2\alpha}{3\pi}\int_0^\infty \text{d}r^{\prime}\,4\pi \rho(r^\prime)\int_1^\infty \text{d}t\,\left( 1+\frac{1}{2t^2} \right)\nonumber\\[7.5pt]
 &&&\times\frac{\sqrt{t^2-1}}{t^2} \frac{\text{exp}(-2m_e|r-r^\prime|t)-\text{exp}(-2m_e(r+r^\prime)t)}{4m_er t},
@@ -241,31 +242,31 @@ with
 \begin{figure}%
 \centering
 \includegraphics[width=0.9\linewidth]{pics/vac_pol_ks.pdf}%
-\caption{Feynman diagrams corresponding to the contributions to the Källen-Sabry potential of order $\alpha^2(Z\alpha)$.}%
+\caption{Sum of Feynman diagrams corresponding to the contributions to the Källen-Sabry potential of order $\alpha^2(Z\alpha)$.}%
 \label{fig:vac_pol_ks}%
 \end{figure}
 %
 \section{Dirac equation in central potentials}
 \label{sec:sph_dirac}
-In the previous Section, the binding energies of a fermion bound by an atomic nucleus were investigated in the framework of the Furry picture of QED. The zeroth order approximations turned out to be the eigenenergies of the solutions of the Dirac equation (for a c-number field) including the nuclear background field. Furthermore, it was demonstrated that certain radiative corrections can be included as potentials in the Dirac equation as well. To a first approximation, the nuclear potential can be described by a static electric field which possesses spherical symmetry, and deviations thereof may be treated by perturbation theory later on. Thus, in this Section, the solutions of the Dirac equation for a spherical symmetric potential are discussed, mainly following~\cite{greiner2000, weinberg2005}. Then, the case of the pure Coulomb potential is discussed, where the solution can be given in closed form due to the high degree of symmetry. Finally, the dual-kinetic-balance method~\cite{Shabaev2004} for obtaining numerical solutions for arbitrary spherical symmetric potentials is discussed.
+In the previous Section, the binding energies of a fermion bound by an atomic nucleus were analyzed in the framework of the Furry picture of QED. The zeroth order approximations were shown to be the eigenenergies of the solutions of the Dirac equation (for a \mbox{$\mathbb{C}$-number} field) including the nuclear background field. Furthermore, it was demonstrated that certain radiative corrections can be included as potentials in the Dirac equation as well. To a first approximation, the nuclear potential can be described by a static electric field which possesses spherical symmetry, and deviations thereof may be treated by perturbation theory later on. Thus, in this Section, the solutions of the Dirac equation for a spherical symmetric potential are discussed, mainly following~\cite{greiner2000, weinberg2005}. Then, the case of the pure Coulomb potential is discussed, where the solution can be given in closed form due to the high degree of symmetry. Finally, the dual-kinetic-balance method~\cite{Shabaev2004} for obtaining numerical solutions for arbitrary spherical symmetric potentials is discussed.
 
 Firstly, the Dirac equation~\eqref{eq:diraceq} for the functions $v_n$ is rewritten, such that it has the same form as for $u_n$. For this, add a new range of indices $\tilde{n}$ to the original $n$ and define $u_{\tilde{n}}(x)\coloneqq v_n(x)$, $E_{\tilde{n}}\coloneqq -E_n$. Secondly, static electric background fields are considered, which corresponds to a four potential
 \begin{equation}
 \mathcal{A}_\mu(x)=(\Phi(\mathbf{x})/e,\mathbf{0}),
 \end{equation}
-where the electric potential $\phi(\mathbf{r})$ can be expressed in terms of a spherically symmetric nuclear charge distribution $\rho(\mathbf{|r|})$ as
+where the electric potential $\Phi(\mathbf{r})$ can be expressed in terms of a spherically symmetric nuclear charge distribution $\rho(\mathbf{|r|})$ as
 \begin{equation}
 \label{eq:furry_elPot}
 \Phi(\mathbf{r})=-Z\alpha\int\mathrm{d}V^{\prime}\,\frac{\rho(|\mathbf{r^{\prime}}|)}{|\mathbf{r}-\mathbf{r^{\prime}}|},
 \end{equation}
 where $\int \mathrm{d}V\,\rho(|\mathbf{r}|)=1$. Since $\Phi$ only depends on $|\mathbf{r}|$, we define $V(r)\coloneqq \Phi((r,0,0))$ for spherical coordinates $\mathbf{r}=(r,\vartheta,\varphi)$. Thereby, the Dirac equation~\eqref{eq:diraceq} reads as
 \begin{equation}
-\text{H}_D \, u_n(\mathbf{r})\coloneqq\left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m + V(r) \right) u_n(\mathbf{r}) =  E_n u_n(\mathbf{r}),
+\text{H}_D \, u_n(\mathbf{r})\coloneqq\left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m_f + V(r) \right) u_n(\mathbf{r}) =  E_n u_n(\mathbf{r}),
 \label{eq:sphdirac}
 \end{equation}
-where the eigenenergies $E_n$ contain both positive and negative values and the spectrum contains both continuum and discrete parts. $u_n(\mathbf{r})$ are the corresponding solutions in form of four-component spinors. For an arbitrary potential $V(r)$ possessing spherical symmetry, the solution can be simplified significantly by transforming the partial differential equation~\eqref{eq:sphdirac} into an ordinary differential equation.
+where the eigenenergies $E_n$ are both positive and negative and the spectrum contains both continuum and discrete parts. $u_n(\mathbf{r})$ are the corresponding solutions in form of four-component spinors. For an arbitrary potential $V(r)$ possessing spherical symmetry, the solution can be simplified significantly by transforming the partial differential equation~\eqref{eq:sphdirac} into an ordinary differential equation.
 
-For the Dirac Hamiltonian with spherically symmetry, energy eigenfunctions can be found, which also have a well-defined Parity and total angular momentum. At first, the relativistic angular momentum number $\kappa$ is introduced as a function of the orbital angular momentum quantum number $l$ and total angular momentum quantum number $j$ as
+For the Dirac Hamiltonian with spherically symmetry, energy eigenfunctions can be found, which also have a well-defined parity and total angular momentum. At first, the relativistic angular quantum number $\kappa$ is introduced as a function of the orbital angular momentum quantum number $l$ and total angular momentum quantum number $j$ as
 \begin{equation}
 \kappa(j,l) \coloneqq (-1)^{j+l+1/2} \left(j+\frac{1}{2}\right).
 \end{equation}
@@ -278,7 +279,7 @@ Since for a Dirac particle every value of $l$ has two possible values $j=l\pm 1/
 \text{Y}_{l(\kappa)m_l}(\vartheta,\varphi)\chi_{m_s},
 \label{eq:sph_spinor}
 \end{equation}
-where $\text{C}^{l_1m_1}_{l_2m_2\,l_3m_3}$ are the Clebsch-Gordan coefficients~\cite{varshalovich1988}. The functions defined in Eq.~\eqref{eq:sph_spinor} are called \textit{spherical spinors}. Direct calculations shows that a pair ($\Omega_{\kappa m}$, $\Omega_{-\kappa m}$) have the same values for $j$, but opposite parity. Motivated by the solutions of the free Dirac equation, the solution is written with an ansatz in two component spinors, with a priori different values for $\kappa_1$, $\kappa_2$, $m_1$, $m_2$. 
+where $\text{C}^{l_1m_1}_{l_2m_2\,l_3m_3}$ are the Clebsch-Gordan coefficients~\cite{varshalovich1988}. The functions defined in Eq.~\eqref{eq:sph_spinor} are called \textit{spherical spinors}. Direct calculations shows that a pair \mbox{($\Omega_{\kappa m}$, $\Omega_{-\kappa m}$)} have the same values for $j$, but opposite parity. Motivated by the solutions of the free Dirac equation, the solution is written with an ansatz in two component spinors, with a priori different values for $\kappa_1$, $\kappa_2$, $m_1$, $m_2$. 
 However, for a well defined total angular momentum and $z$-component of the total angular momentum $|\kappa_1|=|\kappa_2|$ and $m_1=m_2$ is needed. Furthermore, applying the parity operator reveals that the lower component needs to have the opposite parity compared to the upper component in order for the four-component spinor having a well-defined parity, which corresponds to the parity of the upper component, and therefore $\kappa_1=-\kappa_2$. As a result, the solutions are written as
 \begin{equation}
 u_{n\kappa m_j}(\mathbf{r})=
@@ -288,14 +289,14 @@ i f_{n\kappa}(r) \Omega_{-\kappa m_j}(\vartheta,\varphi)
 \end{pmatrix}.
 \label{eq:ansatz_dirac}
 \end{equation}
-Using this ansatz in the Dirac equation~\ref{eq:sphdirac} leads to the following system of equations for the radial functions $g_{n\kappa}(r)$ and $f_{n\kappa}(r)$:
-\begin{numcases}{}
+Using this ansatz in Eq.~\eqref{eq:sphdirac} leads to the following system of equations for the radial functions $g_{n\kappa}(r)$ and $f_{n\kappa}(r)$:
+\begin{alignat}{2}
+& \frac{\mathrm{d}g(r)}{\mathrm{d}r}+(1+\kappa)\frac{g(r)}{r}
+-\left[ E+m_f-V(r) \right] f(r) &&= 0\\[7.5pt]
+&\frac{\mathrm{d}f(r)}{\mathrm{d}r}+(1-\kappa)\frac{f(r)}{r}
++\left[ E-m_f-V(r) \right] g(r) &&= 0.
 \label{eq:radial_equations_small}
- \frac{\mathrm{d}g(r)}{\mathrm{d}r}+(1+\kappa)\frac{g(r)}{r}
--\left[ E+m-V(r) \right] f(r) = 0\\
-\frac{\mathrm{d}f(r)}{\mathrm{d}r}+(1-\kappa)\frac{f(r)}{r}
-+\left[ E-m-V(r) \right] g(r) = 0.\notag
-\end{numcases}
+\end{alignat}
 
 \subsection{Bound state solutions of the Coulomb problem}
 For a point-like nucleus with charge number $Z$, the pure Coulomb potential reads
@@ -309,34 +310,34 @@ and the radial equations~\eqref{eq:radial_equations_small} can be solved analyti
 \end{alignat}
 and for the functions $\varphi_i(r)$ the power-series ansatz
 \begin{equation}
-\varphi_i(r)=(2\lambda r)^\gamma \sum_{m=0}^\infty a^{(i)}_m (2\lambda r)^m,
+\varphi_i(r)=(2\lambda r)^\gamma \sum_{k=0}^\infty a^{(i)}_k (2\lambda r)^k,
 \end{equation}
-is assumed, where $\lambda = \sqrt{1-E^2_{n\kappa}}$ and $\gamma=\pm \sqrt{\kappa^2 - (Z\alpha)^2}$. Plugging this ansatz in the radial equations~\eqref{eq:radial_equations_small} results in recurrence relations, such that the solution can be expressed only in terms of the normalization coefficient $a^{(1)}_0$ as
+is assumed, where $\lambda = \sqrt{1-E^2_{n\kappa}}$ and $\gamma=\pm \sqrt{\kappa^2 - (Z\alpha)^2}$. Plugging this ansatz into Eq.~\eqref{eq:radial_equations_small} results in recurrence relations, such that the solution can be expressed only in terms of the normalization coefficient $a^{(1)}_0$ as
 \begin{alignat}{2}
 & \varphi_1(r)&&=a^{(1)}_0 (2\lambda r)^\gamma\, \text{F}(1-n_r,2\gamma+1,2\lambda r)\\
 & \varphi_2(r) &&= a^{(1)}_0 (\kappa -Z\alpha / \lambda) (2\lambda r)^\gamma\, \text{F}(-n_r,2\gamma+1,x) /n_r,
 \end{alignat}
-where $n_r=Z\alpha E_{n\kappa}/\lambda - \gamma$ and $\text{F}(a,b,c)$ are the hypergeometric function, as defined in Eq.~\eqref{app:def_hypergeo}. Now, for the positive value of $\gamma$, the solutions are regular at the origin, but behave as $\e^{\lambda r}$ as $r\rightarrow \infty$. On the other hand, linear combination of positive and negative values of $\gamma$ enable solutions which are regular at infinity but behave badly at the origin. Solutions regular both at the origin and at infinity can only be obtained for certain energies, corresponding to integer values of $n_r$~\cite{rose1961}. With $n=n_r+|\kappa|$, the bound state energies read
+where $n_r=Z\alpha E_{n\kappa}/\lambda - \gamma$ and $\text{F}(a,b,c)$ are the hypergeometric function, as defined in Eq.~\eqref{app:def_hypergeo}. Now, for the positive value of $\gamma$, the solutions are regular at the origin, but behave as $\e^{\lambda r}$ as $r\rightarrow \infty$. On the other hand, linear combination of positive and negative values of $\gamma$ enable solutions which are regular at infinity but are divergent at the origin. Solutions regular both at the origin and at infinity can only be obtained for certain energies, corresponding to integer values of $n_r$~\cite{rose1961}. Therefore, with $n=n_r+|\kappa|$, the bound state energies read
 \begin{equation}
 \label{eq:finestructure_formula}
-E_{n\kappa}=\cfrac{(mc^2)}{\sqrt{1+\cfrac{(Z\alpha)^2}{\left( n-|\kappa|+\sqrt{|\kappa|^2-(Z\alpha)^2} \right)^2}}},
+E_{n\kappa}=\cfrac{(m_fc^2)}{\sqrt{1+\cfrac{(Z\alpha)^2}{\left( n-|\kappa|+\sqrt{|\kappa|^2-(Z\alpha)^2} \right)^2}}},
 \end{equation}
 for $n\in \{1,2,3,...\}$ and $\kappa \in \{{-}{n},...,-1,1,...,n-1\}$.
-These solution explains the spectrum of hydrogen-like atoms to a reasonable accuracy, including fine structure splitting, as long as $Z\alpha\ll 1$. The solutions are degenerate in the sign of $\kappa$, i.e. states with the same $j$ but different $l$ have the same energy. As a result, the $2s\nicefrac{1}{2}$ and $2p\nicefrac{1}{2}$ states are degenerate. The lifting of this degeneracy (Lamb shift) is explained by radiative corrections and finite nuclear size effects. However, in situations where $Z\alpha$ is not much smaller than unity, the point-like approximation becomes increasingly worse and solutions of the Dirac equation for non-Coulomb potentials have to be used.
+These solution explains the spectrum of hydrogen-like atoms to a reasonable accuracy, including fine structure splitting, as long as $Z\alpha\ll 1$. The solutions are degenerate in the sign of $\kappa$, i.e. states with the same $j$ but different $l$ have the same energy. As a result, the $2s\nicefrac{1}{2}$ and $2p\nicefrac{1}{2}$ states are degenerate. The lifting of this degeneracy (Lamb shift) is explained by radiative corrections and finite nuclear size effects. However, in situations where $Z\alpha$ is not much smaller than unity, the point-like approximation becomes increasingly worse and solutions of the Dirac equation for non-Coulomb, extended potentials have to be used.
 
 
 
 \subsection{Numerical solution in a cavity for arbitrary potentials}
-Except the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (eg. Coulomb potential, spherical potential well), numerical methods have to be used to obtain approximations for $g(r)$ and $f(r)$. Especially for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and heavy muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution.
+Except the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (eg. Coulomb potential, spherical potential well), numerical methods have to be used to obtain solutions for $g(r)$ and $f(r)$. Especially for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution.
  
-Generally, for finite basis set solutions of the Dirac equation, the radial equations~\eqref{eq:radial_equations_small} are considered, but the domain is changed from $r\in[0,\infty)$ to a finite cavity $r\in [0,R]$. On the original domain, the spectrum of the energy eigenvalues $E$ has a negative continuum $E\in (-\infty,-m]$, a positive continuum $E\in [m,\infty)$, and a discrete part $E\in (-m,m)$ of infinitely many bound states, where $m$ is the mass of the bound fermion. On the modified domain, the positive and negative continuum become discrete~\cite{johnson1988}, but still infinite.
+Generally, for finite basis set solutions of the Dirac equation, the radial equations~\eqref{eq:radial_equations_small} are considered, but the domain is changed from $r\in[0,\infty)$ to a finite cavity $r\in [0,R]$. On the original domain, the spectrum of the energy eigenvalues $E$ has a negative continuum $E\in (-\infty,-m_f]$, a positive continuum $E\in [m_f,\infty)$, and a discrete part $E\in (-m_f,m_f)$ of infinitely many bound states, where $m$ is the mass of the bound fermion. On the modified domain, the positive and negative continuum become discrete~\cite{johnson1988}, but still infinite.
 A problem with numerical solutions of the Dirac equation is the appearance of unphysical, or spurious states~\cite{johnson1988, drake1981}. A method circumventing this problem was presented in~\cite{Shabaev2004}, which is shortly described in the following.
 
 The radial equations~\eqref{eq:radial_equations_small} can be rewritten in matrix form as
 \begin{equation}
 \begin{pmatrix}
-m+V(r)&(-\partial_r + \kappa/r)\\
-(\partial_r + \kappa/r)&-m+V(r)
+m_f+V(r)&(-\partial_r + \kappa/r)\\
+(\partial_r + \kappa/r)&-m_f+V(r)
 \end{pmatrix}
 \nu(r)\eqqcolon\mathrm{H}_\kappa \nu(r)
 = E\,\nu(r)
@@ -347,12 +348,12 @@ for the function $\nu(r)=(G(r),F(r))^T=(r g(r),r f(r))^T$. As a finite set of ba
 \nu(r)=\hspace{-0.2cm}\sum_{i=1}^{2n}c_i\,\nu_i(r)\coloneqq \hspace{-0.2cm}\sum_{i=1}^n
 c_i\begin{pmatrix}
 \Pi_{i,k}(r)\\
-(\partial_r +\kappa/r)\Pi_{i,k}(r)/(2m).
+(\partial_r +\kappa/r)\Pi_{i,k}(r)/(2m_f).
 \end{pmatrix}
 +\hspace{-0.3cm}
 \sum_{i=n+1}^{2n}c_i
 \begin{pmatrix}
-(\partial_r -\kappa/r)\Pi_{i,k}(r)/(2m)\\
+(\partial_r -\kappa/r)\Pi_{i,k}(r)/(2m_f)\\
 \Pi_{i,k}(r)
 \end{pmatrix}\hspace{-0.1cm}.
 \label{eq:finitebasis}
@@ -363,7 +364,8 @@ Thereby, the infinite amount of discrete states in the cavity are reduced to $2n
 \label{eq:eigenvals}
 \end{equation}
 where $i\in [1,...,2n]$, 
-which can be solved efficiently with existing libraries for B-splines and linear algebra. In the case of a positively charged nucleus with $Z\alpha<1$, the eigenvalues of the solution of~\eqref{eq:eigenvals} consist of $n$ negative values, approximating the negative continuous spectrum and of $n$ positive values, approximation the bound state spectrum and the positive continuous spectrum~\cite{drake1981}. Besides the eigenenergies, approximations of the bound and continuum dirac wave functions are obtained in terms of the coefficients $c_i$ and Eq.~\eqref{eq:finitebasis}. This enables the numerical evaluation of intermediate sum of states occurring in second order perturbation theory or in the spectral representation of the Dirac propagator.
+which can be solved efficiently with existing libraries for B-splines and linear algebra. \\
+In the case of a positively charged nucleus with $Z\alpha<1$, the eigenvalues of the solution of~\eqref{eq:eigenvals} consist of $n$ negative values, forming a discrete representation of the negative continuous spectrum and of $n$ positive values representing the bound state spectrum and the positive continuous spectrum~\cite{drake1981}. Besides the eigenenergies, approximations of the bound and continuum Dirac wave functions are obtained in terms of the coefficients $c_i$ and Eq.~\eqref{eq:finitebasis}. This enables the numerical evaluation of intermediate sum of states occurring in second order perturbation theory or in the spectral representation of the Dirac propagator.
 
 
 
