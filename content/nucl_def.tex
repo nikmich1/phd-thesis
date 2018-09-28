@@ -61,12 +61,16 @@ Using angular momentum theory, the energy splitting can be calculated as $$\Delt
 g=\frac{2m_e\kappa}{j(j+1)}\int_0^\infty\mathrm{d}r_e r_e^3 f_{n\kappa}(r_e)g_{n\kappa}(r_e).
 \label{eq:gfac_central}
 \end{equation}
-It has been shown in~\cite{Karshenboim2005}, that the radial integral in Eq.~\eqref{eq:gfac_central} is related to the derivative of the electron energies with respect to its mass. As a first step, from the radial equations~\eqref{eq:radial_equations_small} the following identity for the radial wave functions can be derived:
+It has been shown in~\cite{Karshenboim2005}, that the radial integral in Eq.~\eqref{eq:gfac_central} is related to the derivative of the electron energies with respect to its mass. As a first step, a transformation of the radial integral in Eq.~\eqref{eq:gfac_central} can be performed. For this, the first line of the radial equations~\eqref{eq:radial_equations_small} is multiplied by $g(r)$ and the second line is multiplied by $f(r)$. Then, the sum of these equation is independent of the energy $E$ and the potential $V(r)$ and by integrating this sum over $r$, the following identity of radial integrals is obtained:
 \begin{equation}
 \int\mathrm{d}r_e r_e^3 f(r_e)g(r_e) = -\frac{1}{4m_e}
-\text{\Large(}1-2\kappa \underbrace{\int_0^\infty\mathrm{d}r_e r_e^2 (f(r_e)^2-g(r_e)^2)}_{=\left<n\kappa m\right|\beta\left|n\kappa m\right>}\text{\Large)}.
+\text{\Large(}1-2\kappa \int_0^\infty\mathrm{d}r_e r_e^2 (f(r_e)^2-g(r_e)^2)\text{\Large)}.
 \end{equation}
-where the radial integral on the right hand side can be expressed in terms of the expectation value of the $\beta$ matrix. Since for potentials which do not depend on the mass of the electron, $\beta$ can be expressed by the derivative of the Dirac Hamiltonian~\eqref{eq:sphdirac} as $\beta = \partial\text{H}_D/\partial m_e$, it follows that
+Now, the radial integral on the right hand side can be expressed in terms of the expectation value of the $\beta$ matrix, using its definition from Appendix~\ref{app:conventions}, as
+\begin{equation}
+\int_0^\infty\mathrm{d}r_e r_e^2 (f(r_e)^2-g(r_e)^2)=\left<n\kappa m\middle|\beta\middle|n\kappa m\right>
+\end{equation}
+Since for potentials which do not depend on the mass of the electron, $\beta$ can be expressed by the derivative of the Dirac Hamiltonian~\eqref{eq:sphdirac} as $\beta = \partial\text{H}_D/\partial m_e$, it follows that
 \begin{equation}
 \left<n\kappa m\right|\beta\left|n\kappa m\right> = \left<n\kappa m\right|\partial\text{H}_D/\partial m_e\left|n\kappa m\right> = \partial E_{n\kappa}/\partial m_e,
 \end{equation}

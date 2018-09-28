@@ -1,6 +1,6 @@
 \chapter{Bound state quantum electrodynamics in the Furry picture}
 \label{ch:furry_pic}
-In this thesis, relativistic atomic structure calculations are performed in order to investigate nuclear effects on the energy levels of electrons or muons bound in the potential of an atomic nucleus. In this chapter, the starting point is the Lagrangian of quantum electrodynamics (QED), and results will be derived from thereon. This includes the derivation of the Dirac equation for a classical field as the zero-order solution and radiative corrections due to virtual particles. The analytical solution of the Dirac equation for the relativistic Coulomb problem is discussed, as well as numerical solutions for arbitrary nuclear potentials. Finally, the leading order Vacuum polarization corrections are considered.
+In this thesis, relativistic atomic structure calculations are performed in order to investigate nuclear effects on the energy levels of electrons or muons bound in the potential of an atomic nucleus. In this chapter, as an introduction, the starting point is the Lagrangian of quantum electrodynamics (QED), and results will be derived from thereon. This includes the derivation of the Dirac equation for a classical field as the zero-order solution and radiative corrections due to virtual particles. The leading order Vacuum polarization corrections, and their inclusion as potentials in the Dirac equation, are discussed. Finally, the analytical solution of the Dirac equation for the relativistic Coulomb problem is discussed, as well as numerical solutions for arbitrary nuclear potentials.
 %\begin{itemize}
 %\item Treatment of perturbations in Furry picture(mixed QED+HFS)
 %\item Treatment of nuclear structure effects in Furry picture (nuclear excited states)
@@ -197,15 +197,15 @@ This propagator is a Green's function for the Dirac equation including the exter
 \end{equation}
 As a result, the diagrams in Fig.~\ref{fig:vac_pol_uehl} can be teated by solving the Dirac equation~\eqref{eq:diraceq} including the Uehling potential. The same reasoning holds as well for the Wichmann-Kroll potential (Fig.~\ref{fig:vac_pol_wk}~b)) and for the order $\alpha^2(Z\alpha)$ vacuum polarization, referred to as the Källen-Sabry potential~\cite{kallen1955}, where the corresponding diagrams are shown in Fig.~\ref{fig:vac_pol_ks}. 
 
-Since the formal expressions for the vacuum polarization potentials contain divergences, they have to be renormalised. This Section concludes with giving the corresponding expressions for the renormalized Uehling (order $\alpha(Z\alpha)$) and Källen-Sabry (order $\alpha^2(Z\alpha)$) potentials for a virtual electron-positron pair and an extended, spherically symmetric nuclear charge distribution $\rho(r)$, which can be included in the Dirac equation. It is important to note, that the virtual particle in the loop can be a different one compared to the considered fermion. For example, the electronic vacuum polarization is muonic atoms is more impartent than the muonic vacuum polarization. The Uehling potential reads as~\cite{Fullerton1976,Elizarov2005}
+Since the formal expressions for the vacuum polarization potentials contain divergences, they have to be renormalised. This Section concludes with giving the corresponding expressions for the renormalized Uehling (order $\alpha(Z\alpha)$) and Källen-Sabry (order $\alpha^2(Z\alpha)$) potentials for a virtual electron-positron pair and an extended, spherically symmetric nuclear charge distribution $\rho(r)$, which can be included in the Dirac equation. It is important to note, that the virtual particle in the loop can be a different one compared to the considered fermion. Therefore, the mass of the virtual particle is $m_l$, which is an additional dependency of the potential. For an electron-positron loop, correspondingly $m_l=m_e$ and for a muon-antimuon loop $m_l=m_\mu$. For example, the electronic vacuum polarization is muonic atoms is more impartent than the muonic vacuum polarization. The Uehling potential reads as~\cite{Fullerton1976,Elizarov2005}
 \begin{alignat}{2}
-&V_{\text{Uehl}}(r)&&=-\alpha \frac{2\alpha}{3\pi}\int_0^\infty \text{d}r^{\prime}\,4\pi \rho(r^\prime)\int_1^\infty \text{d}t\,\left( 1+\frac{1}{2t^2} \right)\nonumber\\[7.5pt]
-&&&\times\frac{\sqrt{t^2-1}}{t^2} \frac{\text{exp}(-2m_e|r-r^\prime|t)-\text{exp}(-2m_e(r+r^\prime)t)}{4m_er t},
+&V^{(m_l)}_{\text{Uehl}}(r)&&=-\alpha \frac{2\alpha}{3\pi}\int_0^\infty \text{d}r^{\prime}\,4\pi \rho(r^\prime)\int_1^\infty \text{d}t\,\left( 1+\frac{1}{2t^2} \right)\nonumber\\[7.5pt]
+&&&\times\frac{\sqrt{t^2-1}}{t^2} \frac{\text{exp}(-2m_l|r-r^\prime|t)-\text{exp}(-2m_l(r+r^\prime)t)}{4m_lr t},
 \label{eq:uehlPot}
 \end{alignat}
 and the Källen-Sabry potential, corresponding to the diagrams in Fig.~\ref{fig:vac_pol_ks}, is derived in~\cite{Barbieri1970,Barbieri1972,Barbieri1972_2,Barbieri1973} and given e.g. in~\cite{indelicato2013,Fullerton1976} as
 \begin{alignat}{2}
-V_{\text{KS}}(r)=\frac{\alpha^2(Z\alpha)}{\pi r}\int\limits_0^\infty\text{d}r^\prime\,r^\prime \rho(r^\prime)\left( L_0(2m_e|r-r^\prime|)-L_0(2m_e(r+r^\prime))\right),
+V^{(m_l)}_{\text{KS}}(r)=\frac{\alpha^2(Z\alpha)}{\pi r}\int\limits_0^\infty\text{d}r^\prime\,r^\prime \rho(r^\prime)\left( L_0(2m_l|r-r^\prime|)-L_0(2m_l(r+r^\prime))\right),\label{eq:KSPot}
 \end{alignat}
 with
 \begin{alignat}{2}
@@ -259,7 +259,7 @@ where the electric potential $\Phi(\mathbf{r})$ can be expressed in terms of a s
 \label{eq:furry_elPot}
 \Phi(\mathbf{r})=-Z\alpha\int\mathrm{d}V^{\prime}\,\frac{\rho(|\mathbf{r^{\prime}}|)}{|\mathbf{r}-\mathbf{r^{\prime}}|},
 \end{equation}
-where $\int \mathrm{d}V\,\rho(|\mathbf{r}|)=1$. Since $\Phi$ only depends on $|\mathbf{r}|$, we define $V(r)\coloneqq \Phi((r,0,0))$ for spherical coordinates $\mathbf{r}=(r,\vartheta,\varphi)$. Thereby, the Dirac equation~\eqref{eq:diraceq} reads as
+where $\int \mathrm{d}V\,\rho(|\mathbf{r}|)=1$. Since $\Phi$ only depends on $|\mathbf{r}|$, we define $$V(r)\coloneqq \Phi((r,0,0))\label{eq:FSpot}$$ for spherical coordinates $\mathbf{r}=(r,\vartheta,\varphi)$. Thereby, the Dirac equation~\eqref{eq:diraceq} reads as
 \begin{equation}
 \text{H}_D \, u_n(\mathbf{r})\coloneqq\left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m_f + V(r) \right) u_n(\mathbf{r}) =  E_n u_n(\mathbf{r}),
 \label{eq:sphdirac}
@@ -301,6 +301,7 @@ Using this ansatz in Eq.~\eqref{eq:sphdirac} leads to the following system of eq
 \subsection{Bound state solutions of the Coulomb problem}
 For a point-like nucleus with charge number $Z$, the pure Coulomb potential reads
 \begin{equation}
+\label{eq:pureCoulomb}
 V_C(r)=-\frac{Z\alpha}{r},
 \end{equation}
 and the radial equations~\eqref{eq:radial_equations_small} can be solved analytically in this case. As a first step, the radial wave functions are substituted with
