@@ -44,31 +44,31 @@ with the averaged charge distribution
 Thus, for spinless nuclei, the potential is spherically symmetric, although the charge distribution of the nucleus does not have to be. Therefore, the theory of the bound electron g-factor in a spherical potential can be applied also in this case.
 
 \section{Bound-electron $g$ factor in central potentials}
-In the previous Section, it was shown that for spinless nuclei the electric potential for a bound electron is still spherically symmetric, also for deformed nuclear charge distributions. Therefore, in this Section, the theory of the bound-electron $g$ factor in a spherically symmetric potential is presented, following~\cite{rose1961,Karshenboim2005}. In a weak magnetic field, the $g$ factor is determined by the energy splitting in a homogeneous magnetic field, which is linear in the field strength. Therefore, an electron moving in an arbitrary central potential $V(r_e)$ of the nucleus and in a homogeneous magnetic field $\mathbf{B}$ is considered. The $z$ axis is aligned along the magnetic field, i.e. $\mathbf{B}=B\mathbf{e}_z$, where $\mathbf{A}(\mathbf{r_e})=\mathbf{B}\times \mathbf{r}_e /2$ is the corresponding vector potential in Coulomb gauge. The stationary Dirac equation for the electron thereby reads as
+In the previous Section, it was shown that for spinless nuclei the electric potential for a bound electron is still spherically symmetric, also for deformed nuclear charge distributions. Therefore, in this Section, the theory of the bound-electron $g$ factor in a spherically symmetric potential is presented, following~\cite{rose1961,Karshenboim2005}. In a weak magnetic field, the $g$ factor is determined by the energy splitting in a homogeneous magnetic field, which is linear in the field strength. Therefore, an electron moving in an arbitrary central potential $V(r_e)$ of the nucleus and in a homogeneous magnetic field $\mathbf{B}$ is considered. The $z$ axis is aligned along the magnetic field, i.e. $\mathbf{B}=B\mathbf{e}_z$, where $\mathbf{A}(\mathbf{r})=\mathbf{B}\times \mathbf{r} /2$ is the corresponding vector potential in Coulomb gauge. The stationary Dirac equation for the electron thereby reads as
 \begin{equation}
-\left[\boldsymbol{\alpha}\cdot\mathbf{p}+\beta m_e + V(r_e) -e\boldsymbol{\alpha}\cdot\mathbf{A}(\mathbf{r_e})\right]\,\left|\psi\right> = E\,\left|\psi\right>.
+\left[\boldsymbol{\alpha}\cdot\mathbf{p}+\beta m_e + V(r) -e\boldsymbol{\alpha}\cdot\mathbf{A}(\mathbf{r})\right]\,\left|\psi\right> = E\,\left|\psi\right>.
 \end{equation}
 Since only the energy splitting linear in the magnetic field strength is needed for the g factor in a weak field, it is enough to solve the Dirac equation with only the nuclear potential as
 \begin{equation}
-\left[\boldsymbol{\alpha}\cdot\mathbf{p}+\beta m_e + V(r_e) \right]\,\left|n\kappa m\right> = E\,\left|n\kappa m\right>,
+\left[\boldsymbol{\alpha}\cdot\mathbf{p}+\beta m_e + V(r) \right]\,\left|n\kappa m\right> = E\,\left|n\kappa m\right>,
 \end{equation}
 where the methods presented in Section~\ref{sec:sph_dirac} for spherical potentials can be used. Then, the first order energy splitting due to the magnetic field is considered as
 \begin{equation}
-\Delta E_B = -e\left<n\kappa m\right|\boldsymbol{\alpha}\cdot\mathbf{A}(\mathbf{r_e})\left|n\kappa m\right>.
+\Delta E_B = -e\left<n\kappa m\right|\boldsymbol{\alpha}\cdot\mathbf{A}(\mathbf{r})\left|n\kappa m\right>.
 \end{equation}
 Using angular momentum theory, the energy splitting can be calculated as $$\Delta E_B = m\, g \mu_B B,$$ where the $g$ factor is defined as the proportionality constant between energy shift and product of the quantum number $m$, Bohr magneton $\mu_B$ and field strength $B$ as
 \begin{equation}
-g=\frac{2m_e\kappa}{j(j+1)}\int_0^\infty\mathrm{d}r_e r_e^3 f_{n\kappa}(r_e)g_{n\kappa}(r_e).
+g=\frac{2m_e\kappa}{j(j+1)}\int_0^\infty\mathrm{d}r r^3 f_{n\kappa}(r)g_{n\kappa}(r).
 \label{eq:gfac_central}
 \end{equation}
 It has been shown in~\cite{Karshenboim2005}, that the radial integral in Eq.~\eqref{eq:gfac_central} is related to the derivative of the electron energies with respect to its mass. As a first step, a transformation of the radial integral in Eq.~\eqref{eq:gfac_central} can be performed. For this, the first line of the radial equations~\eqref{eq:radial_equations_small} is multiplied by $g(r)$ and the second line is multiplied by $f(r)$. Then, the sum of these equation is independent of the energy $E$ and the potential $V(r)$ and by integrating this sum over $r$, the following identity of radial integrals is obtained:
 \begin{equation}
-\int\mathrm{d}r_e r_e^3 f(r_e)g(r_e) = -\frac{1}{4m_e}
-\text{\Large(}1-2\kappa \int_0^\infty\mathrm{d}r_e r_e^2 (f(r_e)^2-g(r_e)^2)\text{\Large)}.
+\int\mathrm{d}r r^3 f(r)g(r) = -\frac{1}{4m_e}
+\text{\Large(}1-2\kappa \int_0^\infty\mathrm{d}r r^2 (f(r)^2-g(r)^2)\text{\Large)}.
 \end{equation}
 Now, the radial integral on the right hand side can be expressed in terms of the expectation value of the $\beta$ matrix, using its definition from Appendix~\ref{app:conventions}, as
 \begin{equation}
-\int_0^\infty\mathrm{d}r_e r_e^2 (f(r_e)^2-g(r_e)^2)=\left<n\kappa m\middle|\beta\middle|n\kappa m\right>
+\int_0^\infty\mathrm{d}r r^2 (f(r)^2-g(r)^2)=\left<n\kappa m\middle|\beta\middle|n\kappa m\right>
 \end{equation}
 Since for potentials which do not depend on the mass of the electron, $\beta$ can be expressed by the derivative of the Dirac Hamiltonian~\eqref{eq:sphdirac} as $\beta = \partial\text{H}_D/\partial m_e$, it follows that
 \begin{equation}

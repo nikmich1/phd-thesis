@@ -1172,7 +1172,7 @@ The value of the magnetic moment needed for the calculation of the magnetic dipo
 With this parametrization, the entire spectrum can be calculated for a given spectroscopic quadrupole moment and by fitting the theoretically calculated spectrum to the experimental measured one, the quadrupole moment can be extracted. 
 The difference of two transition energies is especially sensitive on the quadrupole moment, since the majority of the uncertainty due to the nuclear RMS radius cancels, as described in~\cite{konijn1979}. Therefore, the energy differences of all $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ transition compared to the most intense transition in this group, called the centroid transition, is calculated and analogously the corresponding intensities are given relative to the centroid transition. 
 The same holds for the group of the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{5}{2}$ and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ transitions. Then, the energy difference of the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{5}{2}$ and the $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ centroid transition compared to the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid transition is calculated. Thereby, the energy differences of all considered transitions and the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid is parametrized in terms of the nuclear quadrupole moment and the position of the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid can be fitted to the experimental spectrum as a free parameter.
-It is too expensive to perform full calculations in the fitting process to experimental data. Instead, the full calculations are performed for several values of the quadrupole moment in the proximity of the expected value and a quadratic function is fitted for every transition energy and intensity. The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies are given in Table~\ref{tab:re185energ} for the relative transition energies and in Table~\ref{tab:re185intens} for the intensities. A difficulty from the experimental side is the understanding of the line shape of the detector response function, which broadens the signal coming from a transtion with a well-defined energy, which is treated in~\cite{vogiatzi2018}.
+It is too expensive to perform full calculations in the fitting process to experimental data. Instead, the full calculations are performed for several values of the quadrupole moment in the proximity of the expected value and a quadratic function is fitted for every transition energy and intensity. The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies are given in Table~\ref{tab:re185energ} for the relative transition energies and in Table~\ref{tab:re185intens} for the intensities. The fitted energy differences of the centroid transitions is given in Table~\ref{tab:re185energ}. A difficulty from the experimental side is the understanding of the line shape of the detector response function, which broadens the signal coming from a transtion with a well-defined energy, which is treated in~\cite{vogiatzi2018}.
 
 The fitted experimental spectrum is shown in Fig.~\ref{fig:re54} and thereby, the preliminary extracted spectroscopic quadrupole moment of $^{185}$Re is obtained as
 \begin{equation}
@@ -1193,6 +1193,24 @@ Experimental spectrum for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $
 %
 %
 %re185 tables
+%
+\begin{table}[b]
+%\setlength\extrarowheight{1pt}
+\caption{\label{tab:re185centroid}%
+Quadratic fits of the energy differences for the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ centroid transitions compared to the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid in $^{185}$Re. The formula for the energy difference in terms of a give quadrupole moment $Q$ is $\Delta E(Q)=C_q \, Q^2 + C_l \, Q + C_c$. See Sec.~\ref{sec:muon_re} for details.}
+%\begin{ruledtabular}
+\centering
+\begin{small}
+\begin{tabular}{cc|ccc}
+centroid& $F_i \rightarrow F_f$ & $C_q [\text{keV/barn}^2]$ & $C_l [\text{keV/barn}]$ & $C_c [\text{keV}]$\\[1pt]\hline%\\[1pt]
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$ &6 $\rightarrow$ 5&$\phantom{-}0.004$&$\phantom{-}0.014$&$4.451$\\
+$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$&6 $\rightarrow$ 5&$-0.002$&$-0.266$&$4.215$\\
+\end{tabular}
+%\end{ruledtabular}
+\end{small}
+\end{table}%
+%
+%
 %
 \begin{table}[b]
 %\setlength\extrarowheight{1pt}
@@ -1251,7 +1269,7 @@ $5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ &6 $\rightarrow$ 5&0.000&0.000
 \end{tabular}
 %\end{ruledtabular}
 \end{small}
-\end{table}
+\end{table}%
 %
 %
 %
@@ -1312,12 +1330,12 @@ $5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ & 6 $\rightarrow$ 5&0.000&0.00
 \end{tabular}
 %\end{ruledtabular}
 \end{small}
-\end{table}
+\end{table}%
 %
 %
 %
 %\subsection{Low lying states}
-Furthermore, the low-lying $2p\rightarrow1s$ and $3d\rightarrow 2p$ transitions, or $K$ and $L$ x rays, have been measured during the same experiments. The calculations in this thesis show that the assumption of statistically populated $5g$ states and a cascade as explained in Sec.~\ref{sec:transitions} can explain the spectrum qualitatively, using the rigid rotor model for the nucleus (Appendix~\ref{app:rig_rotor}). For the calculations of the spectra, the first five nuclear rotational states have been considered. In principle, from these spectra, the nuclear RMS radius can be extracted~\cite{hitlin1970}. However, for the low-lying transitions in heavy muonic atoms, the nuclear polarization corrections, e.g.~\cite{chen1970}, have to be considered. These corrections are due to virtual excitations of nuclear states beyond the rigid rotor model and have to be treated with a more accurate nuclear model or experimental data on nuclear transitions. Thus, updated calculations from the nuclear physics side would be desirable in order to extract nuclear charge radii in connections with the calculations from the muonic side as presented in this thesis, see also the conclusion \& outlook chapter.
+Furthermore, the low-lying $2p\rightarrow1s$ and $3d\rightarrow 2p$ transitions, or $K$ and $L$ x rays, have been measured during the same experiments. The assumption of statistically populated $5g$ states, i.e. $\sim 2F+1$, and a cascade $5g\rightarrow 4f \rightarrow 3d \rightarrow 2p \rightarrow 1s$ as explained in Sections~\ref{sec:muon_dynamic} and \ref{sec:transitions} can explain the spectrum qualitatively, using the rigid rotor model for the nucleus (Appendix~\ref{app:rig_rotor}). For the calculations of the spectra, the first five nuclear rotational states have been considered. In principle, from these spectra, the nuclear RMS radius can be extracted~\cite{hitlin1970}. However, for the low-lying transitions in heavy muonic atoms, the nuclear polarization corrections, e.g.~\cite{chen1970}, have to be considered. These corrections are due to virtual excitations of nuclear states beyond the rigid rotor model and have to be treated with a more accurate nuclear model or experimental data on nuclear transitions. Thus, updated calculations from the nuclear physics side would be desirable in order to extract nuclear charge radii in connection with the calculations from the muonic side as presented in this thesis, which is discussed in more detail in the conclusion \& outlook chapter.
 The corresponding comparison for the $K$ x rays is shown in Fig.~\ref{fig:re54_K} and in Fig.~\ref{fig:re54_L} for the L x rays.
 % figure k x rays
 \begin{figure}%
