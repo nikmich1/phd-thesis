@@ -5,21 +5,21 @@ This chapter is organized in the following way:\\
 At first, a motivation for new structure calculations is given in Section~\ref{sec:muon_motivation}. The current status of existing methods is reviewed and new experiments in the field are explained, which use the results presented in this thesis.\\
 Afterwards, the theoretical framework and implementation of several important effects is shown in Sections~\ref{sec:muon_framework} to~\ref{sec:muon_dynamic}. Here, finite basis set methods suitable for precision calculations are used and results for selected nuclei are presented.\\
 In Sections~\ref{sec:muon_residualSO} and~\ref{sec:muon_quadUehl}, improved methods for the calculation of higher order effects in electric hyperfine interactions are presented.\\
-Finally, in Sections~\ref{sec:muon_re}, calculations in combination with recent experiments on isotopically pure Rhenium-185 are presented. Here, a combination of theoretical predictions and experimental measurements of muonic transitions enables the extraction of the nuclear quadrupole moment. \\
+Finally, in Sections~\ref{sec:muon_re}, calculations in combination with recent experiments on isotopically pure rhenium-185 are presented. Here, a combination of theoretical predictions and experimental measurements of muonic transitions enables the extraction of the nuclear quadrupole moment. \\
 In Section~\ref{sec:muon_he}, high-precision calculations for one- and two-loop vacuum polarization corrections to the bound-muon $g$ factor in muonic Helium-4 are shown.
 
 \section{Calculation of spectra for muonic atoms}
 \label{sec:calculationSpectraMuon}
 \subsection{Motivation}
 \label{sec:muon_motivation}
-Atomic nuclei are one of the building blocks of matter and therefore, information on their structure, like the distribution of electric charge inside the nucleus, is of intrinsic interest. Furthermore, the charge radii of atomic nuclei are of importance as an input parameter for the interpretation of other experiments. For example, Radium is candidate for measuring atomic parity violation effects, but for this more accurate values of the Radium charge radii are needed~\cite{wansbeek2012}.
+Atomic nuclei are one of the building blocks of matter and therefore, information on their structure, like the distribution of electric charge inside the nucleus, is of intrinsic interest. Furthermore, the charge radii of atomic nuclei are of importance as an input parameter for the interpretation of other experiments. For example, radium is candidate for measuring atomic parity violation effects, but for this more accurate values of the radium charge radii are needed~\cite{wansbeek2012}.
 There are several methods for extracting information on the nuclear charge distribution, i.e. the distribution of protons inside the atomic nucleus, like electron scattering~\cite{devries1987} or laser spectroscopy~\cite{wang2004,dewitte2007,mueller2007}. One method is also muonic atom spectroscopy. Here, a muon, which is a negatively charged elementary particle is brought in the proximity of an atomic nucleus. Then, the negatively charged muon forms bound states with the positively charged nucleus and radiation due to muonic transitions can be analyzed in order to extract information on the nuclear charge distribution and measure quantities like nuclear charge radii and quadrupole moments.
 
 Correspondingly, the theory of muonic atoms has been developed in order to describe the level structure and the probabilities for muonic transitions. The general approach is that for a given nuclear charge distribution, the spectrum of the corresponding muonic atom needs to be predicted. Then, vice versa, for a measured spectrum the nuclear charge distribution can be extracted. An overview of the different contributions to the energy levels of muonic atoms can be found in~\cite{BorieRinker1982}. Hitherto, the majority of analyses of the spectra of heavy muonic atoms used the computer programs \texttt{MUON} and \texttt{RURP}~\cite{rinker1979}. There are two main differences compared to the approach used in this thesis:
 Firstly, the dual-kinetic-balance method~\cite{Shabaev2004} is used in this thesis. Being a finite basis set method, an approximation of the complete muon spectrum can obtained, i.e. bound states and positive as well as negative continuum states, including the effects of the finite nuclear charge distribution. Thereby, numerical summations over the complete muon spectrum are possible. This enables for example a complete treatment of the second order hyperfine interactions, as presented in Section~\ref{sec:muon_residualSO}.
 Secondly, whereas in the \textit{MUON} and \textit{RURP} codes, the fine and hyperfine structure are calculated separately, in this thesis the calculations of the fine and hyperfine structure are performed at once, based on a given nuclear charge distribution, enabling improved analysis of the dependence of the muonic spectrum on parameters of the nuclear charge distribution.
 
-Furthermore, there are new experiments on high $Z$ muonic atoms being performed by the MuX-Collaboration at the Paul Scherrer Institute (PSI) in Villigen, Switzerland~\cite{kirch2016}. One of the goals is to measure the charge radius for Radium, needed for experiments on atomic parity violations, as mentioned earlier in this Section. Furthermore, measurements on muonic atoms involving several nuclei will be or have been performed for the first time, involving isotopically pure Rhenium. The corresponding structure calculations for muonic Rhenium were performed during the work on this thesis, and results are presented in Section~\ref{sec:muon_re}.
+Furthermore, there are new experiments on high $Z$ muonic atoms being performed by the MuX-Collaboration at the Paul Scherrer Institute (PSI) in Villigen, Switzerland~\cite{kirch2016}. One of the goals is to measure the charge radius for radium, needed for experiments on atomic parity violations, as mentioned earlier in this Section. Furthermore, measurements on muonic atoms involving several nuclei will be or have been performed for the first time, involving isotopically pure rhenium. The corresponding structure calculations for muonic rhenium were performed during the work on this thesis, and results are presented in Section~\ref{sec:muon_re}.
 
 \subsection{Theoretical framework}
 \label{sec:muon_framework}
@@ -33,7 +33,7 @@ where $\hbar$ is the Planck's constant, $\alpha$ is the fine-structure constant 
 %
 \begin{table}
 \caption{\label{tab:nucl_radii}
-Comparison of the ratio of nuclear charge radius $R_N$ to the Bohr radius $r_B$ of a bound electron or muon in the corresponding hydrogen-like atomic system for Hydrogen, Helium, Rhenium, and Uranium. If this ratio is small, the finite size of the nucleus does not influence the bound fermion significantly. On the other hand, if this ratio is on the order of 1, large finite nuclear size and nuclear structure effects can be expected. The nuclear charge radii are taken from~\cite{Angeli2013}.}
+Comparison of the ratio of nuclear charge radius $R_N$ to the Bohr radius $r_B$ of a bound electron or muon in the corresponding hydrogen-like atomic system for hydrogen, helium, rhenium, and uranium. If this ratio is small, the finite size of the nucleus does not influence the bound fermion significantly. On the other hand, if this ratio is on the order of 1, large finite nuclear size and nuclear structure effects can be expected. The nuclear charge radii are taken from~\cite{Angeli2013}.}
 \centering
 \begin{tabular}{ccccc}
 Fermion type & Nucleus & $R_N$[fm]&$r_B$[fm]&$R_N/r_B$\\\hline\\[-5pt]
@@ -49,12 +49,12 @@ $\mu^-$&$^{238}_{\phantom{1}92}$U&5.8571&$\phantom{1111}2.782$&$2.105\phantom{11
 \end{table}
 %
 %
-It can be seen that, that for electronic atoms, the nucleus is generally a few orders of magnitude smaller compared to the extend of the electronic wave function, which is given by the Bohr radius, although for high $Z$, the electron is much closer to the nucleus due to the strong Coulomb attraction. Since the Bohr radius is inversely proportional to the mass of the bound fermion, the situation in muonic atomic systems is different. While for low $Z$, the extend of the muonic wave functions is still much larger than the nuclear radius, for high $Z$, the nuclear radius is actually larger than the muonic Bohr radius. In Fig.~\ref{fig:muonGS}, the muonic and electronic ground state wave functions for hydrogen-like Uranium are shown in comparison to the nuclear charge distribution. 
+It can be seen that, that for electronic atoms, the nucleus is generally a few orders of magnitude smaller compared to the extend of the electronic wave function, which is given by the Bohr radius, although for high $Z$, the electron is much closer to the nucleus due to the strong Coulomb attraction. Since the Bohr radius is inversely proportional to the mass of the bound fermion, the situation in muonic atomic systems is different. While for low $Z$, the extend of the muonic wave functions is still much larger than the nuclear radius, for high $Z$, the nuclear radius is actually larger than the muonic Bohr radius. In Fig.~\ref{fig:muonGS}, the muonic and electronic ground state wave functions for hydrogen-like uranium are shown in comparison to the nuclear charge distribution. 
 %
 \begin{figure}%
 \centering
 \includegraphics[width=0.75\linewidth]{pics/muon_groundState.pdf}%
-\caption{The monopole charge distribution for the nucleus (red) and the $1s\nicefrac{1}{2}$ wave functions of the muon (blue) and the electron (gray, enhanced by factor 50) for hydrogen-like Uranium. The muonic wave function overlaps strongly with the nuclear charge distribution. Therefore finite nuclear size effects are enhanced in muonic atoms}%
+\caption{The monopole charge distribution for the nucleus (red) and the $1s\nicefrac{1}{2}$ wave functions of the muon (blue) and the electron (gray, enhanced by factor 50) for hydrogen-like uranium. The muonic wave function overlaps strongly with the nuclear charge distribution. Therefore finite nuclear size effects are enhanced in muonic atoms}%
 \label{fig:muonGS}%
 \end{figure}
 %
@@ -195,11 +195,15 @@ The uncertainties include the error in the rms radius value as well as a model e
 \begin{table}[b]
 \setlength\extrarowheight{3pt}
 \caption{\label{tab:sphDirac}
-Overview of the binding energies for muonic $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr, obtained by solving the Dirac equation with the spherically symmetric parts of the muon-nucleus interaction. The values for solving the Dirac equation only with the electric monopole potential, and with the electric monopole potential and the Uehling potential are presented to show the influence of the leading order vacuum polarization. The binding energies \eqref{eq:finestructure_formula_2} for a  point like nucleus are shown as well. The reduced mass is used to include the non-relativistic recoil corrections from Section~\ref{sec:recoil}. The corrections from section~\ref{sec:screen} are not included in this table. All energies are in keV.}
+Overview of the binding energies for muonic $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr, obtained by solving the Dirac equation with the spherically symmetric parts of the muon-nucleus interaction.
+$E_{\rm{c}}$ are the binding energies \eqref{eq:finestructure_formula_2} for a  point-like nucleus. 
+$E_{\rm{fs}}$, $E_{\rm{uehl}}$ are the binding energies in the finite-size potential with and without the Uehling correction, respectively.
+The reduced mass is used to include the non-relativistic recoil corrections from Section~\ref{sec:recoil}. 
+All energies are in keV.}
 %\begin{ruledtabular}
 \centering
 \begin{tabular}{c|clll}
-& state & \text{point like}& \text{finite size (fs)}\footnotemark[1] &\text{fs+Uehling}\footnotemark[2]\\ \hline \\[-7pt]
+& state & $E_{\rm{C}}$& $E_{\rm{fs}}$ &$E_{\rm{uehl}}$\\ \hline \\[-7pt]
 $^{205}$Bi & 1s\nicefrac{1}{2} &\text{21573.3} & \text{10699.(51.)} &\text{10767.(52.)} \\
   & 2s\nicefrac{1}{2} & \text{\phantom{1}5538.6} & \text{\phantom{1}3654.(15.)} & \text{\phantom{1}3674.(15.)}\\
   & 2p\nicefrac{1}{2} & \text{\phantom{1}5538.6} & \text{\phantom{1}4893.(3.)} & \text{\phantom{1}4927.(3.)} \\
@@ -271,7 +275,7 @@ where $M_N$ is the mass of the nucleus, and the functions $h(r)$ and $P_1(r)$ ar
 %begin table
 \begin{table}
 \setlength\extrarowheight{3pt}
-\caption{\label{tab:recoil}Recoil corrections to the binding energies of the muon. fm (full mass) denotes the finite size binding energy, analogous to the fourth column of Table~\ref{tab:sphDirac}, but with the rest mass of the muon used in the Dirac equation. $\Delta E_{\text{rec,nr}}$ is the non-relativistic recoil correction, which is the difference between the finite size Dirac solutions with reduced mass and full mass, respectively. $\Delta E^{\text{(rec,rel)}}_{n\kappa}$ is the leading relativistic recoil correction from Section~\ref{sec:recoil}.
+\caption{\label{tab:recoil}Relativistic recoil corrections to the binding energies of the muon. fm (full mass) denotes the finite size binding energy, analogous to the fourth column of Table~\ref{tab:sphDirac}, but with the rest mass of the muon used in the Dirac equation. $\Delta E_{\text{rec,nr}}$ is the non-relativistic recoil correction, which is the difference between the finite size Dirac solutions with reduced mass and full mass, respectively. $\Delta E^{\text{(rec,rel)}}_{n\kappa}$ is the leading relativistic recoil correction from Section~\ref{sec:recoil}.
 All energies are in keV.}
 %\begin{ruledtabular}
 \centering
@@ -316,7 +320,7 @@ All energies are in keV.}
 %begin table
 \begin{table}
 \setlength\extrarowheight{3pt}
-\caption{\label{tab:screen}Electron screening corrections to the bound muon energy levels. $\Delta E_{\rm{S,eff}}^{(1)}$ and $\Delta E_{\rm{S,eff}}^{(1+2)}$ are the screening corrections with the effective nuclear charge method, whereas $\Delta E_{\rm{S,3step}}^{(1)}$ and $\Delta E_{\rm{S,3step}}^{(1+2)}$ use the 3 step calculation, both described in Section~\ref{sec:screen}. For the superscript $(1)$, only the 1s electrons are considered, while for $({1}{+}{2})$, all electrons from the first and second shell are considered. All energies are in keV.}
+\caption{\label{tab:screen}Electron screening corrections $\Delta E_{\rm{S}}$ to the bound muon energy levels. The subscript '$\rm{eff}$' are the screening corrections with the effective nuclear charge method, whereas '$\rm{3step}$' use the 3 step calculation, both described in Section~\ref{sec:screen}. For the superscript $(1)$, only the 1s electrons are considered, while for $({1}{+}{2})$, all electrons from with $n=1,2$ are considered. All energies are in keV.}
 %\begin{ruledtabular}
 \centering
 \begin{tabular}{c|crrrr}
@@ -375,11 +379,11 @@ The interaction between the electrons is not taken into account here. Finally, t
 \setlength\extrarowheight{3pt}
 \begin{small}
 \caption{\label{tab:hfs}
-Results for the electric quadrupole and magnetic dipole hyperfine splitting for a selection of hyperfine states of muonic $^{205}_{83}$Bi ($I=\frac{9}{2}$), $^{147}_{62}$Sm ($I=\frac{7}{2}$), and $^{89}_{40}$Zr ($I=\frac{9}{2}$). $\braket{H_E^{(2)}}$ are the values of the electric quadrupole splitting. $\braket{H_M^{\rm{hom}}}$ is the magnetic dipole splitting from Eq.~\ref{eq:hmag} using a homogeneous nuclear current distribution and $\braket{H_M^{\rm{sp}}}$ using the nuclear magnetization distribution in the single particle model. See Sections~\ref{sec:elQuad1} and~\ref{sec:magndip} for definitions. All energies are in keV.}
+Results for the electric quadrupole and magnetic dipole hyperfine splitting for a selection of hyperfine states of muonic $^{205}_{83}$Bi ($I=\frac{9}{2}$), $^{147}_{62}$Sm ($I=\frac{7}{2}$), and $^{89}_{40}$Zr ($I=\frac{9}{2}$). $\Delta E_Q$ are the values of the electric quadrupole splitting. $\Delta E_M^{\rm{hom}}$ is the magnetic dipole splitting from Eq.~\eqref{eq:hmag} using a homogeneous nuclear current distribution and $\Delta E_M^{\rm{sp}}$ using the nuclear magnetization distribution in the single particle model. See Sections~\ref{sec:elQuad1} and~\ref{sec:magndip} for definitions. All energies are in keV.}
 %\begin{ruledtabular}
 \centering
 \begin{tabular}{c|cllllll}
- nucleus&state&\multicolumn{2}{c}{$\braket{H_E^{(2)}}$}&\multicolumn{2}{c}{$\braket{H_M^{\rm{hom}}}$}&\multicolumn{2}{c}{$\braket{H_M^{\rm{sp}}}$}\\
+ nucleus&state&\multicolumn{2}{c}{$\Delta E_Q$}&\multicolumn{2}{c}{$\Delta E_M^{\rm{hom}}$}&\multicolumn{2}{c}{$\Delta E_M^{\rm{sp}}$}\\
  & &$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$&$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$&$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$\\[2pt] \hline \\[-7pt]
    $^{205}$Bi & 1s\nicefrac{1}{2} & \phantom{-11}0 & \phantom{-11}0 & -2.27(20) &\phantom{-}1.86(16) & -2.41(20) &\phantom{-}1.97(16) \\
   & 2s\nicefrac{1}{2} & \phantom{-11}0 & \phantom{-11}0 & \text{-0.43(5)} &\phantom{-}0.35(4) & -0.47(6) &\phantom{-}0.38(4) \\
@@ -729,7 +733,7 @@ After the rediagonalization, the unperturbed states $\left|FM\,IK\,n\kappa\right
 \label{eq:rediagonState}
 \left|FM,\,i\right> = \sum_{k=1}^d \alpha^{(i)}_k \left| FM\,I_kK\,n_k\kappa_k\right>,
 \end{equation}
-where $i\in \{1,...,d\}$ and $d$ is the number of states in the modelspace, which can form the total angular momentum $F$. For the example of Rhenium in this Section, there is one state for $F\in \{1,6\}$; three states for $F\in\{2,5\}$; and five states for $F\in\{3,4\}$ (see Fig.~\ref{fig:blockRe}). Thus, e.g. for $F=3$, a 5x5-matrix has to be rediagonalized, and the coefficient-matrix $\alpha^{(i)}_k$ in Eq.~\eqref{eq:rediagonState} corresponds to the matrix of corresponding eigenvectors.
+where $i\in \{1,...,d\}$ and $d$ is the number of states in the modelspace, which can form the total angular momentum $F$. For the example of rhenium in this Section, there is one state for $F\in \{1,6\}$; three states for $F\in\{2,5\}$; and five states for $F\in\{3,4\}$ (see Fig.~\ref{fig:blockRe}). Thus, e.g. for $F=3$, a 5x5-matrix has to be rediagonalized, and the coefficient-matrix $\alpha^{(i)}_k$ in Eq.~\eqref{eq:rediagonState} corresponds to the matrix of corresponding eigenvectors.
 %
 \begin{figure}%
 \centering
@@ -849,13 +853,15 @@ The muonic cascade starting from the muonic $4f$ states is visualized in Fig.~\r
 \newpage
 \section{Higher order corrections for the dynamic hyperfine structure}
 \label{sec:higherorder}
-In this Section, the improved calculations of two higher order contributions to the dynamic hyperfine structure are discussed, namely the second order quadrupole interaction beyond the rediagonalization in the modelspaces and the correction to the matrix elements of the quadrupole interactions due to leading order vacuum polarization (VP) due to a virtual electron-positron pair.\\
-The contribution of leading order vacuum polarization (VP) to the spherically symmetric part of the charge distribution was briefly discussed in Sec.~\ref{sec:qed}. However, VP influences multipole interactions of all orders, thus in the context of the dynamic hyperfine structure especially the matrix elements of the quadrupole interaction. In the past, the corresponding correction to the quadrupole interaction between muon and nucleus has at most been considered with a power-series expansion~\cite{Fricke1969vp,zehnder1975} or for specific forms of the nuclear charge distribution~\cite{pearson1963}, which does not enable precision calculations for heavy muonic atoms. In this thesis, a new approach is developed in Section~\ref{sec:muon_quadUehl} by performing a multipole expansion of the Uehling potential. This enables the calculation of the leading order VP correction to the quadrupole matrix elements for arbitrary charge distributions, including all finite size effects.\\
-The approach of quasi-degenerate perturbation theory is discussed in Sec.~\ref{sec:almostDeg}, and the rediagonalization of the perturbation is applied to the hyperfine interaction in Sec.~\ref{sec:non-diagElements} and~\ref{sec:toyModelRediag}. However, there are residual second order corrections due to contrubutions from outside of the modelspace, as introduced in Eq.~\eqref{eq:pert_secondOrderEnerg}. A non-relativistic estimation of the residual second order electric quadrupole interaction with states outside of this modelspace has been presented in Ref.~\cite{chen1970}. In this thesis, a fully relativistic approach is presented in Sec.~\ref{sec:muon_residualSO}.
+In this Section, improved calculations of two higher order contributions to the dynamic hyperfine structure are discussed. Firstly, corrections of the quadrupole matrix elements due to vacuum polarization (VP) are considered. Furthermore, a numerical treatment of second order quadrupole interactions is presented.
+
+The contribution of leading order VP to the spherically symmetric part of the charge distribution was briefly discussed in Sec.~\ref{sec:qed}. However, VP influences multipole interactions of all orders, thus in the context of the dynamic hyperfine structure it influences matrix elements of the quadrupole interaction between muon and nucleus. Until now, the corresponding correction to the matrix elements has at most been considered with a power-series expansion~\cite{Fricke1969vp,zehnder1975} or for specific forms of the nuclear charge distribution~\cite{pearson1963}, which does not enable precision calculations for heavy muonic atoms. In this thesis, a new approach is developed in Section~\ref{sec:muon_quadUehl} by performing a multipole expansion of the Uehling potential. This enables the calculation of the leading order VP correction to the quadrupole matrix elements for arbitrary charge distributions with all finite size effects.
+
+The approach of quasi-degenerate perturbation theory is discussed in Sec.~\ref{sec:almostDeg}, and the rediagonalization of the perturbation is applied to the hyperfine interaction in Sec.~\ref{sec:non-diagElements} and~\ref{sec:toyModelRediag}. However, there are residual second order corrections due to contrubutions from outside of the modelspace, as introduced in Eq.~\eqref{eq:pert_secondOrderEnerg}. A non-relativistic estimation of the residual second order electric quadrupole interaction with states outside of this modelspace has been presented in Ref.~\cite{chen1970}. In this thesis, an extended, fully relativistic approach is presented in Sec.~\ref{sec:muon_residualSO}.
 
 \subsection{Quadrupole-Uehling interactions}
 \label{sec:muon_quadUehl}
-The resummation of the order $\alpha (Z\alpha)$ Vacuum polarization (Uehling potential) has been discussed in Section~\ref{sec:vacPolTheory}, with the result that it can be included in the solution of the Dirac equation. The starting point in this Section is the renormalized expression for the Uehling potential for a given, possibly deformed nuclear charge distribution, which reads in the chosen system of units (Appendix~\ref{app:conventions}) as~\cite{Fullerton1976}
+The resummation of the order $\alpha (Z\alpha)$ vacuum polarization (Uehling potential) has been discussed in Section~\ref{sec:vacPolTheory}, with the result that it can be included in the solution of the Dirac equation. The starting point in this Section is the renormalized expression for the Uehling potential for a given, deformed nuclear charge distribution, which reads in the chosen system of units (Appendix~\ref{app:conventions}) as~\cite{Fullerton1976}
 \begin{equation}
 {V_{\text{uehl}}(\mathbf{r}_\mu^{\,\prime})}{=}{-Z\alpha\frac{2 \alpha}{3\pi} \int \text{d}^3\mathbf{r}_N^{\prime} \frac{\rho(\mathbf{r}_N^{\,\prime})}{|\mathbf{r}_\mu^{\,\prime} - \mathbf{r}_N^{\,\prime}\,|} K_1(2m_e{|\mathbf{r}_\mu^{\,\prime} - \mathbf{r}_N^{\,\prime}\,|}),}
 \label{eq:Vvp}
@@ -876,29 +882,29 @@ Furthermore, they can be expressed in terms of Meijer G functions from Eq.~\eqre
 K_n(x)=\frac{1}{4} {G_{1, 3}^{3, 0}\left({\frac{x^{2}}{4}}\middle|\begin{matrix}   - \frac{n}{2} + 2 \\- \frac{n}{2} + \frac{1}{2}, 0, \frac{1}{2}   \end{matrix}   \right)} + \frac{1}{8} {G_{1, 3}^{3, 0}\left(\frac{x^2}{4}\middle| \begin{matrix}   - \frac{n}{2} + 3 \\- \frac{n}{2} + \frac{3}{2}, 0, \frac{1}{2}   \end{matrix}  \right)},
 \label{eq:defKnAnalyt}
 \end{equation}
-which enables evaluation using arbitrary precision implementations of the Meijer G function of existing libraries or programs like~\cite{Mathematica,mpmath}. The Uehling potential from Eq.~\eqref{eq:Vvp} depends only on $|\mathbf{r}_\mu^{\,\prime} - \mathbf{r}_N^{\,\prime}\,|$, similar to the electric potential~\eqref{eq:defmulti}, which can be written as
+which enables evaluation using arbitrary precision implementations of the Meijer G function of existing libraries or programs like~\cite{Mathematica,mpmath}. The Uehling potential~\eqref{eq:Vvp} depends only on $|\mathbf{r}_\mu^{\,\prime} - \mathbf{r}_N^{\,\prime}\,|$, similar to the electric potential~\eqref{eq:defmulti}, which can be written as
 \begin{equation}
 |\mathbf{r}_\mu^{\,\prime} - \mathbf{r}_N^{\,\prime}|
 =|\mathbf{r}_\mu - \mathbf{r}_N|
 =\sqrt{r_\mu^2 + r_N^2 - 2 r_\mu r_N y},
 \end{equation}
-and therefore only depends on the absolute values of the vectors and on ${y}{=}{\cos(\sphericalangle \mathbf{r}_\mu\mathbf{r}_N)}$. The dependence on $|\mathbf{r}_\mu^{\,\prime} - \mathbf{r}_N^{\,\prime}\,|$ is more complicated for the Uehling potential, but a multipole expansion can be performed nonetheless by expanding the dependence on $y$ in Legendrepolynomials, which reads as
+and therefore only depends on the absolute values of the vectors and on ${y}{=}{\cos(\sphericalangle \mathbf{r}_\mu\mathbf{r}_N)}$. The dependence on $|\mathbf{r}_\mu^{\,\prime} - \mathbf{r}_N^{\,\prime}\,|$ is more complicated for the Uehling potential, but a multipole expansion can be performed nonetheless by expanding the dependence on $y$ in Legendre polynomials, which reads as
 \begin{alignat}{2}
 &\frac{K_1(2m_e{|\mathbf{r}_\mu^{\,\prime} - \mathbf{r}^{\,\prime}\,|})}{|\mathbf{r}_\mu^{\,\prime} - \mathbf{r}^{\,\prime}\,|}
 &&=\sum_{l=0}^\infty c_l(r_\mu,r_N) P_l(y)\\
 &&&=\sum_{l=0}^\infty c_l(r_\mu,r_N) \sum_{m=-l}^l \text{C}^*_{lm}(\vartheta_N^{\prime},\varphi_N^{\prime})\text{C}_{lm}(\vartheta_\mu^\prime,\varphi_\mu^\prime),\notag
 \end{alignat}
-where the second equality is a consequence of the addition theorem~\eqref{eq:legendreAddTheorem} of Legendre polynomials, and the expansion coefficients, which are still a function of the absolute values of the vectors, are defined as
+where the second equality is a consequence of the addition theorem~\eqref{eq:legendreAddTheorem} of Legendre polynomials. The expansion coefficients are still functions of the absolute values of the vectors and are defined as
 \begin{equation}
 c_l(r_\mu,r_N)=\frac{2l+1}{2} \int_{-1}^1 \text{d}y \frac{K_1(2m_e{|\mathbf{r}_\mu - \mathbf{r}_N|})}{|\mathbf{r}_\mu - \mathbf{r}_N|} P_l(y).
 \label{eq:defcl}
 \end{equation}
-Eq.~\eqref{eq:defcl} can be either solved by numerical integration, or it can also be expressed in closed form, using Eq.~\eqref{eq:defKnAnalyt} for the functions $K_n(x)$. For the closed form expression, the integration variable $y$ in Eq.~\eqref{eq:defcl} is sustituted by $z=f^{-1}(y)=2m_e{|\mathbf{r}_\mu - \mathbf{r}_N|}$ or $y=f(z)=(r_\mu^2+r_N^2 -(z/2m)^2)/(2r_\mu r_N)$. Thereby, Eq.~\eqref{eq:defcl} reads as
+Eq.~\eqref{eq:defcl} can be either solved by numerical integration, or expressed in closed form, using Eq.~\eqref{eq:defKnAnalyt} for the functions $K_n(x)$. For the closed form expression, the integration variable $y$ in Eq.~\eqref{eq:defcl} is substituted by $z=f^{-1}(y)=2m_e{|\mathbf{r}_\mu - \mathbf{r}_N|}$ or $y=f(z)=(r_\mu^2+r_N^2 -(z/2m)^2)/(2r_\mu r_N)$. Thereby, Eq.~\eqref{eq:defcl} reads as
 \begin{equation}
 c_l(r_\mu,r_N)=\frac{2l+1}{4 r_\mu r_N m_e}\mathop\int\limits_{2m_e{|r_\mu - r_N|}}^{2m_e{(r_\mu + r_N)}} \text{d}z\, K_1(z)P_l(f(z)).
 \label{eq:defcl2}
 \end{equation}
-Now, using that the $l$-th Legendre polynomials are polynomials of degree $l$, and that $f(z)$ is quadratic in $z$, it follows that $P_l(f(z))$ is a polynomial of degree $2l$. Thereby, Eq.\eqref{eq:defcl2} can be integrated by part $2l$-times for the two functions $K_1(z)$ and $P_l(f(z))$, using the relations from Eq.~\eqref{eq:Kninfo}, to solve the integral as
+Since $f(z)$ is quadratic in $z$, it follows that $P_l(f(z))$ is a polynomial of degree $2l$. Thereby, Eq.\eqref{eq:defcl2} can be integrated by part $2l$-times for the two functions $K_1(z)$ and $P_l(f(z))$, using the relations from Eq.~\eqref{eq:Kninfo}, to solve the integral as
 \begin{equation}
 c_l(r_\mu,r_N)=\frac{2l+1}{4 r_\mu r_N m_e}
 \sum\limits_{i=0}^{2l} K_{-i}(z)\,\partial^{(i)}_yP_l(f(z))\text{\huge |}^{y=2m_e{|r_\mu - r_N|}}_{y=2m_e{(r_\mu + r_N)}}.
@@ -915,12 +921,29 @@ V_{\text{uehl}}(\mathbf{r}_\mu,\phi,\theta)=&\sum_{l=0}^\infty-Z\alpha\frac{2\al
 For $l=0$, the expression for Uehling potential of a spherical charge distribution~\cite{Fullerton1976} which only depends on $r_\mu$ is recovered as
 \begin{align}
 \label{eq:sph_uehl}
-V^{(0)}_{\text{uehl}}(r_\mu)=& -\frac{2\alpha (Z\alpha)}{3 m_e r}\int_0^\infty \text{d}r^{\prime}\,\rho_0(r^\prime)\left[K_0(2m_e|r-r^\prime|)-K_0(2m_e(r+r^\prime))\right]\notag
+V^{(0)}_{\text{uehl}}(r_\mu)=& -\frac{2\alpha (Z\alpha)}{3 m_e r}\int_0^\infty \text{d}r^{\prime}\,\rho_0(r^\prime)\left[K_0(2m_e|r-r^\prime|)-K_0(2m_e(r+r^\prime))\right]\notag,
 \end{align}
 where the spherically averaged part of the charge distribution is
 \begin{equation}
-\rho_0(r)=\int_0^{2\pi}\text{d}\varphi\int_0^\pi\text{d}\vartheta \sin(\vartheta)\rho(\mathbf{r}\,)/(4\pi).
+\rho_0(r)=\frac{1}{4\pi}\int_0^{2\pi}\text{d}\varphi\int_0^\pi\text{d}\vartheta \sin(\vartheta)\rho(\mathbf{r}).
 \end{equation}
+%
+% begin quad uehl figure
+\begin{figure}[t]%
+\centering
+\subfloat[]{\label{fig:quehl1}\includegraphics[width=0.3\linewidth]{pics/mixed}}
+\hspace{2cm}
+\subfloat[]{\label{fig:quehl2}\includegraphics[width=0.3\linewidth]{pics/quehl}}
+%\includegraphics[width=0.30\textwidth]{pics/mixed}\hspace{3.5cm}
+%\includegraphics[width=0.30\textwidth]{pics/quehl}\\
+%$\qquad\qquad\qquad\qquad$(a)\hfill(b)$\qquad\qquad\qquad\qquad$
+\caption{
+Feynman diagrams for the leading order contributions of the vacuum polarization to the quadrupole interaction in muonic atoms. An external double line stands for the bound-muon wave function. A single internal line for the free electron propagator, and a wave line for the photon propagator. A cross represents the interaction with the monopole potential, and a triangle the interaction with the quadrupole potential. Contribution (a) is calculated by including the spherically symmetric contribution of the Uehling potential~\eqref{eq:sph_uehl} in the Dirac equation; Contribution (b) by including the quadrupole contribution of the Uehling potential~\eqref{eq:defmultiuehl} in the matrix elements.
+}
+\label{fig:quehl}
+\end{figure}
+% end quad uehl figure
+%
 The approach is applicable for arbitrary charge distributions, and is applied for the quadrupole term with $l=2$ in Sec.~\ref{sec:muon_re}. In the following, the quadrupole term $l=2$ is considered for the models of a charged-shell and point-like quadrupole distribution, where the corresponding term in Eq.~\eqref{eq:defmultiuehl} can be simplified. For the charged-shell quadrupole distribution, the nuclear charge distribution is written as
 \begin{alignat}{2}
 &\rho(\mathbf{r}_N)&&=\rho_0(r_N) + \rho_2(r_N,\vartheta_N)\\
@@ -933,7 +956,7 @@ V^{(2)}_{\text{uehl}}(\mathbf{r}_\mu,\phi,\theta)=
 -\alpha Q_0 \frac{\alpha}{3\pi}\frac{c_2(r_\mu,R)}{R^2}\sum\limits_{m=-l}^{l} C_{lm}^*(\theta,\phi)C_{lm}(\vartheta_\mu,\varphi_\mu).
 \label{eq:quadUehlShell}
 \end{equation}
-The limit of a point-like quadrupole moment is the limit of zero nuclear radius $R$ in Eq.\eqref{eq:quadUehlShell}. However, the limit cannot be calculated naively due to the $R^{2}$ factor in the denominator, but it turns out that the Taylor expansion of $c_2(r_\mu,R)$ around $R=0$ has no constant and linear term. Therefore, $c_2(r_\mu,R)$ can be expanded for small $R$ as
+The limit of a point-like quadrupole moment is the limit of zero nuclear radius $R$ in Eq.~\eqref{eq:quadUehlShell}. However, the limit cannot be calculated naively due to the $R^{2}$ factor in the denominator, but it turns out that the Taylor expansion of $c_2(r_\mu,R)$ around $R=0$ has no constant and linear term. Therefore, $c_2(r_\mu,R)$ can be expanded for small $R$ as
 \begin{equation}
 c_2(r_\mu,R) = \frac{K_1(2m_er_\mu)+2m_er_\mu K_2(2m_er_\mu)+4m_e^2r_\mu^2/3K_3(2m_er_\mu)}{r^3}R^2 + \mathcal{O}(R^3),
 \end{equation}
@@ -945,18 +968,18 @@ and therby the point-like limit of quadrupole Uehling potential reads
 &\qquad\qquad g(r)&&=\frac{\alpha}{3\pi}\frac{K_1(2m_er_\mu)+2m_er_\mu K_2(2m_er_\mu)+4m_e^2r_\mu^2/3K_3(2m_er_\mu)}{r^3}.
 \label{eq:quadUehlShellLimit}
 \end{alignat}
-The expressions for the quadrupole Uehling potential for the charged-sphere and point-like distributions from Eqs.~\eqref{eq:quadUehlShell} and \eqref{eq:quadUehlpoint}, respectively, can be used for testing the implementation of the general case in Eq.~\eqref{eq:defmultiuehl}.\\
+The expressions for the quadrupole Uehling potential for the charged-sphere and point-like distributions from Eqs.~\eqref{eq:quadUehlShell},~\eqref{eq:quadUehlpoint}, respectively, can be used for testing the implementation of the general case in Eq.~\eqref{eq:defmultiuehl}.\\
 
 
 \subsection{Residual second order corrections}
 \label{sec:muon_residualSO}
-The rediagonalization of the hyperfine interaction in muonic atoms is explained in Sec.~\ref{sec:muon_dynamic}, using a modelspace consisting of a muonic fine-structure doublet and the first rotational nuclear states. Also, the leading contribution from states outside of the modelspace is derived in Eq.~\eqref{eq:pert_secondOrderEnerg}. Essentially, it is the second order energy correction due to the hyperfine interaction, excluding all states which are considered in the rediagonalization process. In the following, the residual second order corrections will be discussed for the example of the Rhenium $2p$ modelspace given in Sec.~\ref{sec:toyModelRediag}. Here, the modelspace consists of the muonic $2p\nicefrac{1}{2}$ and $2p\nicefrac{3}{2}$ states and the nuclear $5/2,7/2,9/2$ states. This results in 18 coupled states, with values of the total angular momentum between $F=1$ and $F=6$, as shown in Fig.\ref{fig:blockRe}. The set of these states is called $M$. The summation over all states, which are not in the modelspace involves all states $\left|FM\,I_iK_i\,n_i\kappa_i\right>$ as defined in \eqref{eq:totalState}, where not all quantum numbers coincide with a state in the modelspace $M$. In the following, this summation is schematically written as $\sum_{i\notin M}$.
+The rediagonalization of the hyperfine interaction in muonic atoms is explained in Section~\ref{sec:muon_dynamic}, using a modelspace consisting of a muonic fine-structure doublet and the first rotational nuclear states. Also, the leading contribution from states outside of the modelspace is derived in Eq.~\eqref{eq:pert_secondOrderEnerg}. Essentially, it is the second order energy correction due to the hyperfine interaction, excluding all states which are considered in the rediagonalization process. In the following, the residual second order corrections will be discussed for the example of the rhenium $2p$ modelspace given in Sec.~\ref{sec:toyModelRediag}. Here, the modelspace consists of the muonic $2p\nicefrac{1}{2}$ and $2p\nicefrac{3}{2}$ states and the nuclear $5/2,7/2,9/2$ states. This results in 18 coupled states, with values of the total angular momentum $F=1,...,6$, as shown in Fig.~\ref{fig:blockRe}. The set of these states is called $M_{\mu}$. The summation over all states, which are not in the modelspace involves all states $\left|FM\,I_iK_i\,n_i\kappa_i\right>$ as defined in Eq.~\eqref{eq:totalState}, where not all quantum numbers coincide with a state in the considered modelspace $M_{2p}$. In the following, this summation is schematically written as $\sum_{i\notin M_{\mu}}$.
 
 After the subspace has been chosen and rediagonalization has been performed, the quadrupole interaction with states outside of the subspace leads to residual second order corrections to the energy levels~\cite{chen1970}. 
 For the total second order correction a summation/integration over the complete (discrete and continous) spectrum for both nuclear and muonic states has to be performed. For the complete nuclear spectrum, sophisticated models or numerous experimental data are required. However, the muon is a point-like particle and can be described as a Dirac particle. Therefore, in this work, we calculate the second order corrections due to the electric quadrupole (Eq.~\eqref{eq:quadPot}) and quadrupole-Uehling interaction (${l}{=}{2}$-term in Eq.~\eqref{eq:defmultiuehl}), where the nucleus stays in the rotational ground state, but the complete muonic spectrum is considered.
 For a composite state from Eq.~\eqref{eq:rediagonState}, where the hyperfine interaction is diagonalized in the modelspace, the second order energy shift due to states outside of the modelspace is
 \begin{equation}
-\Delta E_{\text{2.ord.}}^{(F,k)}= \sum_{i\notin M}\frac{\left|\left< FMk\right|{V_{\text{el}}^{(2)}}{+}{V_{\text{uehl}}^{(2)}}\left|FMn_i\kappa_iI_iK \right>\right|^2}{E_{F,k}-E_i},
+\Delta E_{\text{2.ord.}}^{(F,k)}= \sum_{i\notin M_{\mu}}\frac{\left|\left< FMk\right|{V_{\text{el}}^{(2)}}{+}{V_{\text{uehl}}^{(2)}}\left|FMn_i\kappa_iI_iK \right>\right|^2}{E_{F,k}-E_i},
 \label{eq:second}
 \end{equation}
 where the sum is to be taken over all states not considered in the rediagonalization, including continuum states of the muon, and the unperturbed energy of the state $i$ is $E_i=E_{n_i\kappa_i}+E_{I_i}$.
@@ -974,8 +997,8 @@ where the sum is to be taken over all states not considered in the rediagonaliza
 
 
 
-\subsection{Evaluation for Rhenium-185 and Uranium-235}
-Calculations of the quadrupole-Uehling potential and the residual second order corrections have been performed for muonic Rhenium and Uranium, assuming a deformed Fermi nuclear charge distribution which reads as
+\subsection{Evaluation for rhenium-185 and uranium-235}
+Calculations of the quadrupole-Uehling potential and the residual second order corrections have been performed for muonic rhenium and uranium, assuming a deformed Fermi nuclear charge distribution which reads as
 \begin{equation}
 \rho_{ca\beta}(\vec{r}\,)=\cfrac{N}{1+\exp (\frac{r-c(1+\beta \text{Y}_{20}(\vartheta))}{a})},
 \label{eq:deffermi_2}
@@ -984,38 +1007,22 @@ where $c$ is the half-density radius, $a$ the skin thickness, $\beta$ the deform
 \begin{equation}
 \int \text{d}^3r\, \rho_{ca\beta}(\vec{r}\,)=1.
 \end{equation}
-Using the deformed Fermi distribution has proved to be very successful in the description of the level structure of heavy muonic atoms, e.g.~\cite{hitlin1970,tanaka1984,tanaka1984_2}.
+Using the deformed Fermi distribution has proved to be suitable for the description of the level structure of heavy muonic atoms, e.g.~\cite{hitlin1970,tanaka1984,tanaka1984_2}.
 Values for the parameters can be estimated by using a value ${a}{=}{2.3\,\text{fm}/(4\ln 3)}$, which has proved to be a sufficiently accurate value for most nuclei~\cite{Beier2000}. Then, $c$ and $\beta$ are chosen such that the quadrupole moment and RMS value of the distribution are in agreement with the literature values from~\cite{Angeli2013,Stone2005}. For the nuclear states involved in the dynamic hyperfine structure, also the excitation energies are needed from literature~\cite{ENSDF}. The used parameters are summarized in Table~\ref{tab:params}.
 With these parameters, the electric and Uehling potentials, both monopole and quadrupole parts, can be calculated numerically. The muon wave functions are obtained by solving the Dirac equation~\eqref{eq:muonicEn} with the dual-kinetic-balance method~\cite{Shabaev2004}. Thereby, a complete set of muonic bound and continuum states is obtained. An overview for the binding energies of muon states important for the dynamic hyperfine splitting are shown in Table~\ref{tab:monopole}.
 
-The quadrupole matrix elements can be calculated both for the rediagonalization in the dynamic hyperfine structure and for the evaluation of the residual second-order terms \eqref{eq:second}, using Eq.~\eqref{eq:quadNonDiagEl}. As the next step, the total Hamiltonian~\eqref{eq:muon_htotal} is diagonalized in finite subspaces or modelspaces consisting of the muonic ($2p\nicefrac{1}{2}$, $2p\nicefrac{3}{2}$) or ($3d\nicefrac{3}{2}$, $3d\nicefrac{5}{2}$) doublet states and nuclear ground state rotational band. For Rhenium, the first six states with $I_N \in \{5/2,...,15/2\}$ are considered, and for Uranium with $I_N \in \{7/2,...,17/2\}$. The excitation energies of the nuclear states are summarized, along with other nuclear parameters, in Table~\ref{tab:params}. Thereby, the composite states and corresponding energies $E_{\text{quad}}$ from Eq.~\eqref{eq:rediagonState} are obtained and finally, for each of these states the residual second order quadrupole correction \eqref{eq:second} is calculated. Here, the intermediate sum goes over all nuclear and muonic states not included in the modelspace.
-Note that for the muonic ground state, a rediagonalization is not necessary, since the diagonal matrix elements of the quadrupole interactions vanish for muonic states with $j=1/2$.
-The quadrupole-Uehling contribution to the binding energies can be obtained by performing the calculations for the dynamic hyperfine structure twice; once with the matrix elements both for the rediagonalization and for the residual second-order corrections containing both the electric and Uehling interaction ${V_{\text{el}}^{(2)}}{+}{V_{\text{uehl}}^{(2)}}$ and a second time only with the electric part ${V_{\text{el}}^{(2)}}$ from Eq.\eqref{eq:quadNonDiagEl}. The difference between those two approaches gives the quadrupole-Uehling corrections. Results for the residual second order quadrupole correction from Eq.~\eqref{eq:second} and for the quadrupole-Uehling corrections can be found in Table~\ref{tab:hfs_2} for a number of states.
-%
-To conclude the improved calculation of the higher order effects, the quadrupole interaction in the framework of the dynamic hyperfine structure in heavy muonic atoms was analyzed by an fully relativistic treatment of the quadrupole-Uehling potential and of the residual second order terms.
-The quadrupole-Uehling interaction was obtained by a multipole expansion of the Uehling potential for an arbitrary nuclear charge distribution without the assumption on the distance between muon and nuclear charge being large.
-Since it has the same angular structure as the conventional quadrupole interaction, the quadrupole-Uehling expectation value vanishes between two muonic states with $j=1/2$, thus it does not affect the muonic ground state.
-The calculations for Uranium show that it can lead to energy corrections almost on the keV level for very heavy nuclei with muonic $2p$ states and thus can be potentially relevant for comparison between theoretical predictions and experiments. Being a short-ranged potential, it falls of quickly for states further away from the nucleus. For states with $n\geq3$, we find values below $0.15\,$keV, even for high Z.
-The generalization to Uehling corrections for higher order multipole is straight forward. In the case of muonic atoms, since the influence of higher order multipoles is already small, we expect this correction will not contribute significantly.
-The residual second order quadrupole corrections in the dynamic hyperfine structure were calculated numerically using a basis of relativistic wave functions including nuclear finite size correction and Uehling correction due to the monopole part of the nuclear potential.
-In contrast to the first order terms, the muonic ground state energy is affected by the second order corrections. Here, the energy correction amounts up to several keV. Also for muonic $2p$ states, it is of similar size. For the $3d$ levels, we find the energy corrections below half a keV, both for Rhenium and Uranium.
-If a more complete nuclear model instead the rotational model is used, the additional nuclear states appear as intermediate state in the second order corrections, leading to the nuclear polarization corrections. Therefore, the approach presented in this work provides a basis for an accurate treatment of the muonic spectrum for the nuclear polarization effect in deformed muonic atoms.
+The quadrupole matrix elements can be calculated both for the rediagonalization in the dynamic hyperfine structure and for the evaluation of the residual second-order terms \eqref{eq:second}, using Eq.~\eqref{eq:quadNonDiagEl}. As the next step, the total Hamiltonian~\eqref{eq:muon_htotal} is diagonalized in finite subspaces or modelspaces consisting of the muonic ($2p\nicefrac{1}{2}$, $2p\nicefrac{3}{2}$) or ($3d\nicefrac{3}{2}$, $3d\nicefrac{5}{2}$) doublet states and nuclear ground state rotational band. For rhenium, the first six states with $I_N =5/2,...,15/2$ are considered, and for uranium with $I_N =7/2,...,17/2$. The excitation energies of the nuclear states are summarized, along with other nuclear parameters, in Table~\ref{tab:params}. Thereby, the composite states and corresponding energies~$E_{\text{quad}}$ from Eq.~\eqref{eq:rediagonState} are obtained and finally, for each of these states the residual second order quadrupole correction \eqref{eq:second} is calculated. Here, the intermediate sum goes over the rotational nuclear and muonic states not included in the modelspace.
+For the muonic ground state, a rediagonalization is not necessary, since the diagonal matrix elements of the quadrupole interactions vanish for muonic states with $j=1/2$.
+The quadrupole-Uehling contribution to the binding energies can be obtained as the difference of two calculations; once with the matrix elements both for the rediagonalization and for the residual second-order corrections containing both the electric and Uehling interaction ${V_{\text{el}}^{(2)}}{+}{V_{\text{uehl}}^{(2)}}$ and a second time only with the electric part ${V_{\text{el}}^{(2)}}$ from Eq.\eqref{eq:quadNonDiagEl}. Results for the residual second order quadrupole correction from Eq.~\eqref{eq:second} and for the quadrupole-Uehling corrections can be found in Table~\ref{tab:hfs_2} for a number of states.\\
 
-
-
-
-% begin quad uehl figure
-\begin{figure}%
-\centering
-\includegraphics[width=0.30\textwidth]{pics/mixed}\hspace{3.5cm}
-\includegraphics[width=0.30\textwidth]{pics/quehl}\\
-$\qquad\qquad\qquad\qquad$(a)\hfill(b)$\qquad\qquad\qquad\qquad$
-\caption{
-Feynman diagrams for the leading order contributions of the vacuum polarization to the quadrupole interaction in muonic atoms. An external double line stands for the bound-muon wave function. A single internal line for the free electron propagator, and a wave line for the photon propagator. A cross represents the interaction with the monopole potential, and a triangle the interaction with the quadrupole potential. Contribution (a) is calculated by including the spherically symmetric contribution of the Uehling potential in the Dirac equation; Contribution (b) by including the quadrupole contribution of the Uehling potential in the matrix elements.
-}
-\label{fig:quehl}
-\end{figure}
-% end quad uehl figure
+To conclude, the improved calculation of the higher order effects, the quadrupole interaction in the framework of the dynamic hyperfine structure in heavy muonic atoms was analyzed by a fully relativistic treatment of the quadrupole-Uehling potential and of the residual second order terms.
+The quadrupole-Uehling interaction was obtained rigorously by a multipole expansion of the Uehling potential for an arbitrary nuclear charge distribution.
+Since it has the same angular structure as the conventional quadrupole interaction, the quadrupole-Uehling expectation value also vanishes between two muonic states with $j=1/2$, thus it does not affect the muonic ground state.
+The calculations for uranium show that it can lead to energy corrections almost on the keV level for very heavy nuclei with muonic $2p$ states and thus can be potentially visible in the current experiments. Being a short-ranged potential, it falls of quickly for states further away from the nucleus. For states with $n\geq3$, we find values below $0.15\,$keV, even for high Z.
+The generalization to Uehling corrections for higher-order multipoles is straight forward. In the case of muonic atoms, since the influence of higher order multipoles is already small, this correction can be expected to be negligible.
+The residual second order quadrupole corrections in the dynamic hyperfine structure were calculated numerically using a basis of relativistic wave functions including nuclear finite size correction and monopole Uehling correction.
+In contrast to the first order terms, the muonic ground state energy is affected by the second order corrections. Here, the energy correction amounts up to several keV. Also for muonic $2p$ states, it is of similar size. For the $3d$ levels, we find the energy corrections below half a keV, both for rhenium and uranium.
+If a more advanced nuclear model instead the rotational model is used, the additional nuclear states appear as intermediate state in the second order corrections, leading to the nuclear polarization corrections. Therefore, the approach presented in this work provides an excellent basis for an accurate treatment of the muonic spectrum for the nuclear polarization effect in deformed muonic atoms.
 
 %begin params table
 \begin{table}[b]
@@ -1044,12 +1051,12 @@ $E_{I_0 + 5}$ \hfill[keV] & 949.7(5) & 339.976(24) \\
 %begin monopole table
 \begin{table}[b]
 \caption{\label{tab:monopole}%
-Binding energies of the low-lying, unperturbed muonic states due to the spherically symmetric parts of the electric and Uehling potential obtained by solving Eq.~\eqref{eq:muonicEn} for muonic Rhenium and Uranium. The first column shows the binding energies for a point-like Coulomb potential, the second and third column include the finite size corrections without and with Uehling potential, respectively. All energies are in keV.
+Binding energies of the low-lying, unperturbed muonic states due to the spherically symmetric parts of the electric and Uehling potential obtained by solving Eq.~\eqref{eq:muonicEn} for muonic rhenium and uranium. $E_{\rm{c}}$ shows the binding energies for a point-like Coulomb potential, $E_{\rm{fs}}$ and $E_{\rm{uehl}}$ include the finite size corrections without and with Uehling potential, respectively. All energies are in keV.
 }
 %\begin{ruledtabular}
 \centering
 \begin{tabular}{c|crrr}
-& state & \text{point like}& \text{finite size (fs)} &\text{fs+Uehling}\\ \hline \\[-7pt]
+& state & $E_{\rm{c}}$& $E_{\rm{fs}}$ &$E_{\rm{uehl}}$\\ \hline \\[-7pt]
 $^{185}$Re &1s\nicefrac{1}{2} & 17229.12 & 9333.46 & 9394.02 \\
 &2s\nicefrac{1}{2} & 4398.85 & 3083.91 & 3100.44 \\
 &2p\nicefrac{1}{2} & 4398.85 & 4032.61 & 4059.50 \\
@@ -1154,20 +1161,20 @@ $^{235}\text{U}$&  3 &   \nicefrac{7}{2} & 1s\nicefrac{1}{2} & 12175.51 &  6.83 
 
 
 \cleardoublepage
-\section{Structure of muonic Rhenium-185}
+\section{Structure of muonic $^{185}\text{Re}$ \& $^{187}\text{Re}$}
 \label{sec:muon_re}
-The analysis of x rays emitted due to transitions in muonic atoms is one possibility to obtain information on the nuclear charge distribution and measure properties like RMS charge radii, or nuclear quadrupole moments. This Section is about the structure of muonic Rhenium-185. So far, there is no absolute measurement of the charge radius of $^{185}$Re~\cite{schopper2004} and the only experiment reported on muonic rhenium is an extraction of the quadrupole moments of $^{185}$Re and $^{187}$Re from the N x rays (${n}{=}{5}\rightarrow{n}{=}{4}$) of natural Re~\cite{konijn1979}, which is mainly a mixture of these two isotopes. Measurements of muonic x rays with isotopically pure Rhenium have been recently performed by the MuX Collaboration, using the high intensity muon beam at the Paul-Scherrer-Institut~\cite{psiExperiments,psiFacilities}.
+The analysis of x-rays emitted due to transitions in muonic atoms is one possibility to obtain information on the nuclear charge distribution and measure properties like RMS charge radii, or nuclear quadrupole moments. This Section analyzes the structure of muonic rhenium-185 and -187. So far, there is no absolute measurement of the charge radius of $^{185}$Re~\cite{schopper2004} and the only experiment reported on muonic rhenium is an extraction of the quadrupole moments of $^{185}$Re and $^{187}$Re from the N x rays (${n}{=}{5}\rightarrow{n}{=}{4}$) of natural Re~\cite{konijn1979}, which is mainly a mixture of these two isotopes. Measurements of muonic x-rays with isotopically pure rhenium have been recently performed by the MuX Collaboration, using the high intensity muon beam at the Paul-Scherrer-Institut~\cite{psiExperiments,psiFacilities}.
 
-In the following, the muonic transition energies and transition probabilities are analyzed, using the methods described in Sections~\ref{sec:calculationSpectraMuon} and~\ref{sec:higherorder}. Thereby, the dependence of transitions and intensities of the $N$ x rays ($n=5\rightarrow n=4$) on the quadrupole is used in combination with experimental data on isotopically pure $^{185}$Re to extract the nuclear quadrupole moment. Also, a good qualitative discription of the $K$- and $L$ x rays is given, using the rigid-rotor nuclear model (Appendix~\ref{app:rig_rotor}).
+In the following, the muonic transition energies and transition probabilities are analyzed, using the methods described in Sections~\ref{sec:calculationSpectraMuon} and~\ref{sec:higherorder}. Thereby, the dependence of transitions and intensities of the $N$ x rays ($n=5\rightarrow n=4$) on the quadrupole moment is used in combination with experimental data on isotopically pure $^{185}$Re to extract the nuclear quadrupole moment. Also, a good qualitative description based on the rigid-rotor nuclear model (Appendix~\ref{app:rig_rotor}) of the $K$ and $L$ x-rays is given.
 
 
 %\subsection{Extraction of quadrupole moment from $5g\rightarrow 4f$ transitions}
-After a muon is captured and starts cascading towards its ground state, there is an intermediate region, where finite nuclear size effects are still rather small and the muon is not influenced by the surrounding atomic electrons. Therefore, the system is essentially hydrogen-like and no many-body problem needs to be solved. It has been realized, that in this region, corresponding to the ${n}{=}{5}\rightarrow{n}{=}{4}$ transitions, nuclear quadrupole moments can be extracted, which has been done for Lutetium-175 in Ref.~\cite{Dey1979} and for natural Rhenium in Ref.~\cite{konijn1979}.
-As a first application of the spectrum-calculation presented in this thesis, the dependence of the transition energies and intensities of the muonic $N$ x rays on the nuclear quadrupole moment is calculated, and by comparing to recent measurements of isotopically pure $^{185}$Re, a new value for its quadrupole moment is obtained.
+After a muon is captured and starts cascading towards its ground state, there is an intermediate region with $n\approx 4 - 7$, where finite nuclear size effects are still rather small and the muon is not influenced by the surrounding atomic electrons. Therefore, the system is essentially hydrogen-like and no many-body problem has to be solved. It has been realized, that in this region, corresponding to the ${n}{=}{5}\rightarrow{n}{=}{4}$ transitions, nuclear quadrupole moments can be extracted, which has been done for lutetium-175 in Ref.~\cite{Dey1979} and for natural rhenium in Ref.~\cite{konijn1979}.
+As a first application of the spectrum-calculation presented in this thesis, the dependence of the transition energies and intensities of the muonic $N$ x rays on the nuclear quadrupole moment is calculated, and by comparing to recent measurements of isotopically pure $^{185}$Re and $^{187}$Re, a new value for their spectroscopic quadrupole moment is obtained.
 
-Following Sec.~\ref{sec:transitions}, the most intense transitions are the $E1$-transitions in the circular orbits $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ and $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$. However, it turns out that also the $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ transitions have to be considered, since they almost coincide in energy with the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$ energies around $365\,$keV. Therefore, the following approach is chosen for the theoretical prediction: The four fine-structure states of the initial states $5g\nicefrac{9}{2},\,5g\nicefrac{7}{2},\,5f\nicefrac{7}{2}\,,5f\nicefrac{5}{2}$ together with the nuclear ground state with $I=5/2$ define a first model space. Now, the formalism described in Sec.~\ref{sec:muon_dynamic} can be used to calculate the energies in this modelspace, including finite size effects, vacuum polarization (Uehling, Källen-Sabry, Wichmann-Kroll in point-like approximation, quadrupole-Uehling), and rediagonalization of the electric quadrupole and magnetic dipole hyperfine interaction.
-Excited nuclear states do not need to be considered, since these states only contribute, if the quadrupole interaction is on the same order of magnitude compared to the nuclear rotational states. For the $N$ x rays, the nuclear energy splitting is around three orders of magnitude larger. Furthermore, due to the small hyperfine splitting in the ${n}{\in}{\{4,5\}}$ states, the residual second order terms, as described in Sec.~\ref{sec:muon_residualSO}, are very small.
-The same procedure is repeated for the final states with ${n}{=}{4}$, i.e. $4f\nicefrac{7}{2},\,4f\nicefrac{5}{2},\,4d\nicefrac{5}{2},\,4f\nicefrac{3}{2}$. Then, the transition probabilities can be calculated from each initial to each final state. For this analysis, the relativistic formulas for $E1$ and $M1$ transitions from Sec.~\ref{sec:transitions} are used, assuming an initial population $\sim 2F+1$ for each initial state with total angular momentum $F$. With this approach, every transition energy and corresponding intensity can be calculated for a give nuclear charge distribution. A deformed Fermi distribution is assumed, which reads as
+Following Sec.~\ref{sec:transitions}, the most intense transitions are the $E1$-transitions in the circular orbits $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ and $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$. However, also the $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ transitions have to be considered, since they almost coincide in energy with the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$ energies around $365\,$keV. Therefore, the following approach is chosen for the theoretical prediction: The four fine-structure states of the initial states $5g\nicefrac{9}{2},\,5g\nicefrac{7}{2},\,5f\nicefrac{7}{2}\,,5f\nicefrac{5}{2}$ together with the nuclear ground state with $I=5/2$ define a first model space. Now, the formalism described in Sec.~\ref{sec:muon_dynamic} can be used to calculate the energies in this modelspace, including finite size effects, vacuum polarization (Uehling, Källen-Sabry, Wichmann-Kroll in point-like approximation, quadrupole-Uehling), and rediagonalization of the electric quadrupole and magnetic dipole hyperfine interaction.
+Excited nuclear states were not considered, since the quadrupole interaction in this case is compared to the nuclear rotational states. For the $N$ x rays, the nuclear energy splitting is around three orders of magnitude larger. Furthermore, due to the small hyperfine splitting in the ${n}{=}{4,5}$ states, the residual second order terms, as described in Sec.~\ref{sec:muon_residualSO}, are very small.
+The same procedure is repeated for the final states with ${n}{=}{4}$, i.e. $4f\nicefrac{7}{2},\,4f\nicefrac{5}{2},\,4d\nicefrac{5}{2},\,4d\nicefrac{3}{2}$. Then, the transition probabilities can be calculated from each initial to each final state. For this analysis, the relativistic formulas for $E1$ and $M1$ transitions from Sec.~\ref{sec:transitions} are used, assuming an initial population $\sim 2F+1$ for each initial state with total angular momentum $F$. Transitions of higher-order multipolarity have a much smaller transition rate. With this approach, every transition energy and corresponding intensity can be calculated for a given nuclear charge distribution
 \begin{equation}
 \rho_N(r_N,\vartheta_N)=\cfrac{N}{1+\e^{\frac{r-c(1+\beta \text{Y}_{20}(\vartheta))}{a}}},
 \end{equation}
@@ -1180,9 +1187,9 @@ r_N^4 \sin\vartheta_N \rho_N(r_N,\vartheta_N)\text{P}_2(\cos\vartheta_N),
 where $\text{P}_l(x)$ are the Legendre polynomials from Appendix~\ref{app:special_func}.
 The value of the magnetic moment needed for the calculation of the magnetic dipole interaction is taken from~\cite{STONE2016}. The influence of finite size effects was checked by also using charged shell and homogeneously charged sphere distribution.
 With this parametrization, the entire spectrum can be calculated for a given spectroscopic quadrupole moment and by fitting the theoretically calculated spectrum to the experimental measured one, the quadrupole moment can be extracted. 
-The difference of two transition energies is especially sensitive on the quadrupole moment, since the majority of the uncertainty due to the nuclear RMS radius cancels, as described in~\cite{konijn1979}. Therefore, the energy differences of all $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ transition compared to the most intense transition in this group, called the centroid transition, is calculated and analogously the corresponding intensities are given relative to the centroid transition. 
+The difference between two transition energies is especially sensitive to the quadrupole moment, since the majority of the uncertainty due to the nuclear RMS radius cancels, as described in~\cite{konijn1979}. Therefore, the energy differences of all $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ transition compared to the most intense transition in this group, called the centroid transition, is calculated and analogously the corresponding intensities are given relative to the centroid transition. 
 The same holds for the group of the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{5}{2}$ and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ transitions. Then, the energy difference of the $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{5}{2}$ and the $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ centroid transition compared to the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid transition is calculated. Thereby, the energy differences of all considered transitions and the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid is parametrized in terms of the nuclear quadrupole moment and the position of the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid can be fitted to the experimental spectrum as a free parameter.
-It is too expensive to perform full calculations in the fitting process to experimental data. Instead, the full calculations are performed for several values of the quadrupole moment in the proximity of the expected value and a quadratic function is fitted for every transition energy and intensity. The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies are given in Table~\ref{tab:re185energ} for the relative transition energies and in Table~\ref{tab:re185intens} for the intensities. The fitted energy differences of the centroid transitions is given in Table~\ref{tab:re185energ}. A difficulty from the experimental side is the understanding of the line shape of the detector response function, which broadens the signal coming from a transtion with a well-defined energy, which is treated in~\cite{vogiatzi2018}.
+It is too expensive to perform full calculations in the fitting process to experimental data. Instead, the full calculations are performed for several values of the quadrupole moment in the proximity of the expected value and a quadratic function is fitted for every transition energy and intensity. The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies are given in Table~\ref{tab:re185energ} for the relative transition energies and in Table~\ref{tab:re185intens} for the intensities. The fitted energy differences of the centroid transitions is given in Table~\ref{tab:re185energ}. The main experimental challenge is understanding of the line shape of the detector response function, which broadens the signal coming from a transition with a well-defined energy, which is treated in~\cite{vogiatzi2018}.
 
 The fitted experimental spectrum is shown in Fig.~\ref{fig:re54} and thereby, the preliminary extracted spectroscopic quadrupole moment of $^{185}$Re is obtained as
 \begin{equation}
@@ -1205,7 +1212,7 @@ Comparison of the experimental spectrum for the $5g\nicefrac{9}{2}\rightarrow4f\
 %\subfloat[balll]{\label{fig:bliub}\includegraphics[width=0.83\linewidth]{pics/comparison}}\\
 %\subfloat[balll2]{\label{fig:bliub}\includegraphics[width=0.9\linewidth]{pics/Re185_Exp}}
 %\caption{
-%Experimental spectrum for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The black dots are the measurements, the red line is the total theoratical predicition, and the colored lines below are the separate lines convoluted with the detector response function.
+%Experimental spectrum for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The black dots are the measurements, the red line is the total theoretical predicition, and the colored lines below are the separate lines convoluted with the detector response function.
 %}
 %\label{fig:re54}
 %\end{figure*}
@@ -1406,26 +1413,26 @@ Comparison of experimental spectrum and theoretical calculations in the area of 
 
 
 \cleardoublepage
-\section{Bound muon g factor in Helium-4}
+\section{Bound muon $g$ factor in Helium-4}
 \label{sec:muon_he}
-Another application of the calculations described in this thesis are connected to the bound muon $g$ factor in muonic Helium-4, following the work presented in~\cite{sikora2018}. Although Helium is a light nucleus, finite nuclear size corrections have to be considered, since they are much bigger in muonic systems. Other effects, like nuclear polarization, further one- and two-loop QED, recoil, and weak corrections have been calculated by the other authors in~\cite{sikora2018}. Thereby, a precise theoretical prediction of the bound-muon g factor in Helium-4 is obtained.
+Another application of the calculations described in this thesis are connected to the bound muon $g$ factor in muonic Helium-4, following the work presented in~\cite{sikora2018}. Although Helium is a light nucleus, finite nuclear size corrections have to be considered for precise theoretical predictions. Other effects, like nuclear polarization, further one- and two-loop QED, recoil, and weak corrections have been calculated by the other authors in~\cite{sikora2018}. Thereby, a theoretical prediction of the bound-muon $g$ factor in Helium-4 on the $10^{-9}$ level is obtained.
 The calculations are preformed analogously to Chapter~\ref{ch:nucl_def}, but now with a bound muon instead of a bound electron. This is, the Dirac equation
 \begin{equation}
 \label{eq:boundMuonDirac}
 \left[\boldsymbol{\alpha}\cdot\mathbf{p}+
-\boldsymbol{\beta}m_\mu + V_i(r)\right]
+\beta m_\mu + V_i(r)\right]
 \,\left|n\kappa m\right> = E_{n\kappa} \, \left|n\kappa m\right>
 \end{equation}
 is solved for a spherically symmetric potentials $V_i(r)$, which are described below. Then, according to Eq.~\eqref{eq:gfac_central}, the g factors $g_i$, including the corrections due to $V_i$ can be obtained by radial integration of the solutions as
 \begin{equation}
-g_i=\frac{2m_\mu\kappa}{j(\kappa)(j(\kappa)+1)}\int_0^\infty\mathrm{d}r_e r_e^3 f_{n\kappa}(r_e)g_{n\kappa}(r_e).
+g_i=\frac{2m_\mu\kappa}{j(j+1)}\int_0^\infty\mathrm{d}r r^3 f_{n\kappa}(r)g_{n\kappa}(r).
 \label{eq:gfac_centralMuon}
 \end{equation}
 The finite nuclear size, the electric-loop and muonic-loop Uehling correction as well as the Källen-Sabry correction to the bound muon g factor is considederd by using the corresponding potentials directly in the Dirac equation. A two-parameter Fermi charge distribution for $^2$He$^4$ is used, such that the RMS value agrees with~\cite{Angeli2013} ($1.6755\,$fm):
 \begin{equation}
 \rho(r) = \frac{N}{1+\text{e}^{(r-c)/a}}.
 \end{equation}
-The uncertainty of this charge distribution is considered by using the uncertainty in the RMS value and the model dependence is estimated conventionally by varying the parameters $a$ between $0.05\,$fm and $0.3\,$fm. The considered potentials in dependence of the charge distribution are the point-like Coulomb potential $V_C(r)$ from Eq.~\eqref{eq:pureCoulomb}, the finite size electric potential $V(r)$ from Eq.~\eqref{eq:FSpot}, and the Uehling potentials $V^{(m_e)}_{\text{Uehl}}(r)$, $V^{(m_\mu)}_{\text{Uehl}}(r)$ from Eq.~\eqref{eq:uehlPot} for the electric- and muonic-loop Uehling potential, respectively. Furthermore, the Källen-Sabry potential with electronic loops $V^{(m_e)}_{\text{KS}}(r)$ from Eq.~\eqref{eq:KSPot} is considered. The $g$-factor corrections are obtained as:\\[8pt]
+The uncertainty of this charge distribution is estimated by using the uncertainty in the RMS value and the model dependence is estimated conventionally by varying the parameters $a$ between $0.05\,$fm and $0.3\,$fm. The considered potentials are the point-like Coulomb potential $V_C(r)$ from Eq.~\eqref{eq:pureCoulomb}, finite size electric potential $V(r)$ from Eq.~\eqref{eq:FSpot}, and Uehling potentials $V^{(m_e)}_{\text{Uehl}}(r)$, $V^{(m_\mu)}_{\text{Uehl}}(r)$ from Eq.~\eqref{eq:uehlPot} for the electric- and muonic-loop Uehling potential, respectively. Furthermore, the Källen-Sabry potential with electronic loops $V^{(m_e)}_{\text{KS}}(r)$ from Eq.~\eqref{eq:KSPot} is taken into account. The $g$-factor corrections are obtained as:\\[8pt]
 \begin{tabular}{llll}
 $i$&potential& $g_i$ factor& $\delta g_{i}/10^{-8}$ correction\\\hline
 0&$V_0(r)=V_C(r)$&1.999857988825369&$\phantom{-1}$--\\
@@ -1442,14 +1449,14 @@ $\delta g_2$ & $g_2-g_1$ & electronic-loop Ueling correction\\
 $\delta g_3$ & $g_3-g_2$ & muonic-loop Ueling correction\\
 $\delta g_4$ & $g_4-g_2$ & Källen-Sabry correction\\
 \end{tabular}\\[8pt]
-Thus, mixed Källen-Sabry and muonic-loop Uehling terms are not considered, but since the individual contributions are already small, the combined contribution can be expected to be even smaller and not important on the $10^{-10}$-level at all. Finally, the electronic-loop Uehling correction can written as $\delta g_1=47.96\times 10^{-7}+1.1(4)\times 10^{-9}$, where the first terms corresponds to the first order Uehling correction, which is the expectation value of the Uehling potential, corresponding to diagram Fig.~\ref{fig:vac_pol_uehl}~(a). The second term corresponds to the second and higher order Uehling corrections, mainly corresponding to diagram Fig.~\ref{fig:vac_pol_uehl}~(b), but also higher diagrams like Fig.\ref{fig:vac_pol_uehl}~(c), but higher order iterations do not contribute on the $10^{-10}$ level. All calculated contributions to the theoretical prediction of the bound muon $g$ factor in Helium-4 are presented in Table~\ref{tab:gHe}, where the contributions from this thesis are highlighted in red. There are still uncalculated two-loop light-by-light-scattering diagrams, and the corresponding estimated uncertainty is $5\times 10^{-9}$~\cite{sikora2018}.\\
+Thus, mixed Källen-Sabry and muonic-loop Uehling terms are not considered, but since the individual contributions are already small, the combined contribution can be expected to be even smaller and not visible on the $10^{-10}$-level at all. Finally, the electronic-loop Uehling correction can be written as $\delta g_1=47.96\times 10^{-7}+1.1(4)\times 10^{-9}$, where the first terms corresponds to the first order Uehling correction, which is the expectation value of the Uehling potential, corresponding to diagram Fig.~\ref{fig:vac_pol_uehl}~(a). The second term corresponds to the second and higher order Uehling corrections, mainly corresponding to diagram Fig.~\ref{fig:vac_pol_uehl}~(b), but also higher diagrams like Fig.~\ref{fig:vac_pol_uehl}~(c). Higher order iterations do not contribute on the $10^{-10}$ level. All calculated contributions to the theoretical prediction of the bound muon $g$ factor in Helium-4 are presented in Table~\ref{tab:gHe}, where the contributions calculated in this thesis are highlighted in red. There are still uncalculated two-loop light-by-light-scattering diagrams, and the corresponding uncertainty is estimated as $5\times 10^{-9}$~\cite{sikora2018}.\\
 In conclusion, it was demonstrated that the bound-muon $g$ factor in Helium-4 can be calculated on the $10^{-9}$ level. A measurement of this $g$ factor as $g_{\text{exp}}$ with a similar experimental uncertainty could give access to an independent and one order more accurate value of the muon mass. For this, the implicit dependency of the the theoretical value $g_{\text{theory}}$ on the muon mass has to solved for an expression of the muon mass in dependency of the experimantal and theoretical value as
 \begin{alignat}{2}
 &&&g_{\text{theory}}(m_\mu)\overset{!}{=}g_{\text{exp}}\\
 &\rightarrow &&m_\mu=m_\mu (g_{\text{theory}},g_{\text{exp}}).
 \end{alignat}
  Alternatively, an independent determination of the muon magnetic moment anomaly of the free muon $g_{\text{free}}-2$ may be possible by separating the  contributions to the free $g$ factor and the binding corrections as $g_{\text{theory}}=g_{\text{free}}+g_{\text{binding}}\overset{!}{=}g_{\text{exp}}$~\cite{sikora2018}.
-However, it is important to keep in mind, that the life time of a muonic atom is around one micro second, which is too short-lived for measuring the $g$ factor of muonic atoms in the same way as for electronic atoms, for example in~\cite{Sturm2011,Sturm2014} and thus a new, experimental technique would be needed for a measurement of the $10^{-9}$ level.
+However, it is important to keep in mind, that the life time of a muonic atom is around one micro second, which is too short-lived for measuring the $g$ factor of muonic atoms in the same way as for electronic atoms, for example in~\cite{Sturm2011,Sturm2014} and thus a measurement of the bound muon $g$ factor on the $10^{-9}$ level represents a major experimental challenge.
 
 %
 %
@@ -1505,8 +1512,8 @@ In the last row, the uncertainties due to the calculated and uncalculated (two-l
 \label{sec:muon_summary}
 In this chapter, the following results have been presented:
 \begin{itemize}
-\item An up-to-date numerical approach, namely the dual-kinetic-balance method with B-splines, has been used for fully relativistic precision calculations in muonic atoms. Many known contributions have been implemented, like finite nuclear size effects, magnetic and electric hyperfine interactions, electron screening, QED corrections and cascade calculations in the framework of the dynamic hyperfine structure.
-\item Additionally, enhanced numerical approaches for calculation of the quadrupole vacuum polarization correction in Uehling approximation and for the treatment of residual second order quadrupole interactions has been presented. Here, the extended nuclear charge distribution is considered without approximations or expansions.
-\item In connection with the experimental spectrum of isotopically pure muonic Rhenium-185, measured by the MuX collaboration at the Paul-Scherrer-Institute, the nuclear quadrupole moment of $^{185}$Re was extracted by fitting theoretical to experimental spectra. Also, the spectrum of the low-lying transitions was calculated and could describe the measured one with good qualitative agreement.
-\item Calculations of the finite nuclear size -, the all-order Uehling -, and the Källen-Sabry correction have been performed and have contributed to a theoretical prediction of the bound-muon g factor of Helium-4 on a $10^{-9}$ level. With the same experimental accuracy, a more accurate value of the muon mass could obtained.
+\item An up-to-date numerical approach, namely the dual-kinetic-balance method with B-splines, has been used for fully relativistic precision calculations in muonic atoms. Many important contributions have been implemented, like finite nuclear size effects, magnetic and electric hyperfine interactions, electron screening, QED corrections and cascade calculations in the framework of the dynamic hyperfine structure.
+\item Additionally, enhanced numerical approaches for calculation of the quadrupole vacuum polarization correction in Uehling approximation and for the treatment of residual second order quadrupole interactions has been presented. The extended nuclear charge distribution is considered without any approximations or expansions.
+\item  The nuclear spectroscopic quadrupole moment of $^{185}$Re and $^{187}$Re was extracted by fitting theoretical to experimental spectra in connection with the experimental spectrum of isotopically pure muonic rhenium, measured by the MuX collaboration at the Paul-Scherrer-Institute. Also, the spectrum of the low-lying transitions was calculated and is in good qualitative agreement with the measured one.
+\item Calculations of the finite nuclear size -, the all-order Uehling -, and the Källen-Sabry correction have been performed and have contributed to a theoretical prediction of the bound-muon $g$ factor of helium-4 on a $10^{-9}$ level. With the same experimental accuracy, a more accurate value of the muon mass could be obtained.
 \end{itemize}
