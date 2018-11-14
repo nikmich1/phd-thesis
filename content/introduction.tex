@@ -32,94 +32,112 @@ In~\cite{jacek2012}, the nuclear shape effect, also called nuclear deformation e
 
 %outlook/outline
 The combination of theory and experiment for the bound electron $g$ factor in $^{12}_{\phantom{0}6}$C provided an improved value of the electron mass~\cite{Sturm2014,Zatorski2017}. For $^{28}_{14}$Si~\cite{Sturm2011}, it was shown as a proof-of-principle that nuclear parameters like the RMS charge radius can be obtained. Extracting nuclear magnetic moments was suggested theoretically~\cite{Yerokhin2011,Werth2001}. Also, it was argued that an independent and more accurate value for the fine-structure constant can be obtained~\cite{Shabaev2006,yerokhin2016}. With the upcoming experiments in the high-$Z$ regime, further tests of QED in stong fields, information on nuclear parameters, and extraction of fundamental constants can be expected, and updated theoretical calculations especially for heavy nuclei are needed. To date, the nuclear deformation correction was calculated with perturbative methods only. This thesis contributes to the theory landscape by investigating the nuclear deformation correction non-perturbatively with numerical methods.\\[11pt]
-For further studies of H-like systems, either the atomic nucleus or the bound electron can be exchanged for another charged particle. This establishes the field of research on \textit{exotic atoms}.
+For further studies of H-like systems, either the atomic nucleus or the bound electron can be exchanged for another charged particle. This establishes the field of research on \textit{exotic atoms}. Depending on the type of considered particles, nuclear structure effects can either be avoided or enhanced. Bound states between two leptons are not affected by the strong interaction or nuclear effects and therefore suitable for testing bound state QED. 
+% positronium
+One example is positronium~\cite{karshenboim2004}, a bound state between an electron and its antiparticle, the positron. The energy levels were studied up to order $\alpha^6$~\cite{pineda1998,pachucki1998,czarnecki1999,zatorski2008} and measured on a $10^{-4}$ up to $10^{-9}$ level, e.g.~\cite{mills1975,ritter1984,danzmann1989,hagena1993,fee1993}, despite a life time in the range of $10^{-9}$s due to pair annihilation. 
+% muonium
+Another interesting leptonic system is muonium~\cite{jungmann2004}, a bound state consisting of an antimuon and an electron. The muon is the charged lepton in the second generation of matter in the Standard Model. Since the mass ratio of muon and proton is $m_p/m_\mu \approx 8.9$, the spectrum of muonium is quite similar to hydrogen, except that effects due to proton structure are avoided. The hyperfine splitting in muonium was measured to a part-per-billion level in ~\cite{casperson1975,liu1999} and calculated with a similar accuracy~\cite{pachucki1996,Karshenboim1996,sapirstein1997,nio1997,eides1998}. The \textit{MuSEUM} collaboration plans new precision experiments on the hyperfine structure in muonium~\cite{museum}. 
+% true muonium / dimuonium
+The muon-antimuon bound state is called true muonium~\cite{brodsky2009}, or dimuonium. It has yet to be observed, which is the aim of the $\mu\mu$tron collider, which is constructed at the Budker Institute of Nuclear Physics~\cite{bogomyagkov2017}. 
+% true tauonium
+A similar bound state exists in principle also for third-generation matter and a tau-antitau bound state is called true tauonium. However, due to the extremely short life time of a tau lepton, it is even more difficult to observe~\cite{brodsky2009}.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\clearpage
-
-\begin{itemize}
-\item a bit more history for free and bound el. g factor experiment (eg. v. Dyck., Dehmelt)
-\item cite w.q.'s papers
-\item add magnetic moment, alpha determination from nucl def intro.
-\item problems with 1-particle interpretation of the Dirac eq. resolved due to QED point of view
-\item connection to nuclear deformation and this thesis
-\item muonic atoms: one possibility for measuring absolute charge radii
-\item for outlook: generalization of nuclear shape correction to non-zero spins
-\end{itemize}
-[heavy ions]\\[11pt]
-[exotic atoms]\\[11pt]
-
-\subsubsection*{Spectroscopy of atoms, picture of atoms in general}
-\begin{itemize}
-\item
-review picture of atom and structure of atom (beginning with rutherford's experiment)\\
-review history of spectroscopy of atoms and connection to development of theories\\
-(discrete spectrum -> quantum mechanics; finestructure -> dirac eq.; lambshift,hfs -> finite nuclear size, qed). \\
-Also mention recent development (H precision spectroscopy, highly charged ions, x ray spectr., microwave spectr.)\\
-\end{itemize}
-
-\subsubsection*{contemporary research}
-\begin{itemize}
-\item recent (precision) spectroscopy
-\item especially heavy ions, nuclear structure effects in spectra
-\end{itemize}
-
-\subsubsection*{bound electron g factor}
-\begin{itemize}
-\item
-history of measurements and theory (Zeeman). recent project (heaviest highly charged ions). penning traps, fine structure constant, electron mass, specific difference etc.
-\end{itemize}
-
-\subsubsection*{muonic atoms}
-\begin{itemize}
-\item
-explain field of exotic atoms (positronium, muonium, true muonium, pionic atoms, muonic atoms) and which regimes can be tested with them. Give more details about muonic atoms, history of findings and results. Describe the new experiments at psi.
-\item 
-explain proton radius puzzle as a motivation for more experiments on muonic systems, also g-2 anomlies for muon
-\end{itemize}
-
-
+%muonic atoms
+The muon can also form bound states with atomic nuclei. These exotic atoms are commonly referred to as muonic atoms. In this case, the nuclear structure effects are very important for the following reason: The muon is about 207 times heavier than the electron. Therefore, the Bohr radius of muonic atoms, which is an estimate for the distance between bound particle and nucleus, is also 207 times smaller. As a consequence, especially for high $Z$, the bound muon has a big overlap with the nucleus and it comes to interesting interplays between atomic and nuclear physics. X-rays from muonic atoms were reported for the first time in~\cite{chang1949} in cosmic ray studies and in~\cite{fitch1953} with a laboratory muon beam. The beginning of muonic atoms theory is the seminal paper by Wheeler~\cite{wheeler1949}.  Since then, the spectra of muonic atoms have been investigated in numerous experiments, e.g.~\cite{hitlin1970,zehnder1975,powers1976,Yamazaki1978,tanaka1983,tanaka1984,tanaka1984_2,Bergem1988,
+powers1977}. In particular, absolute RMS charge radii of atomic nuclei can be obtained by analysis of muonic x-ray spectra~\cite{FRICKE1995}. An overview over the progress in theoretical calculations can be found in~\cite{BorieRinker1982,Devons1995,wu1969}. In the past, the codes \texttt{MUON} and \texttt{RURP}~\cite{rinker1979} have been used frequently for the comparison of theoretical predictions and measurements of muonic x-rays. Muonic hydrogen came to attention recently because laser spectroscopy of a \mbox{\small{$2p\rightarrow 2s$}} transition enabled the extraction of the proton charge radius and the result was smaller than CODATA value by five standard deviations~\cite{Pohl2010,antognini2013}. Measurements on muonic deuterium confirmed these results~\cite{pohl2016} for the deuterium charge radius and lately, also an experiment with atomic hydrogen measured the small proton radius~\cite{beyer2017}.
+Results from elastic electron-proton scattering, which are also used for the CODATA value~\cite{CODATA2014}, seem to confirm the large value for the proton radius, but the proton-radius extraction from scattering data is not unambiguous~\cite{arrington2015}. However, a new result from atomic hydrogen spectroscopy resulted in the large value again~\cite{fleurbaey2018} and the so-called proton radius puzzle is not completely resolved until now. Together with anomalies on the magnetic moment of the muon~\cite{bennett2006}, this motivates further investigation of muonic systems.\clearpage 
+In the high-$Z$ regime, the MuX collaboration has started an experimental campaign at the Paul Scherrer Institut. 
+The aim is to measure muonic x-ray spectra for the heaviest and for the first time also radioactive nuclei, for example $^{226}_{\phantom{1}88}$Ra and $^{248}_{\phantom{1}96}$Cm. 
+Therefore, the calculation of muonic spectra is necessary in connection with these experiments. This thesis presents calculations of muonic spectra, using up-to-date numerical schemes and new methods for predicting the higher order hyperfine structure, including vacuum polarization corrections due to deformed nuclei.
 
 \subsubsection*{Structure of the Thesis}
 
-Explain the structure here.
+This thesis is organized in the following way:\\
+Chapter 1 gives an introduction to the framework of bound state QED. The usage of the Dirac equation is discussed, together with analytical and numerical solutions for nuclear potentials and vacuum polarization potentials.\\
+In Chapter 2, the nuclear finite size and deformation correction to the bound electron $g$ factor is introduced. A numerical methods for its precise calculation is introduced and compared with the previous results.\\
+Chapter 3 is about the energy levels and transition probabilities of muonic atoms. In this connection, new methods and calculations for vacuum polarization and higher-order hyperfine splitting are presented as well as an updated numerical spectrum generator for the extraction of nuclear parameters. In connection with measurements on isotopically pure muonic Rhenium, the nuclear spectroscopic quadrupole moment is extracted.\\
+Finally, the main findings of the thesis are summarized in the Summary \& Outlook.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\clearpage
+%
+%
+%
+%\begin{itemize}
+%\item a bit more history for free and bound el. g factor experiment (eg. v. Dyck., Dehmelt)
+%\item cite w.q.'s papers
+%\item problems with 1-particle interpretation of the Dirac eq. resolved due to QED point of view
+%\item connection to nuclear deformation and this thesis
+%\item muonic atoms: one possibility for measuring absolute charge radii
+%\item for outlook: generalization of nuclear shape correction to non-zero spins
+%\end{itemize}
+%[heavy ions]\\[11pt]
+%[exotic atoms]\\[11pt]
+%
+%\subsubsection*{Spectroscopy of atoms, picture of atoms in general}
+%\begin{itemize}
+%\item
+%review picture of atom and structure of atom (beginning with rutherford's experiment)\\
+%review history of spectroscopy of atoms and connection to development of theories\\
+%(discrete spectrum -> quantum mechanics; finestructure -> dirac eq.; lambshift,hfs -> finite nuclear size, qed). \\
+%Also mention recent development (H precision spectroscopy, highly charged ions, x ray spectr., microwave spectr.)\\
+%\end{itemize}
+%
+%\subsubsection*{contemporary research}
+%\begin{itemize}
+%\item recent (precision) spectroscopy
+%\item especially heavy ions, nuclear structure effects in spectra
+%\end{itemize}
+%
+%\subsubsection*{bound electron g factor}
+%\begin{itemize}
+%\item
+%history of measurements and theory (Zeeman). recent project (heaviest highly charged ions). penning traps, fine structure constant, electron mass, specific difference etc.
+%\end{itemize}
+%
+%\subsubsection*{muonic atoms}
+%\begin{itemize}
+%\item
+%explain field of exotic atoms (positronium, muonium, true muonium, pionic atoms, muonic atoms) and which regimes can be tested with them. Give more details about muonic atoms, history of findings and results. Describe the new experiments at psi.
+%\item 
+%explain proton radius puzzle as a motivation for more experiments on muonic systems, also g-2 anomlies for muon
+%\end{itemize}
+
 
 
 
