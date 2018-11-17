@@ -1189,6 +1189,7 @@ where $\text{P}_l(x)$ are the Legendre polynomials from Appendix~\ref{app:specia
 The value of the magnetic moment needed for the calculation of the magnetic dipole interaction is taken from~\cite{STONE2016}. The influence of finite size effects was checked by also using charged shell and homogeneously charged sphere distribution.
 With this parametrization, the entire spectrum can be calculated for a given spectroscopic quadrupole moment and by fitting the theoretically calculated spectrum to the experimental measured one, the quadrupole moment can be extracted. There are five groups of $E1$-transitions in energy range of the $5g\rightarrow 4f$ transitions, namely:
 \begin{enumerate}
+\label{en:groups}
 \item $5g\nicefrac{9}{2}\rightarrow 4f\nicefrac{7}{2}$
 \item $5g\nicefrac{7}{2}\rightarrow 4f\nicefrac{5}{2}$
 \item $5f\nicefrac{7}{2}\rightarrow 4d\nicefrac{5}{2}$
@@ -1199,16 +1200,16 @@ Each of those groups consists of 15 or 16 individual lines itself due to the hyp
 
 The difference between two transition energies is especially sensitive to the quadrupole moment, since the majority of the uncertainty due to the nuclear RMS radius cancels, as described in~\cite{konijn1979}. Therefore, the energy differences of all $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ transition compared to the most intense transition in this group, called the centroid transition, is calculated and analogously the corresponding intensities are given relative to the centroid transition. 
 The same holds for the other four groups. Then, the energy difference of the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid compared to the other four centroids is calculated. 
-Thereby, the energy differences of all considered transitions compared to the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid is parametrized in terms of the nuclear quadrupole moment and the position of the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid can be fitted to the experimental spectrum as a free parameter.
+Thereby, the energy differences of all considered transitions compared to the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid is parametrized in terms of the nuclear quadrupole moment and the position of the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$ centroid can be fitted to the experimental spectrum as a free parameter. The relative intensities of the 5 different groups are either free fit parameters or obtained from other programs for cascade calculations~\cite{elisa_privcomm}.
 It is too expensive to perform full calculations in the fitting process to experimental data. Instead, the full calculations are performed for several values of the quadrupole moment in the proximity of the expected value and a quadratic function is fitted for every transition energy and intensity as
 \begin{alignat}{2}
 &\Delta E^{if}(Q)&&= \Delta E^{if}_0 +  \Delta E^{if}_1 Q+  \Delta E^{if}_2 Q^2,\label{eq:en_fit}\\
-&I^{if}(Q)&&= I^{if}_0 +  I^{if}_1 Q+  I^{if}_2 Q^2.\label{eq:tran_fit}
+&\phantom{\Delta}I^{if}(Q)&&= I^{if}_0 +  I^{if}_1 Q+  I^{if}_2 Q^2.\label{eq:tran_fit}
 \end{alignat} 
 The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies for $^{185}\rm{Re}$ are given in Table~\ref{tab:re185energ} for the relative transition energies, in Table~\ref{tab:re185intens} for the intensities, and in Table~\ref{tab:re185centroid} for fitted energy differences of the centroid transitions. For $^{187}$Re, the coefficients differ only to a small extend to to different values for the magnetic moment and RMS charge radius. 
 A main experimental challenge is understanding of the line shape due to the detector response function, which broadens the Lorentzian (due to natural life time) essentially into a Voigt profile. This issue is treated in~\cite{vogiatzi2018} in detail.
 
-The fitted experimental spectrum is shown in Fig.~\ref{fig:re54} and thereby, the preliminary extracted spectroscopic quadrupole moment of $^{185}$Re and $^{187}$Re is obtained as
+The calculated spectrum parametrized by the nuclear quadrupole moment can now be fitted efficiently to the experimental spectrum and the result is shown in Fig.~\ref{fig:re54}. The $5f\nicefrac{5}{2}\rightarrow 4d\nicefrac{5}{2}$ group turned out not to be visible in the fit. Thereby, the preliminary extracted spectroscopic quadrupole moment of $^{185}$Re and $^{187}$Re is obtained as
 \begin{align}
 Q_{\text{Re-}185} &= 2.12(11)\,\text{barn},\\
 Q_{\text{Re-}187} &= x.xx(xx)\,\text{barn}
@@ -1217,8 +1218,8 @@ where the largest contribution to the uncertainty stems from the lineshape of th
 
 %re185 5-4 figure
 \begin{figure}%
-\centering
-\includegraphics[width=0.99\textwidth]{pics/comparison}
+\raggedright
+\includegraphics[width=1.02\textwidth]{pics/comparison}
 \caption{
 Comparison of the experimental spectrum for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{5}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The black dots are the measurements and the colored lines below show the calculations for line positions and corresponding transition probabilities.
 }
@@ -1248,8 +1249,11 @@ Quadratic fits of the energies of the centroid transitions. The formula for the 
 \begin{small}
 \begin{tabular}{cc|ccc}
 centroid& $F_i \rightarrow F_f$ & $\Delta E_2^{if} [\text{keV/barn}^2]$ & $\Delta E_1^{if} [\text{keV/barn}]$ & $\Delta E_0^{if} [\text{keV}]$\\[1pt]\hline%\\[1pt]
-$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$ &6 $\rightarrow$ 5&$\phantom{-}0.004$&$\phantom{-}0.014$&$4.451$\\
-$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$&6 $\rightarrow$ 5&$-0.002$&$-0.266$&$4.215$\\
+$5g\nicefrac{9}{2} \rightarrow 4f\nicefrac{7}{2}$ & $7 \rightarrow 6$ & 0.0000 & -0.1743 & 360.2145\\
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$ & $6 \rightarrow 5$ & 0.0040 & -0.1601 & 364.6631\\
+$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ & $6 \rightarrow 5$ &-0.0016 & -0.4396 & 364.4165\\
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{7}{2}$ & $6 \rightarrow 6$ &-0.0004 & -0.1775 & 358.2798\\
+$5f\nicefrac{5}{2} \rightarrow 4d\nicefrac{5}{2}$ & $5 \rightarrow 5$ &-0.0039 & -0.4480 & 361.1407
 \end{tabular}
 %\end{ruledtabular}
 \end{small}
@@ -1260,60 +1264,95 @@ $5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$&6 $\rightarrow$ 5&$-0.002$&$-0
 \begin{table}[b]
 %\setlength\extrarowheight{1pt}
 \caption{\label{tab:re185energ}%
-Quadratic fits of the transitions energies for the 15 most intense transitions each for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{5}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:tran_fit}. See Sec.~\ref{sec:muon_re} for details.}
+Quadratic fits of the transitions energies for the 15 most intense transitions each for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{5}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:en_fit}. See Sec.~\ref{sec:muon_re} for details.}
 %\begin{ruledtabular}
 \centering
-\begin{small}
+\begin{tiny}
 \begin{tabular}{cc|rrr}
 Group& $F_i \rightarrow F_f$ & $\Delta E_2^{if} [\text{eV/barn}^2]$ & $\Delta E_1^{if} [\text{eV/barn}]$ & $\Delta E_0^{if} [\text{eV}]$\\[1pt]\hline%\\[1pt]
-$5g\nicefrac{9}{2} \rightarrow 4f\nicefrac{7}{2}$ &7 $\rightarrow$ 6&0.000&0.000&0.000\\
-&6 $\rightarrow$ 6&0.436&-113.004&-4.375\\
-&6 $\rightarrow$ 5&-4.010&375.085&8.167\\
-&5 $\rightarrow$ 6&0.008&-130.644&-8.610\\
-&5 $\rightarrow$ 5&-4.437&357.446&3.932\\
-&5 $\rightarrow$ 4&-0.001&385.944&20.415\\
-&4 $\rightarrow$ 5&-4.347&397.780&0.588\\
-&4 $\rightarrow$ 4&0.089&426.279&17.071\\
-&4 $\rightarrow$ 3&-1.339&210.326&28.123\\
-&3 $\rightarrow$ 4&0.245&494.714&14.351\\
-&3 $\rightarrow$ 3&-1.183&278.762&25.403\\
-&3 $\rightarrow$ 2&-2.381&-23.728&33.770\\
-&2 $\rightarrow$ 3&-1.218&351.042&23.416\\
-&2 $\rightarrow$ 2&-2.416&48.552&31.783\\
-&2 $\rightarrow$ 1&-1.505&-218.762&36.596\\[10pt]
-$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$ &6 $\rightarrow$ 5&0.000&0.000&0.000\\
-&5 $\rightarrow$ 5&0.428&-116.820&-6.093\\
-&5 $\rightarrow$ 4&-4.024&397.880&15.168\\
-&4 $\rightarrow$ 5&0.337&-125.046&-11.358\\
-&4 $\rightarrow$ 4&-4.115&389.654&9.903\\
-&4 $\rightarrow$ 3&-2.681&339.955&29.045\\
-&3 $\rightarrow$ 4&-4.270&441.263&5.736\\
-&3 $\rightarrow$ 3&-2.837&391.564&24.878\\
-&3 $\rightarrow$ 2&-1.625&86.361&39.154\\
-&2 $\rightarrow$ 3&-2.802&464.360&21.699\\
-&2 $\rightarrow$ 2&-1.590&159.157&35.976\\
-&2 $\rightarrow$ 1&-2.486&-173.161&46.258\\
-&1 $\rightarrow$ 2&-1.371&223.978&33.798\\
-&1 $\rightarrow$ 1&-2.267&-108.340&44.081\\
-&1 $\rightarrow$ 0&-3.990&-313.013&49.331\\[10pt]
-$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ &6 $\rightarrow$ 5&0.000&0.000&0.000\\
-&5 $\rightarrow$ 5&2.362&-252.893&-6.398\\
-&5 $\rightarrow$ 4&-39.316&1143.990&-7.719\\
-&4 $\rightarrow$ 5&0.008&-267.574&-14.961\\
-&4 $\rightarrow$ 4&-41.671&1129.310&-16.283\\
-&4 $\rightarrow$ 3&-3.004&941.964&47.554\\
-&3 $\rightarrow$ 4&-40.921&1241.180&-21.987\\
-&3 $\rightarrow$ 3&-2.253&1053.834&41.849\\
-&3 $\rightarrow$ 2&-21.172&231.728&70.440\\
-&2 $\rightarrow$ 3&-1.623&1210.520&37.533\\
-&2 $\rightarrow$ 2&-20.541&388.414&66.123\\
-&2 $\rightarrow$ 1&-23.480&-470.776&68.557\\
-&1 $\rightarrow$ 2&-21.020&526.858&63.654\\
-&1 $\rightarrow$ 1&-23.959&-332.332&66.088\\
-&1 $\rightarrow$ 0&1.647&-870.304&73.088
+$5g\nicefrac{9}{2} \rightarrow 4f\nicefrac{7}{2}$ & $7 \rightarrow 6$ & 0.0000 & 0.0000 & 0.0000 \\
+& $6 \rightarrow 6$ & 0.4349 & -112.8421 & -4.3710 \\
+& $6 \rightarrow 5$ & -3.9990 & 374.5405 & 8.1664 \\
+& $5 \rightarrow 6$ & 0.0083 & -130.4566 & -8.6014 \\
+& $5 \rightarrow 5$ & -4.4255 & 356.9260 & 3.9360 \\
+& $5 \rightarrow 4$ & -0.0011 & 385.3921 & 20.3954 \\
+& $4 \rightarrow 5$ & -4.3353 & 397.2028 & 0.5956 \\
+& $4 \rightarrow 4$ & 0.0891 & 425.6690 & 17.0550 \\
+& $4 \rightarrow 3$ & -1.3357 & 210.0265 & 28.0955 \\
+& $3 \rightarrow 4$ & 0.2441 & 494.0067 & 14.3378 \\
+& $3 \rightarrow 3$ & -1.1807 & 278.3642 & 25.3784 \\
+& $3 \rightarrow 2$ & -2.3757 & -23.6926 & 33.7363 \\
+& $2 \rightarrow 3$ & -1.2154 & 350.5410 & 23.3930 \\
+& $2 \rightarrow 2$ & -2.4104 & 48.4842 & 31.7510 \\
+& $2 \rightarrow 1$ & -1.5016 & -218.4484 & 36.5602 \\[7pt]
+
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$ & $6 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \\
+& $5 \rightarrow 5$ & 0.4268 & -116.6524 & -6.0881 \\
+& $5 \rightarrow 4$ & -4.0133 & 397.3030 & 15.1612 \\
+& $4 \rightarrow 5$ & 0.3365 & -124.8666 & -11.3476 \\
+& $4 \rightarrow 4$ & -4.1035 & 389.0888 & 9.9017 \\
+& $4 \rightarrow 3$ & -2.6732 & 339.4603 & 29.0257 \\
+& $3 \rightarrow 4$ & -4.2588 & 440.6240 & 5.7383 \\
+& $3 \rightarrow 3$ & -2.8284 & 390.9955 & 24.8623 \\
+& $3 \rightarrow 2$ & -1.6187 & 86.2278 & 39.1264 \\
+& $2 \rightarrow 3$ & -2.7939 & 463.6869 & 21.6868 \\
+& $2 \rightarrow 2$ & -1.5843 & 158.9191 & 35.9509 \\
+& $2 \rightarrow 1$ & -2.4783 & -172.9226 & 46.2225 \\
+& $1 \rightarrow 2$ & -1.3654 & 223.6477 & 33.7757 \\
+& $1 \rightarrow 1$ & -2.2595 & -108.1940 & 44.0473 \\
+& $1 \rightarrow 0$ & -3.9788 & -312.5737 & 49.2916 \\[7pt]
+
+$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ & $6 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \\
+& $5 \rightarrow 5$ & 2.3569 & -252.5291 & -6.3945 \\
+& $5 \rightarrow 4$ & -39.2156 & 1142.4006 & -7.6361 \\
+& $4 \rightarrow 5$ & 0.0075 & -267.1910 & -14.9468 \\
+& $4 \rightarrow 4$ & -41.5650 & 1127.7387 & -16.1884 \\
+& $4 \rightarrow 3$ & -2.9973 & 940.7303 & 47.5074 \\
+& $3 \rightarrow 4$ & -40.8162 & 1239.4485 & -21.8866 \\
+& $3 \rightarrow 3$ & -2.2485 & 1052.4401 & 41.8091 \\
+& $3 \rightarrow 2$ & -21.1329 & 231.4531 & 70.3569 \\
+& $2 \rightarrow 3$ & -1.6192 & 1208.9013 & 37.4969 \\
+& $2 \rightarrow 2$ & -20.5036 & 387.9143 & 66.0447 \\
+& $2 \rightarrow 1$ & -23.4328 & -470.1437 & 68.4933 \\
+& $1 \rightarrow 2$ & -20.9818 & 526.1606 & 63.5780 \\
+& $1 \rightarrow 1$ & -23.9109 & -331.8974 & 66.0266 \\
+& $1 \rightarrow 0$ & 1.6436 & -869.1530 & 73.0235 \\[7pt]
+
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{7}{2}$ & $6 \rightarrow 6$ & 0.0000 & 0.0000 & 0.0000 \\
+& $6 \rightarrow 5$ & -4.4339 & 487.3826 & 12.5375 \\
+& $5 \rightarrow 6$ & 0.4268 & -116.6524 & -6.0881 \\
+& $5 \rightarrow 5$ & -4.0071 & 370.7302 & 6.4493 \\
+& $5 \rightarrow 4$ & 0.4173 & 399.1963 & 22.9087 \\
+& $4 \rightarrow 5$ & -4.0974 & 362.5159 & 1.1898 \\
+& $4 \rightarrow 4$ & 0.3270 & 390.9821 & 17.6492 \\
+& $4 \rightarrow 3$ & -1.0978 & 175.3397 & 28.6898 \\
+& $3 \rightarrow 4$ & 0.1718 & 442.5174 & 13.4858 \\
+& $3 \rightarrow 3$ & -1.2530 & 226.8749 & 24.5264 \\
+& $3 \rightarrow 2$ & -2.4480 & -75.1819 & 32.8844 \\
+& $2 \rightarrow 3$ & -1.2185 & 299.5663 & 21.3508 \\
+& $2 \rightarrow 2$ & -2.4135 & -2.4905 & 29.7088 \\
+& $2 \rightarrow 1$ & -1.5047 & -269.4231 & 34.5180 \\
+& $1 \rightarrow 2$ & -2.1947 & 62.2380 & 27.5336 \\
+& $1 \rightarrow 1$ & -1.2858 & -204.6945 & 32.3428 \\[7pt]
+
+$5f\nicefrac{5}{2} \rightarrow 4d\nicefrac{5}{2}$ & $5 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \\
+& $5 \rightarrow 4$ & -41.5725 & 1394.9297 & -1.2415 \\
+& $4 \rightarrow 5$ & 2.3621 & -267.5452 & -10.8732 \\
+& $4 \rightarrow 4$ & -39.2104 & 1127.3845 & -12.1147 \\
+& $4 \rightarrow 3$ & -0.6427 & 940.3761 & 51.5811 \\
+& $3 \rightarrow 4$ & -39.9636 & 1153.2006 & -21.9500 \\
+& $3 \rightarrow 3$ & -1.3959 & 966.1922 & 41.7458 \\
+& $3 \rightarrow 2$ & -20.2803 & 145.2052 & 70.2936 \\
+& $2 \rightarrow 3$ & -2.0370 & 1124.7959 & 34.4113 \\
+& $2 \rightarrow 2$ & -20.9214 & 303.8089 & 62.9591 \\
+& $2 \rightarrow 1$ & -23.8506 & -554.2491 & 65.4077 \\
+& $1 \rightarrow 2$ & -20.4551 & 476.5200 & 57.6634 \\
+& $1 \rightarrow 1$ & -23.3843 & -381.5380 & 60.1120 \\
+& $1 \rightarrow 0$ & 2.1702 & -918.7936 & 67.1089 \\
+& $0 \rightarrow 1$ & -22.4779 & -275.1695 & 57.4097
 \end{tabular}
 %\end{ruledtabular}
-\end{small}
+\end{tiny}
 \end{table}%
 %
 %
@@ -1321,60 +1360,95 @@ $5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ &6 $\rightarrow$ 5&0.000&0.000
 \begin{table}[b]
 %\setlength\extrarowheight{1pt}
 \caption{\label{tab:re185intens}%
-Quadratic fits of the intensities for the 15 most intense transitions each for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The formula for the transition energy in terms of a give quadrupole moment $Q$ is $E(Q)=B_q \, Q^2 + B_l \, Q + B_c$. See Sec.~\ref{sec:muon_re} for details.}
+Quadratic fits of the intensities for the 15 most intense transitions each for the $5g\nicefrac{9}{2}\rightarrow4f\nicefrac{7}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, $5f\nicefrac{7}{2}\rightarrow4d\nicefrac{5}{2}$, $5g\nicefrac{7}{2}\rightarrow4f\nicefrac{7}{2}$, and $5f\nicefrac{5}{2}\rightarrow4d\nicefrac{5}{2}$ groups in $^{185}$Re. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:tran_fit}. See Sec.~\ref{sec:muon_re} for details.}
 %\begin{ruledtabular}
 \centering
-\begin{small}
+\begin{tiny}
 \begin{tabular}{cc|rrr}
 Group& $F_i \rightarrow F_f$ & $I_2^{if} [\%\text{/barn}^2]$ & $I_1^{if} [\%\text{/barn}]$ & $I_0^{if} [\%]$\\[1pt]\hline%\\[1pt]
-$5g\nicefrac{9}{2} \rightarrow 4f\nicefrac{7}{2}$ & 7 $\rightarrow$ 6&0.000&0.000&100.000\\
- & 6 $\rightarrow$ 6&-0.011&-0.115&8.045\\
- & 6 $\rightarrow$ 5&-0.009&0.384&78.602\\
- & 5 $\rightarrow$ 6&0.000&-0.002&0.311\\
- & 5 $\rightarrow$ 5&-0.012&0.036&12.375\\
- & 5 $\rightarrow$ 4&0.000&0.215&60.644\\
- & 4 $\rightarrow$ 5&-0.001&0.012&0.669\\
- & 4 $\rightarrow$ 4&-0.001&0.109&13.527\\
- & 4 $\rightarrow$ 3&-0.002&0.007&45.818\\
- & 3 $\rightarrow$ 4&0.000&0.019&0.837\\
- & 3 $\rightarrow$ 3&-0.001&0.104&11.900\\
- & 3 $\rightarrow$ 2&-0.002&-0.103&33.944\\
- & 2 $\rightarrow$ 3&0.000&0.013&0.619\\
- & 2 $\rightarrow$ 2&-0.001&0.050&7.725\\
- & 2 $\rightarrow$ 1&-0.001&-0.105&25.000\\[10pt]
-$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$ & 6 $\rightarrow$ 5&0.000&0.000&100.000\\
- & 5 $\rightarrow$ 5&0.022&0.218&12.062\\
- & 5 $\rightarrow$ 4&0.037&0.360&72.591\\
- & 4 $\rightarrow$ 5&0.003&0.024&0.730\\
- & 4 $\rightarrow$ 4&0.008&0.088&18.102\\
- & 4 $\rightarrow$ 3&0.021&0.398&50.423\\
- & 3 $\rightarrow$ 4&0.001&0.009&1.642\\
- & 3 $\rightarrow$ 3&0.012&-0.046&19.212\\
- & 3 $\rightarrow$ 2&0.013&0.257&33.003\\
- & 2 $\rightarrow$ 3&0.002&-0.022&2.192\\
- & 2 $\rightarrow$ 2&0.009&-0.097&16.477\\
- & 2 $\rightarrow$ 1&0.009&0.094&19.797\\
- & 1 $\rightarrow$ 2&0.001&-0.027&1.829\\
- & 1 $\rightarrow$ 1&0.004&-0.078&10.989\\
- & 1 $\rightarrow$ 0&0.005&-0.008&10.262\\[10pt]
-$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$ & 6 $\rightarrow$ 5&0.000&0.000&100.000\\
- & 5 $\rightarrow$ 5&-0.042&-0.308&12.106\\
- & 5 $\rightarrow$ 4&-0.106&1.217&72.303\\
- & 4 $\rightarrow$ 5&0.000&-0.002&0.738\\
- & 4 $\rightarrow$ 4&-0.106&0.344&18.039\\
- & 4 $\rightarrow$ 3&-0.007&0.381&50.338\\
- & 3 $\rightarrow$ 4&-0.016&0.086&1.639\\
- & 3 $\rightarrow$ 3&-0.002&0.330&19.267\\
- & 3 $\rightarrow$ 2&-0.019&-0.188&32.976\\
- & 2 $\rightarrow$ 3&-0.001&0.097&2.206\\
- & 2 $\rightarrow$ 2&-0.009&0.170&16.510\\
- & 2 $\rightarrow$ 1&-0.018&-0.276&19.773\\
- & 1 $\rightarrow$ 2&0.000&0.056&1.836\\
- & 1 $\rightarrow$ 1&-0.010&0.009&10.995\\
- & 1 $\rightarrow$ 0&0.000&-0.157&10.257\\
+$5g\nicefrac{9}{2} \rightarrow 4f\nicefrac{7}{2}$  &  $7 \rightarrow 6$  &  0.000  &  0.000  &  100.000\\
+&  $6 \rightarrow 6$  &  -0.011  &  -0.115  &  8.045\\
+&  $6 \rightarrow 5$  &  -0.008  &  0.383  &  78.602\\
+&  $5 \rightarrow 6$  &  0.000  &  -0.002  &  0.311\\
+&  $5 \rightarrow 5$  &  -0.012  &  0.036  &  12.375\\
+&  $5 \rightarrow 4$  &  0.000  &  0.214  &  60.644\\
+&  $4 \rightarrow 5$  &  -0.001  &  0.012  &  0.669\\
+&  $4 \rightarrow 4$  &  -0.001  &  0.109  &  13.527\\
+&  $4 \rightarrow 3$  &  -0.002  &  0.007  &  45.818\\
+&  $3 \rightarrow 4$  &  0.000  &  0.019  &  0.837\\
+&  $3 \rightarrow 3$  &  -0.001  &  0.104  &  11.900\\
+&  $3 \rightarrow 2$  &  -0.002  &  -0.102  &  33.944\\
+&  $2 \rightarrow 3$  &  0.000  &  0.013  &  0.619\\
+&  $2 \rightarrow 2$  &  -0.001  &  0.050  &  7.725\\
+&  $2 \rightarrow 1$  &  -0.001  &  -0.105  &  25.000\\[7pt]
+
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{5}{2}$  &  $6 \rightarrow 5$  &  0.000  &  0.000  &  100.000\\
+&  $5 \rightarrow 5$  &  0.022  &  0.218  &  12.062\\
+&  $5 \rightarrow 4$  &  0.036  &  0.360  &  72.591\\
+&  $4 \rightarrow 5$  &  0.003  &  0.024  &  0.730\\
+&  $4 \rightarrow 4$  &  0.008  &  0.088  &  18.102\\
+&  $4 \rightarrow 3$  &  0.021  &  0.397  &  50.423\\
+&  $3 \rightarrow 4$  &  0.001  &  0.009  &  1.642\\
+&  $3 \rightarrow 3$  &  0.012  &  -0.046  &  19.212\\
+&  $3 \rightarrow 2$  &  0.013  &  0.257  &  33.003\\
+&  $2 \rightarrow 3$  &  0.002  &  -0.022  &  2.192\\
+&  $2 \rightarrow 2$  &  0.009  &  -0.097  &  16.477\\
+&  $2 \rightarrow 1$  &  0.009  &  0.094  &  19.797\\
+&  $1 \rightarrow 2$  &  0.001  &  -0.027  &  1.829\\
+&  $1 \rightarrow 1$  &  0.004  &  -0.078  &  10.989\\
+&  $1 \rightarrow 0$  &  0.005  &  -0.008  &  10.262\\[7pt]
+
+$5f\nicefrac{7}{2} \rightarrow 4d\nicefrac{5}{2}$  &  $6 \rightarrow 5$  &  0.000  &  0.000  &  100.000\\
+&  $5 \rightarrow 5$  &  -0.041  &  -0.307  &  12.106\\
+&  $5 \rightarrow 4$  &  -0.106  &  1.215  &  72.304\\
+&  $4 \rightarrow 5$  &  0.000  &  -0.002  &  0.738\\
+&  $4 \rightarrow 4$  &  -0.106  &  0.343  &  18.040\\
+&  $4 \rightarrow 3$  &  -0.007  &  0.381  &  50.338\\
+&  $3 \rightarrow 4$  &  -0.016  &  0.086  &  1.639\\
+&  $3 \rightarrow 3$  &  -0.002  &  0.330  &  19.267\\
+&  $3 \rightarrow 2$  &  -0.019  &  -0.188  &  32.976\\
+&  $2 \rightarrow 3$  &  -0.001  &  0.097  &  2.206\\
+&  $2 \rightarrow 2$  &  -0.009  &  0.170  &  16.510\\
+&  $2 \rightarrow 1$  &  -0.018  &  -0.275  &  19.773\\
+&  $1 \rightarrow 2$  &  0.000  &  0.056  &  1.836\\
+&  $1 \rightarrow 1$  &  -0.010  &  0.009  &  10.995\\
+&  $1 \rightarrow 0$  &  0.000  &  -0.157  &  10.257\\[7pt]
+
+$5g\nicefrac{7}{2} \rightarrow 4f\nicefrac{7}{2}$  &  $6 \rightarrow 6$  &  0.000  &  0.000  &  100.000\\
+&  $6 \rightarrow 5$  &  0.722  &  1.664  &  10.899\\
+&  $5 \rightarrow 6$  &  -0.010  &  -0.401  &  10.234\\
+&  $5 \rightarrow 5$  &  -0.117  &  -8.661  &  68.235\\
+&  $5 \rightarrow 4$  &  0.022  &  -1.370  &  15.636\\
+&  $4 \rightarrow 5$  &  -0.009  &  -1.686  &  15.656\\
+&  $4 \rightarrow 4$  &  0.101  &  -3.994  &  44.693\\
+&  $4 \rightarrow 3$  &  0.210  &  -3.201  &  16.754\\
+&  $3 \rightarrow 4$  &  0.019  &  -1.220  &  16.889\\
+&  $3 \rightarrow 3$  &  -0.120  &  0.243  &  28.837\\
+&  $3 \rightarrow 2$  &  0.149  &  -2.527  &  14.555\\
+&  $2 \rightarrow 3$  &  -0.054  &  0.005  &  14.624\\
+&  $2 \rightarrow 2$  &  -0.166  &  1.893  &  19.289\\
+&  $2 \rightarrow 1$  &  0.015  &  -0.887  &  9.296\\
+&  $1 \rightarrow 2$  &  -0.066  &  0.637  &  9.265\\
+&  $1 \rightarrow 1$  &  -0.128  &  1.955  &  16.650\\[7pt]
+
+$5f\nicefrac{5}{2} \rightarrow 4d\nicefrac{5}{2}$  &  $5 \rightarrow 5$  &  0.000  &  0.000  &  100.000\\
+&  $5 \rightarrow 4$  &  1.842  &  3.914  &  17.965\\
+&  $4 \rightarrow 5$  &  -0.008  &  -1.155  &  16.736\\
+&  $4 \rightarrow 4$  &  0.792  &  -16.181  &  56.816\\
+&  $4 \rightarrow 3$  &  0.382  &  -5.451  &  24.306\\
+&  $3 \rightarrow 4$  &  0.130  &  -5.071  &  24.769\\
+&  $3 \rightarrow 3$  &  -0.002  &  -1.881  &  25.862\\
+&  $3 \rightarrow 2$  &  0.644  &  -7.174  &  24.558\\
+&  $2 \rightarrow 3$  &  -0.017  &  -1.687  &  24.986\\
+&  $2 \rightarrow 2$  &  -0.278  &  3.084  &  8.988\\
+&  $2 \rightarrow 1$  &  0.079  &  -3.215  &  20.127\\
+&  $1 \rightarrow 2$  &  -0.351  &  2.589  &  19.702\\
+&  $1 \rightarrow 1$  &  0.043  &  1.509  &  1.602\\
+&  $1 \rightarrow 0$  &  -0.122  &  0.943  &  10.821\\
+&  $0 \rightarrow 1$  &  -0.154  &  3.105  &  10.510
 \end{tabular}
 %\end{ruledtabular}
-\end{small}
+\end{tiny}
 \end{table}%
 %
 %
@@ -1384,9 +1458,9 @@ Furthermore, the low-lying $2p\rightarrow1s$ transitions, or $K$ x-rays, have be
 % figure k x rays
 \begin{figure}%
 \centering
-\includegraphics[width=0.99\textwidth]{pics/185Re_K}
+\includegraphics[width=0.99\textwidth]{pics/comparison_21}
 \caption{
-Comparison of experimental spectrum and theoretical calculations in the area of the $K$ x rays for muonic Re-185. For details of the calculations, see Sec.~\ref{sec:muon_re}.
+Comparison of experimental spectrum (upper plot) and theoretical calculations (lower plot) in the area of the $K$ x rays for muonic $^{185}$Re. The first 5 rotational states of the $^{185}$Re nucleus and a muonic cascade starting from statistically populated $5g$ states have been used for the calculations. The spectrum is complex due to excited nuclear states and large hyperfine splitting in the muonic $2p$ states. The small shift of the theoretical values is due to the non-calculated nuclear polarization corrections. For further details see Sec.~\ref{sec:muon_re}.
 }
 \label{fig:re54_K}
 \end{figure}
