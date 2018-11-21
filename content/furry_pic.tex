@@ -204,7 +204,7 @@ Since the formal expressions for the vacuum polarization potentials contain dive
 &&&\times\frac{\sqrt{t^2-1}}{t^2} \frac{\text{exp}(-2m_l|r-r^\prime|t)-\text{exp}(-2m_l(r+r^\prime)t)}{4m_lr t},
 \label{eq:uehlPot}
 \end{alignat}
-and the Källen-Sabry potential, corresponding to the diagrams in Fig.~\ref{fig:vac_pol_ks}, is derived in~\cite{Barbieri1970,Barbieri1972,Barbieri1972_2,Barbieri1973} and given e.g. in~\cite{indelicato2013,Fullerton1976} as
+and the Källen-Sabry potential, corresponding to the diagrams in Fig.~\ref{fig:vac_pol_ks}, is derived in Refs.~\cite{Barbieri1970,Barbieri1972,Barbieri1972_2,Barbieri1973} and given e.g. in Refs.~\cite{indelicato2013,Fullerton1976} as
 \begin{alignat}{2}
 V^{(m_l)}_{\text{KS}}(r)=\frac{\alpha^2(Z\alpha)}{\pi r}\int\limits_0^\infty\text{d}r^\prime\,r^\prime \rho(r^\prime)\left( L_0(2m_l|r-r^\prime|)-L_0(2m_l(r+r^\prime))\right),\label{eq:KSPot}
 \end{alignat}
@@ -333,7 +333,7 @@ These solution explains the spectrum of hydrogen-like atoms to a reasonable accu
 Except the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (eg. Coulomb potential, spherical potential well), numerical methods have to be used to obtain solutions for $g(r)$ and $f(r)$. Especially for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution.
  
 Generally, for finite basis set solutions of the Dirac equation, the radial equations~\eqref{eq:radial_equations_small} are considered, but the domain is changed from $r\in[0,\infty)$ to a finite cavity $r\in [0,R]$. On the original domain, the spectrum of the energy eigenvalues $E$ has a negative continuum $E\in (-\infty,-m_f]$, a positive continuum $E\in [m_f,\infty)$, and a discrete part $E\in (-m_f,m_f)$ of infinitely many bound states, where $m_f$ is the mass of the bound fermion. On the modified domain, the positive and negative continuum become discrete~\cite{johnson1988}, but still infinite.
-A problem with numerical solutions of the Dirac equation is the appearance of unphysical, or spurious states~\cite{johnson1988, drake1981}. A method circumventing this problem was presented in~\cite{Shabaev2004}, which is shortly described in the following.
+A problem with numerical solutions of the Dirac equation is the appearance of unphysical, or spurious states~\cite{johnson1988, drake1981}. A method circumventing this problem was presented in Ref.~\cite{Shabaev2004}, which is shortly described in the following.
 
 The radial equations~\eqref{eq:radial_equations_small} can be rewritten in matrix form as
 \begin{equation}
@@ -345,7 +345,7 @@ m_f+V(r)&-\partial_r + \kappa/r\\
 = E\,\nu(r)
 \label{eq:radmatrixEq}
 \end{equation}
-for the function $\nu(r)=(G(r),F(r))^T=(r g(r),r f(r))^T$. As a finite set of basis functions, B-splines $\Pi_{i,k}(r)$ of order $k$  with a suitable knot sequence as described in~\cite{johnson1988} are selected, where the first and last spline is set to zero. With the size of the basis set $n$, the solutions are expressed with $2n$ coefficients $c_i$ as
+for the function $\nu(r)=(G(r),F(r))^T=(r g(r),r f(r))^T$. As a finite set of basis functions, B-splines $\Pi_{i,k}(r)$ of order $k$  with a suitable knot sequence as described in Ref.~\cite{johnson1988} are selected, where the first and last spline is set to zero. With the size of the basis set $n$, the solutions are expressed with $2n$ coefficients $c_i$ as
 \begin{equation}
 \nu(r)=\hspace{-0.2cm}\sum_{i=1}^{2n}c_i\,\nu_i(r)\coloneqq \hspace{-0.2cm}\sum_{i=1}^n
 c_i\begin{pmatrix}
