@@ -39,7 +39,7 @@
 \usepackage                             {graphicx,nicefrac}
 \usepackage     [english]               {babel}
 %\usepackage     [numbers,sort&compress] {natbib}
-\usepackage         					{hyperref}
+\usepackage    [hypertexnames=false]	{hyperref}
 \usepackage                             {lmodern}
 %\usepackage                             {txfonts}
 %\usepackage                             {multirow}
@@ -259,20 +259,26 @@
 %Appendix
 %----------------------------------------------------------------------
   \cleardoublepage
-  \phantomsection
-  \addcontentsline{toc}{chapter}{Appendix} %\protect\large
-  \appendix
+  %\phantomsection
+  %\renewcommand{\appendixname}{}
+  %\appendix
+  %\addcontentsline{toc}{chapter}{Appendix} %\protect\large
+  %\renewcommand{\chaptername}{Chapter}
+  \setcounter{chapter}{0}
+  \renewcommand{\thechapter}{\Alph{chapter}}  
+  \chapter{Appendix}
   
-  \chapter{Conventions and notation\label{app:conventions}}
+  
+  \section{Conventions and notation\label{app:conventions}}
   	\input{appendix/conventions}
   	
-  \chapter{Special functions\label{app:special_func}}
+  \section{Special functions\label{app:special_func}}
   	\input{appendix/special_func}
 
-  \chapter{Angular momentum theory \label{app:ang_theo}}
+  \section{Angular momentum theory \label{app:ang_theo}}
     \input{appendix/angular_theo}
     
-  \chapter{Symmetric Rigid Rotor Model}
+  \section{Symmetric rigid rotor model}
     \input{appendix/rigid_rotor}
       
  % \chapter{Electric and Uehling potentials with special functions \label{app:pots}}    
