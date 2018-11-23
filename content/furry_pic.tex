@@ -1,6 +1,6 @@
 \chapter{Bound state quantum electrodynamics in the Furry picture}
 \label{ch:furry_pic}
-In this thesis, relativistic atomic structure calculations are performed in order to investigate nuclear effects on the energy levels of electrons or muons bound in the potential of an atomic nucleus. In this chapter, as an introduction, the starting point is the Lagrangian of quantum electrodynamics (QED) and results will be derived from there. This includes the derivation of the Dirac equation as the zero-order solution and radiative corrections due to virtual particles. The leading order vacuum polarization corrections, and their inclusion as potentials in the Dirac equation, are discussed. Finally, the analytical solution of the Dirac equation for the relativistic Coulomb problem is presented, as well as numerical solutions for arbitrary nuclear potentials.
+In this thesis, relativistic atomic structure calculations are performed in order to investigate nuclear effects on the energy levels of electrons or muons bound in the potential of an atomic nucleus. In this chapter, as an introduction, the starting point is the Lagrangian of quantum electrodynamics (QED) and results will be derived from there. This includes the derivation of the Dirac equation as the zero-order solution and the study of radiative corrections due to virtual particles. The leading-order vacuum polarization corrections, and their inclusion as potentials in the Dirac equation, are discussed. Finally, the analytical solution of the Dirac equation for the relativistic Coulomb problem is presented, as well as numerical solutions for arbitrary nuclear potentials.
 %\begin{itemize}
 %\item Treatment of perturbations in Furry picture(mixed QED+HFS)
 %\item Treatment of nuclear structure effects in Furry picture (nuclear excited states)
@@ -80,7 +80,7 @@ S_F(x-y)\coloneqq \left<0\right|T\psi(x)\bar{\psi}(x)\left|0\right>=\int \frac{\
 \end{equation}
 The Feynman propagator is a Green's function of the Dirac equation~\eqref{eq:dirac}, thus
 \begin{equation}
-\left(i\gamma^\mu \partial_\mu -m_f\right)S_F(x-y)=\delta(x-y)
+\left(i\gamma^\mu \partial_\mu -m_f\right)S_F(x-y)=\delta(x-y).
 \label{eq:freeprop}
 \end{equation} 
 \subsubsection*{Propagator in the external field}
@@ -117,7 +117,7 @@ It is a Green's function of the equation of motion of the fermion field operator
 \left(i\gamma^\mu \partial_\mu -m_f - e \gamma^\mu \mathcal{A}_\mu(x)\right)S_{\mathcal{A}}(x,y)=\delta(x-y).
 \label{eq:extprop}
 \end{equation}
-Since the external field breaks translation invariance, the propagator in the external field now depends on the spacial components of $x$ and $y$ separately, and not only on the difference $(x-y)$. Radiative corrections in the Furry picture can be calculated by using the usual Feynman rules and the dressed propagator instead of the free propagator as well as solutions of the Dirac equation including the external field for the in and out states. Combining Eq.~\eqref{eq:freeprop} with Eq.~\eqref{eq:extprop} gives a relation between the propagators of the free theory and in the external field~\mbox{\cite[Section 2.5.]{itzykson2005}}, which can be solved iteratively, as
+Since the external field breaks translation invariance, the propagator in the external field now depends on the spacial components of $x$ and $y$ separately, and not only on the difference $(x-y)$. Radiative corrections in the Furry picture can be calculated by using the usual Feynman rules and the dressed propagator instead of the free propagator, as well as solutions of the Dirac equation including the external field for the in and out states. Combining Eq.~\eqref{eq:freeprop} with Eq.~\eqref{eq:extprop} gives a relation between the propagators of the free theory and in the external field~\mbox{\cite[Section 2.5.]{itzykson2005}}, which can be solved iteratively, as
 \begin{alignat}{2}
 &\,S_{\mathcal{A}}(x,y)&&= \,S_F(x-y) 
 + \int\mathrm{d}x\, \,S_F(x-z)\left(-e\gamma^\mu \mathcal{A}_\mu(z)\right)\,S_{\mathcal{A}}(z,y)\\
@@ -193,15 +193,15 @@ This propagator is a Green's function for the Dirac equation including the exter
 \left(i\gamma^\mu \partial_\mu -m_f - e \gamma^\mu \mathcal{A}_\mu + \Sigma_{\text{Uehl}}\right)S_{\mathcal{A}+\text{Uehl}}(x,y)=\delta(x-y).
 \label{eq:uehlprop}
 \end{equation}
-As a result, the diagrams in Fig.~\ref{fig:vac_pol_uehl} can be treated by solving the Dirac equation~\eqref{eq:diraceq} including the Uehling potential. The same reasoning holds as well for the Wichmann-Kroll potential (Fig.~\ref{fig:vac_pol_wk}~(b)) and for the order $\alpha^2(Z\alpha)$ VP, referred to as the Källen-Sabry potential~\cite{kallen1955}, where the corresponding diagrams are shown in~Fig.~\ref{fig:vac_pol_ks}. 
+As a result, the diagrams in Fig.~\ref{fig:vac_pol_uehl} can be treated by solving the Dirac equation~\eqref{eq:diraceq} including the Uehling potential. The same reasoning holds as well for the Wichmann-Kroll potential (Fig.~\ref{fig:vac_pol_wk}~(b)) and for the order $\alpha^2(Z\alpha)$ VP, referred to as the Källén-Sabry potential~\cite{kallen1955}, where the corresponding diagrams are shown in~Fig.~\ref{fig:vac_pol_ks}. 
 
-Since the formal expressions for the VP potentials contain divergences, they have to be renormalized. This section concludes with giving the corresponding expressions for the renormalized Uehling (order $\alpha(Z\alpha)$) and Källen-Sabry (order $\alpha^2(Z\alpha)$) potentials for a virtual electron-positron pair and an extended, spherically symmetric nuclear charge distribution $\rho(r)$, which can be included in the Dirac equation. It is important to note, that the virtual particle in the loop can be a different one compared to the considered fermion. Therefore, the mass of the virtual particle is $m_l$, which is an additional dependency of the potential. For an electron-positron loop, correspondingly $m_l=m_e$ and for a muon-antimuon loop $m_l=m_\mu$. For example, the electronic VP in muonic atoms is more important than the muonic VP. The Uehling potential reads as~\cite{Fullerton1976,Elizarov2005}
+Since the formal expressions for the VP potentials contain divergences, they have to be renormalized. This section concludes with giving the corresponding expressions for the renormalized Uehling (order $\alpha(Z\alpha)$) and Källén-Sabry (order $\alpha^2(Z\alpha)$) potentials for a virtual electron-positron pair and an extended, spherically symmetric nuclear charge distribution $\rho(r)$, which can be included in the Dirac equation. It is important to note, that the virtual particle in the loop can be a different one compared to the considered fermion. Therefore, the mass of the virtual particle is $m_l$, which is an additional dependency of the potential. For an electron-positron loop, correspondingly $m_l=m_e$ and for a muon-antimuon loop $m_l=m_\mu$. For example, the electronic VP in muonic atoms is more important than the muonic VP. The Uehling potential reads as~\cite{Fullerton1976,Elizarov2005}
 \begin{alignat}{2}
 &V^{(m_l)}_{\text{Uehl}}(r)&&=-\alpha \frac{2\alpha}{3\pi}\int_0^\infty \text{d}r^{\prime}\,4\pi \rho(r^\prime)\int_1^\infty \text{d}t\,\left( 1+\frac{1}{2t^2} \right)\nonumber\\[7.5pt]
 &&&\times\frac{\sqrt{t^2-1}}{t^2} \frac{\text{exp}(-2m_l|r-r^\prime|t)-\text{exp}(-2m_l(r+r^\prime)t)}{4m_lr t},
 \label{eq:uehlPot}
 \end{alignat}
-and the Källen-Sabry potential, corresponding to the diagrams in Fig.~\ref{fig:vac_pol_ks}, is derived in Refs.~\cite{Barbieri1970,Barbieri1972,Barbieri1972_2,Barbieri1973} and given e.g. in Refs.~\cite{indelicato2013,Fullerton1976} as
+and the Källén-Sabry potential, corresponding to the diagrams in Fig.~\ref{fig:vac_pol_ks}, is derived in Refs.~\cite{Barbieri1970,Barbieri1972,Barbieri1972_2,Barbieri1973} and given e.g. in Refs.~\cite{indelicato2013,Fullerton1976} as
 \begin{alignat}{2}
 V^{(m_l)}_{\text{KS}}(r)=\frac{\alpha^2(Z\alpha)}{\pi r}\int\limits_0^\infty\text{d}r^\prime\,r^\prime \rho(r^\prime)\left( L_0(2m_l|r-r^\prime|)-L_0(2m_l(r+r^\prime))\right),\label{eq:KSPot}
 \end{alignat}
@@ -240,7 +240,7 @@ with
 \begin{figure}%
 \centering
 \includegraphics[width=0.9\linewidth]{pics/vac_pol_ks.pdf}%
-\caption{Feynman diagrams corresponding contribution to the Källen-Sabry potential of order $\alpha^2(Z\alpha)$, as given in Eq.~\eqref{eq:KSPot}.}%
+\caption{Feynman diagrams corresponding contribution to the Källén-Sabry potential of order $\alpha^2(Z\alpha)$, as given in Eq.~\eqref{eq:KSPot}.}%
 \label{fig:vac_pol_ks}%
 \end{figure}
 %
@@ -262,7 +262,7 @@ where $\int \mathrm{d}V\,\rho(|\mathbf{r}|)=1$. Since $\Phi$ only depends on $|\
 \text{H}_D \, u_n(\mathbf{r})\coloneqq\left( i\,\pmb{\alpha} \cdot \mathbf{\nabla} + \beta m_f + V(r) \right) u_n(\mathbf{r}) =  E_n u_n(\mathbf{r}),
 \label{eq:sphdirac}
 \end{equation}
-where the eigenenergies $E_n$ are both positive and negative and the spectrum contains both continuum and discrete parts. $u_n(\mathbf{r})$ are the corresponding solutions in form of four-component spinors. For an arbitrary, spherically symmetric potential $V(r)$, the solution can be simplified significantly by reducing the partial differential equation~\eqref{eq:sphdirac} to an ordinary differential equation.
+where the eigenenergies $E_n$ are both positive and negative and the spectrum contains both continuum and discrete parts. $u_n(\mathbf{r})$ are the corresponding solutions in form of four-component spinors. For an arbitrary spherically symmetric potential $V(r)$, the solution can be simplified significantly by reducing the partial differential equation~\eqref{eq:sphdirac} to an ordinary differential equation.
 
 For the Dirac Hamiltonian with spherical symmetry, energy eigenfunctions can be found, which also have a well-defined parity and total angular momentum. At first, the relativistic angular quantum number $\kappa$ is introduced as a function of the orbital angular momentum quantum number $l$ and total angular momentum quantum number $j$ as
 \begin{equation}
@@ -322,12 +322,12 @@ where $n_r=Z\alpha E_{n\kappa}/\lambda - \gamma$ and $\text{F}(a,b,c)$ are the h
 E_{n\kappa}=\cfrac{m_f}{\sqrt{1+\cfrac{(Z\alpha)^2}{\left( n-|\kappa|+\sqrt{|\kappa|^2-(Z\alpha)^2} \right)^2}}},
 \end{equation}
 for $n\in \{1,2,3,...\}$ and $\kappa \in \{\pm 1,...,\pm(n-1),-n\}$.
-These solution explains the spectrum of hydrogen-like atoms to a reasonable accuracy, including fine-structure splitting, as long as $Z\alpha\ll 1$. The solutions are degenerate in the sign of $\kappa$, i.e. states with the same $j$ but different $l$ have the same energy. As a result, the $2s_{1/2}$ and $2p_{1/2}$ states are degenerate. The lifting of this degeneracy (Lamb shift) can explained by radiative corrections and finite nuclear size effects. However, in situations where $Z\alpha$ is on the order of unity, the point-like approximation becomes increasingly worse and solutions of the Dirac equation for non-Coulomb, extended potentials have to be used.
+These solution explains the spectrum of hydrogen-like atoms to a reasonable accuracy, including fine-structure splitting, as long as $Z\alpha\ll 1$. The solutions are degenerate in the sign of $\kappa$, i.e. states with the same $j$ but different $l$ have the same energy. As a result, the $2s_{1/2}$ and $2p_{1/2}$ states are degenerate. The lifting of this degeneracy (Lamb shift) can be explained by radiative corrections and finite nuclear size effects. However, in situations where $Z\alpha$ is on the order of unity, the point-like approximation becomes increasingly worse and solutions of the Dirac equation for non-Coulomb, extended potentials have to be used.
 
 
 
 \subsection{Numerical solution in a cavity for arbitrary potentials}
-Except the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (eg. Coulomb potential, spherical potential well), numerical methods have to be used to obtain solutions for $g(r)$ and $f(r)$. In particular, for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution.
+Except the rare cases, where the radial equations~\eqref{eq:radial_equations_small} can be solved exactly (e.g. Coulomb potential, spherical potential well), numerical methods have to be used to obtain solutions for $g(r)$ and $f(r)$. In particular, for atomic systems with large finite nuclear size effects, like highly charged, heavy ions and muonic atoms, the nuclear potential deviates from the Coulomb potential significantly and numerical solutions have to be found, including the extended nuclear charge distribution.
  
 Generally, for finite basis set solutions of the Dirac equation, the radial equations~\eqref{eq:radial_equations_small} are considered, but the domain is changed from $r\in[0,\infty)$ to a finite cavity $r\in [0,R]$. On the original domain, the spectrum of the energy eigenvalues $E$ has a negative continuum $E\in (-\infty,-m_f]$, a positive continuum $E\in [m_f,\infty)$, and a discrete part $E\in (-m_f,m_f)$ of infinitely many bound states, where $m_f$ is the mass of the bound fermion. On the modified domain, the positive and negative continuum become discrete~\cite{johnson1988}, but still infinite.
 A problem with numerical solutions of the Dirac equation is the appearance of unphysical, or spurious states~\cite{johnson1988, drake1981}. A method circumventing this problem was presented in Ref.~\cite{Shabaev2004}, which is shortly described in the following.
