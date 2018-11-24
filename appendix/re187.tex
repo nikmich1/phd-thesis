@@ -3,7 +3,7 @@ The calculations are described in Section~2.3., as well.
 %
 %re187 tables
 %
-\begin{table}[b]
+\begin{table}[h!]
 %\setlength\extrarowheight{1pt}
 \caption{\label{tab:re187centroid}%
 Quadratic fits of the energies of the centroid transitions for $^{187}$Re. The formula for the energy difference in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:en_fit}. See Section~2.3. for details.}
@@ -21,17 +21,23 @@ $5f_{5/2} \rightarrow 4d_{5/2}$ & $5 \rightarrow 5$ &-0.0040 &-0.4476&361.1363
 %\end{ruledtabular}
 \end{small}
 \end{table}%
+%\clearpage
 %
 %
-\begin{table}[b]
-%\setlength\extrarowheight{1pt}
+\begin{longtable}{cc|rrr}
 \caption{\label{tab:re187energ}%
 Quadratic fits of the transitions energies compared to the most intense (centroid) transition for the 15 most intense transitions for the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, and $5f_{5/2}\rightarrow4d_{5/2}$ groups in $^{187}$Re. The absolute transition energies of the centroid transitions are given in Table~\ref{tab:re187centroid}. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:en_fit}. See Section~2.3. for details.}
-%\begin{ruledtabular}
+\\\hline\\[-10pt]\hline\\[-10pt]
 \centering
-\begin{tiny}
-\begin{tabular}{cc|rrr}
-Group& $F_i \rightarrow F_f$ & $\Delta E_2^{if} [\text{eV/barn}^2]$ & $\Delta E_1^{if} [\text{eV/barn}]$ & $\Delta E_0^{if} [\text{eV}]$\\[1pt]\hline%\\[1pt]
+Group& $F_i \rightarrow F_f$ & $\Delta E_2^{if} [\text{eV/barn}^2]$ & $\Delta E_1^{if} [\text{eV/barn}]$ & $\Delta E_0^{if} [\text{eV}]$\\[1pt]\hline\endfirsthead
+
+Group& $F_i \rightarrow F_f$ & $\Delta E_2^{if} [\text{eV/barn}^2]$ & $\Delta E_1^{if} [\text{eV/barn}]$ & $\Delta E_0^{if} [\text{eV}]$\\[1pt]\hline
+\multicolumn{5}{c}{{(continuation from previous page)}}\\
+\endhead
+
+\multicolumn{5}{c}{{(continued on next page)}}\\ \endfoot
+\hline \\[-10pt] \hline
+\endlastfoot
 $5g_{9/2} \rightarrow 4f_{7/2}$ & $7 \rightarrow 6$ &0.0000&0.0000&0.0000\\
  & $6 \rightarrow 6$ &0.1633&-111.7023&-5.6165\\
  & $6 \rightarrow 5$ &-3.9877&374.4897&8.3492\\
@@ -108,23 +114,26 @@ $5f_{5/2} \rightarrow 4d_{5/2}$ & $5 \rightarrow 5$ &0.0000&0.0000&0.0000\\
  & $1 \rightarrow 1$ &-23.5235&-380.7237&59.9849\\
  & $1 \rightarrow 0$ &1.9261&-917.4101&66.6750\\
  & $0 \rightarrow 1$ &-22.5830&-274.4994&57.4088
-\end{tabular}
-%\end{ruledtabular}
-\end{tiny}
-\end{table}%
+\end{longtable}
 %
 
 
 %
-\begin{table}[b]
-%\setlength\extrarowheight{1pt}
+\begin{longtable}{cc|rrr}
 \caption{\label{tab:re187intens}%
 Quadratic fits of the relative intensities for the 15 most intense transitions each for the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, and $5f_{5/2}\rightarrow4d_{5/2}$ groups in $^{187}$Re. The intensities are given relative to the most intense (cenroid) transition. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:tran_fit}. See Section~2.3. for details.}
-%\begin{ruledtabular}
-\centering
-\begin{tiny}
-\begin{tabular}{cc|rrr}
-Group& $F_i \rightarrow F_f$ & $I_2^{if} [\%\text{/barn}^2]$ & $I_1^{if} [\%\text{/barn}]$ & $I_0^{if} [\%]$\\[1pt]\hline%\\[1pt]
+\\\hline\\[-10pt]\hline\\[-10pt]
+Group& $F_i \rightarrow F_f$ & $I_2^{if} [\%\text{/barn}^2]$ & $I_1^{if} [\%\text{/barn}]$ & $I_0^{if} [\%]$\\[1pt]\hline
+\endfirsthead
+
+Group& $F_i \rightarrow F_f$ & $I_2^{if} [\%\text{/barn}^2]$ & $I_1^{if} [\%\text{/barn}]$ & $I_0^{if} [\%]$\\[1pt]\hline
+\multicolumn{5}{c}{{(continuation from previous page)}}\\
+\endhead
+
+\multicolumn{5}{c}{{(continued on next page)}}\\ \endfoot
+\hline \\[-10pt] \hline
+\endlastfoot
+
 $5g_{9/2} \rightarrow 4f_{7/2}$ & $7 \rightarrow 6$ &0.000&0.000&100.000\\
  & $6 \rightarrow 6$ &-0.011&-0.114&8.044\\
  & $6 \rightarrow 5$ &-0.007&0.379&78.607\\
@@ -201,8 +210,5 @@ $5f_{5/2} \rightarrow 4d_{5/2}$ & $5 \rightarrow 5$ &0.000&0.000&100.000\\
  & $1 \rightarrow 1$ &0.052&1.473&1.641\\
  & $1 \rightarrow 0$ &-0.122&0.940&10.826\\
  & $0 \rightarrow 1$ &-0.144&3.062&10.558
-\end{tabular}
-%\end{ruledtabular}
-\end{tiny}
-\end{table}%
+\end{longtable}%
 %

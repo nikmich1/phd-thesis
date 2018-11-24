@@ -1174,7 +1174,7 @@ $^{235}_{\phantom{1}92}\text{U}$&  3 &   \nicefrac{7}{2} & $1s_{1/2}$& 12175.51 
 \cleardoublepage
 \section{Structure of muonic $^{185}\text{Re}$ \& $^{187}\text{Re}$}
 \label{sec:muon_re}
-The analysis of x-rays emitted due to transitions in muonic atoms constitutes one possibility to obtain information on the nuclear charge distribution and measure properties like RMS charge radii, or nuclear quadrupole moments. This section analyzes the structure of muonic rhenium-185 and -187. So far, there is no absolute measurement of the charge radius of $^{185}$Re~\cite{schopper2004} and the only experiment reported on muonic rhenium is an extraction of the quadrupole moments of $^{185}$Re and $^{187}$Re from the N x-rays (${n}{=}{5}\rightarrow{n}{=}{4}$) of natural Re~\cite{konijn1979}, which is mainly a mixture of these two isotopes. Therefore, the theoretical spectra of both isotopes have been used at the same time for fitting the experimental spectrum. As a consequence, the two extracted quadrupole moments in Ref.~\cite{konijn1979} are not indepentent. During the work on this thesis, the quadrupole moments were extracted independently for the two isotopes.
+The analysis of x-rays emitted due to transitions in muonic atoms constitutes one possibility to obtain information on the nuclear charge distribution and measure properties like RMS charge radii, or nuclear quadrupole moments. This section analyzes the structure of muonic rhenium-185 and -187. So far, there is no absolute measurement of the charge radius of $^{185}$Re~\cite{schopper2004} and the only experiment reported on muonic rhenium is an extraction of the quadrupole moments of $^{185}$Re and $^{187}$Re from the N x-rays (${n}{=}{5}\rightarrow{n}{=}{4}$) of natural Re~\cite{konijn1979}, which is mainly a mixture of these two isotopes. Therefore, the theoretical spectra of both isotopes have been used at the same time for fitting the experimental spectrum. As a consequence, the two extracted quadrupole moments in Ref.~\cite{konijn1979} are not indepentent. During the work on this thesis, the quadrupole moments were extracted independently for these two isotopes.
 The experimental data used in this section comes from measurements of muonic x-rays with isotopically pure rhenium performed in 2016 by the MuX Collaboration. The high intensity muon beam at the Paul Scherrer Institute (Switzerland)~\cite{psiExperiments,psiFacilities} was used as a muon source.
 
 In the following, the muonic transition energies and transition probabilities are analyzed, where the methods described in Sections~\ref{sec:calculationSpectraMuon} and~\ref{sec:higherorder} are used. Thereby, the dependence of transitions and intensities of the $N$ x-rays ($n=5\rightarrow n=4$) on the quadrupole moment is used in combination with experimental data on isotopically pure $^{185}$Re and $^{187}$Re to extract the nuclear quadrupole moment. Also, a good qualitative description based on the rigid-rotor nuclear model (Appendix~\ref{app:rig_rotor}) of the $K$ x-rays ($2p\rightarrow 1s$) is given.
@@ -1187,12 +1187,12 @@ As a first application of the calculation of muonic spectra presented in this th
 Following Section~\ref{sec:transitions}, the most intense transitions are the $E1$-transitions in the circular orbits $5g_{9/2}\rightarrow4f_{7/2}$ and $5g_{7/2}\rightarrow4f_{7/2}$. However, also the $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow 4f_{7/2}$, and $5f_{5/2}\rightarrow 4d_{5/2}$ transitions have to be considered, since they almost coincide in energy with the $5g\rightarrow4f$ energies around $365\,$keV. Therefore, the following approach is chosen for the theoretical prediction: The four fine-structure states of the initial states $5g_{9/2},\,5g_{7/2},\,5f_{7/2}\,,5f_{5/2}$ together with the nuclear ground state with $I=5/2$ define a first model space. Now, the formalism described in Section~\ref{sec:muon_dynamic} can be used to calculate the energies in this modelspace, including finite size effects, vacuum polarization (Uehling, Källen-Sabry, Wichmann-Kroll in point-like approximation, quadrupole-Uehling), and rediagonalization of the electric quadrupole and magnetic dipole hyperfine interaction. In this way, also contributions non-linear in the nuclear quadrupole moment are included, in contrast to~\cite{konijn1979}.
 Excited nuclear states were not considered, since the quadrupole interaction in this case is small compared to the nuclear rotational states. For the $N$ x-rays, the nuclear energy splitting is around three orders of magnitude larger. Furthermore, due to the small hyperfine splitting in the ${n}{=}{4,5}$ states, the residual second order terms, as described in Section~\ref{sec:muon_residualSO}, are very small.
 The same procedure is repeated for the final states with ${n}{=}{4}$, i.e. $4f_{7/2},\,4f_{5/2},\,4d_{5/2},\,4d_{3/2}$.
-Then, the transition probabilities can be calculated from each initial to each final state. For this analysis, the relativistic formulas for $E1$ and $M1$ transitions from Section~\ref{sec:transitions} are used, assuming an initial statistical population $\sim 2F+1$ for each initial state with total angular momentum $F$. Transitions of higher-order multipolarity have a much smaller transition rate. With this approach, every transition energy and corresponding intensity can be calculated for a given nuclear charge distribution
+Then, the transition probabilities can be calculated from each initial to each final state. For this analysis, the relativistic formulas for $E1$ and $M1$ transitions from Section~\ref{sec:transitions} are used, assuming an initial statistical population $\sim (2F+1)$ for each initial state with total angular momentum $F$. Transitions of higher-order multipolarity have a much smaller transition rate. With this approach, every transition energy and corresponding intensity can be calculated for a given nuclear charge distribution
 \begin{equation}
-\rho_N(r_N,\vartheta_N)=\cfrac{N}{1+\exp\left[\frac{r-c(1+\beta \text{Y}_{20}(\vartheta))}{a}\right]},
+\rho_N(r_N,\vartheta_N)=\cfrac{N}{1+\exp\left[\left(r_N-c(1+\beta \text{Y}_{20}(\vartheta_N))\right)/a\right]},
 \end{equation}
-where $N$ is a normalization constant fixed by the condition $\int\text{d}V \rho(r,\vartheta) = Z$.
-The three parameters $a$, $c$, $\beta$ are calculated using $a=2.3\,\text{fm}/(4\ln3)$, which is a reasonable estimate for most nuclei~\cite{Beier2000}, such that the RMS charge radius agrees with the literature value from Ref.~\cite{Angeli2013}, and the spectroscopic quadrupole moment with some given value $Q$. The connection of the spectroscopic quadrupole $Q$ moment with the nuclear charge distribution for a nucleus with ground state angular momentum $I$ is
+where $N$ is a normalization constant fixed by the condition $\int\text{d}^3\mathbf{r} \rho(r,\vartheta) = Z$.
+The three parameters $a$, $c$, $\beta$ are calculated using $a=2.3\,\text{fm}/(4\ln3)$, which is a reasonable estimate for most nuclei~\cite{Beier2000}, such that the RMS charge radius agrees with the literature value from Ref.~\cite{Angeli2013}, and the spectroscopic quadrupole moment with some given value~$Q$. The connection of the spectroscopic quadrupole~$Q$ moment with the nuclear charge distribution for a nucleus with ground state angular momentum~$I$ is
 \begin{equation}
 Q = 4\pi\frac{I(2I-1)}{(I+1)(2I+3)}\int\limits_0^\infty\text{d}r_N \int\limits_0^\pi\text{d}\vartheta_N\,
 r_N^4 \sin\vartheta_N \rho_N(r_N,\vartheta_N)\text{P}_2(\cos\vartheta_N),
@@ -1212,13 +1212,13 @@ Each of those groups consists of 15 or 16 individual lines itself due to the hyp
 
 The difference between two transition energies is especially sensitive to the quadrupole moment, since the majority of the uncertainty due to the nuclear RMS radius cancels, as described in Ref.~\cite{konijn1979}. Therefore, the energy differences of all $5g_{9/2}\rightarrow4f_{7/2}$ transition compared to the most intense transition in this group, called the centroid transition, is calculated and analogously the corresponding intensities are given relative to the centroid transition.
 The same holds for the other four groups. Then, the energy difference of the $5g_{9/2}\rightarrow4f_{7/2}$ centroid compared to the other four centroids is calculated.
-Thereby, the energy differences of all considered transitions compared to the $5g_{9/2}\rightarrow4f_{7/2}$ centroid is parametrized in terms of the nuclear quadrupole moment and the position of the $5g_{9/2}\rightarrow4f_{7/2}$ centroid can be fitted to the experimental spectrum as a free parameter. The relative intensities of the 5 different groups are either free fit parameters or obtained from other programs for cascade calculations~\cite{elisa_privcomm}.
-It is too expensive to perform full calculations in the fitting process to experimental data. Instead, the full calculations are performed for several values of the quadrupole moment in the proximity of the expected value and are fitted by a quadratic function for every transition energy and intensity as
+Thereby, the energy differences of all considered transitions compared to the $5g_{9/2}\rightarrow4f_{7/2}$ centroid is parametrized in terms of the nuclear quadrupole moment, and the position of the $5g_{9/2}\rightarrow4f_{7/2}$ centroid can be fitted to the experimental spectrum as a free parameter. The relative intensities of the 5 different groups are either free fit parameters or obtained from other programs for cascade calculations~\cite{elisa_privcomm}.
+Since it is too expensive to perform full calculations in the fitting process to experimental data, the full calculations are performed for several values of the quadrupole moment in the proximity of the expected value and are fitted by a quadratic function for every transition energy and intensity as
 \begin{alignat}{2}
 &\Delta E^{if}(Q)&&= \Delta E^{if}_0 +  \Delta E^{if}_1 Q+  \Delta E^{if}_2 Q^2,\label{eq:en_fit}\\
 &\phantom{\Delta}I^{if}(Q)&&= I^{if}_0 +  I^{if}_1 Q+  I^{if}_2 Q^2.\label{eq:tran_fit}
 \end{alignat}
-The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies for $^{185}\rm{Re}$ are given in Table~\ref{tab:re185energ} for the relative transition energies, in Table~\ref{tab:re185intens} for the intensities, and in Table~\ref{tab:re185centroid} for fitted energy differences of the centroid transitions. For $^{187}$Re, the coefficients differ only to a small extent due to different values for the magnetic moment and RMS charge radius.
+The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies for $^{185}\rm{Re}$ are given in Table~\ref{tab:re185energ} for the relative transition energies, in Table~\ref{tab:re185intens} for the intensities, and in Table~\ref{tab:re185centroid} for fitted energy differences of the centroid transitions. For $^{187}$Re, the coefficients differ only to a small extent due to different values for the magnetic moment and RMS charge radius and the corresponding tables are given in Appendix~\ref{app:re187}. 
 A main experimental challenge is understanding of the line shape due to the detector response function, which broadens the Lorentzian (due to natural life time) essentially into a Voigt profile. This issue is treated in Ref.~\cite{vogiatzi2018} in detail.
 
 The calculated spectrum parametrized by the nuclear quadrupole moment can now be fitted efficiently to the experimental spectrum and the result is shown in Fig.~\ref{fig:re54}. The $5f_{5/2}\rightarrow 4d_{5/2}$ group turned out not to be visible in the fit. Thereby, the preliminary extracted spectroscopic quadrupole moment of $^{185}$Re and $^{187}$Re is obtained as
@@ -1226,36 +1226,39 @@ The calculated spectrum parametrized by the nuclear quadrupole moment can now be
 Q_{\text{Re-}185} &= 2.11(2)(7)\,\text{barn},\\
 Q_{\text{Re-}187} &= 1.96(2)(2)\,\text{barn},
 \end{align}
-where the number in the first bracket is the statistical uncertainty and the number in the second bracket is the systematic uncertainty due to the ratio of the intensities. The value is in agreement with the previous literature values~\cite{Stone2005}.
+where the number in the first bracket is the statistical uncertainty and the number in the second bracket is the systematic uncertainty due to the ratio of the intensities. The value is in agreement with the previous literature values~\cite{Stone2005}.%
 
+Furthermore, the low-lying $2p\rightarrow1s$ transitions, or $K$ x-rays, have been measured during the same experiments. The assumption of statistically populated $5g$ states, i.e. $\sim (2F+1)$, and a cascade $5g\rightarrow 4f \rightarrow 3d \rightarrow 2p \rightarrow 1s$ as discussed in Sections~\ref{sec:muon_dynamic} and \ref{sec:transitions} can explain the spectrum qualitatively, using the rigid rotor model for the nucleus (Appendix~\ref{app:rig_rotor}). The corresponding comparison for the $K$ x-rays ($2p\rightarrow 1s$) is shown in Fig.~\ref{fig:re54_K}. For the calculations of the spectra, the first five nuclear rotational states have been considered. In principle, from these spectra, the nuclear RMS radius can be extracted~\cite{hitlin1970}. However, for the low-lying transitions in heavy muonic atoms, the nuclear polarization corrections, e.g.~\cite{chen1970}, have to be included into the theoretical predictions. These corrections are due to virtual excitations of nuclear states beyond the rigid rotor model and have to be treated with a more accurate nuclear model or experimental data on nuclear transitions. Thus, updated calculations from the nuclear physics side would be highly desirable together with the calculations for the bound muon as presented in this thesis in connection with the new experimental campaign on muonic atoms. 
+This is also discussed in more detail in the conclusion \& outlook chapter.%
+%
 %re185 5-4 figure
 \begin{figure}%
 \centering
-\subfloat[]{\label{fig:comp54exp}\includegraphics[width=0.92\linewidth]{pics/comparison_54}}\\
-\subfloat[]{\label{fig:comp54theo}\includegraphics[width=0.95\linewidth]{pics/comparison_exp}}
+\subfloat[]{\label{fig:comp54exp}\includegraphics[width=0.95\linewidth]{pics/comparison_54}}\\
+\subfloat[]{\label{fig:comp54theo}\includegraphics[width=0.915\linewidth]{pics/comparison_exp}}
 \caption{
 Comparison of the experimental data and theoretical predictions in region of the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$ groups in $^{185}$Re. The black dots are the measurements and the nuclear quadrupole moment of $^{185}$Re has been extracted by fitting the theoretical prediction to the data. 
 In part (a), the colored lines show the calculated transition energies and corresponding transition probabilities.
 In part (b), the predicted signals for each transition are shown. The center corresponds to the calculated transition probability and the shape is given by the natural line width and the detector response function. The red function represents the calculated total signal and is the sum of all separate signals. Details about the calculations can be found in Section~\ref{sec:muon_re}, and about the detector response function in Ref.~\cite{vogiatzi2018}.
 }
 \label{fig:re54}
-\end{figure}
+\end{figure}%
 %
-%\begin{figure*}
-%\centering
-%\subfloat[balll]{\label{fig:bliub}\includegraphics[width=0.83\linewidth]{pics/comparison}}\\
-%\subfloat[balll2]{\label{fig:bliub}\includegraphics[width=0.9\linewidth]{pics/Re185_Exp}}
-%\caption{
-%Experimental spectrum for the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, and $5f_{7/2}\rightarrow4d_{5/2}$ groups in $^{185}$Re. The black dots are the measurements, the red line is the total theoretical predicition, and the colored lines below are the separate lines convoluted with the detector response function.
-%}
-%\label{fig:re54}
-%\end{figure*}
-%
+% figure k x-rays
+\begin{figure}%
+\centering
+\includegraphics[width=0.99\textwidth]{pics/comparison_21}
+\caption{
+Comparison of experimental spectrum (upper plot) and theoretical calculations (lower plot) in the area of the $K$ x-rays for muonic $^{185}$Re. The first 5 rotational states of the $^{185}$Re nucleus and a muonic cascade starting from statistically populated $5g$ states have been used for the calculations. The spectrum is complex due to excited nuclear states and large hyperfine splitting in the muonic $2p$ states. The small shift of the theoretical values is due to the non-calculated nuclear polarization corrections. For further details, see Section~\ref{sec:muon_re}.
+}
+\label{fig:re54_K}
+\end{figure}%
 %
 %
 %re185 tables
 %
-\begin{table}[b]
+\clearpage
+\begin{table}
 %\setlength\extrarowheight{1pt}
 \caption{\label{tab:re185centroid}%
 Quadratic fits of the energies of the centroid transitions for $^{185}$Re. The formula for the energy difference in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:en_fit}. See Section~\ref{sec:muon_re} for details.}
@@ -1273,18 +1276,25 @@ $5f_{5/2} \rightarrow 4d_{5/2}$ & $5 \rightarrow 5$ &-0.0039 & -0.4480 & 361.140
 %\end{ruledtabular}
 \end{small}
 \end{table}%
+%\clearpage
 %
 %
-%
-\begin{table}[b]
+\begin{longtable}{c c | r r r}
 %\setlength\extrarowheight{1pt}
 \caption{\label{tab:re185energ}%
-Quadratic fits of the transitions energies compared to the most intense (centroid) transition for the 15 most intense transitions for the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, and $5f_{5/2}\rightarrow4d_{5/2}$ groups in $^{185}$Re. The absolute transition energies of the centroid transitions are given in Table~\ref{tab:re185centroid}. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:en_fit}. See Section~\ref{sec:muon_re} for details.}
-%\begin{ruledtabular}
+Quadratic fits of the transitions energies compared to the most intense (centroid) transition for the 15 most intense transitions for the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, and $5f_{5/2}\rightarrow4d_{5/2}$ groups in $^{185}$Re. The absolute transition energies of the centroid transitions are given in Table~\ref{tab:re185centroid}. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:en_fit}. See Section~\ref{sec:muon_re} for details.}\\
+\\\hline\\[-10pt]\hline\\[-10pt]
 \centering
-\begin{tiny}
-\begin{tabular}{cc|rrr}
-Group& $F_i \rightarrow F_f$ & $\Delta E_2^{if} [\text{eV/barn}^2]$ & $\Delta E_1^{if} [\text{eV/barn}]$ & $\Delta E_0^{if} [\text{eV}]$\\[1pt]\hline%\\[1pt]
+Group& $F_i \rightarrow F_f$ & $\Delta E_2^{if} [\text{eV/barn}^2]$ & $\Delta E_1^{if} [\text{eV/barn}]$ & $\Delta E_0^{if} [\text{eV}]$\\[1pt]\hline
+\endfirsthead
+
+Group& $F_i \rightarrow F_f$ & $\Delta E_2^{if} [\text{eV/barn}^2]$ & $\Delta E_1^{if} [\text{eV/barn}]$ & $\Delta E_0^{if} [\text{eV}]$\\[1pt]\hline
+\multicolumn{5}{c}{{(continuation from previous page)}}\\
+\endhead
+
+\multicolumn{5}{c}{{(continued on next page)}}\\ \endfoot
+\hline \\[-10pt] \hline \endlastfoot
+
 $5g_{9/2} \rightarrow 4f_{7/2}$ & $7 \rightarrow 6$ & 0.0000 & 0.0000 & 0.0000 \\
 & $6 \rightarrow 6$ & 0.4349 & -112.8421 & -4.3710 \\
 & $6 \rightarrow 5$ & -3.9990 & 374.5405 & 8.1664 \\
@@ -1300,7 +1310,6 @@ $5g_{9/2} \rightarrow 4f_{7/2}$ & $7 \rightarrow 6$ & 0.0000 & 0.0000 & 0.0000 \
 & $2 \rightarrow 3$ & -1.2154 & 350.5410 & 23.3930 \\
 & $2 \rightarrow 2$ & -2.4104 & 48.4842 & 31.7510 \\
 & $2 \rightarrow 1$ & -1.5016 & -218.4484 & 36.5602 \\[7pt]
-
 $5g_{7/2} \rightarrow 4f_{5/2}$ & $6 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \\
 & $5 \rightarrow 5$ & 0.4268 & -116.6524 & -6.0881 \\
 & $5 \rightarrow 4$ & -4.0133 & 397.3030 & 15.1612 \\
@@ -1316,7 +1325,6 @@ $5g_{7/2} \rightarrow 4f_{5/2}$ & $6 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \
 & $1 \rightarrow 2$ & -1.3654 & 223.6477 & 33.7757 \\
 & $1 \rightarrow 1$ & -2.2595 & -108.1940 & 44.0473 \\
 & $1 \rightarrow 0$ & -3.9788 & -312.5737 & 49.2916 \\[7pt]
-
 $5f_{7/2} \rightarrow 4d_{5/2}$ & $6 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \\
 & $5 \rightarrow 5$ & 2.3569 & -252.5291 & -6.3945 \\
 & $5 \rightarrow 4$ & -39.2156 & 1142.4006 & -7.6361 \\
@@ -1332,7 +1340,6 @@ $5f_{7/2} \rightarrow 4d_{5/2}$ & $6 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \
 & $1 \rightarrow 2$ & -20.9818 & 526.1606 & 63.5780 \\
 & $1 \rightarrow 1$ & -23.9109 & -331.8974 & 66.0266 \\
 & $1 \rightarrow 0$ & 1.6436 & -869.1530 & 73.0235 \\[7pt]
-
 $5g_{7/2} \rightarrow 4f_{7/2}$ & $6 \rightarrow 6$ & 0.0000 & 0.0000 & 0.0000 \\
 & $6 \rightarrow 5$ & -4.4339 & 487.3826 & 12.5375 \\
 & $5 \rightarrow 6$ & 0.4268 & -116.6524 & -6.0881 \\
@@ -1349,7 +1356,6 @@ $5g_{7/2} \rightarrow 4f_{7/2}$ & $6 \rightarrow 6$ & 0.0000 & 0.0000 & 0.0000 \
 & $2 \rightarrow 1$ & -1.5047 & -269.4231 & 34.5180 \\
 & $1 \rightarrow 2$ & -2.1947 & 62.2380 & 27.5336 \\
 & $1 \rightarrow 1$ & -1.2858 & -204.6945 & 32.3428 \\[7pt]
-
 $5f_{5/2} \rightarrow 4d_{5/2}$ & $5 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \\
 & $5 \rightarrow 4$ & -41.5725 & 1394.9297 & -1.2415 \\
 & $4 \rightarrow 5$ & 2.3621 & -267.5452 & -10.8732 \\
@@ -1365,22 +1371,24 @@ $5f_{5/2} \rightarrow 4d_{5/2}$ & $5 \rightarrow 5$ & 0.0000 & 0.0000 & 0.0000 \
 & $1 \rightarrow 1$ & -23.3843 & -381.5380 & 60.1120 \\
 & $1 \rightarrow 0$ & 2.1702 & -918.7936 & 67.1089 \\
 & $0 \rightarrow 1$ & -22.4779 & -275.1695 & 57.4097
-\end{tabular}
-%\end{ruledtabular}
-\end{tiny}
-\end{table}%
+\end{longtable}%
 %
 %
 %
-\begin{table}[b]
-%\setlength\extrarowheight{1pt}
+\begin{longtable}{cc|rrr}
 \caption{\label{tab:re185intens}%
-Quadratic fits of the relative intensities for the 15 most intense transitions each for the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, and $5f_{5/2}\rightarrow4d_{5/2}$ groups in $^{185}$Re. The intensities are given relative to the most intense (cenroid) transition. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:tran_fit}. See Section~\ref{sec:muon_re} for details.}
-%\begin{ruledtabular}
+Quadratic fits of the relative intensities for the 15 most intense transitions each for the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, and $5f_{5/2}\rightarrow4d_{5/2}$ groups in $^{185}$Re. The intensities are given relative to the most intense (cenroid) transition. The formula for the transition energy in terms of a give quadrupole moment $Q$ is given in Eq.~\eqref{eq:tran_fit}. See Section~\ref{sec:muon_re} for details.}\\
+\hline\\[-10pt]\hline\\[-10pt]
 \centering
-\begin{tiny}
-\begin{tabular}{cc|rrr}
-Group& $F_i \rightarrow F_f$ & $I_2^{if} [\%\text{/barn}^2]$ & $I_1^{if} [\%\text{/barn}]$ & $I_0^{if} [\%]$\\[1pt]\hline%\\[1pt]
+Group& $F_i \rightarrow F_f$ & $I_2^{if} [\%\text{/barn}^2]$ & $I_1^{if} [\%\text{/barn}]$ & $I_0^{if} [\%]$\\[1pt]\hline\endfirsthead
+
+Group& $F_i \rightarrow F_f$ & $I_2^{if} [\%\text{/barn}^2]$ & $I_1^{if} [\%\text{/barn}]$ & $I_0^{if} [\%]$\\[1pt]\hline
+\multicolumn{5}{c}{{(continuation from previous page)}}\\
+\endhead
+
+\multicolumn{5}{c}{{(continued on next page)}}\\ \endfoot
+\hline \\[-10pt] \hline
+\endlastfoot
 $5g_{9/2} \rightarrow 4f_{7/2}$  &  $7 \rightarrow 6$  &  0.000  &  0.000  &  100.000\\
 &  $6 \rightarrow 6$  &  -0.011  &  -0.115  &  8.045\\
 &  $6 \rightarrow 5$  &  -0.008  &  0.383  &  78.602\\
@@ -1461,37 +1469,7 @@ $5f_{5/2} \rightarrow 4d_{5/2}$  &  $5 \rightarrow 5$  &  0.000  &  0.000  &  10
 &  $1 \rightarrow 1$  &  0.043  &  1.509  &  1.602\\
 &  $1 \rightarrow 0$  &  -0.122  &  0.943  &  10.821\\
 &  $0 \rightarrow 1$  &  -0.154  &  3.105  &  10.510
-\end{tabular}
-%\end{ruledtabular}
-\end{tiny}
-\end{table}%
-%
-%
-%
-%\subsection{Low lying states}
-Furthermore, the low-lying $2p\rightarrow1s$ transitions, or $K$ x-rays, have been measured during the same experiments. The assumption of statistically populated $5g$ states, i.e. $\sim (2F+1)$, and a cascade $5g\rightarrow 4f \rightarrow 3d \rightarrow 2p \rightarrow 1s$ as discussed in Sections~\ref{sec:muon_dynamic} and \ref{sec:transitions} can explain the spectrum qualitatively, using the rigid rotor model for the nucleus (Appendix~\ref{app:rig_rotor}). The corresponding comparison for the $K$ x-rays ($2p\rightarrow 1s$) is shown in Fig.~\ref{fig:re54_K}. For the calculations of the spectra, the first five nuclear rotational states have been considered. In principle, from these spectra, the nuclear RMS radius can be extracted~\cite{hitlin1970}. However, for the low-lying transitions in heavy muonic atoms, the nuclear polarization corrections, e.g.~\cite{chen1970}, have to be considered. These corrections are due to virtual excitations of nuclear states beyond the rigid rotor model and have to be treated with a more accurate nuclear model or experimental data on nuclear transitions. Thus, updated calculations from the nuclear physics side would be highly desirable together with the calculations for the bound muon as presented in this thesis in connection with the new experimental campaign on muonic atoms. 
-This is also discussed in more detail in the conclusion \& outlook chapter.
-% figure k x-rays
-\begin{figure}%
-\centering
-\includegraphics[width=0.99\textwidth]{pics/comparison_21}
-\caption{
-Comparison of experimental spectrum (upper plot) and theoretical calculations (lower plot) in the area of the $K$ x-rays for muonic $^{185}$Re. The first 5 rotational states of the $^{185}$Re nucleus and a muonic cascade starting from statistically populated $5g$ states have been used for the calculations. The spectrum is complex due to excited nuclear states and large hyperfine splitting in the muonic $2p$ states. The small shift of the theoretical values is due to the non-calculated nuclear polarization corrections. For further details, see Section~\ref{sec:muon_re}.
-}
-\label{fig:re54_K}
-\end{figure}
-%
-%
-% figure l x-rays
-%\begin{figure}%
-%\centering
-%\includegraphics[width=0.99\textwidth]{pics/185Re_L}
-%\caption{
-%Comparison of experimental spectrum and theoretical calculations in the area of the $L$ x-rays for muonic Re-185. For details of the calculations, see Sec.~\ref{sec:muon_re}.
-%}
-%\label{fig:re54_L}
-%\end{figure}%
-%
+\end{longtable}
 \clearpage
 \section{Conclusion}
 \label{sec:muon_summary}
