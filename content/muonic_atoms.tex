@@ -120,9 +120,9 @@ For these types of operators, the calculation of expectation values can be simpl
 \end{equation}
 with total angular momentum $F$, nuclear angular momentum $I$ and muonic angular momentum $j$. The muonic angular momentum $j$ is already composed out of the orbital angular momentum $l$ and the spin angular momentum, as described in Eq.~\eqref{eq:ansatz_dirac}. The total energy of the muon-nucleus system can be calculated as the sum of nuclear energy $E_N$ from Eq.~\eqref{eq:nuclEn}, the muonic energy from Eq.~\eqref{eq:muonicEn} and the expactation value of the quadrupole interaction $\left<V_{\text{el}}^{(2)}\right>$ from Eq.~\eqref{eq:defmulti}.
 
-\subsection{Fine structure of heavy muonic atoms}
+\subsection{Fine and first-order hyperfine structure}
 \label{sec:muon_finestructure}
-In this subsection, the solution of the Dirac equation for the muon will be discussed. In particular, the effects of vacuum polarization in Uehling approximation, recoil corrections, and electron screening are implemented, using known methods. Especially, the usage of the dual-kinetic-balance method~\cite{Shabaev2004} in the framework of muonic atoms is presented. Results are presented for muonic $^{205}$Bi, $^{147}$Sm, and $^{89}$Zr. This subsection follows Ref.~\cite{michel2017}, which was published in the framework of this thesis. 
+In this subsection, the solution of the Dirac equation and the calculation of first-order hyperfine interactions for the muon will be discussed. In particular, the effects of vacuum polarization in Uehling approximation, recoil corrections, and electron screening are implemented, using known methods. The usage of the dual-kinetic-balance method~\cite{Shabaev2004} in the framework of muonic atoms is presented. Results are shown for muonic $^{205}$Bi, $^{147}$Sm, and $^{89}$Zr. This subsection follows Ref.~\cite{michel2017}, which was published in the framework of this thesis.
 
 \subsubsection{Finite nuclear size corrections}
 \label{sec:radialEq}
@@ -197,7 +197,7 @@ The uncertainties include the error in the tabulated RMS radius value as well as
 Overview of the binding energies for muonic $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr, obtained by solving the Dirac equation with the spherically symmetric parts of the muon-nucleus interaction.
 $E_{\rm{C}}$ are the binding energies \eqref{eq:finestructure_formula_2} for a  point-like nucleus.
 $E_{\rm{fs}}$, $E_{\rm{uehl}}$ are the binding energies in the finite-size potential with and without the Uehling correction, respectively.
-The reduced mass is used to include the non-relativistic recoil corrections from Section~\ref{sec:recoil}. If not indicated, the uncertainties are negligible. 
+The reduced mass is used to include the non-relativistic recoil corrections from Section~\ref{sec:recoil}. If not indicated, the uncertainties are negligible.
 All energies are in keV.}
 %\begin{ruledtabular}
 \centering
@@ -274,8 +274,8 @@ where $M_N$ is the mass of the nucleus, and the functions $h(r)$ and $P_1(r)$ ar
 %begin table
 \begin{table}
 \setlength\extrarowheight{3pt}
-\caption{\label{tab:recoil}Relativistic recoil corrections to the binding energies for muonic $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr. fm (full mass) denotes the finite size binding energy, analogous to the fourth column of Table~\ref{tab:sphDirac}, but with the rest mass of the muon used in the Dirac equation. $\Delta E_{\text{rec,nr}}$ is the non-relativistic recoil correction, which is the difference between the finite size Dirac solutions with reduced mass and full mass, respectively. $\Delta E^{\text{(rec,rel)}}_{n\kappa}$ is the leading relativistic recoil correction from Section~\ref{sec:recoil}. 
-If not indicated, the uncertainties are negligible. 
+\caption{\label{tab:recoil}Relativistic recoil corrections to the binding energies for muonic $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr. fm (full mass) denotes the finite size binding energy, analogous to the fourth column of Table~\ref{tab:sphDirac}, but with the rest mass of the muon used in the Dirac equation. $\Delta E_{\text{rec,nr}}$ is the non-relativistic recoil correction, which is the difference between the finite size Dirac solutions with reduced mass and full mass, respectively. $\Delta E^{\text{(rec,rel)}}_{n\kappa}$ is the leading relativistic recoil correction from Section~\ref{sec:recoil}.
+If not indicated, the uncertainties are negligible.
 All energies are in keV.}
 %\begin{ruledtabular}
 \centering
@@ -374,139 +374,162 @@ analogously to Eq.~\eqref{eq:screenPot}.
 The interaction between the electrons is not taken into account here. Finally, the Dirac equation for the muon is solved again, now including the nuclear potential and the screening potential \eqref{eq:screenPot} due the atomic electrons from the considered electron configuration. This procedure can be repeated in the spirit of Hartree's method~\cite{bethe_salpeter} until the electrons and the muon are self-consistent in the fields of each other. Our studies show that one iteration is usually enough since the overlap of muon and electron wave functions in heavy muonic atoms is small. It is important to note, that here the screening potential depends to a small extent on the state of the muon, since the muon wave function is used in the calculation for the electron wave function. The atomic electrons primarily behave like a charged shell around the muon and the nucleus; thus every muon level is mainly shifted by a constant term, which is not observable in muonic transitions. The correction $\Delta E_S$ is defined as the difference of the binding energy without and with screening potential, respectively. Therefore, a positive value indicates that the muon is less bound due to the screening effect. The main contribution to the nonconstant part of the screening potential comes from the 1$s$ electrons, since their wave functions have the biggest overlap with the muon; therefore the exact electron configuration has only a minor effect on transition energies~\cite{vogel1973}. In Table~\ref{tab:screen}, results for the screening correction are shown for both mentioned methods and for different electron configurations. Values of the screening correction for different electron configurations show that a 10\% error for the non-constant part is a reasonable estimate.
 %
 %
-%\section{Hyperfine interactions}
-%\label{sec:hfs}
-%\subsubsection{Electric quadrupole splitting}
-%\label{sec:elQuad1}
-%%begin hfs table
-%\begin{table*}
-%\setlength\extrarowheight{3pt}
-%\begin{small}
-%\caption{\label{tab:hfs}
-%Results for the electric quadrupole and magnetic dipole hyperfine splitting for a selection of hyperfine states of muonic $^{205}_{83}$Bi ($I=\frac{9}{2}$), $^{147}_{62}$Sm ($I=\frac{7}{2}$), and $^{89}_{40}$Zr ($I=\frac{9}{2}$). $\Delta E_Q$ are the values of the electric quadrupole splitting. $\Delta E_M^{\rm{hom}}$ is the magnetic dipole splitting from Eq.~\eqref{eq:hmag} using a homogeneous nuclear current distribution and $\Delta E_M^{\rm{sp}}$ using the nuclear magnetization distribution in the single particle model. See Sections~\ref{sec:elQuad1} and~\ref{sec:magndip} for definitions. All energies are in keV.}
-%%\begin{ruledtabular}
-%\centering
-%\begin{tabular}{c|cllllll}
-% nucleus&state&\multicolumn{2}{c}{$\Delta E_Q$}&\multicolumn{2}{c}{$\Delta E_M^{\rm{hom}}$}&\multicolumn{2}{c}{$\Delta E_M^{\rm{sp}}$}\\
-% & &$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$&$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$&$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$\\[2pt] \hline \\[-7pt]
-%   $^{205}$Bi & $1s_{1/2}$& \phantom{-11}0 & \phantom{-11}0 & -2.27(20) &\phantom{-}1.86(16) & -2.41(20) &\phantom{-}1.97(16) \\
-%  & $2s_{1/2}$& \phantom{-11}0 & \phantom{-11}0 & \text{-0.43(5)} &\phantom{-}0.35(4) & -0.47(6) &\phantom{-}0.38(4) \\
-%  & $2p_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & -1.23(11) & \phantom{-}1.01(9) & -1.31(11) &\phantom{-}1.07(10) \\
-%  & $2p_{3/2}$ & -175.(24.) & \phantom{-}175.(24.) & -0.55(2) & \phantom{-}0.010(4) & -0.554(22) & \phantom{-}0.098(4) \\
-%  & $3s_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & \text{-0.144(20)} & \phantom{-}0.118(16) & -0.160(20) & \phantom{-}0.131(16) \\
-%  & $3p_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & -0.311(33) & \phantom{-}0.255(26) & -0.336(33) & \phantom{-}0.275(27) \\
-%  & $3p_{3/2}$ & \phantom{1}-48.9(8.0) & \phantom{-1}48.9(8.0) & -0.160(7) & \phantom{-}0.028(1) & -0.163(7) & \phantom{-}0.029(1) \\
-%  & $3d_{3/2}$ & \phantom{1}-25.4(1.3) & \phantom{-1}25.4(1.3) & -0.161(6) & \phantom{-}0.028(1) & -0.163(6) & \phantom{-}0.029(1) \\
-%  & $3d_{5/2}$ & \phantom{-1}28.3(1.3) & \phantom{1}-28.3(1.3) & -0.103(3) & -0.027 & -0.103(3) & -0.027 \\[7pt]
-%  $^{147}$Sm & $1s_{1/2}$& \phantom{-11}0 & \phantom{-11}0 & \text{\phantom{-}0.42(18)} & -0.33(14) & \phantom{-}0.25(17) & -0.20(14) \\
-%  & $2s_{1/2}$& \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.072(39) & -0.056(30) & \phantom{-}0.033(39) & -0.026(30) \\
-%  & $2p_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.164(58) & -0.127(45) & \phantom{-}0.106(58) & -0.082(45) \\
-%  & $2p_{3/2}$ & \phantom{1}-32.8(3.2) & \phantom{-1}32.8(3.2) & \phantom{-}0.066(8) & -0.004(1) & \phantom{-}0.058(8) & -0.004(1) \\
-%  & $3s_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.023(13) & -0.018(10) & \phantom{-}0.010(13) & -0.008(8) \\
-%  & $3p_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.044(18) & -0.034(14) & \phantom{-}0.026(18) & -0.02(1) \\
-%  & $3p_{3/2}$ & \phantom{11}-9.4(1.1) & \phantom{-11}9.4(1.1) & \phantom{-}0.020(3) & -0.001 & \phantom{-}0.017(3) & -0.001 \\
-%  & $3d_{3/2}$ & \phantom{11}-3.2(0.1) & \phantom{-11}3.2(0.1) & \phantom{-}0.015(1) & \phantom{-}0.000 & \phantom{-}0.014(1) & \phantom{-}0.000 \\
-%  & $3d_{5/2}$ & \phantom{-11}3.7(0.2) & \phantom{11}-3.7(0.2) & \phantom{-}0.010 & \phantom{-}0.004 & \phantom{-}0.010 & \phantom{-}0.004 \\[7pt]
-% $^{89}$Zr & $1s_{1/2}$& \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.36(13) & -0.29(10) & \phantom{-}0.23(12) & -0.19(10) \\
-%  & $2s_{1/2}$& \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.053(23) & -0.043(18) & \phantom{-}0.030(23) & -0.025(18) \\
-%  & $2p_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.071(14) & -0.058(11) & \phantom{-}0.057(14) & -0.047(11) \\
-%  & $2p_{3/2}$ & \phantom{-1}12.2(4.7) &\phantom{1}-12.2(4.7) & \phantom{-}0.023(1) & -0.004 & \phantom{-}0.022(1) &-0.004 \\
-%  & $3s_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.016(7) & -0.013(6) & \phantom{-}0.009(7) & -0.007(6) \\
-%  & $3p_{1/2}$ & \phantom{-11}0 & \phantom{-11}0 & \phantom{-}0.020(4) & -0.017(4) & \phantom{-}0.016(4) & -0.013(4) \\
-%  & $3p_{3/2}$ & \phantom{-11}3.6(1.4) & \phantom{11}-3.6(1.4) & \phantom{-}0.007 & -0.001 & \phantom{-}0.007 & -0.001 \\
-%  & $3d_{3/2}$ & \text{\phantom{-11}0.9(0.3)} & \text{\phantom{11}-0.9(0.3)} & \phantom{-}0.004 & \phantom{-}0.000 & \phantom{-}0.004 & \phantom{-}0.000 \\
-%  & $3d_{5/2}$ & \text{\phantom{11}-1.1(0.4)} & \text{\phantom{-11}1.1(0.4)} & \phantom{-}0.003 & \phantom{-}0.000 & \phantom{-}0.003 &\phantom{-}0.000 \\
+\subsubsection{Electric quadrupole splitting}
+\label{sec:hfs}
+\label{sec:elQuad1}
+%begin hfs table
+\begin{table*}
+\setlength\extrarowheight{3pt}
+\begin{small}
+\caption{\label{tab:hfs}
+Results for the electric quadrupole and magnetic dipole hyperfine splitting for a selection of hyperfine states of muonic $^{205}_{83}$Bi ($I=\frac{9}{2}$), $^{147}_{62}$Sm ($I=\frac{7}{2}$), and $^{89}_{40}$Zr ($I=\frac{9}{2}$). $\Delta E_Q$ are the values of the electric quadrupole splitting. $\Delta E_M^{\rm{hom}}$ is the magnetic dipole splitting from Eq.~\eqref{eq:hmag} using a homogeneous nuclear current distribution and $\Delta E_M^{\rm{sp}}$ using the nuclear magnetization distribution in the single particle model. See Sections~\ref{sec:elQuad1} and~\ref{sec:magndip} for definitions. All energies are in keV.}
+%\begin{ruledtabular}
+\centering
+\begin{small}
+\begin{tabular}{c|cllllll}
+ nucleus&state&\multicolumn{2}{c}{$\Delta E_Q$}&\multicolumn{2}{c}{$\Delta E_M^{\rm{hom}}$}&\multicolumn{2}{c}{$\Delta E_M^{\rm{sp}}$}\\
+ & &$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$&$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$&$F=I-\frac{1}{2}$&$F=I+\frac{1}{2}$\\[2pt] \hline \\[-7pt]
+   $^{205}$Bi & $1s_{1/2}$& \phantom{-}0 & \phantom{-1}0 & -2.27(20) &\phantom{-}1.86(16) & -2.41(20) &\phantom{-}1.97(16) \\
+  & $2s_{1/2}$& \phantom{-}0 & \phantom{-1}0 & \text{-0.43(5)} &\phantom{-}0.35(4) & -0.47(6) &\phantom{-}0.38(4) \\
+  & $2p_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & -1.23(11) & \phantom{-}1.01(9) & -1.31(11) &\phantom{-}1.07(10) \\
+  & $2p_{3/2}$ & \phantom{-}7.0(1.0) & \phantom{-}13.9(1.9) & -0.55(2) & \phantom{-}0.010(4) & -0.554(22) & \phantom{-}0.098(4) \\
+  & $3s_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & \text{-0.144(20)} & \phantom{-}0.118(16) & -0.160(20) & \phantom{-}0.131(16) \\
+  & $3p_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & -0.311(33) & \phantom{-}0.255(26) & -0.336(33) & \phantom{-}0.275(27) \\
+  & $3p_{3/2}$ & \phantom{-}1.9(3) & \phantom{-1}3.9(6) & -0.160(7) & \phantom{-}0.028(1) & -0.163(7) & \phantom{-}0.029(1) \\
+  & $3d_{3/2}$ & \phantom{-}1.01(5) & \phantom{-1}2.02(10) & -0.161(6) & \phantom{-}0.028(1) & -0.163(6) & \phantom{-}0.029(1) \\
+  & $3d_{5/2}$ & \phantom{-}0.74(3) & \phantom{-1}1.72(8) & -0.103(3) & -0.027 & -0.103(3) & -0.027 \\[7pt]
+  $^{147}$Sm & $1s_{1/2}$& \phantom{-}0 & \phantom{-1}0 & \text{\phantom{-}0.42(18)} & -0.33(14) & \phantom{-}0.25(17) & -0.20(14) \\
+  & $2s_{1/2}$& \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.072(39) & -0.056(30) & \phantom{-}0.033(39) & -0.026(30) \\
+  & $2p_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.164(58) & -0.127(45) & \phantom{-}0.106(58) & -0.082(45) \\
+  & $2p_{3/2}$ & \phantom{-}1.13(11) & \phantom{-1}2.94(29) & \phantom{-}0.066(8) & -0.004(1) & \phantom{-}0.058(8) & -0.004(1) \\
+  & $3s_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.023(13) & -0.018(10) & \phantom{-}0.010(13) & -0.008(8) \\
+  & $3p_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.044(18) & -0.034(14) & \phantom{-}0.026(18) & -0.02(1) \\
+  & $3p_{3/2}$ & \phantom{-}0.32(4) & \phantom{-1}0.84(10) & \phantom{-}0.020(3) & -0.001 & \phantom{-}0.017(3) & -0.001 \\
+  & $3d_{3/2}$ & \phantom{-}0.110(4) & \phantom{-1}0.287(9) & \phantom{-}0.015(1) & \phantom{-}0.000 & \phantom{-}0.014(1) & \phantom{-}0.000 \\
+  & $3d_{5/2}$ & \phantom{-}0.056(3) & \phantom{-1}0.234(13) & \phantom{-}0.010 & \phantom{-}0.004 & \phantom{-}0.010 & \phantom{-}0.004 \\[7pt]
+ $^{89}$Zr & $1s_{1/2}$& \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.36(13) & -0.29(10) & \phantom{-}0.23(12) & -0.19(10) \\
+  & $2s_{1/2}$& \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.053(23) & -0.043(18) & \phantom{-}0.030(23) & -0.025(18) \\
+  & $2p_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.071(14) & -0.058(11) & \phantom{-}0.057(14) & -0.047(11) \\
+  & $2p_{3/2}$ & -0.48(19) &\phantom{1}-0.97(37) & \phantom{-}0.023(1) & -0.004 & \phantom{-}0.022(1) &-0.004 \\
+  & $3s_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.016(7) & -0.013(6) & \phantom{-}0.009(7) & -0.007(6) \\
+  & $3p_{1/2}$ & \phantom{-}0 & \phantom{-1}0 & \phantom{-}0.020(4) & -0.017(4) & \phantom{-}0.016(4) & -0.013(4) \\
+  & $3p_{3/2}$ & -0.143(56) & \phantom{1}-0.29(11) & \phantom{-}0.007 & -0.001 & \phantom{-}0.007 & -0.001 \\
+  & $3d_{3/2}$ & -0.036(12) & \text{\phantom{1}-0.072(24)} & \phantom{-}0.004 & \phantom{-}0.000 & \phantom{-}0.004 & \phantom{-}0.000 \\
+  & $3d_{5/2}$ & \text{-0.029(10)} & \text{\phantom{1}-0.067(24)} & \phantom{-}0.003 & \phantom{-}0.000 & \phantom{-}0.003 &\phantom{-}0.000 \\
+
+\end{tabular}
+\end{small}
+%\end{ruledtabular}
+\end{small}
+\end{table*}
+% end hfs table
+Since for heavy nuclei the nuclear radius is comparable to the muon's Compton wavelength~\cite{Angeli2013,codata}, the muonic wavefunction overlaps strongly with the nucleus and the muon is sensitive to nuclear shape corrections, which results in hyperfine splitting of the energy levels. The quadrupole part of the electric interaction \eqref{eq:quadInt} can be rewritten as~\cite{kozhedub2008}
+\begin{equation}
+\label{eq:Hquad}
+V^{(2)}_{\text{el}}(\mathbf{r}_\mu,\theta,\phi) = - \alpha \frac{Q_0 F_{\text{QD}}(r_\mu)}{2\, r_\mu^3} \sum_{m=-2}^2 C_{2m}(\theta,\phi)C_{2m}^{*}(\vartheta_\mu,\varphi_\mu),
+\end{equation}
+where $C_{lm}(\vartheta,\varphi)=\sqrt{4\pi/(2l+1)}Y_{lm}(\vartheta,\varphi)$ and angles with a subscript $\mu$ describe the position of the muon in the laboratory frame. Here, the nuclear intrinsic quadrupole moment is defined via the charge distribution from Eq.~\eqref{eq:rho} as
+\begin{equation}
+\label{eq:defQ0}
+Q_0 = 2 \sqrt{\frac{4\pi}{5}} \int_0^\infty r^4 \rho_2(r)\,\mathrm{d}r,
+\end{equation}
+and the distribution of the quadrupole moment is described by the function $F_{\text{QD}}(r_\mu)$, with the point-like limit $F_{\text{QD}}(r_\mu)=1$. For the shell model, where the quadrupole distribution is concentrated around the nuclear RMS radius $R_N$, the divergence for $r_\mu=0$ is removed, and the corresponding quadrupole distribution function is
+\begin{equation}
+\label{eq:quaddistris}
+F_{\text{QD}}(r_\mu)=
+\begin{cases}
+\left(\nicefrac{r_\mu}{R_N}\right)^5 & r_\mu \leq R_N\\
+1 &r_\mu > R_N
+\end{cases}.
+\end{equation}
+Formally, this corresponds to a charge distribution with
+\begin{equation}
+\label{eq:quadrhos}
+\rho_2(r_\mu)=\frac{Q_0}{2}\sqrt{\frac{5}{4\pi}}\frac{\delta(r_\mu-R_N)}{R_N^4}.
+\end{equation}
+The matrix elements of the quadrupole interaction from Eq.~\eqref{eq:Hquad} in the states~\eqref{eq:totalState} read~\cite{Korzinin2005}
+\begin{IEEEeqnarray}{l}
+\label{eq:hquad}
+\bra{FM_FI\kappa}H^{(2)}_E\ket{FM_FI\kappa}= - \alpha (-1)^{j+I+F}
+\left\{\begin{matrix}
+j & I & F\\
+I & j & 2
+\end{matrix}\right\}\\
+\qquad\quad\times \bra{I|}\frac{Q_0}{2} \widehat{C}_2(\vartheta_N,\varphi_N)\ket{|I}
+\bra{n\kappa|}\frac{F_{\text{QD}}(r_\mu)}{r_\mu^{3}}\widehat{C}_2(\vartheta_\mu,\varphi_\mu)\ket{|n\kappa}\nonumber.
+\end{IEEEeqnarray}
+The reduced matrix element in the nuclear coordinates can be expressed with the spectroscopic nuclear quadrupole moment $Q$ as
+\begin{equation}
+\nonumber
+\bra{I|}\frac{Q_0}{2} \widehat{C}_2(\vartheta_N,\varphi_N)\ket{|I}= Q\sqrt{\frac{(2I+3)(2I+1)(I+1)}{4I(2I-1)}},
+\end{equation}
+and the reduced matrix elements in the muonic coordinates are
+\begin{IEEEeqnarray}{l}
+\bra{n\kappa|}f(r_\mu)\widehat{C}_2(\vartheta_\mu,\varphi_\mu)\ket{|n\kappa} =\\[5pt]
+\quad-\sqrt{\frac{(2j+3)(2j+1)(2j-1)}{16j(j+1)}}
+\int_0^\infty \left( G^2_{n\kappa}(r_\mu)+F^2_{n\kappa}(r_\mu)\right)\frac{F_{\text{QD}}(r_\mu)}{r_\mu^{3}} \mathrm{d}r_\mu.\nonumber
+\end{IEEEeqnarray}
+The values for the nuclear RMS radii $R_N$ and the spectroscopic quadrupole moments $Q$ are taken from Refs.~\cite{Angeli2013,Stone2005}. In Table~\ref{tab:hfs}, results for the electric quadrupole hyperfine splitting for the nuclei $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr are shown for a selection of hyperfine states, with uncertainties stemming from the error in the quadrupole moment and an estimation of the modeling uncertainty, which was estimated by using quadrupole distributions of the form
+%\begin{equation}
+%\tilde{\rho}_2(r_\mu)=\frac{Q_0}{2}\sqrt{\frac{5}{4\pi}}
+%\frac{(n+5)r_\mu^n}{R_N^{n+5}}
+%\end{equation}
+\begin{equation}
+\tilde{\rho}_2(r_\mu)=
+\begin{cases}
+\rho_0 \; r_\mu^n, & r_\mu \leq R_N;\\
+0 ,&r_\mu > R_N
+\end{cases}
+\end{equation}
+for different $n$ instead of Eq.~\eqref{eq:quadrhos}. Here, $\rho_0$ is chosen such that Eq.~\eqref{eq:defQ0} is fulfilled.
+This leads to the quadrupole distributions
+\begin{equation}
+\tilde{F}_{\text{QD}}(r_\mu)=
+\begin{cases}
+\left(\nicefrac{r_\mu}{R_N}\right)^5 \left[ \frac{n+5}{n}-\frac{5}{n}\left(\frac{r_\mu}{R^N}\right)^n \right], & r_\mu \leq R_N;\\
+1 ,&r_\mu > R_N
+\end{cases}
+\end{equation}
+and Eq.~\eqref{eq:quaddistris} is formally the limit for large $n$.
 %
-%\end{tabular}
-%%\end{ruledtabular}
-%\end{small}
-%\end{table*}
-%% end hfs table
-%Since for heavy nuclei the nuclear radius is comparable to the muon's Compton wavelength~\cite{Angeli2013,codata}, the muonic wavefunction overlaps strongly with the nucleus and the muon is sensitive to nuclear shape corrections, which results in hyperfine splitting of the energy levels. The quadrupole part of the electric interaction \eqref{eq:quadInt} can be rewritten as~\cite{kozhedub2008}
-%\begin{equation}
-%\label{eq:Hquad}
-%V^{(2)}_{\text{el}}(\mathbf{r}_\mu,\theta,\phi) = - \alpha \frac{Q_0 F_{\text{QD}}(r_\mu)}{2\, r_\mu^3} \sum_{m=-2}^2 C_{2m}(\theta,\phi)C_{2m}^{*}(\vartheta_\mu,\varphi_\mu),
-%\end{equation}
-%where $C_{lm}(\vartheta,\varphi)=\sqrt{4\pi/(2l+1)}Y_{lm}(\vartheta,\varphi)$ and angles with a subscript $\mu$ describe the position of the muon in the laboratory frame. Here, the nuclear intrinsic quadrupole moment is defined via the charge distribution from Eq.~\eqref{eq:rho} as
-%\begin{equation}
-%\label{eq:defQ0}
-%Q_0 = 2 \sqrt{\frac{4\pi}{5}} \int_0^\infty r^4 \rho_2(r)\,\mathrm{d}r,
-%\end{equation}
-%and the distribution of the quadrupole moment is described by the function $F_{\text{QD}}(r_\mu)$, with the point-like limit $F_{\text{QD}}(r_\mu)=1$. For the shell model, where the quadrupole distribution is concentrated around the nuclear RMS radius $R_N$, the divergence for $r_\mu=0$ is removed, and the corresponding quadrupole distribution function is
-%\begin{equation}
-%F_{\text{QD}}(r_\mu)=
-%\begin{cases}
-%\left(\nicefrac{r_\mu}{R_N}\right)^5 & r_\mu \leq R_N\\
-%1 &r_\mu > R_N
-%\end{cases}.
-%\end{equation}
-%Formally, this corresponds to a charge distribution with
-%\begin{equation}
-%\rho_2(r_\mu)=\frac{Q_0}{2 R_N^4}\sqrt{\frac{5}{4\pi}}\delta(r_\mu-R_N).
-%\end{equation}
-%The matrix elements of the quadrupole interaction from Eq.~\eqref{eq:Hquad} in the states~\eqref{eq:totalState} read~\cite{Korzinin2005}
-%\begin{IEEEeqnarray}{l}
-%\label{eq:hquad}
-%\bra{FM_FI\kappa}H^{(2)}_E\ket{FM_FI\kappa}= - \alpha (-1)^{j+I+F}
-%\left\{\begin{matrix}
-%j & I & F\\
-%I & j & 2
-%\end{matrix}\right\}\\
-%\qquad\quad\times \bra{I|}\frac{Q_0}{2} \widehat{C}_2(\vartheta_N,\varphi_N)\ket{|I}
-%\bra{n\kappa|}\frac{F_{\text{QD}}(r_\mu)}{r_\mu^{3}}\widehat{C}_2(\vartheta_\mu,\varphi_\mu)\ket{|n\kappa}\nonumber.
-%\end{IEEEeqnarray}
-%The reduced matrix element in the nuclear coordinates can be expressed with the spectroscopic nuclear quadrupole moment $Q$ as
-%\begin{equation}
-%\nonumber
-%\bra{I|}\frac{Q_0}{2} \widehat{C}_2(\vartheta_N,\varphi_N)\ket{|I}= Q\sqrt{\frac{(2I+3)(2I+1)(I+1)}{4I(2I-1)}},
-%\end{equation}
-%and the reduced matrix elements in the muonic coordinates are
-%\begin{IEEEeqnarray}{l}
-%\bra{n\kappa|}f(r_\mu)\widehat{C}_2(\vartheta_\mu,\varphi_\mu)\ket{|n\kappa} =\\[5pt]
-%\quad-\sqrt{\frac{(2j+3)(2j+1)(2j-1)}{16j(j+1)}}
-%\int_0^\infty \left( G^2_{n\kappa}(r_\mu)+F^2_{n\kappa}(r_\mu)\right)\frac{F_{\text{QD}}(r_\mu)}{r_\mu^{3}} \mathrm{d}r_\mu.\nonumber
-%\end{IEEEeqnarray}
-%The values for the nuclear RMS radii $R_N$ and the spectroscopic quadrupole moments $Q$ are taken from Refs.~\cite{Angeli2013,Stone2005}. In Table~\ref{tab:hfs}, results for the electric quadrupole hyperfine splitting for the nuclei $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr are shown for a selection of hyperfine states, with uncertainties stemming from the error in the quadrupole moment and an estimation of the modeling uncertainty.
-%%
-%%
-%\subsubsection{Magnetic dipole splitting}
-%\label{sec:magndip}
-%As for the magnetic part, dipole interaction is considered. Therefore, the corresponding interaction Hamiltonian reads~\cite{Elizarov2005}
-%\begin{equation}
-%\label{eq:Hmag}
-%H_{M} = \frac{|e|}{4 \pi}\,\boldsymbol{\mu}\cdot \left( F_{\text{BW}}(r) \frac{\mathbf{r}}{r^3} \times \boldsymbol{\alpha} \right),
-%\end{equation}
-%with the charge of the muon $e=-|e|$, the nuclear magnetic moment $\boldsymbol{\mu}$, its distribution function $F_{\text{BW}}$, and the Dirac matrices $\boldsymbol{\alpha}$.
-%%If the nuclear current density is described by a normalized scalar function $f_\mu(r)$ as
-%%\begin{equation}
-%%\label{eq:currentdistr}
-%%\mathbf{j}(r)= \text{rot}\left(\boldsymbol{\mu}f_\mu(r)\right),
-%%\end{equation}
-%%then the distribution function is given by
-%%\begin{equation}
-%%\label{eq:Fbw}
-%%F_{\text{BW}}(r)=-r^2 \frac{\partial}{\partial r}\,\int \text{d}V^{\prime}\,\frac{f_\mu(r^{\prime})}{|\mathbf{r}-\mathbf{r}\,^{\prime}|}.
-%%\end{equation}
-%The difference in the hyperfine splitting between a point-like magnetic moment and a spatial distribution of the magnetization is called the Bohr-Weisskopf effect~\cite{bohrWeisskopf1950}. In the following, the diagonal matrix elements of the magnetic interaction are analyzed, paying special attention to the distribution function $F_{\text{BW}}$. We expect the contribution of the higher-order terms, namely electric octupole, magnetic quadrupole, and beyond, to be smaller than the uncertainty of the considered terms~\cite{Devons1995,Steffen1985}. Therefore they can be ignored here.
 %
-%The hyperfine splitting arises from the interaction of the nuclear magnetic moment with the muon's magnetic moment, which is also sensitive to the spatial distribution of the nuclear currents.
-%Since the magnetic moment of the muon is inversely proportional to its mass, the magnetic hyperfine splitting in muonic atoms is less important than in electronic atoms. The matrix elements of the corresponding Hamiltonian~\eqref{eq:Hmag} in the state~\eqref{eq:totalState} are~\cite{Korzinin2005}
-%\begin{IEEEeqnarray}{l}
-%\label{eq:hmag}
-%\bra{FM_FI\kappa}H_M\ket{FM_FI\kappa}=
-%\,\,\left[ F(F+1)-I(I+1)-j(j+1)\right] \\[7.5pt]
-%\qquad\qquad\qquad\qquad\,\,\times\frac{\alpha}{2 m_p}\frac{\mu}{\mu_N}\frac{\kappa}{Ij(j+1)}\int_0^\infty \frac{G_{n\kappa}(r_\mu)F_{n\kappa}(r_\mu)F_{\text{BW}}(r_\mu)}{r_\mu^2}\mathrm{d}r_\mu,\nonumber
-%\end{IEEEeqnarray}
-%where $m_p$ is the proton mass, and the ratio of the observed magnetic moment $\mu:=\bra{II}(\boldsymbol{\mu})_z\ket{II}$ and the nuclear magneton $\mu_N$ can be found in the literature~\cite{Stone2005}. For the simple model of a homogeneous nuclear current, the distribution function of the Bohr-Weisskopf effect reads
+\subsubsection{Magnetic dipole splitting}
+\label{sec:magndip}
+As for the magnetic part, dipole interaction is considered. Therefore, the corresponding interaction Hamiltonian reads~\cite{Elizarov2005}
+\begin{equation}
+\label{eq:Hmag}
+H_{M} = \frac{|e|}{4 \pi}\,\boldsymbol{\mu}\cdot \left( F_{\text{BW}}(r) \frac{\mathbf{r}}{r^3} \times \boldsymbol{\alpha} \right),
+\end{equation}
+with the charge of the muon $e=-|e|$, the nuclear magnetic moment $\boldsymbol{\mu}$, its distribution function $F_{\text{BW}}$, and the Dirac matrices $\boldsymbol{\alpha}$.
+%If the nuclear current density is described by a normalized scalar function $f_\mu(r)$ as
 %\begin{equation}
-%\label{eq:bwsimple}
-%F_{\rm{BW}}(r_\mu)=\begin{cases}
-%\left( \nicefrac{r_\mu}{R_N} \right)^3 & r_\mu \leq R_N\\
-%1 &r_\mu > R_N
-%\end{cases}.
+%\label{eq:currentdistr}
+%\mathbf{j}(r)= \text{rot}\left(\boldsymbol{\mu}f_\mu(r)\right),
 %\end{equation}
-%Furthermore, an additional method is used to obtain the distribution function $F_{\rm{BW}}$ from the nuclear single particle model, where the nuclear magnetic moment is assigned to the odd nucleon and the Schrödinger equation for this nucleon is solved in the Woods-Saxon potential of the other nucleons~\cite{Elizarov2005}. In Table~\ref{tab:hfs}, results for the magnetic dipole hyperfine splitting for the nuclei $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr are presented for a selection of hyperfine states, using both methods for obtaining $F_{\rm{BW}}$, where the model error is estimated by the difference of these two methods and the uncertainty in the magnetic moment is also taken into account.
-%
+%then the distribution function is given by
+%\begin{equation}
+%\label{eq:Fbw}
+%F_{\text{BW}}(r)=-r^2 \frac{\partial}{\partial r}\,\int \text{d}V^{\prime}\,\frac{f_\mu(r^{\prime})}{|\mathbf{r}-\mathbf{r}\,^{\prime}|}.
+%\end{equation}
+The difference in the hyperfine splitting between a point-like magnetic moment and a spatial distribution of the magnetization is called the Bohr-Weisskopf effect~\cite{bohrWeisskopf1950}. In the following, the diagonal matrix elements of the magnetic interaction are analyzed, paying special attention to the distribution function $F_{\text{BW}}$. We expect the contribution of the higher-order terms, namely electric octupole, magnetic quadrupole, and beyond, to be smaller than the uncertainty of the considered terms~\cite{Devons1995,Steffen1985}. Therefore they can be ignored here.
+
+The hyperfine splitting arises from the interaction of the nuclear magnetic moment with the muon's magnetic moment, which is also sensitive to the spatial distribution of the nuclear currents.
+Since the magnetic moment of the muon is inversely proportional to its mass, the magnetic hyperfine splitting in muonic atoms is less important than in electronic atoms. The matrix elements of the corresponding Hamiltonian~\eqref{eq:Hmag} in the state~\eqref{eq:totalState} are~\cite{Korzinin2005}
+\begin{IEEEeqnarray}{l}
+\label{eq:hmag}
+\bra{FM_FI\kappa}H_M\ket{FM_FI\kappa}=
+\,\,\left[ F(F+1)-I(I+1)-j(j+1)\right] \\[7.5pt]
+\qquad\qquad\qquad\qquad\,\,\times\frac{\alpha}{2 m_p}\frac{\mu}{\mu_N}\frac{\kappa}{Ij(j+1)}\int_0^\infty \frac{G_{n\kappa}(r_\mu)F_{n\kappa}(r_\mu)F_{\text{BW}}(r_\mu)}{r_\mu^2}\mathrm{d}r_\mu,\nonumber
+\end{IEEEeqnarray}
+where $m_p$ is the proton mass, and the ratio of the observed magnetic moment $\mu:=\bra{II}(\boldsymbol{\mu})_z\ket{II}$ and the nuclear magneton $\mu_N$ can be found in the literature~\cite{Stone2005}. For the simple model of a homogeneous nuclear current, the distribution function of the Bohr-Weisskopf effect reads
+\begin{equation}
+\label{eq:bwsimple}
+F_{\rm{BW}}(r_\mu)=\begin{cases}
+\left( \nicefrac{r_\mu}{R_N} \right)^3 & r_\mu \leq R_N\\
+1 &r_\mu > R_N
+\end{cases}.
+\end{equation}
+Furthermore, an additional method is used to obtain the distribution function $F_{\rm{BW}}$ from the nuclear single particle model, where the nuclear magnetic moment is assigned to the odd nucleon and the Schrödinger equation for this nucleon is solved in the Woods-Saxon potential of the other nucleons~\cite{Elizarov2005}. In Table~\ref{tab:hfs}, results for the magnetic dipole hyperfine splitting for the nuclei $^{205}_{83}$Bi, $^{147}_{62}$Sm, and $^{89}_{40}$Zr are presented for a selection of hyperfine states, using both methods for obtaining $F_{\rm{BW}}$, where the model error is estimated by the difference of these two methods and the uncertainty in the magnetic moment is also taken into account.
 
 \subsection{Dynamical hyperfine structure}
 \label{sec:muon_dynamic}
@@ -735,7 +758,7 @@ j(\kappa_1)&j(\kappa_2)&1\\
 
 \subsubsection{Rediagonalization of muonic fine-structure doublets}
 \label{sec:toyModelRediag}
-The concept of rediagonalization in the context of quasi-degenerate perturbation theory was introduced in Section~\ref{sec:almostDeg}. The unperturbed Hamiltonian is introduced in Eqs.~\eqref{eq:muonicEn} and~\eqref{eq:nuclEn} for the unperturbed states from Eq.~\eqref{eq:totalState}. The matrix elements necessary for the rediagonalization of the hyperfine states are discussed in Section~\ref{sec:non-diagElements} for the general case. Thereby, all necessary ingredients for the rediagonalization in the dynamical hyperfine structure of muonic atoms are available. In this section, this concept is applied to a simplified part of the muonic $^{185}$Re spectrum for clarification. The $^{185}$Re nucleus has a ground state angular momentum of $I=5/2$~\cite{Stone2005}, and in this section, the first two excited nuclear states with angular momentum quantum numbers of $7/2$ and $9/2$ are considered. As for the muonic states, the ($2p_{1/2}$,$2p_{3/2}$) fine-structure doublet is considered. 
+The concept of rediagonalization in the context of quasi-degenerate perturbation theory was introduced in Section~\ref{sec:almostDeg}. The unperturbed Hamiltonian is introduced in Eqs.~\eqref{eq:muonicEn} and~\eqref{eq:nuclEn} for the unperturbed states from Eq.~\eqref{eq:totalState}. The matrix elements necessary for the rediagonalization of the hyperfine states are discussed in Section~\ref{sec:non-diagElements} for the general case. Thereby, all necessary ingredients for the rediagonalization in the dynamical hyperfine structure of muonic atoms are available. In this section, this concept is applied to a simplified part of the muonic $^{185}$Re spectrum for clarification. The $^{185}$Re nucleus has a ground state angular momentum of $I=5/2$~\cite{Stone2005}, and in this section, the first two excited nuclear states with angular momentum quantum numbers of $7/2$ and $9/2$ are considered. As for the muonic states, the ($2p_{1/2}$,$2p_{3/2}$) fine-structure doublet is considered.
 As a first step, it has to be considered, which unperturbed states $\left|FM_F\,IK\,n\kappa\right>$ can be formed by the nuclear and the muonic states. In general, for every possible value of $F$, the projection quantum number has $(2F+1)$ possible values: $M_F\in \{-F,...,F\}$. The minimal value for $F$ is $F_{\text{min}}=\min(|j(\kappa)-I|)_{\kappa, I}$ and the maximal value for $F$ is $F_{\text{max}}=\max(j(\kappa)+I)_{\kappa, I}$ for the considered values of $\kappa$ and $I$. In this example, the values are $F_{\text{max}}=6$ and $F_{\text{min}}=1$. As a next step, it has to be checked for every value of $F$, which combinations of muonic and nuclear states of the modelspace are able to have the $F$ value. For this, the triangle equation $|j(\kappa)-I|\leq F \leq j(\kappa)+I$ has to hold. In this way, a modelspace is separated into distinct blocks, each with a value of $F$ and a corresponding subset of states from the modelspace, which can form this $F$ value. Since the hyperfine interactions are diagonal in $F$ and $M_F$, the rediagonalization has to be performed only in the blocks separately and not in the entire modelspace. The separation of the modelspace into the different blocks is shown in Fig.~\ref{fig:blockRe}. For the experimental nuclear excitation energies from~\cite{ENSDF} and the RMS radius from~\cite{Angeli2013}, the resulting level scheme without and with rediagonalized quadrupole interaction is shown in Fig.~\ref{fig:quad2}, which demonstrates the rich level structure in this case. Furthermore, there is no clear distinction between the fine- and hyperfine structure, since the nuclear rotational states, the fine-structure splitting and the quadrupole matrix elements are all on the same energy scale. In practice, for the calculations in Section~\ref{sec:muon_re} up to five excited nuclear states are used, which leads to even more energy levels.
 
 After the rediagonalization, the previously unperturbed states $\left|FM_F\,IK\,n\kappa\right>$ are mixed. The quantum numbers $F$ and $M_F$ describing the total angular momentum of the muon-nucleus system are still well-defined, since the hyperfine structure is diagonal therein. However, different $I$, $\kappa$, and in principle also $n$ are mixed by the rediagonalization. The mixed state can be written as
@@ -1218,7 +1241,7 @@ Since it is too expensive to perform full calculations in the fitting process to
 &\Delta E^{if}(Q)&&= \Delta E^{if}_0 +  \Delta E^{if}_1 Q+  \Delta E^{if}_2 Q^2,\label{eq:en_fit}\\
 &\phantom{\Delta}I^{if}(Q)&&= I^{if}_0 +  I^{if}_1 Q+  I^{if}_2 Q^2.\label{eq:tran_fit}
 \end{alignat}
-The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies for $^{185}\rm{Re}$ are given in Table~\ref{tab:re185energ} for the relative transition energies, in Table~\ref{tab:re185intens} for the intensities, and in Table~\ref{tab:re185centroid} for fitted energy differences of the centroid transitions. For $^{187}$Re, the coefficients differ only to a small extent due to different values for the magnetic moment and RMS charge radius and the corresponding tables are given in Appendix~\ref{app:re187}. 
+The fitted function and the results from the full calculations agree on the $10^{-4}\,$eV level in the region of the determined quadrupole moment. The resulting dependencies for $^{185}\rm{Re}$ are given in Table~\ref{tab:re185energ} for the relative transition energies, in Table~\ref{tab:re185intens} for the intensities, and in Table~\ref{tab:re185centroid} for fitted energy differences of the centroid transitions. For $^{187}$Re, the coefficients differ only to a small extent due to different values for the magnetic moment and RMS charge radius and the corresponding tables are given in Appendix~\ref{app:re187}.
 A main experimental challenge is understanding of the line shape due to the detector response function, which broadens the Lorentzian (due to natural life time) essentially into a Voigt profile. This issue is treated in Ref.~\cite{vogiatzi2018} in detail.
 
 The calculated spectrum parametrized by the nuclear quadrupole moment can now be fitted efficiently to the experimental spectrum and the result is shown in Fig.~\ref{fig:re54}. The $5f_{5/2}\rightarrow 4d_{5/2}$ group turned out not to be visible in the fit. Thereby, the preliminary extracted spectroscopic quadrupole moment of $^{185}$Re and $^{187}$Re is obtained as
@@ -1228,7 +1251,7 @@ Q_{\text{Re-}187} &= 1.96(2)(2)\,\text{barn},
 \end{align}
 where the number in the first bracket is the statistical uncertainty and the number in the second bracket is the systematic uncertainty due to the ratio of the intensities. The value is in agreement with the previous literature values~\cite{Stone2005}.%
 
-Furthermore, the low-lying $2p\rightarrow1s$ transitions, or $K$ x-rays, have been measured during the same experiments. The assumption of statistically populated $5g$ states, i.e. $\sim (2F+1)$, and a cascade $5g\rightarrow 4f \rightarrow 3d \rightarrow 2p \rightarrow 1s$ as discussed in Sections~\ref{sec:muon_dynamic} and \ref{sec:transitions} can explain the spectrum qualitatively, using the rigid rotor model for the nucleus (Appendix~\ref{app:rig_rotor}). The corresponding comparison for the $K$ x-rays ($2p\rightarrow 1s$) is shown in Fig.~\ref{fig:re54_K}. For the calculations of the spectra, the first five nuclear rotational states have been considered. In principle, from these spectra, the nuclear RMS radius can be extracted~\cite{hitlin1970}. However, for the low-lying transitions in heavy muonic atoms, the nuclear polarization corrections, e.g.~\cite{chen1970}, have to be included into the theoretical predictions. These corrections are due to virtual excitations of nuclear states beyond the rigid rotor model and have to be treated with a more accurate nuclear model or experimental data on nuclear transitions. Thus, updated calculations from the nuclear physics side would be highly desirable together with the calculations for the bound muon as presented in this thesis in connection with the new experimental campaign on muonic atoms. 
+Furthermore, the low-lying $2p\rightarrow1s$ transitions, or $K$ x-rays, have been measured during the same experiments. The assumption of statistically populated $5g$ states, i.e. $\sim (2F+1)$, and a cascade $5g\rightarrow 4f \rightarrow 3d \rightarrow 2p \rightarrow 1s$ as discussed in Sections~\ref{sec:muon_dynamic} and \ref{sec:transitions} can explain the spectrum qualitatively, using the rigid rotor model for the nucleus (Appendix~\ref{app:rig_rotor}). The corresponding comparison for the $K$ x-rays ($2p\rightarrow 1s$) is shown in Fig.~\ref{fig:re54_K}. For the calculations of the spectra, the first five nuclear rotational states have been considered. In principle, from these spectra, the nuclear RMS radius can be extracted~\cite{hitlin1970}. However, for the low-lying transitions in heavy muonic atoms, the nuclear polarization corrections, e.g.~\cite{chen1970}, have to be included into the theoretical predictions. These corrections are due to virtual excitations of nuclear states beyond the rigid rotor model and have to be treated with a more accurate nuclear model or experimental data on nuclear transitions. Thus, updated calculations from the nuclear physics side would be highly desirable together with the calculations for the bound muon as presented in this thesis in connection with the new experimental campaign on muonic atoms.
 This is also discussed in more detail in the conclusion \& outlook chapter.%
 %
 %re185 5-4 figure
@@ -1237,7 +1260,7 @@ This is also discussed in more detail in the conclusion \& outlook chapter.%
 \subfloat[]{\label{fig:comp54exp}\includegraphics[width=0.95\linewidth]{pics/comparison_54}}\\
 \subfloat[]{\label{fig:comp54theo}\includegraphics[width=0.915\linewidth]{pics/comparison_exp}}
 \caption{
-Comparison of the experimental data and theoretical predictions in region of the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$ groups in $^{185}$Re. The black dots are the measurements and the nuclear quadrupole moment of $^{185}$Re has been extracted by fitting the theoretical prediction to the data. 
+Comparison of the experimental data and theoretical predictions in region of the $5g_{9/2}\rightarrow4f_{7/2}$, $5g_{7/2}\rightarrow4f_{7/2}$, $5f_{7/2}\rightarrow4d_{5/2}$, $5g_{7/2}\rightarrow4f_{7/2}$ groups in $^{185}$Re. The black dots are the measurements and the nuclear quadrupole moment of $^{185}$Re has been extracted by fitting the theoretical prediction to the data.
 In part (a), the colored lines show the calculated transition energies and corresponding transition probabilities.
 In part (b), the predicted signals for each transition are shown. The center corresponds to the calculated transition probability and the shape is given by the natural line width and the detector response function. The red function represents the calculated total signal and is the sum of all separate signals. Details about the calculations can be found in Section~\ref{sec:muon_re}, and about the detector response function in Ref.~\cite{vogiatzi2018}.
 }
@@ -1476,7 +1499,7 @@ $5f_{5/2} \rightarrow 4d_{5/2}$  &  $5 \rightarrow 5$  &  0.000  &  0.000  &  10
 In this chapter, the following results have been presented:\\
 \begin{itemize}
 \setlength{\itemsep}{0.75cm}
-\item An state-of-the-art numerical approach, namely the dual-kinetic-balance method based on B-splines, has been used for fully relativistic precision calculations in muonic atoms. Many important contributions have been implemented, like finite nuclear size effects, magnetic and electric hyperfine interactions, electron screening, and the most important QED corrections. 
+\item An state-of-the-art numerical approach, namely the dual-kinetic-balance method based on B-splines, has been used for fully relativistic precision calculations in muonic atoms. Many important contributions have been implemented, like finite nuclear size effects, magnetic and electric hyperfine interactions, electron screening, and the most important QED corrections.
 
 \item The calculations include the level mixing of low-lying nuclear rotational states and muonic fine-structure components due to strong electric quadrupole interaction. The transition energies and probabilities were calculated in this framework in a fully relativistic approach, which enables an accurate theoretical prediction of the observed spectra of heavy muonic atoms.
 %This work has been published in Ref.~\cite{michel2017}.
