@@ -22,7 +22,7 @@ b_1,...,b_q
 {\ell=m}^{q-1}\Gamma\left(1-b_{\ell+1}+s\right)\prod\limits_{\ell=n}^{p-1}%
 \Gamma\left(a_{\ell+1}-s\right)\right)}}\right)z^{s}\mathrm{d}s,
 \end{equation}
-where the integration contour $L$ is a suitable path around the poles of $\Gamma(b_l-l)$ and \mbox{$\Gamma(1-a_l+s)$}~\cite[Eq.~16.17.1]{NIST:DLMF}, and $\Gamma(z)$ is defined in Eq.~\eqref{app:def_gamma}. $m$, $n$, $p$, $q$ are integers with $0 \leq m \leq q$ and $0 \leq n \leq p$, and $z,a_1,...,a_p,b_1,...,b_q$ are complex numbers where none of the differences $a_i-b_j$ must be a positive integers for $0\leq i \leq n$, $0\leq j \leq m$.
+where the integration contour $L$ is a suitable path around the poles of $\Gamma(b_l-l)$ and \mbox{$\Gamma(1-a_l+s)$}~\cite[Eq.~16.17.1]{NIST:DLMF}, and $\Gamma(z)$ is defined in Eq.~\eqref{app:def_gamma}. $m$, $n$, $p$, $q$ are integers with $0 \leq m \leq q$ and $0 \leq n \leq p$, and $z,a_1,...,a_p,b_1,...,b_q$ are complex numbers where none of the differences $a_i-b_j$ must be positive integers for $0\leq i \leq n$, $0\leq j \leq m$.
 
 Arbitrary precision implementations exist in several libraries and computer algebra systems, for example in \cite{mpmath,Mathematica}.
 
@@ -60,7 +60,7 @@ where $\mu = |m_1-m_2|$, $\nu=|m_1+m_2|$, $s=l-(\mu+\nu)/2$ and
 \end{numcases}
 and $F(a,b,c,x)$ are the hypergeometric functions from Eq.~\eqref{app:def_hypergeo}.
 
-\subsubsection*{Spherical Harmonics}
+\subsubsection*{Spherical harmonics}
 The spherical harmonics $\text{Y}_{lm}(\vartheta,\varphi)$ are special cases of the Wigner D-functions~\cite{varshalovich1988} from Eq.~\eqref{app:defDfunction}:
 \begin{equation}
 \label{app:defYlm}
@@ -80,8 +80,8 @@ with the expansion coefficients obtained by
 a_{lm}=\int_0^{2\pi}\text{d}\varphi\int_0^\pi\text{d}\vartheta \sin\vartheta \text{Y}^{*}_{lm}(\vartheta,\varphi)f(\vartheta,\varphi).
 \end{equation}
 
-\subsubsection*{Legendre Polynomials}
-The Legendre Polynomials $P_l(\cos\vartheta)$ can be expressed in terms of the spherical harmonics from Eq.~\eqref{app:defYlm} as
+\subsubsection*{Legendre polynomials}
+The Legendre polynomials $P_l(\cos\vartheta)$ can be expressed in terms of the spherical harmonics from Eq.~\eqref{app:defYlm} as
 \begin{equation}
 P_l(\cos\vartheta)=\sqrt{\frac{4\pi}{2l+1}}\text{Y}_{l0}(\vartheta,0).
 \end{equation}
